@@ -1,26 +1,18 @@
 local DataStoreService = game:GetService("DataStoreService")
-local Players = game:GetService("Players")
+local TagStore = DataStoreService:GetDataStore("4e20_TagSystem_V1")
 
-local tagStore = DataStoreService:GetDataStore("4e20Tags")
-
-Players.PlayerAdded:Connect(function(player)
-	local tag = "User"
-
-	local success, data = pcall(function()
-		return tagStore:GetAsync(player.UserId)
-	end)
-
-	if success and data then
-		tag = data
-	end
-
-	player:SetAttribute("Tag", tag)
+game.Players.PlayerAdded:Connect(function(player)
+    local success, savedTag = pcall(function()
+        return TagStore:GetAsync(tostring(player.UserId))
+    end)
+    
+    if success and savedTag then
+        -- Envia a tag salva para o cliente via RemoteEvent (você deve criar o Remote no Git)
+        print("Tag carregada para " .. player.Name .. ": " .. savedTag)
+    end
 end)
 
-Players.PlayerRemoving:Connect(function(player)
-	local tag = player:GetAttribute("Tag") or "User"
-
-	pcall(function()
-		tagStore:SetAsync(player.UserId, tag)
-	end)
-end)
+-- Função para salvar quando a tag muda (Exemplo de lógica)
+-- RemoteEvent.OnServerEvent:Connect(function(player, targetUserId, newTag)
+--     TagStore:SetAsync(tostring(targetUserId), newTag)
+-- end)
