@@ -611,7 +611,7 @@ AvisoTP.TextSize = 14.000
 
 -- Scripts:
 
-local function JBUAPL_fake_script() -- ScreenGui.LocalScript 
+local function RDAV_fake_script() -- ScreenGui.LocalScript 
 	local script = Instance.new('LocalScript', ScreenGui)
 
 	local UserInputService = game:GetService("UserInputService")
@@ -672,8 +672,8 @@ local function JBUAPL_fake_script() -- ScreenGui.LocalScript
 		end
 	end)
 end
-coroutine.wrap(JBUAPL_fake_script)()
-local function AKIIOB_fake_script() -- tela1.CarregarHome 
+coroutine.wrap(RDAV_fake_script)()
+local function XJME_fake_script() -- tela1.CarregarHome 
 	local script = Instance.new('LocalScript', tela1)
 
 	local Players = game:GetService("Players")
@@ -697,8 +697,8 @@ local function AKIIOB_fake_script() -- tela1.CarregarHome
 	
 	task.spawn(carregarFoto)
 end
-coroutine.wrap(AKIIOB_fake_script)()
-local function YVJKBWF_fake_script() -- tela2.NOMES 
+coroutine.wrap(XJME_fake_script)()
+local function JQNL_fake_script() -- tela2.NOMES 
 	local script = Instance.new('LocalScript', tela2)
 
 	local Players = game:GetService("Players")
@@ -752,8 +752,8 @@ local function YVJKBWF_fake_script() -- tela2.NOMES
 		end
 	end)
 end
-coroutine.wrap(YVJKBWF_fake_script)()
-local function CRPPEF_fake_script() -- tela2.VIEW 
+coroutine.wrap(JQNL_fake_script)()
+local function YTBXU_fake_script() -- tela2.VIEW 
 	local script = Instance.new('LocalScript', tela2)
 
 	local Players = game:GetService("Players")
@@ -852,8 +852,8 @@ local function CRPPEF_fake_script() -- tela2.VIEW
 		end
 	end)
 end
-coroutine.wrap(CRPPEF_fake_script)()
-local function BHQJ_fake_script() -- CLICKTP.LocalScript 
+coroutine.wrap(YTBXU_fake_script)()
+local function RSCG_fake_script() -- CLICKTP.LocalScript 
 	local script = Instance.new('LocalScript', CLICKTP)
 
 	local Players = game:GetService("Players")
@@ -909,8 +909,8 @@ local function BHQJ_fake_script() -- CLICKTP.LocalScript
 		end
 	end)
 end
-coroutine.wrap(BHQJ_fake_script)()
-local function AXKVJ_fake_script() -- NOCLIP.LocalScript 
+coroutine.wrap(RSCG_fake_script)()
+local function QHWLFVO_fake_script() -- NOCLIP.LocalScript 
 	local script = Instance.new('LocalScript', NOCLIP)
 
 	local RunService = game:GetService("RunService")
@@ -972,8 +972,8 @@ local function AXKVJ_fake_script() -- NOCLIP.LocalScript
 		end
 	end)
 end
-coroutine.wrap(AXKVJ_fake_script)()
-local function JRUM_fake_script() -- FLASHBACK.LocalScript 
+coroutine.wrap(QHWLFVO_fake_script)()
+local function SBWUJJ_fake_script() -- FLASHBACK.LocalScript 
 	local script = Instance.new('LocalScript', FLASHBACK)
 
 	local RunService = game:GetService("RunService")
@@ -1051,12 +1051,13 @@ local function JRUM_fake_script() -- FLASHBACK.LocalScript
 		end
 	end)
 end
-coroutine.wrap(JRUM_fake_script)()
-local function FTZIN_fake_script() -- tela4.LocalScript 
+coroutine.wrap(SBWUJJ_fake_script)()
+local function AHXV_fake_script() -- tela4.LocalScript 
 	local script = Instance.new('LocalScript', tela4)
 
 	local Players = game:GetService("Players")
 	local TweenService = game:GetService("TweenService")
+	local HttpService = game:GetService("HttpService")
 	local localPlayer = Players.LocalPlayer
 	
 	local tela = script.Parent
@@ -1073,6 +1074,8 @@ local function FTZIN_fake_script() -- tela4.LocalScript
 	
 	local MEU_ID_DONO = 9657477548
 	local tagSelecionada = ""
+	local SERVIDOR = "https://foure20-backend.onrender.com"
+	local GAME_ID = tostring(game.PlaceId)
 	
 	local configuracaoTags = {
 		["OWNER"]   = Color3.fromRGB(150, 0, 0),
@@ -1082,6 +1085,20 @@ local function FTZIN_fake_script() -- tela4.LocalScript
 		["VIP"]     = Color3.fromRGB(0, 255, 0),
 		["USER"]    = Color3.fromRGB(255, 255, 255)
 	}
+	
+	-- CONVERTE Color3 pra tabela {r,g,b}
+	local function corParaTabela(cor)
+		return {
+			math.floor(cor.R * 255),
+			math.floor(cor.G * 255),
+			math.floor(cor.B * 255)
+		}
+	end
+	
+	-- CONVERTE tabela {r,g,b} pra Color3
+	local function tabelaParaCor(t)
+		return Color3.fromRGB(t[1], t[2], t[3])
+	end
 	
 	-- APLICA TAG VISUAL NO PERSONAGEM
 	local function aplicarTagVisual(playerAlvo, texto, cor)
@@ -1121,70 +1138,78 @@ local function FTZIN_fake_script() -- tela4.LocalScript
 		end
 	end
 	
-	-- LÊ A TAG ATUAL DO PERSONAGEM
-	local function lerTagDoPersonagem(p)
-		local char = p.Character
-		if not char then return nil end
-		local head = char:FindFirstChild("Head")
-		if not head then return nil end
-		local bill = head:FindFirstChild("TagPainel")
-		if not bill then return nil end
-		local label = bill:FindFirstChildOfClass("TextLabel")
-		if not label then return nil end
-		return label.Text
-	end
-	
-	-- APLICA TAG PADRÃO SE NÃO TIVER NENHUMA
-	local function aplicarTagPadrao(p)
-		task.spawn(function()
-			task.wait(1)
-			local tagAtual = lerTagDoPersonagem(p)
-			if not tagAtual then
-				if p.UserId == MEU_ID_DONO then
-					aplicarTagVisual(p, "OWNER", configuracaoTags["OWNER"])
-				else
-					aplicarTagVisual(p, "USER", configuracaoTags["USER"])
-				end
-			end
+	-- MANDA TAG PRO SERVIDOR
+	local function enviarTag(playerName, cargo, cor)
+		pcall(function()
+			local body = HttpService:JSONEncode({
+				player = playerName,
+				cargo = cargo,
+				cor = corParaTabela(cor),
+				gameId = GAME_ID
+			})
+			syn.request({
+				Url = SERVIDOR .. "/settag",
+				Method = "POST",
+				Headers = {["Content-Type"] = "application/json"},
+				Body = body
+			})
 		end)
 	end
 	
-	-- SINCRONIZAÇÃO: mantém tags mesmo após respawn
+	-- REMOVE TAG DO SERVIDOR
+	local function removerTag(playerName)
+		pcall(function()
+			local body = HttpService:JSONEncode({
+				player = playerName,
+				gameId = GAME_ID
+			})
+			syn.request({
+				Url = SERVIDOR .. "/removetag",
+				Method = "POST",
+				Headers = {["Content-Type"] = "application/json"},
+				Body = body
+			})
+		end)
+	end
+	
+	-- LOOP: busca tags do servidor e aplica em tempo real
 	task.spawn(function()
-		while task.wait(1) do
-			for _, p in pairs(Players:GetPlayers()) do
-				local tagAtual = lerTagDoPersonagem(p)
-				if tagAtual and configuracaoTags[tagAtual] then
-					aplicarTagVisual(p, tagAtual, configuracaoTags[tagAtual])
+		while task.wait(2) do
+			pcall(function()
+				local resposta = syn.request({
+					Url = SERVIDOR .. "/gettags?gameId=" .. GAME_ID,
+					Method = "GET"
+				})
+				local dados = HttpService:JSONDecode(resposta.Body)
+	
+				for playerName, info in pairs(dados) do
+					for _, p in pairs(Players:GetPlayers()) do
+						if p.Name == playerName and p.Character then
+							local head = p.Character:FindFirstChild("Head")
+							if head then
+								local tagAtual = head:FindFirstChild("TagPainel")
+								local labelAtual = tagAtual and tagAtual:FindFirstChildOfClass("TextLabel")
+								-- Só reaaplica se a tag mudou ou sumiu
+								if not labelAtual or labelAtual.Text ~= info.cargo then
+									aplicarTagVisual(p, info.cargo, tabelaParaCor(info.cor))
+								end
+							end
+						end
+					end
 				end
-			end
 	
-			-- Trava de abas por cargo
-			local minhaTag = lerTagDoPersonagem(localPlayer)
-			local temAcesso = (localPlayer.UserId == MEU_ID_DONO)
-				or (minhaTag == "OWNER")
-				or (minhaTag == "GERENTE")
+				-- Trava de abas
+				local minhaInfo = dados[localPlayer.Name]
+				local meuCargo = minhaInfo and minhaInfo.cargo or "USER"
+				local temAcesso = (localPlayer.UserId == MEU_ID_DONO)
+					or (meuCargo == "OWNER")
+					or (meuCargo == "GERENTE")
 	
-			for _, aba in pairs(abasRestritas) do
-				if aba then aba.Visible = temAcesso end
-			end
+				for _, aba in pairs(abasRestritas) do
+					if aba then aba.Visible = temAcesso end
+				end
+			end)
 		end
-	end)
-	
-	-- JOGADORES JÁ NA SALA ao executar
-	for _, p in pairs(Players:GetPlayers()) do
-		aplicarTagPadrao(p)
-		p.CharacterAdded:Connect(function()
-			aplicarTagPadrao(p)
-		end)
-	end
-	
-	-- NOVOS JOGADORES que entram depois
-	Players.PlayerAdded:Connect(function(p)
-		aplicarTagPadrao(p)
-		p.CharacterAdded:Connect(function()
-			aplicarTagPadrao(p)
-		end)
 	end)
 	
 	-- BUSCA DE JOGADOR NO TEXTBOX
@@ -1218,25 +1243,43 @@ local function FTZIN_fake_script() -- tela4.LocalScript
 		for _, p in pairs(Players:GetPlayers()) do
 			if p.DisplayName == textoDisplay.Text then
 				if tagSelecionada ~= "" then
-					aplicarTagVisual(p, tagSelecionada, configuracaoTags[tagSelecionada])
+					local cor = configuracaoTags[tagSelecionada]
+					enviarTag(p.Name, tagSelecionada, cor)
+					aplicarTagVisual(p, tagSelecionada, cor)
 				end
 				break
 			end
 		end
 	end)
 	
-	-- BOTÃO REMOVE (volta para USER)
+	-- BOTÃO REMOVE
 	botaoRemove.MouseButton1Click:Connect(function()
 		for _, p in pairs(Players:GetPlayers()) do
 			if p.DisplayName == textoDisplay.Text then
+				removerTag(p.Name)
 				aplicarTagVisual(p, "USER", configuracaoTags["USER"])
 				break
 			end
 		end
 	end)
+	
+	-- INICIALIZAÇÃO: registra o próprio jogador no servidor
+	task.spawn(function()
+		task.wait(2)
+		local cargo = localPlayer.UserId == MEU_ID_DONO and "OWNER" or "USER"
+		local cor = configuracaoTags[cargo]
+		enviarTag(localPlayer.Name, cargo, cor)
+		aplicarTagVisual(localPlayer, cargo, cor)
+	
+		localPlayer.CharacterAdded:Connect(function()
+			task.wait(1)
+			enviarTag(localPlayer.Name, cargo, cor)
+			aplicarTagVisual(localPlayer, cargo, cor)
+		end)
+	end)
 end
-coroutine.wrap(FTZIN_fake_script)()
-local function TPFPCIF_fake_script() -- ScreenGui.GerenciadorAbas 
+coroutine.wrap(AHXV_fake_script)()
+local function RYMPD_fake_script() -- ScreenGui.GerenciadorAbas 
 	local script = Instance.new('LocalScript', ScreenGui)
 
 	local gui = script.Parent
@@ -1268,4 +1311,4 @@ local function TPFPCIF_fake_script() -- ScreenGui.GerenciadorAbas
 		end
 	end
 end
-coroutine.wrap(TPFPCIF_fake_script)()
+coroutine.wrap(RYMPD_fake_script)()
