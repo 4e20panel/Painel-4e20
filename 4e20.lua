@@ -640,7 +640,7 @@ AvisoTP.TextSize = 14.000
 
 -- Scripts:
 
-local function CVTGOI_fake_script() -- ScreenGui.LocalScript 
+local function KRGUWV_fake_script() -- ScreenGui.LocalScript 
 	local script = Instance.new('LocalScript', ScreenGui)
 
 	local UserInputService = game:GetService("UserInputService")
@@ -701,8 +701,8 @@ local function CVTGOI_fake_script() -- ScreenGui.LocalScript
 		end
 	end)
 end
-coroutine.wrap(CVTGOI_fake_script)()
-local function DFGN_fake_script() -- tela1.CarregarHome 
+coroutine.wrap(KRGUWV_fake_script)()
+local function APOAI_fake_script() -- tela1.CarregarHome 
 	local script = Instance.new('LocalScript', tela1)
 
 	local Players = game:GetService("Players")
@@ -726,8 +726,8 @@ local function DFGN_fake_script() -- tela1.CarregarHome
 	
 	task.spawn(carregarFoto)
 end
-coroutine.wrap(DFGN_fake_script)()
-local function EYGYGIB_fake_script() -- tela2.NOMES 
+coroutine.wrap(APOAI_fake_script)()
+local function HMUOK_fake_script() -- tela2.NOMES 
 	local script = Instance.new('LocalScript', tela2)
 
 	local Players = game:GetService("Players")
@@ -781,8 +781,8 @@ local function EYGYGIB_fake_script() -- tela2.NOMES
 		end
 	end)
 end
-coroutine.wrap(EYGYGIB_fake_script)()
-local function FHSR_fake_script() -- tela2.VIEW 
+coroutine.wrap(HMUOK_fake_script)()
+local function KXWLH_fake_script() -- tela2.VIEW 
 	local script = Instance.new('LocalScript', tela2)
 
 	local Players = game:GetService("Players")
@@ -881,8 +881,8 @@ local function FHSR_fake_script() -- tela2.VIEW
 		end
 	end)
 end
-coroutine.wrap(FHSR_fake_script)()
-local function JKWXKN_fake_script() -- CLICKTP.LocalScript 
+coroutine.wrap(KXWLH_fake_script)()
+local function GQUIMQE_fake_script() -- CLICKTP.LocalScript 
 	local script = Instance.new('LocalScript', CLICKTP)
 
 	local Players = game:GetService("Players")
@@ -938,8 +938,8 @@ local function JKWXKN_fake_script() -- CLICKTP.LocalScript
 		end
 	end)
 end
-coroutine.wrap(JKWXKN_fake_script)()
-local function MOMVREC_fake_script() -- NOCLIP.LocalScript 
+coroutine.wrap(GQUIMQE_fake_script)()
+local function UPXK_fake_script() -- NOCLIP.LocalScript 
 	local script = Instance.new('LocalScript', NOCLIP)
 
 	local RunService = game:GetService("RunService")
@@ -1001,8 +1001,8 @@ local function MOMVREC_fake_script() -- NOCLIP.LocalScript
 		end
 	end)
 end
-coroutine.wrap(MOMVREC_fake_script)()
-local function MZAZ_fake_script() -- FLASHBACK.LocalScript 
+coroutine.wrap(UPXK_fake_script)()
+local function PXYQZ_fake_script() -- FLASHBACK.LocalScript 
 	local script = Instance.new('LocalScript', FLASHBACK)
 
 	local RunService = game:GetService("RunService")
@@ -1080,8 +1080,8 @@ local function MZAZ_fake_script() -- FLASHBACK.LocalScript
 		end
 	end)
 end
-coroutine.wrap(MZAZ_fake_script)()
-local function TAQUA_fake_script() -- ANTAFK.LocalScript 
+coroutine.wrap(PXYQZ_fake_script)()
+local function EQKDHWC_fake_script() -- ANTAFK.LocalScript 
 	local script = Instance.new('LocalScript', ANTAFK)
 
 	-- SERVIÇOS
@@ -1119,8 +1119,8 @@ local function TAQUA_fake_script() -- ANTAFK.LocalScript
 		end
 	end)
 end
-coroutine.wrap(TAQUA_fake_script)()
-local function ZRFQODL_fake_script() -- tela4.LocalScript 
+coroutine.wrap(EQKDHWC_fake_script)()
+local function YETLARB_fake_script() -- tela4.LocalScript 
 	local script = Instance.new('LocalScript', tela4)
 
 	local Players = game:GetService("Players")
@@ -1146,6 +1146,8 @@ local function ZRFQODL_fake_script() -- tela4.LocalScript
 	local SERVIDOR = "https://foure20-backend.onrender.com"
 	local GAME_ID = tostring(game.PlaceId)
 	local cargoAnterior = {}
+	-- NOVO: controla se notificação de remoção já foi enviada
+	local notificacaoRemocaoEnviada = {}
 	
 	local configuracaoTags = {
 		["OWNER"]   = Color3.fromRGB(150, 0, 0),
@@ -1161,7 +1163,7 @@ local function ZRFQODL_fake_script() -- tela4.LocalScript
 		if aba then aba.Visible = false end
 	end
 	
-	-- CRIA SCREENGU I PARA NOTIFICAÇÕES
+	-- CRIA SCREENGUI PARA NOTIFICAÇÕES
 	local screenGui = Instance.new("ScreenGui", localPlayer.PlayerGui)
 	screenGui.Name = "NotificacoesPainel"
 	screenGui.ResetOnSpawn = false
@@ -1194,7 +1196,6 @@ local function ZRFQODL_fake_script() -- tela4.LocalScript
 		duracao = duracao or 4
 		if cargo == "USER" and tipo == "update" then return end
 	
-		-- Empurra notificações antigas pra cima
 		for _, f in pairs(notificacoes) do
 			if f and f.Parent then
 				TweenService:Create(f, TweenInfo.new(0.3, Enum.EasingStyle.Quad), {
@@ -1218,7 +1219,6 @@ local function ZRFQODL_fake_script() -- tela4.LocalScript
 		local canto = Instance.new("UICorner", frame)
 		canto.CornerRadius = UDim.new(0, 8)
 	
-		-- Sombra
 		local sombra = Instance.new("Frame", frame)
 		sombra.Size = UDim2.new(1, 4, 1, 4)
 		sombra.Position = UDim2.new(0, -2, 0, 2)
@@ -1229,7 +1229,6 @@ local function ZRFQODL_fake_script() -- tela4.LocalScript
 		local cantoSombra = Instance.new("UICorner", sombra)
 		cantoSombra.CornerRadius = UDim.new(0, 8)
 	
-		-- Borda esquerda colorida
 		local borda = Instance.new("Frame", frame)
 		borda.Size = UDim2.new(0, 4, 1, 0)
 		borda.Position = UDim2.new(0, 0, 0, 0)
@@ -1239,7 +1238,6 @@ local function ZRFQODL_fake_script() -- tela4.LocalScript
 		local cantoBorda = Instance.new("UICorner", borda)
 		cantoBorda.CornerRadius = UDim.new(0, 8)
 	
-		-- Ícone
 		local labelIcone = Instance.new("TextLabel", frame)
 		labelIcone.Size = UDim2.new(0, 36, 1, -10)
 		labelIcone.Position = UDim2.new(0, 12, 0, 5)
@@ -1249,7 +1247,6 @@ local function ZRFQODL_fake_script() -- tela4.LocalScript
 		labelIcone.Font = Enum.Font.GothamBold
 		labelIcone.ZIndex = 11
 	
-		-- Título
 		local labelTitulo = Instance.new("TextLabel", frame)
 		labelTitulo.Size = UDim2.new(1, -60, 0, 26)
 		labelTitulo.Position = UDim2.new(0, 50, 0, 8)
@@ -1261,7 +1258,6 @@ local function ZRFQODL_fake_script() -- tela4.LocalScript
 		labelTitulo.TextXAlignment = Enum.TextXAlignment.Left
 		labelTitulo.ZIndex = 11
 	
-		-- Texto
 		local labelTexto = Instance.new("TextLabel", frame)
 		labelTexto.Size = UDim2.new(1, -60, 0, 20)
 		labelTexto.Position = UDim2.new(0, 50, 0, 32)
@@ -1273,7 +1269,6 @@ local function ZRFQODL_fake_script() -- tela4.LocalScript
 		labelTexto.TextXAlignment = Enum.TextXAlignment.Left
 		labelTexto.ZIndex = 11
 	
-		-- Barra de progresso fundo
 		local barraFundo = Instance.new("Frame", frame)
 		barraFundo.Size = UDim2.new(1, -8, 0, 3)
 		barraFundo.Position = UDim2.new(0, 4, 1, -5)
@@ -1283,7 +1278,6 @@ local function ZRFQODL_fake_script() -- tela4.LocalScript
 		local cantoBarraF = Instance.new("UICorner", barraFundo)
 		cantoBarraF.CornerRadius = UDim.new(1, 0)
 	
-		-- Barra de progresso
 		local barra = Instance.new("Frame", barraFundo)
 		barra.Size = UDim2.new(1, 0, 1, 0)
 		barra.BackgroundColor3 = corCargo
@@ -1294,17 +1288,14 @@ local function ZRFQODL_fake_script() -- tela4.LocalScript
 	
 		table.insert(notificacoes, frame)
 	
-		-- Entrada
 		TweenService:Create(frame, TweenInfo.new(0.4, Enum.EasingStyle.Back, Enum.EasingDirection.Out), {
 			Position = UDim2.new(1, -300, 1, notificacaoY)
 		}):Play()
 	
-		-- Barra diminuindo
 		TweenService:Create(barra, TweenInfo.new(duracao, Enum.EasingStyle.Linear), {
 			Size = UDim2.new(0, 0, 1, 0)
 		}):Play()
 	
-		-- Saída
 		task.delay(duracao, function()
 			TweenService:Create(frame, TweenInfo.new(0.3, Enum.EasingStyle.Quad, Enum.EasingDirection.In), {
 				Position = UDim2.new(1, 10, 1, notificacaoY)
@@ -1370,6 +1361,9 @@ local function ZRFQODL_fake_script() -- tela4.LocalScript
 		for _, o in pairs(head:GetChildren()) do
 			if o.Name == "TagPainel" then o:Destroy() end
 		end
+	
+		-- Se for USER, não cria tag nenhuma (só remove)
+		if texto == "USER" then return end
 	
 		local bill = Instance.new("BillboardGui", head)
 		bill.Name = "TagPainel"
@@ -1442,7 +1436,7 @@ local function ZRFQODL_fake_script() -- tela4.LocalScript
 		return nil
 	end
 	
-	-- REAAPLICA TAG AO RESPAWN
+	-- REAPLICA TAG AO RESPAWN
 	local function conectarRespawn(p)
 		p.CharacterAdded:Connect(function()
 			task.wait(1.5)
@@ -1462,7 +1456,7 @@ local function ZRFQODL_fake_script() -- tela4.LocalScript
 		end)
 	end
 	
-	-- LOOP PRINCIPAL
+	-- LOOP PRINCIPAL - CORRIGIDO
 	task.spawn(function()
 		while task.wait(2) do
 			pcall(function()
@@ -1470,32 +1464,60 @@ local function ZRFQODL_fake_script() -- tela4.LocalScript
 				if not resposta or not resposta.Body then return end
 				local dados = HttpService:JSONDecode(resposta.Body)
 	
+				-- Atualiza tags dos players que ESTÃO no servidor
 				for playerName, info in pairs(dados) do
 					for _, p in pairs(Players:GetPlayers()) do
 						if p.Name == playerName and p.Character then
 							local head = p.Character:FindFirstChild("Head")
 							if head then
-								local tagAtual = head:FindFirstChild("TagPainel")
-								local labelAtual = tagAtual and tagAtual:FindFirstChildOfClass("TextLabel")
-								if not labelAtual or labelAtual.Text ~= info.cargo then
-									aplicarTagVisual(p, info.cargo, tabelaParaCor(info.cor))
-									if cargoAnterior[playerName] and cargoAnterior[playerName] ~= info.cargo and info.cargo ~= "USER" then
-										notificar("Tag Atualizada", p.DisplayName .. " agora é " .. info.cargo, 4, "update", info.cargo)
+								local cargoAtual = info.cargo
+								-- Só atualiza se mudou
+								if cargoAnterior[playerName] ~= cargoAtual then
+									aplicarTagVisual(p, cargoAtual, tabelaParaCor(info.cor))
+	
+									-- Notifica atualização de tag (exceto USER->USER)
+									if cargoAnterior[playerName] ~= nil
+										and cargoAnterior[playerName] ~= cargoAtual
+										and cargoAtual ~= "USER" then
+										notificar("Tag Atualizada", p.DisplayName .. " agora é " .. cargoAtual, 4, "update", cargoAtual)
 									end
-									cargoAnterior[playerName] = info.cargo
+	
+									cargoAnterior[playerName] = cargoAtual
+									-- Reseta flag de remoção pois o cargo mudou
+									notificacaoRemocaoEnviada[playerName] = false
 								end
 							end
 						end
 					end
 				end
 	
+				-- FIX: verifica players que FORAM REMOVIDOS do servidor (não estão mais em dados{})
+				for _, p in pairs(Players:GetPlayers()) do
+					local playerName = p.Name
+					if not dados[playerName] then
+						-- Player não tem mais entrada no servidor
+						if cargoAnterior[playerName] and cargoAnterior[playerName] ~= "USER" then
+							-- Remove tag visual
+							if p.Character then
+								aplicarTagVisual(p, "USER", configuracaoTags["USER"])
+							end
+							-- Notifica UMA única vez
+							if not notificacaoRemocaoEnviada[playerName] then
+								notificacaoRemocaoEnviada[playerName] = true
+								if p == localPlayer then
+									notificar("Cargo Removido", "Seu cargo foi alterado para USER", 5, "warn", "USER")
+								else
+									notificar("Tag Removida", p.DisplayName .. " voltou para USER", 4, "remove", "USER")
+								end
+							end
+							cargoAnterior[playerName] = "USER"
+						end
+					end
+				end
+	
+				-- Atualiza abas do localPlayer
 				local minhaInfo = dados[localPlayer.Name]
 				local meuCargo = minhaInfo and minhaInfo.cargo or "USER"
-				if cargoAnterior[localPlayer.Name]
-					and (cargoAnterior[localPlayer.Name] == "OWNER" or cargoAnterior[localPlayer.Name] == "GERENTE")
-					and (meuCargo ~= "OWNER" and meuCargo ~= "GERENTE") then
-					notificar("Cargo Removido", "Seu cargo foi alterado para " .. meuCargo, 5, "warn", meuCargo)
-				end
 				atualizarAbas(meuCargo)
 			end)
 		end
@@ -1536,6 +1558,7 @@ local function ZRFQODL_fake_script() -- tela4.LocalScript
 					enviarTag(p.Name, tagSelecionada, cor)
 					aplicarTagVisual(p, tagSelecionada, cor)
 					cargoAnterior[p.Name] = tagSelecionada
+					notificacaoRemocaoEnviada[p.Name] = false
 					if tagSelecionada ~= "USER" then
 						notificar("Tag Aplicada", p.DisplayName .. " recebeu " .. tagSelecionada, 4, "add", tagSelecionada)
 					end
@@ -1553,6 +1576,7 @@ local function ZRFQODL_fake_script() -- tela4.LocalScript
 				removerTag(p.Name)
 				aplicarTagVisual(p, "USER", configuracaoTags["USER"])
 				cargoAnterior[p.Name] = "USER"
+				notificacaoRemocaoEnviada[p.Name] = true  -- já notificou via botão, não repete no loop
 				notificar("Tag Removida", p.DisplayName .. " voltou para USER", 4, "remove", "USER")
 				if p == localPlayer then atualizarAbas("USER") end
 				break
@@ -1582,13 +1606,14 @@ local function ZRFQODL_fake_script() -- tela4.LocalScript
 			aplicarTagVisual(localPlayer, cargo, cor)
 		end
 		cargoAnterior[localPlayer.Name] = cargo
+		notificacaoRemocaoEnviada[localPlayer.Name] = false
 		atualizarAbas(cargo)
 		notificar("4e20 Panel", "Bem vindo! Cargo: " .. cargo, 5, "welcome", cargo)
 		conectarRespawn(localPlayer)
 	end)
 end
-coroutine.wrap(ZRFQODL_fake_script)()
-local function KIOP_fake_script() -- ScreenGui.GerenciadorAbas 
+coroutine.wrap(YETLARB_fake_script)()
+local function WNDU_fake_script() -- ScreenGui.GerenciadorAbas 
 	local script = Instance.new('LocalScript', ScreenGui)
 
 	local gui = script.Parent
@@ -1620,4 +1645,4 @@ local function KIOP_fake_script() -- ScreenGui.GerenciadorAbas
 		end
 	end
 end
-coroutine.wrap(KIOP_fake_script)()
+coroutine.wrap(WNDU_fake_script)()
