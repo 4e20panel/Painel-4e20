@@ -611,7 +611,7 @@ AvisoTP.TextSize = 14.000
 
 -- Scripts:
 
-local function RDAV_fake_script() -- ScreenGui.LocalScript 
+local function ZUNWDI_fake_script() -- ScreenGui.LocalScript 
 	local script = Instance.new('LocalScript', ScreenGui)
 
 	local UserInputService = game:GetService("UserInputService")
@@ -672,8 +672,8 @@ local function RDAV_fake_script() -- ScreenGui.LocalScript
 		end
 	end)
 end
-coroutine.wrap(RDAV_fake_script)()
-local function XJME_fake_script() -- tela1.CarregarHome 
+coroutine.wrap(ZUNWDI_fake_script)()
+local function NOVZ_fake_script() -- tela1.CarregarHome 
 	local script = Instance.new('LocalScript', tela1)
 
 	local Players = game:GetService("Players")
@@ -697,8 +697,8 @@ local function XJME_fake_script() -- tela1.CarregarHome
 	
 	task.spawn(carregarFoto)
 end
-coroutine.wrap(XJME_fake_script)()
-local function JQNL_fake_script() -- tela2.NOMES 
+coroutine.wrap(NOVZ_fake_script)()
+local function PAODK_fake_script() -- tela2.NOMES 
 	local script = Instance.new('LocalScript', tela2)
 
 	local Players = game:GetService("Players")
@@ -752,8 +752,8 @@ local function JQNL_fake_script() -- tela2.NOMES
 		end
 	end)
 end
-coroutine.wrap(JQNL_fake_script)()
-local function YTBXU_fake_script() -- tela2.VIEW 
+coroutine.wrap(PAODK_fake_script)()
+local function QCYW_fake_script() -- tela2.VIEW 
 	local script = Instance.new('LocalScript', tela2)
 
 	local Players = game:GetService("Players")
@@ -852,8 +852,8 @@ local function YTBXU_fake_script() -- tela2.VIEW
 		end
 	end)
 end
-coroutine.wrap(YTBXU_fake_script)()
-local function RSCG_fake_script() -- CLICKTP.LocalScript 
+coroutine.wrap(QCYW_fake_script)()
+local function ZQIU_fake_script() -- CLICKTP.LocalScript 
 	local script = Instance.new('LocalScript', CLICKTP)
 
 	local Players = game:GetService("Players")
@@ -909,8 +909,8 @@ local function RSCG_fake_script() -- CLICKTP.LocalScript
 		end
 	end)
 end
-coroutine.wrap(RSCG_fake_script)()
-local function QHWLFVO_fake_script() -- NOCLIP.LocalScript 
+coroutine.wrap(ZQIU_fake_script)()
+local function BJUE_fake_script() -- NOCLIP.LocalScript 
 	local script = Instance.new('LocalScript', NOCLIP)
 
 	local RunService = game:GetService("RunService")
@@ -972,8 +972,8 @@ local function QHWLFVO_fake_script() -- NOCLIP.LocalScript
 		end
 	end)
 end
-coroutine.wrap(QHWLFVO_fake_script)()
-local function SBWUJJ_fake_script() -- FLASHBACK.LocalScript 
+coroutine.wrap(BJUE_fake_script)()
+local function YWMVAPQ_fake_script() -- FLASHBACK.LocalScript 
 	local script = Instance.new('LocalScript', FLASHBACK)
 
 	local RunService = game:GetService("RunService")
@@ -1051,8 +1051,8 @@ local function SBWUJJ_fake_script() -- FLASHBACK.LocalScript
 		end
 	end)
 end
-coroutine.wrap(SBWUJJ_fake_script)()
-local function AHXV_fake_script() -- tela4.LocalScript 
+coroutine.wrap(YWMVAPQ_fake_script)()
+local function CRKNJXA_fake_script() -- tela4.LocalScript 
 	local script = Instance.new('LocalScript', tela4)
 
 	local Players = game:GetService("Players")
@@ -1086,6 +1086,11 @@ local function AHXV_fake_script() -- tela4.LocalScript
 		["USER"]    = Color3.fromRGB(255, 255, 255)
 	}
 	
+	-- ESCONDE ABA ADM IMEDIATAMENTE
+	for _, aba in pairs(abasRestritas) do
+		if aba then aba.Visible = false end
+	end
+	
 	-- CONVERTE Color3 pra tabela {r,g,b}
 	local function corParaTabela(cor)
 		return {
@@ -1098,6 +1103,16 @@ local function AHXV_fake_script() -- tela4.LocalScript
 	-- CONVERTE tabela {r,g,b} pra Color3
 	local function tabelaParaCor(t)
 		return Color3.fromRGB(t[1], t[2], t[3])
+	end
+	
+	-- ATUALIZA VISIBILIDADE DAS ABAS
+	local function atualizarAbas(cargo)
+		local temAcesso = (localPlayer.UserId == MEU_ID_DONO)
+			or (cargo == "OWNER")
+			or (cargo == "GERENTE")
+		for _, aba in pairs(abasRestritas) do
+			if aba then aba.Visible = temAcesso end
+		end
 	end
 	
 	-- APLICA TAG VISUAL NO PERSONAGEM
@@ -1182,6 +1197,7 @@ local function AHXV_fake_script() -- tela4.LocalScript
 				})
 				local dados = HttpService:JSONDecode(resposta.Body)
 	
+				-- Aplica tags em todos os jogadores da lista
 				for playerName, info in pairs(dados) do
 					for _, p in pairs(Players:GetPlayers()) do
 						if p.Name == playerName and p.Character then
@@ -1189,7 +1205,6 @@ local function AHXV_fake_script() -- tela4.LocalScript
 							if head then
 								local tagAtual = head:FindFirstChild("TagPainel")
 								local labelAtual = tagAtual and tagAtual:FindFirstChildOfClass("TextLabel")
-								-- Só reaaplica se a tag mudou ou sumiu
 								if not labelAtual or labelAtual.Text ~= info.cargo then
 									aplicarTagVisual(p, info.cargo, tabelaParaCor(info.cor))
 								end
@@ -1198,16 +1213,10 @@ local function AHXV_fake_script() -- tela4.LocalScript
 					end
 				end
 	
-				-- Trava de abas
+				-- Atualiza visibilidade da aba ADM baseado no cargo do localPlayer
 				local minhaInfo = dados[localPlayer.Name]
 				local meuCargo = minhaInfo and minhaInfo.cargo or "USER"
-				local temAcesso = (localPlayer.UserId == MEU_ID_DONO)
-					or (meuCargo == "OWNER")
-					or (meuCargo == "GERENTE")
-	
-				for _, aba in pairs(abasRestritas) do
-					if aba then aba.Visible = temAcesso end
-				end
+				atualizarAbas(meuCargo)
 			end)
 		end
 	end)
@@ -1246,6 +1255,10 @@ local function AHXV_fake_script() -- tela4.LocalScript
 					local cor = configuracaoTags[tagSelecionada]
 					enviarTag(p.Name, tagSelecionada, cor)
 					aplicarTagVisual(p, tagSelecionada, cor)
+					-- Se for o próprio localPlayer, atualiza abas imediatamente
+					if p == localPlayer then
+						atualizarAbas(tagSelecionada)
+					end
 				end
 				break
 			end
@@ -1258,28 +1271,35 @@ local function AHXV_fake_script() -- tela4.LocalScript
 			if p.DisplayName == textoDisplay.Text then
 				removerTag(p.Name)
 				aplicarTagVisual(p, "USER", configuracaoTags["USER"])
+				-- Se for o próprio localPlayer, esconde abas imediatamente
+				if p == localPlayer then
+					atualizarAbas("USER")
+				end
 				break
 			end
 		end
 	end)
 	
-	-- INICIALIZAÇÃO: registra o próprio jogador no servidor
+	-- INICIALIZAÇÃO
 	task.spawn(function()
 		task.wait(2)
 		local cargo = localPlayer.UserId == MEU_ID_DONO and "OWNER" or "USER"
 		local cor = configuracaoTags[cargo]
+	
 		enviarTag(localPlayer.Name, cargo, cor)
 		aplicarTagVisual(localPlayer, cargo, cor)
+		atualizarAbas(cargo)
 	
 		localPlayer.CharacterAdded:Connect(function()
 			task.wait(1)
 			enviarTag(localPlayer.Name, cargo, cor)
 			aplicarTagVisual(localPlayer, cargo, cor)
+			atualizarAbas(cargo)
 		end)
 	end)
 end
-coroutine.wrap(AHXV_fake_script)()
-local function RYMPD_fake_script() -- ScreenGui.GerenciadorAbas 
+coroutine.wrap(CRKNJXA_fake_script)()
+local function MWYZCQY_fake_script() -- ScreenGui.GerenciadorAbas 
 	local script = Instance.new('LocalScript', ScreenGui)
 
 	local gui = script.Parent
@@ -1311,4 +1331,4 @@ local function RYMPD_fake_script() -- ScreenGui.GerenciadorAbas
 		end
 	end
 end
-coroutine.wrap(RYMPD_fake_script)()
+coroutine.wrap(MWYZCQY_fake_script)()
