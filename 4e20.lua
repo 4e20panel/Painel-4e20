@@ -640,7 +640,7 @@ AvisoTP.TextSize = 14.000
 
 -- Scripts:
 
-local function YKZHRXJ_fake_script() -- ScreenGui.LocalScript 
+local function ATXW_fake_script() -- ScreenGui.LocalScript 
 	local script = Instance.new('LocalScript', ScreenGui)
 
 	local UserInputService = game:GetService("UserInputService")
@@ -701,8 +701,8 @@ local function YKZHRXJ_fake_script() -- ScreenGui.LocalScript
 		end
 	end)
 end
-coroutine.wrap(YKZHRXJ_fake_script)()
-local function XGLWQY_fake_script() -- tela1.CarregarHome 
+coroutine.wrap(ATXW_fake_script)()
+local function YKYGE_fake_script() -- tela1.CarregarHome 
 	local script = Instance.new('LocalScript', tela1)
 
 	local Players = game:GetService("Players")
@@ -726,8 +726,8 @@ local function XGLWQY_fake_script() -- tela1.CarregarHome
 	
 	task.spawn(carregarFoto)
 end
-coroutine.wrap(XGLWQY_fake_script)()
-local function IZKP_fake_script() -- tela2.NOMES 
+coroutine.wrap(YKYGE_fake_script)()
+local function KEXJQHG_fake_script() -- tela2.NOMES 
 	local script = Instance.new('LocalScript', tela2)
 
 	local Players = game:GetService("Players")
@@ -781,8 +781,8 @@ local function IZKP_fake_script() -- tela2.NOMES
 		end
 	end)
 end
-coroutine.wrap(IZKP_fake_script)()
-local function QDVH_fake_script() -- tela2.VIEW 
+coroutine.wrap(KEXJQHG_fake_script)()
+local function VQEW_fake_script() -- tela2.VIEW 
 	local script = Instance.new('LocalScript', tela2)
 
 	local Players = game:GetService("Players")
@@ -881,8 +881,8 @@ local function QDVH_fake_script() -- tela2.VIEW
 		end
 	end)
 end
-coroutine.wrap(QDVH_fake_script)()
-local function BVOA_fake_script() -- CLICKTP.LocalScript 
+coroutine.wrap(VQEW_fake_script)()
+local function VCRGU_fake_script() -- CLICKTP.LocalScript 
 	local script = Instance.new('LocalScript', CLICKTP)
 
 	local Players = game:GetService("Players")
@@ -938,8 +938,8 @@ local function BVOA_fake_script() -- CLICKTP.LocalScript
 		end
 	end)
 end
-coroutine.wrap(BVOA_fake_script)()
-local function TVCIDKQ_fake_script() -- NOCLIP.LocalScript 
+coroutine.wrap(VCRGU_fake_script)()
+local function RYUTENU_fake_script() -- NOCLIP.LocalScript 
 	local script = Instance.new('LocalScript', NOCLIP)
 
 	local RunService = game:GetService("RunService")
@@ -1001,8 +1001,8 @@ local function TVCIDKQ_fake_script() -- NOCLIP.LocalScript
 		end
 	end)
 end
-coroutine.wrap(TVCIDKQ_fake_script)()
-local function BETY_fake_script() -- FLASHBACK.LocalScript 
+coroutine.wrap(RYUTENU_fake_script)()
+local function FMBWF_fake_script() -- FLASHBACK.LocalScript 
 	local script = Instance.new('LocalScript', FLASHBACK)
 
 	local RunService = game:GetService("RunService")
@@ -1080,8 +1080,8 @@ local function BETY_fake_script() -- FLASHBACK.LocalScript
 		end
 	end)
 end
-coroutine.wrap(BETY_fake_script)()
-local function PWNKU_fake_script() -- ANTAFK.LocalScript 
+coroutine.wrap(FMBWF_fake_script)()
+local function CTDOZTR_fake_script() -- ANTAFK.LocalScript 
 	local script = Instance.new('LocalScript', ANTAFK)
 
 	-- SERVIÇOS
@@ -1119,8 +1119,8 @@ local function PWNKU_fake_script() -- ANTAFK.LocalScript
 		end
 	end)
 end
-coroutine.wrap(PWNKU_fake_script)()
-local function DNNX_fake_script() -- tela4.LocalScript 
+coroutine.wrap(CTDOZTR_fake_script)()
+local function AGQA_fake_script() -- tela4.LocalScript 
 	local script = Instance.new('LocalScript', tela4)
 
 	local Players = game:GetService("Players")
@@ -1303,7 +1303,6 @@ local function DNNX_fake_script() -- tela4.LocalScript
 		end)
 	end
 	
-	-- FUNÇÃO UNIVERSAL DE REQUEST
 	local function httpRequest(dados)
 		local ok, resultado = pcall(function()
 			if syn and syn.request then
@@ -1330,7 +1329,6 @@ local function DNNX_fake_script() -- tela4.LocalScript
 		return Color3.fromRGB(t[1], t[2], t[3])
 	end
 	
-	-- ATUALIZA ABAS
 	local function atualizarAbas(cargo)
 		local temAcesso = (localPlayer.UserId == MEU_ID_DONO)
 			or (cargo == "OWNER") or (cargo == "GERENTE")
@@ -1346,7 +1344,6 @@ local function DNNX_fake_script() -- tela4.LocalScript
 		end
 	end
 	
-	-- APLICA TAG VISUAL (USER também recebe tag agora)
 	local function aplicarTagVisual(playerAlvo, texto, cor)
 		local char = playerAlvo.Character
 		if not char then return end
@@ -1356,6 +1353,9 @@ local function DNNX_fake_script() -- tela4.LocalScript
 		for _, o in pairs(head:GetChildren()) do
 			if o.Name == "TagPainel" then o:Destroy() end
 		end
+	
+		-- USER sem cargo no painel = sem tag visual
+		if texto == "USER" and playerAlvo ~= localPlayer then return end
 	
 		local bill = Instance.new("BillboardGui", head)
 		bill.Name = "TagPainel"
@@ -1389,7 +1389,6 @@ local function DNNX_fake_script() -- tela4.LocalScript
 		end
 	end
 	
-	-- MANDA TAG PRO SERVIDOR
 	local function enviarTag(playerName, cargo, cor)
 		pcall(function()
 			httpRequest({
@@ -1404,7 +1403,6 @@ local function DNNX_fake_script() -- tela4.LocalScript
 		end)
 	end
 	
-	-- REMOVE TAG DO SERVIDOR
 	local function removerTag(playerName)
 		pcall(function()
 			httpRequest({
@@ -1416,7 +1414,6 @@ local function DNNX_fake_script() -- tela4.LocalScript
 		end)
 	end
 	
-	-- BUSCA CARGO DO SERVIDOR
 	local function buscarCargoServidor(playerName)
 		local ok, resposta = pcall(function()
 			return httpRequest({Url = SERVIDOR .. "/gettags?gameId=" .. GAME_ID, Method = "GET"})
@@ -1428,7 +1425,6 @@ local function DNNX_fake_script() -- tela4.LocalScript
 		return nil
 	end
 	
-	-- REAPLICA TAG AO RESPAWN
 	local function conectarRespawn(p)
 		p.CharacterAdded:Connect(function()
 			task.wait(1.5)
@@ -1438,11 +1434,14 @@ local function DNNX_fake_script() -- tela4.LocalScript
 				cargoAnterior[p.Name] = info.cargo
 				if p == localPlayer then atualizarAbas(info.cargo) end
 			else
-				local cor = configuracaoTags["USER"]
-				enviarTag(p.Name, "USER", cor)
-				aplicarTagVisual(p, "USER", cor)
+				-- Só registra USER no servidor pro próprio localPlayer
+				if p == localPlayer then
+					local cor = configuracaoTags["USER"]
+					enviarTag(p.Name, "USER", cor)
+					aplicarTagVisual(p, "USER", cor)
+					atualizarAbas("USER")
+				end
 				cargoAnterior[p.Name] = "USER"
-				if p == localPlayer then atualizarAbas("USER") end
 			end
 		end)
 	end
@@ -1455,7 +1454,7 @@ local function DNNX_fake_script() -- tela4.LocalScript
 				if not resposta or not resposta.Body then return end
 				local dados = HttpService:JSONDecode(resposta.Body)
 	
-				-- Atualiza tags dos players que estão no servidor
+				-- Atualiza tags de quem ESTÁ no servidor
 				for playerName, info in pairs(dados) do
 					for _, p in pairs(Players:GetPlayers()) do
 						if p.Name == playerName and p.Character then
@@ -1474,30 +1473,44 @@ local function DNNX_fake_script() -- tela4.LocalScript
 					end
 				end
 	
-				-- Verifica players sem entrada no servidor (registra como USER)
+				-- Verifica apenas o localPlayer se foi removido do servidor
+				if not dados[localPlayer.Name] then
+					if cargoAnterior[localPlayer.Name] and cargoAnterior[localPlayer.Name] ~= "USER" then
+						local cor = configuracaoTags["USER"]
+						enviarTag(localPlayer.Name, "USER", cor)
+						if localPlayer.Character then
+							aplicarTagVisual(localPlayer, "USER", cor)
+						end
+						if not notificacaoRemocaoEnviada[localPlayer.Name] then
+							notificacaoRemocaoEnviada[localPlayer.Name] = true
+							notificar("Cargo Removido", "Seu cargo foi alterado para USER", 5, "warn", "USER")
+						end
+						cargoAnterior[localPlayer.Name] = "USER"
+					end
+				end
+	
+				-- Notifica outros players (não localPlayer) que tiveram cargo removido
 				for _, p in pairs(Players:GetPlayers()) do
-					local playerName = p.Name
-					if not dados[playerName] then
-						if cargoAnterior[playerName] ~= "USER" then
-							local cor = configuracaoTags["USER"]
-							enviarTag(playerName, "USER", cor)
+					if p ~= localPlayer and not dados[p.Name] then
+						if cargoAnterior[p.Name] and cargoAnterior[p.Name] ~= "USER" then
 							if p.Character then
-								aplicarTagVisual(p, "USER", cor)
-							end
-							if not notificacaoRemocaoEnviada[playerName] then
-								notificacaoRemocaoEnviada[playerName] = true
-								if p == localPlayer then
-									notificar("Cargo Removido", "Seu cargo foi alterado para USER", 5, "warn", "USER")
-								else
-									notificar("Tag Removida", p.DisplayName .. " voltou para USER", 4, "remove", "USER")
+								-- Remove tag visual do outro player (apenas localmente)
+								local head = p.Character:FindFirstChild("Head")
+								if head then
+									for _, o in pairs(head:GetChildren()) do
+										if o.Name == "TagPainel" then o:Destroy() end
+									end
 								end
 							end
-							cargoAnterior[playerName] = "USER"
+							if not notificacaoRemocaoEnviada[p.Name] then
+								notificacaoRemocaoEnviada[p.Name] = true
+								notificar("Tag Removida", p.DisplayName .. " voltou para USER", 4, "remove", "USER")
+							end
+							cargoAnterior[p.Name] = "USER"
 						end
 					end
 				end
 	
-				-- Atualiza abas do localPlayer
 				local minhaInfo = dados[localPlayer.Name]
 				local meuCargo = minhaInfo and minhaInfo.cargo or "USER"
 				atualizarAbas(meuCargo)
@@ -1522,7 +1535,6 @@ local function DNNX_fake_script() -- tela4.LocalScript
 		end
 	end)
 	
-	-- BOTÕES DE SELEÇÃO DE TAG
 	for nome, _ in pairs(configuracaoTags) do
 		if tela:FindFirstChild(nome) then
 			tela[nome].MouseButton1Click:Connect(function()
@@ -1531,7 +1543,6 @@ local function DNNX_fake_script() -- tela4.LocalScript
 		end
 	end
 	
-	-- BOTÃO ADD
 	botaoAdd.MouseButton1Click:Connect(function()
 		for _, p in pairs(Players:GetPlayers()) do
 			if p.DisplayName == textoDisplay.Text then
@@ -1551,12 +1562,19 @@ local function DNNX_fake_script() -- tela4.LocalScript
 		end
 	end)
 	
-	-- BOTÃO REMOVE
 	botaoRemove.MouseButton1Click:Connect(function()
 		for _, p in pairs(Players:GetPlayers()) do
 			if p.DisplayName == textoDisplay.Text then
 				removerTag(p.Name)
-				aplicarTagVisual(p, "USER", configuracaoTags["USER"])
+				-- Remove tag visual localmente
+				if p.Character then
+					local head = p.Character:FindFirstChild("Head")
+					if head then
+						for _, o in pairs(head:GetChildren()) do
+							if o.Name == "TagPainel" then o:Destroy() end
+						end
+					end
+				end
 				cargoAnterior[p.Name] = "USER"
 				notificacaoRemocaoEnviada[p.Name] = true
 				notificar("Tag Removida", p.DisplayName .. " voltou para USER", 4, "remove", "USER")
@@ -1566,23 +1584,20 @@ local function DNNX_fake_script() -- tela4.LocalScript
 		end
 	end)
 	
-	-- CONECTA RESPAWN DE PLAYERS JÁ NA SALA
 	for _, p in pairs(Players:GetPlayers()) do
 		conectarRespawn(p)
 	end
 	
-	-- NOVO PLAYER ENTROU
 	Players.PlayerAdded:Connect(function(p)
 		conectarRespawn(p)
 		task.spawn(function()
 			task.wait(1)
 			local info = buscarCargoServidor(p.Name)
-			if not info then
-				local cor = configuracaoTags["USER"]
-				enviarTag(p.Name, "USER", cor)
-				cargoAnterior[p.Name] = "USER"
-			else
+			if info then
 				cargoAnterior[p.Name] = info.cargo
+			else
+				cargoAnterior[p.Name] = "USER"
+				-- NÃO registra USER no servidor pra outros players
 			end
 		end)
 	end)
@@ -1607,8 +1622,8 @@ local function DNNX_fake_script() -- tela4.LocalScript
 		conectarRespawn(localPlayer)
 	end)
 end
-coroutine.wrap(DNNX_fake_script)()
-local function AJOH_fake_script() -- ScreenGui.GerenciadorAbas 
+coroutine.wrap(AGQA_fake_script)()
+local function XNLMB_fake_script() -- ScreenGui.GerenciadorAbas 
 	local script = Instance.new('LocalScript', ScreenGui)
 
 	local gui = script.Parent
@@ -1640,4 +1655,4 @@ local function AJOH_fake_script() -- ScreenGui.GerenciadorAbas
 		end
 	end
 end
-coroutine.wrap(AJOH_fake_script)()
+coroutine.wrap(XNLMB_fake_script)()
