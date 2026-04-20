@@ -611,7 +611,7 @@ AvisoTP.TextSize = 14.000
 
 -- Scripts:
 
-local function ZUNWDI_fake_script() -- ScreenGui.LocalScript 
+local function QYXYJSS_fake_script() -- ScreenGui.LocalScript 
 	local script = Instance.new('LocalScript', ScreenGui)
 
 	local UserInputService = game:GetService("UserInputService")
@@ -672,8 +672,8 @@ local function ZUNWDI_fake_script() -- ScreenGui.LocalScript
 		end
 	end)
 end
-coroutine.wrap(ZUNWDI_fake_script)()
-local function NOVZ_fake_script() -- tela1.CarregarHome 
+coroutine.wrap(QYXYJSS_fake_script)()
+local function QFVKT_fake_script() -- tela1.CarregarHome 
 	local script = Instance.new('LocalScript', tela1)
 
 	local Players = game:GetService("Players")
@@ -697,8 +697,8 @@ local function NOVZ_fake_script() -- tela1.CarregarHome
 	
 	task.spawn(carregarFoto)
 end
-coroutine.wrap(NOVZ_fake_script)()
-local function PAODK_fake_script() -- tela2.NOMES 
+coroutine.wrap(QFVKT_fake_script)()
+local function QRTG_fake_script() -- tela2.NOMES 
 	local script = Instance.new('LocalScript', tela2)
 
 	local Players = game:GetService("Players")
@@ -752,8 +752,8 @@ local function PAODK_fake_script() -- tela2.NOMES
 		end
 	end)
 end
-coroutine.wrap(PAODK_fake_script)()
-local function QCYW_fake_script() -- tela2.VIEW 
+coroutine.wrap(QRTG_fake_script)()
+local function AHZYJY_fake_script() -- tela2.VIEW 
 	local script = Instance.new('LocalScript', tela2)
 
 	local Players = game:GetService("Players")
@@ -852,8 +852,8 @@ local function QCYW_fake_script() -- tela2.VIEW
 		end
 	end)
 end
-coroutine.wrap(QCYW_fake_script)()
-local function ZQIU_fake_script() -- CLICKTP.LocalScript 
+coroutine.wrap(AHZYJY_fake_script)()
+local function HPLTPYO_fake_script() -- CLICKTP.LocalScript 
 	local script = Instance.new('LocalScript', CLICKTP)
 
 	local Players = game:GetService("Players")
@@ -909,8 +909,8 @@ local function ZQIU_fake_script() -- CLICKTP.LocalScript
 		end
 	end)
 end
-coroutine.wrap(ZQIU_fake_script)()
-local function BJUE_fake_script() -- NOCLIP.LocalScript 
+coroutine.wrap(HPLTPYO_fake_script)()
+local function KUDT_fake_script() -- NOCLIP.LocalScript 
 	local script = Instance.new('LocalScript', NOCLIP)
 
 	local RunService = game:GetService("RunService")
@@ -972,8 +972,8 @@ local function BJUE_fake_script() -- NOCLIP.LocalScript
 		end
 	end)
 end
-coroutine.wrap(BJUE_fake_script)()
-local function YWMVAPQ_fake_script() -- FLASHBACK.LocalScript 
+coroutine.wrap(KUDT_fake_script)()
+local function RVJGN_fake_script() -- FLASHBACK.LocalScript 
 	local script = Instance.new('LocalScript', FLASHBACK)
 
 	local RunService = game:GetService("RunService")
@@ -1051,8 +1051,8 @@ local function YWMVAPQ_fake_script() -- FLASHBACK.LocalScript
 		end
 	end)
 end
-coroutine.wrap(YWMVAPQ_fake_script)()
-local function CRKNJXA_fake_script() -- tela4.LocalScript 
+coroutine.wrap(RVJGN_fake_script)()
+local function LSQH_fake_script() -- tela4.LocalScript 
 	local script = Instance.new('LocalScript', tela4)
 
 	local Players = game:GetService("Players")
@@ -1089,6 +1089,25 @@ local function CRKNJXA_fake_script() -- tela4.LocalScript
 	-- ESCONDE ABA ADM IMEDIATAMENTE
 	for _, aba in pairs(abasRestritas) do
 		if aba then aba.Visible = false end
+	end
+	
+	-- FUNÇÃO UNIVERSAL DE REQUEST (funciona em qualquer executor)
+	local function httpRequest(dados)
+		local ok, resultado = pcall(function()
+			if syn and syn.request then
+				return syn.request(dados)
+			elseif http and http.request then
+				return http.request(dados)
+			elseif request then
+				return request(dados)
+			elseif HttpRequest then
+				return HttpRequest(dados)
+			elseif fluxus and fluxus.request then
+				return fluxus.request(dados)
+			end
+		end)
+		if ok then return resultado end
+		return nil
 	end
 	
 	-- CONVERTE Color3 pra tabela {r,g,b}
@@ -1162,7 +1181,7 @@ local function CRKNJXA_fake_script() -- tela4.LocalScript
 				cor = corParaTabela(cor),
 				gameId = GAME_ID
 			})
-			syn.request({
+			httpRequest({
 				Url = SERVIDOR .. "/settag",
 				Method = "POST",
 				Headers = {["Content-Type"] = "application/json"},
@@ -1178,7 +1197,7 @@ local function CRKNJXA_fake_script() -- tela4.LocalScript
 				player = playerName,
 				gameId = GAME_ID
 			})
-			syn.request({
+			httpRequest({
 				Url = SERVIDOR .. "/removetag",
 				Method = "POST",
 				Headers = {["Content-Type"] = "application/json"},
@@ -1191,13 +1210,15 @@ local function CRKNJXA_fake_script() -- tela4.LocalScript
 	task.spawn(function()
 		while task.wait(2) do
 			pcall(function()
-				local resposta = syn.request({
+				local resposta = httpRequest({
 					Url = SERVIDOR .. "/gettags?gameId=" .. GAME_ID,
 					Method = "GET"
 				})
+	
+				if not resposta or not resposta.Body then return end
+	
 				local dados = HttpService:JSONDecode(resposta.Body)
 	
-				-- Aplica tags em todos os jogadores da lista
 				for playerName, info in pairs(dados) do
 					for _, p in pairs(Players:GetPlayers()) do
 						if p.Name == playerName and p.Character then
@@ -1213,7 +1234,7 @@ local function CRKNJXA_fake_script() -- tela4.LocalScript
 					end
 				end
 	
-				-- Atualiza visibilidade da aba ADM baseado no cargo do localPlayer
+				-- Atualiza visibilidade da aba ADM
 				local minhaInfo = dados[localPlayer.Name]
 				local meuCargo = minhaInfo and minhaInfo.cargo or "USER"
 				atualizarAbas(meuCargo)
@@ -1255,7 +1276,6 @@ local function CRKNJXA_fake_script() -- tela4.LocalScript
 					local cor = configuracaoTags[tagSelecionada]
 					enviarTag(p.Name, tagSelecionada, cor)
 					aplicarTagVisual(p, tagSelecionada, cor)
-					-- Se for o próprio localPlayer, atualiza abas imediatamente
 					if p == localPlayer then
 						atualizarAbas(tagSelecionada)
 					end
@@ -1271,7 +1291,6 @@ local function CRKNJXA_fake_script() -- tela4.LocalScript
 			if p.DisplayName == textoDisplay.Text then
 				removerTag(p.Name)
 				aplicarTagVisual(p, "USER", configuracaoTags["USER"])
-				-- Se for o próprio localPlayer, esconde abas imediatamente
 				if p == localPlayer then
 					atualizarAbas("USER")
 				end
@@ -1298,8 +1317,8 @@ local function CRKNJXA_fake_script() -- tela4.LocalScript
 		end)
 	end)
 end
-coroutine.wrap(CRKNJXA_fake_script)()
-local function MWYZCQY_fake_script() -- ScreenGui.GerenciadorAbas 
+coroutine.wrap(LSQH_fake_script)()
+local function RYYXFV_fake_script() -- ScreenGui.GerenciadorAbas 
 	local script = Instance.new('LocalScript', ScreenGui)
 
 	local gui = script.Parent
@@ -1331,4 +1350,4 @@ local function MWYZCQY_fake_script() -- ScreenGui.GerenciadorAbas
 		end
 	end
 end
-coroutine.wrap(MWYZCQY_fake_script)()
+coroutine.wrap(RYYXFV_fake_script)()
