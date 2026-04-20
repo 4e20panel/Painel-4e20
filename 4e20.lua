@@ -39,7 +39,6 @@ local TextLabel_8 = Instance.new("TextLabel")
 local tela4 = Instance.new("Frame")
 local OWNER = Instance.new("TextButton")
 local MEOW = Instance.new("TextButton")
-local GERENTE = Instance.new("TextButton")
 local HELPE = Instance.new("TextButton")
 local VIP = Instance.new("TextButton")
 local ADD = Instance.new("TextButton")
@@ -48,6 +47,7 @@ local ID_2 = Instance.new("TextLabel")
 local DISPLAYNAME_2 = Instance.new("TextLabel")
 local ImageLabel_2 = Instance.new("ImageLabel")
 local USER = Instance.new("TextButton")
+local MANAGER = Instance.new("TextButton")
 local TEXTOS = Instance.new("Frame")
 local TextLabel_9 = Instance.new("TextLabel")
 local TextLabel_10 = Instance.new("TextLabel")
@@ -481,18 +481,6 @@ MEOW.Text = "MEOW"
 MEOW.TextColor3 = Color3.fromRGB(255, 255, 255)
 MEOW.TextSize = 14.000
 
-GERENTE.Name = "GERENTE"
-GERENTE.Parent = tela4
-GERENTE.BackgroundColor3 = Color3.fromRGB(85, 0, 255)
-GERENTE.BorderColor3 = Color3.fromRGB(0, 0, 0)
-GERENTE.BorderSizePixel = 0
-GERENTE.Position = UDim2.new(0.0569306947, 0, 0.362676114, 0)
-GERENTE.Size = UDim2.new(0, 100, 0, 36)
-GERENTE.Font = Enum.Font.Unknown
-GERENTE.Text = "GERENTE"
-GERENTE.TextColor3 = Color3.fromRGB(255, 255, 255)
-GERENTE.TextSize = 14.000
-
 HELPE.Name = "HELPE"
 HELPE.Parent = tela4
 HELPE.BackgroundColor3 = Color3.fromRGB(255, 255, 0)
@@ -589,6 +577,18 @@ USER.Text = "USER"
 USER.TextColor3 = Color3.fromRGB(0, 0, 0)
 USER.TextSize = 14.000
 
+MANAGER.Name = "MANAGER"
+MANAGER.Parent = tela4
+MANAGER.BackgroundColor3 = Color3.fromRGB(85, 0, 255)
+MANAGER.BorderColor3 = Color3.fromRGB(0, 0, 0)
+MANAGER.BorderSizePixel = 0
+MANAGER.Position = UDim2.new(0.0569306947, 0, 0.362676114, 0)
+MANAGER.Size = UDim2.new(0, 100, 0, 36)
+MANAGER.Font = Enum.Font.Unknown
+MANAGER.Text = "MANAGER"
+MANAGER.TextColor3 = Color3.fromRGB(255, 255, 255)
+MANAGER.TextSize = 14.000
+
 TEXTOS.Name = "TEXTOS"
 TEXTOS.Parent = CorpoPainel
 TEXTOS.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
@@ -640,7 +640,7 @@ AvisoTP.TextSize = 14.000
 
 -- Scripts:
 
-local function HKYQ_fake_script() -- ScreenGui.LocalScript 
+local function FRYXZSP_fake_script() -- ScreenGui.LocalScript 
 	local script = Instance.new('LocalScript', ScreenGui)
 
 	local UserInputService = game:GetService("UserInputService")
@@ -701,8 +701,8 @@ local function HKYQ_fake_script() -- ScreenGui.LocalScript
 		end
 	end)
 end
-coroutine.wrap(HKYQ_fake_script)()
-local function FGGC_fake_script() -- tela1.CarregarHome 
+coroutine.wrap(FRYXZSP_fake_script)()
+local function NLBQY_fake_script() -- tela1.CarregarHome 
 	local script = Instance.new('LocalScript', tela1)
 
 	local Players = game:GetService("Players")
@@ -726,8 +726,8 @@ local function FGGC_fake_script() -- tela1.CarregarHome
 	
 	task.spawn(carregarFoto)
 end
-coroutine.wrap(FGGC_fake_script)()
-local function JMHTMVQ_fake_script() -- tela2.NOMES 
+coroutine.wrap(NLBQY_fake_script)()
+local function MUCOH_fake_script() -- tela2.NOMES 
 	local script = Instance.new('LocalScript', tela2)
 
 	local Players = game:GetService("Players")
@@ -781,8 +781,8 @@ local function JMHTMVQ_fake_script() -- tela2.NOMES
 		end
 	end)
 end
-coroutine.wrap(JMHTMVQ_fake_script)()
-local function ZVSNR_fake_script() -- tela2.VIEW 
+coroutine.wrap(MUCOH_fake_script)()
+local function RNOTX_fake_script() -- tela2.VIEW 
 	local script = Instance.new('LocalScript', tela2)
 
 	local Players = game:GetService("Players")
@@ -881,8 +881,8 @@ local function ZVSNR_fake_script() -- tela2.VIEW
 		end
 	end)
 end
-coroutine.wrap(ZVSNR_fake_script)()
-local function KCNPRY_fake_script() -- CLICKTP.LocalScript 
+coroutine.wrap(RNOTX_fake_script)()
+local function ZNEXZIO_fake_script() -- CLICKTP.LocalScript 
 	local script = Instance.new('LocalScript', CLICKTP)
 
 	local Players = game:GetService("Players")
@@ -938,8 +938,8 @@ local function KCNPRY_fake_script() -- CLICKTP.LocalScript
 		end
 	end)
 end
-coroutine.wrap(KCNPRY_fake_script)()
-local function NFNBK_fake_script() -- NOCLIP.LocalScript 
+coroutine.wrap(ZNEXZIO_fake_script)()
+local function ZHMWLF_fake_script() -- NOCLIP.LocalScript 
 	local script = Instance.new('LocalScript', NOCLIP)
 
 	local RunService = game:GetService("RunService")
@@ -1001,8 +1001,8 @@ local function NFNBK_fake_script() -- NOCLIP.LocalScript
 		end
 	end)
 end
-coroutine.wrap(NFNBK_fake_script)()
-local function TOKBLL_fake_script() -- FLASHBACK.LocalScript 
+coroutine.wrap(ZHMWLF_fake_script)()
+local function WUCP_fake_script() -- FLASHBACK.LocalScript 
 	local script = Instance.new('LocalScript', FLASHBACK)
 
 	local RunService = game:GetService("RunService")
@@ -1080,8 +1080,8 @@ local function TOKBLL_fake_script() -- FLASHBACK.LocalScript
 		end
 	end)
 end
-coroutine.wrap(TOKBLL_fake_script)()
-local function UCOBTJ_fake_script() -- ANTAFK.LocalScript 
+coroutine.wrap(WUCP_fake_script)()
+local function PBRQ_fake_script() -- ANTAFK.LocalScript 
 	local script = Instance.new('LocalScript', ANTAFK)
 
 	-- SERVIÇOS
@@ -1119,8 +1119,8 @@ local function UCOBTJ_fake_script() -- ANTAFK.LocalScript
 		end
 	end)
 end
-coroutine.wrap(UCOBTJ_fake_script)()
-local function SPPK_fake_script() -- tela4.LocalScript 
+coroutine.wrap(PBRQ_fake_script)()
+local function EJLLKI_fake_script() -- tela4.LocalScript 
 	local script = Instance.new('LocalScript', tela4)
 
 	local Players = game:GetService("Players")
@@ -1149,7 +1149,7 @@ local function SPPK_fake_script() -- tela4.LocalScript
 	local configuracaoTags = {
 		["OWNER"]   = Color3.fromRGB(150, 0, 0),
 		["MEOW"]    = Color3.fromRGB(255, 100, 255),
-		["GERENTE"] = Color3.fromRGB(85, 0, 255),
+		["MANAGER"] = Color3.fromRGB(85, 0, 255),
 		["HELPE"]   = Color3.fromRGB(255, 255, 0),
 		["VIP"]     = Color3.fromRGB(0, 255, 0),
 		["USER"]    = Color3.fromRGB(255, 255, 255)
@@ -1169,7 +1169,7 @@ local function SPPK_fake_script() -- tela4.LocalScript
 	local coresCargo = {
 		["OWNER"]   = Color3.fromRGB(150, 0, 0),
 		["MEOW"]    = Color3.fromRGB(255, 100, 255),
-		["GERENTE"] = Color3.fromRGB(85, 0, 255),
+		["MANAGER"] = Color3.fromRGB(85, 0, 255),
 		["HELPE"]   = Color3.fromRGB(255, 200, 0),
 		["VIP"]     = Color3.fromRGB(0, 200, 0),
 		["USER"]    = Color3.fromRGB(100, 100, 100),
@@ -1333,7 +1333,7 @@ local function SPPK_fake_script() -- tela4.LocalScript
 	-- ATUALIZA ABAS
 	local function atualizarAbas(cargo)
 		local temAcesso = (localPlayer.UserId == MEU_ID_DONO)
-			or (cargo == "OWNER") or (cargo == "GERENTE")
+			or (cargo == "OWNER") or (cargo == "MANAGER")
 		for _, aba in pairs(abasRestritas) do
 			if aba then
 				aba.Visible = temAcesso
@@ -1376,7 +1376,7 @@ local function SPPK_fake_script() -- tela4.LocalScript
 		local textSize = TextService:GetTextSize(texto, 14, Enum.Font.GothamBold, Vector2.new(1000, 1000))
 		bill.Size = UDim2.new(0, textSize.X + 10, 0, textSize.Y + 4)
 	
-		if texto == "OWNER" or texto == "GERENTE" then
+		if texto == "OWNER" or texto == "MANAGER" then
 			local grad = Instance.new("UIGradient", label)
 			grad.Color = ColorSequence.new(cor, Color3.new(1,1,1), cor)
 			task.spawn(function()
@@ -1466,8 +1466,8 @@ local function SPPK_fake_script() -- tela4.LocalScript
 				local minhaInfo = dados[localPlayer.Name]
 				local meuCargo = minhaInfo and minhaInfo.cargo or "USER"
 				if cargoAnterior[localPlayer.Name]
-					and (cargoAnterior[localPlayer.Name] == "OWNER" or cargoAnterior[localPlayer.Name] == "GERENTE")
-					and (meuCargo ~= "OWNER" and meuCargo ~= "GERENTE") then
+					and (cargoAnterior[localPlayer.Name] == "OWNER" or cargoAnterior[localPlayer.Name] == "MANAGER")
+					and (meuCargo ~= "OWNER" and meuCargo ~= "MANAGER") then
 					notificar("Cargo Removido", "Seu cargo foi alterado para " .. meuCargo, 5, "warn", meuCargo)
 				end
 				atualizarAbas(meuCargo)
@@ -1565,8 +1565,8 @@ local function SPPK_fake_script() -- tela4.LocalScript
 		conectarRespawn(localPlayer)
 	end)
 end
-coroutine.wrap(SPPK_fake_script)()
-local function BAYC_fake_script() -- ScreenGui.GerenciadorAbas 
+coroutine.wrap(EJLLKI_fake_script)()
+local function GGWECG_fake_script() -- ScreenGui.GerenciadorAbas 
 	local script = Instance.new('LocalScript', ScreenGui)
 
 	local gui = script.Parent
@@ -1598,4 +1598,4 @@ local function BAYC_fake_script() -- ScreenGui.GerenciadorAbas
 		end
 	end
 end
-coroutine.wrap(BAYC_fake_script)()
+coroutine.wrap(GGWECG_fake_script)()
