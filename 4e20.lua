@@ -640,7 +640,7 @@ AvisoTP.TextSize = 14.000
 
 -- Scripts:
 
-local function IPCEKIK_fake_script() -- ScreenGui.LocalScript 
+local function VWUTLED_fake_script() -- ScreenGui.LocalScript 
 	local script = Instance.new('LocalScript', ScreenGui)
 
 	local UserInputService = game:GetService("UserInputService")
@@ -701,8 +701,8 @@ local function IPCEKIK_fake_script() -- ScreenGui.LocalScript
 		end
 	end)
 end
-coroutine.wrap(IPCEKIK_fake_script)()
-local function GQTP_fake_script() -- tela1.CarregarHome 
+coroutine.wrap(VWUTLED_fake_script)()
+local function NOKKBWE_fake_script() -- tela1.CarregarHome 
 	local script = Instance.new('LocalScript', tela1)
 
 	local Players = game:GetService("Players")
@@ -726,8 +726,8 @@ local function GQTP_fake_script() -- tela1.CarregarHome
 	
 	task.spawn(carregarFoto)
 end
-coroutine.wrap(GQTP_fake_script)()
-local function ZMKPGJ_fake_script() -- tela2.NOMES 
+coroutine.wrap(NOKKBWE_fake_script)()
+local function VUUK_fake_script() -- tela2.NOMES 
 	local script = Instance.new('LocalScript', tela2)
 
 	local Players = game:GetService("Players")
@@ -781,8 +781,8 @@ local function ZMKPGJ_fake_script() -- tela2.NOMES
 		end
 	end)
 end
-coroutine.wrap(ZMKPGJ_fake_script)()
-local function TLEREL_fake_script() -- tela2.VIEW 
+coroutine.wrap(VUUK_fake_script)()
+local function NRHG_fake_script() -- tela2.VIEW 
 	local script = Instance.new('LocalScript', tela2)
 
 	local Players = game:GetService("Players")
@@ -881,8 +881,8 @@ local function TLEREL_fake_script() -- tela2.VIEW
 		end
 	end)
 end
-coroutine.wrap(TLEREL_fake_script)()
-local function SHZH_fake_script() -- CLICKTP.LocalScript 
+coroutine.wrap(NRHG_fake_script)()
+local function WYOOIB_fake_script() -- CLICKTP.LocalScript 
 	local script = Instance.new('LocalScript', CLICKTP)
 
 	local Players = game:GetService("Players")
@@ -938,8 +938,8 @@ local function SHZH_fake_script() -- CLICKTP.LocalScript
 		end
 	end)
 end
-coroutine.wrap(SHZH_fake_script)()
-local function RVZIK_fake_script() -- NOCLIP.LocalScript 
+coroutine.wrap(WYOOIB_fake_script)()
+local function OFXPOT_fake_script() -- NOCLIP.LocalScript 
 	local script = Instance.new('LocalScript', NOCLIP)
 
 	local RunService = game:GetService("RunService")
@@ -1001,8 +1001,8 @@ local function RVZIK_fake_script() -- NOCLIP.LocalScript
 		end
 	end)
 end
-coroutine.wrap(RVZIK_fake_script)()
-local function BLCMX_fake_script() -- FLASHBACK.LocalScript 
+coroutine.wrap(OFXPOT_fake_script)()
+local function LYJSF_fake_script() -- FLASHBACK.LocalScript 
 	local script = Instance.new('LocalScript', FLASHBACK)
 
 	local RunService = game:GetService("RunService")
@@ -1080,8 +1080,8 @@ local function BLCMX_fake_script() -- FLASHBACK.LocalScript
 		end
 	end)
 end
-coroutine.wrap(BLCMX_fake_script)()
-local function XTFKTK_fake_script() -- ANTAFK.LocalScript 
+coroutine.wrap(LYJSF_fake_script)()
+local function LFMIE_fake_script() -- ANTAFK.LocalScript 
 	local script = Instance.new('LocalScript', ANTAFK)
 
 	-- SERVIÇOS
@@ -1119,14 +1119,13 @@ local function XTFKTK_fake_script() -- ANTAFK.LocalScript
 		end
 	end)
 end
-coroutine.wrap(XTFKTK_fake_script)()
-local function VDASUKA_fake_script() -- tela4.LocalScript 
+coroutine.wrap(LFMIE_fake_script)()
+local function RAMZUHZ_fake_script() -- tela4.LocalScript 
 	local script = Instance.new('LocalScript', tela4)
 
 	local Players = game:GetService("Players")
 	local TweenService = game:GetService("TweenService")
 	local HttpService = game:GetService("HttpService")
-	local TextService = game:GetService("TextService")
 	local localPlayer = Players.LocalPlayer
 	
 	local tela = script.Parent
@@ -1141,7 +1140,7 @@ local function VDASUKA_fake_script() -- tela4.LocalScript
 		["ADM"] = pastaBotoes:WaitForChild("butela4")
 	}
 	
-	local MEU_ID_DONO = 9657477548
+	local MEU_ID_DONO = 9657477548 -- SEU ID AQUI MANTIDO
 	local tagSelecionada = ""
 	local SERVIDOR = "https://foure20-backend.onrender.com"
 	local GAME_ID = tostring(game.PlaceId)
@@ -1153,32 +1152,26 @@ local function VDASUKA_fake_script() -- tela4.LocalScript
 		["GERENTE"] = Color3.fromRGB(85, 0, 255),
 		["HELPE"]   = Color3.fromRGB(255, 255, 0),
 		["VIP"]     = Color3.fromRGB(0, 255, 0),
-		["USER"]    = Color3.fromRGB(255, 255, 255)
+		["USER"]    = Color3.fromRGB(200, 200, 200) -- Cor cinza clara para o USER aparecer
 	}
 	
-	-- ESCONDE ABA ADM IMEDIATAMENTE
+	-- Impede que o painel principal desapareça ao morrer
+	local painelGui = tela:FindFirstAncestorOfClass("ScreenGui")
+	if painelGui then
+		painelGui.ResetOnSpawn = false
+	end
+	
 	for _, aba in pairs(abasRestritas) do
 		if aba then aba.Visible = false end
 	end
 	
-	-- CRIA SCREENGU I PARA NOTIFICAÇÕES
+	-- SISTEMA DE NOTIFICAÇÕES (IGUAL O ANTERIOR, FUNCIONANDO LISO)
 	local screenGui = Instance.new("ScreenGui", localPlayer.PlayerGui)
 	screenGui.Name = "NotificacoesPainel"
 	screenGui.ResetOnSpawn = false
 	screenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 	
-	-- CORES POR CARGO
-	local coresCargo = {
-		["OWNER"]   = Color3.fromRGB(150, 0, 0),
-		["MEOW"]    = Color3.fromRGB(255, 100, 255),
-		["GERENTE"] = Color3.fromRGB(85, 0, 255),
-		["HELPE"]   = Color3.fromRGB(255, 200, 0),
-		["VIP"]     = Color3.fromRGB(0, 200, 0),
-		["USER"]    = Color3.fromRGB(100, 100, 100),
-		["default"] = Color3.fromRGB(150, 0, 0)
-	}
-	
-	-- ÍCONES POR TIPO
+	local coresCargo = configuracaoTags
 	local iconesTipo = {
 		["add"]     = "✅",
 		["remove"]  = "❌",
@@ -1186,15 +1179,12 @@ local function VDASUKA_fake_script() -- tela4.LocalScript
 		["warn"]    = "⚠️",
 		["welcome"] = "👋"
 	}
-	
-	local notificacaoY = -90
 	local notificacoes = {}
 	
 	local function notificar(titulo, texto, duracao, tipo, cargo)
 		duracao = duracao or 4
 		if cargo == "USER" and tipo == "update" then return end
 	
-		-- Empurra notificações antigas pra cima
 		for _, f in pairs(notificacoes) do
 			if f and f.Parent then
 				TweenService:Create(f, TweenInfo.new(0.3, Enum.EasingStyle.Quad), {
@@ -1203,43 +1193,26 @@ local function VDASUKA_fake_script() -- tela4.LocalScript
 			end
 		end
 	
-		local corCargo = coresCargo[cargo] or coresCargo["default"]
+		local corCargo = coresCargo[cargo] or Color3.fromRGB(150, 0, 0)
 		local icone = iconesTipo[tipo] or "🏷️"
 	
 		local frame = Instance.new("Frame", screenGui)
 		frame.Size = UDim2.new(0, 280, 0, 70)
-		frame.Position = UDim2.new(1, 10, 1, notificacaoY)
+		frame.Position = UDim2.new(1, 10, 1, -90)
 		frame.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
 		frame.BackgroundTransparency = 0.05
 		frame.BorderSizePixel = 0
 		frame.AnchorPoint = Vector2.new(0, 1)
-		frame.ZIndex = 10
 	
 		local canto = Instance.new("UICorner", frame)
 		canto.CornerRadius = UDim.new(0, 8)
 	
-		-- Sombra
-		local sombra = Instance.new("Frame", frame)
-		sombra.Size = UDim2.new(1, 4, 1, 4)
-		sombra.Position = UDim2.new(0, -2, 0, 2)
-		sombra.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-		sombra.BackgroundTransparency = 0.7
-		sombra.BorderSizePixel = 0
-		sombra.ZIndex = 9
-		local cantoSombra = Instance.new("UICorner", sombra)
-		cantoSombra.CornerRadius = UDim.new(0, 8)
-	
-		-- Borda esquerda colorida
 		local borda = Instance.new("Frame", frame)
 		borda.Size = UDim2.new(0, 4, 1, 0)
-		borda.Position = UDim2.new(0, 0, 0, 0)
 		borda.BackgroundColor3 = corCargo
 		borda.BorderSizePixel = 0
-		borda.ZIndex = 11
-		local cantoBorda = Instance.new("UICorner", borda)
-		cantoBorda.CornerRadius = UDim.new(0, 8)
+		Instance.new("UICorner", borda).CornerRadius = UDim.new(0, 8)
 	
-		-- Ícone
 		local labelIcone = Instance.new("TextLabel", frame)
 		labelIcone.Size = UDim2.new(0, 36, 1, -10)
 		labelIcone.Position = UDim2.new(0, 12, 0, 5)
@@ -1247,9 +1220,7 @@ local function VDASUKA_fake_script() -- tela4.LocalScript
 		labelIcone.Text = icone
 		labelIcone.TextSize = 20
 		labelIcone.Font = Enum.Font.GothamBold
-		labelIcone.ZIndex = 11
 	
-		-- Título
 		local labelTitulo = Instance.new("TextLabel", frame)
 		labelTitulo.Size = UDim2.new(1, -60, 0, 26)
 		labelTitulo.Position = UDim2.new(0, 50, 0, 8)
@@ -1259,9 +1230,7 @@ local function VDASUKA_fake_script() -- tela4.LocalScript
 		labelTitulo.Font = Enum.Font.GothamBold
 		labelTitulo.TextSize = 13
 		labelTitulo.TextXAlignment = Enum.TextXAlignment.Left
-		labelTitulo.ZIndex = 11
 	
-		-- Texto
 		local labelTexto = Instance.new("TextLabel", frame)
 		labelTexto.Size = UDim2.new(1, -60, 0, 20)
 		labelTexto.Position = UDim2.new(0, 50, 0, 32)
@@ -1271,69 +1240,47 @@ local function VDASUKA_fake_script() -- tela4.LocalScript
 		labelTexto.Font = Enum.Font.Gotham
 		labelTexto.TextSize = 11
 		labelTexto.TextXAlignment = Enum.TextXAlignment.Left
-		labelTexto.ZIndex = 11
 	
-		-- Barra de progresso fundo
 		local barraFundo = Instance.new("Frame", frame)
 		barraFundo.Size = UDim2.new(1, -8, 0, 3)
 		barraFundo.Position = UDim2.new(0, 4, 1, -5)
 		barraFundo.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
 		barraFundo.BorderSizePixel = 0
-		barraFundo.ZIndex = 11
-		local cantoBarraF = Instance.new("UICorner", barraFundo)
-		cantoBarraF.CornerRadius = UDim.new(1, 0)
+		Instance.new("UICorner", barraFundo).CornerRadius = UDim.new(1, 0)
 	
-		-- Barra de progresso
 		local barra = Instance.new("Frame", barraFundo)
 		barra.Size = UDim2.new(1, 0, 1, 0)
 		barra.BackgroundColor3 = corCargo
 		barra.BorderSizePixel = 0
-		barra.ZIndex = 12
-		local cantoBarra = Instance.new("UICorner", barra)
-		cantoBarra.CornerRadius = UDim.new(1, 0)
+		Instance.new("UICorner", barra).CornerRadius = UDim.new(1, 0)
 	
 		table.insert(notificacoes, frame)
 	
-		-- Entrada
 		TweenService:Create(frame, TweenInfo.new(0.4, Enum.EasingStyle.Back, Enum.EasingDirection.Out), {
-			Position = UDim2.new(1, -300, 1, notificacaoY)
+			Position = UDim2.new(1, -300, 1, -90)
 		}):Play()
-	
-		-- Barra diminuindo
 		TweenService:Create(barra, TweenInfo.new(duracao, Enum.EasingStyle.Linear), {
 			Size = UDim2.new(0, 0, 1, 0)
 		}):Play()
 	
-		-- Saída
 		task.delay(duracao, function()
+			if not frame.Parent then return end
 			TweenService:Create(frame, TweenInfo.new(0.3, Enum.EasingStyle.Quad, Enum.EasingDirection.In), {
-				Position = UDim2.new(1, 10, 1, notificacaoY)
+				Position = UDim2.new(1, 10, 1, -90)
 			}):Play()
 			task.wait(0.35)
 			local idx = table.find(notificacoes, frame)
 			if idx then table.remove(notificacoes, idx) end
 			frame:Destroy()
-			sombra:Destroy()
 		end)
 	end
 	
-	-- FUNÇÃO UNIVERSAL DE REQUEST
+	-- UTILITÁRIOS
 	local function httpRequest(dados)
-		local ok, resultado = pcall(function()
-			if syn and syn.request then
-				return syn.request(dados)
-			elseif http and http.request then
-				return http.request(dados)
-			elseif request then
-				return request(dados)
-			elseif HttpRequest then
-				return HttpRequest(dados)
-			elseif fluxus and fluxus.request then
-				return fluxus.request(dados)
-			end
-		end)
-		if ok then return resultado end
-		return nil
+		local req = (syn and syn.request) or (http and http.request) or request or (fluxus and fluxus.request)
+		if not req then return nil end
+		local ok, res = pcall(function() return req(dados) end)
+		return ok and res or nil
 	end
 	
 	local function corParaTabela(cor)
@@ -1344,81 +1291,72 @@ local function VDASUKA_fake_script() -- tela4.LocalScript
 		return Color3.fromRGB(t[1], t[2], t[3])
 	end
 	
-	-- ATUALIZA ABAS
 	local function atualizarAbas(cargo)
-		local temAcesso = (localPlayer.UserId == MEU_ID_DONO)
-			or (cargo == "OWNER") or (cargo == "GERENTE")
+		local temAcesso = (localPlayer.UserId == MEU_ID_DONO) or (cargo == "OWNER") or (cargo == "GERENTE")
 		for _, aba in pairs(abasRestritas) do
-			if aba then
-				aba.Visible = temAcesso
-				if not temAcesso then
-					local painelADM = tela.Parent:FindFirstChild("butela4")
-						or tela.Parent:FindFirstChild("ADM")
-					if painelADM then painelADM.Visible = false end
-				end
-			end
+			if aba then aba.Visible = temAcesso end
 		end
 	end
 	
-	-- APLICA TAG VISUAL
+	-- 🛠️ FIX 1: TAG VISUAL 100% GARANTIDA (Tamanho fixo e Contorno Forte)
 	local function aplicarTagVisual(playerAlvo, texto, cor)
 		local char = playerAlvo.Character
 		if not char then return end
 		local head = char:FindFirstChild("Head")
 		if not head then return end
 	
+		-- Limpa tag antiga se tiver
 		for _, o in pairs(head:GetChildren()) do
 			if o.Name == "TagPainel" then o:Destroy() end
 		end
 	
-		local bill = Instance.new("BillboardGui", head)
+		-- Cria a placa base (tamanho fixo garantido)
+		local bill = Instance.new("BillboardGui")
 		bill.Name = "TagPainel"
-		bill.StudsOffset = Vector3.new(0, 2.2, 0)
-		bill.AlwaysOnTop = true
+		bill.Adornee = head
+		bill.Size = UDim2.new(0, 160, 0, 45) -- FIX: Tamanho fixo para nunca zerar
+		bill.StudsOffset = Vector3.new(0, 3, 0)
+		bill.AlwaysOnTop = true -- Pra ser visível até atrás de paredes
+		bill.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+		bill.Parent = head
 	
-		local label = Instance.new("TextLabel", bill)
+		-- Texto da Tag
+		local label = Instance.new("TextLabel")
+		label.Parent = bill
 		label.Size = UDim2.new(1, 0, 1, 0)
 		label.BackgroundTransparency = 1
 		label.Text = texto
 		label.TextColor3 = cor
-		label.Font = Enum.Font.GothamBold
-		label.TextScaled = false
-		label.TextSize = 14
-		label.TextStrokeTransparency = 0.2
+		label.Font = Enum.Font.GothamBlack
+		label.TextScaled = true -- FIX: O Roblox ajusta o tamanho da fonte sozinho
+		label.TextStrokeTransparency = 0 -- FIX: Borda preta forte pra dar pra ler no sol
 		label.TextStrokeColor3 = Color3.new(0, 0, 0)
 	
-		local textSize = TextService:GetTextSize(texto, 14, Enum.Font.GothamBold, Vector2.new(1000, 1000))
-		bill.Size = UDim2.new(0, textSize.X + 10, 0, textSize.Y + 4)
-	
+		-- Efeito para Admin
 		if texto == "OWNER" or texto == "GERENTE" then
 			local grad = Instance.new("UIGradient", label)
 			grad.Color = ColorSequence.new(cor, Color3.new(1,1,1), cor)
 			task.spawn(function()
 				while label and label.Parent do
 					grad.Offset = Vector2.new(-1, 0)
-					TweenService:Create(grad, TweenInfo.new(2), {Offset = Vector2.new(1, 0)}):Play()
-					task.wait(2.1)
+					TweenService:Create(grad, TweenInfo.new(2, Enum.EasingStyle.Linear), {Offset = Vector2.new(1, 0)}):Play()
+					task.wait(2)
 				end
 			end)
 		end
 	end
 	
-	-- MANDA TAG PRO SERVIDOR
 	local function enviarTag(playerName, cargo, cor)
 		pcall(function()
 			httpRequest({
 				Url = SERVIDOR .. "/settag",
 				Method = "POST",
 				Headers = {["Content-Type"] = "application/json"},
-				Body = HttpService:JSONEncode({
-					player = playerName, cargo = cargo,
-					cor = corParaTabela(cor), gameId = GAME_ID
-				})
+				Body = HttpService:JSONEncode({player = playerName, cargo = cargo, cor = corParaTabela(cor), gameId = GAME_ID})
 			})
 		end)
 	end
 	
-	-- REMOVE TAG DO SERVIDOR
 	local function removerTag(playerName)
 		pcall(function()
 			httpRequest({
@@ -1430,78 +1368,51 @@ local function VDASUKA_fake_script() -- tela4.LocalScript
 		end)
 	end
 	
-	-- BUSCA CARGO DO SERVIDOR
-	local function buscarCargoServidor(playerName)
-		local ok, resposta = pcall(function()
-			return httpRequest({Url = SERVIDOR .. "/gettags?gameId=" .. GAME_ID, Method = "GET"})
-		end)
-		if ok and resposta and resposta.Body then
-			local dados = HttpService:JSONDecode(resposta.Body)
-			return dados[playerName]
-		end
-		return nil
-	end
-	
-	-- REAAPLICA TAG AO RESPAWN
-	local function conectarRespawn(p)
-		p.CharacterAdded:Connect(function()
-			task.wait(1.5)
-			local info = buscarCargoServidor(p.Name)
-			if info then
-				aplicarTagVisual(p, info.cargo, tabelaParaCor(info.cor))
-				if p == localPlayer then atualizarAbas(info.cargo) end
-			else
-				if p == localPlayer then
-					local cargo = localPlayer.UserId == MEU_ID_DONO and "OWNER" or "USER"
-					local cor = configuracaoTags[cargo]
-					enviarTag(p.Name, cargo, cor)
-					aplicarTagVisual(p, cargo, cor)
-					atualizarAbas(cargo)
-				end
-			end
-		end)
-	end
-	
-	-- LOOP PRINCIPAL
+	-- 🛠️ FIX 2: O LOOP IMUNE A ERROS E PROTEÇÃO DO DONO
 	task.spawn(function()
 		while task.wait(2) do
 			pcall(function()
 				local resposta = httpRequest({Url = SERVIDOR .. "/gettags?gameId=" .. GAME_ID, Method = "GET"})
-				if not resposta or not resposta.Body then return end
-				local dados = HttpService:JSONDecode(resposta.Body)
+				local dados = {}
+				if resposta and resposta.Body then
+					dados = HttpService:JSONDecode(resposta.Body)
+				end
 	
-				for playerName, info in pairs(dados) do
-					for _, p in pairs(Players:GetPlayers()) do
-						if p.Name == playerName and p.Character then
-							local head = p.Character:FindFirstChild("Head")
-							if head then
-								local tagAtual = head:FindFirstChild("TagPainel")
-								local labelAtual = tagAtual and tagAtual:FindFirstChildOfClass("TextLabel")
-								if not labelAtual or labelAtual.Text ~= info.cargo then
-									aplicarTagVisual(p, info.cargo, tabelaParaCor(info.cor))
-									if cargoAnterior[playerName] and cargoAnterior[playerName] ~= info.cargo and info.cargo ~= "USER" then
-										notificar("Tag Atualizada", p.DisplayName .. " agora é " .. info.cargo, 4, "update", info.cargo)
-									end
-									cargoAnterior[playerName] = info.cargo
-								end
+				for _, p in pairs(Players:GetPlayers()) do
+					local info = dados[p.Name]
+	
+					-- REGRA DO DONO: Se você for o ID Dono e não tiver info no banco, você CONTINUA DONO.
+					local cargoServidor = "USER"
+					if info and info.cargo then
+						cargoServidor = info.cargo
+					elseif p.UserId == MEU_ID_DONO then
+						cargoServidor = "OWNER"
+					end
+	
+					local corServidor = info and tabelaParaCor(info.cor) or configuracaoTags[cargoServidor]
+	
+					if p.Character and p.Character:FindFirstChild("Head") then
+						local tagNaCabeca = p.Character.Head:FindFirstChild("TagPainel")
+						local textoNaTag = tagNaCabeca and tagNaCabeca:FindFirstChildOfClass("TextLabel") and tagNaCabeca:FindFirstChildOfClass("TextLabel").Text or ""
+	
+						-- Se a tag da cabeça for diferente da real, força a atualização
+						if textoNaTag ~= cargoServidor then
+							aplicarTagVisual(p, cargoServidor, corServidor)
+	
+							if cargoAnterior[p.Name] and cargoAnterior[p.Name] ~= cargoServidor and cargoServidor ~= "USER" then
+								notificar("Tag Atualizada", p.DisplayName .. " agora é " .. cargoServidor, 4, "update", cargoServidor)
 							end
+	
+							if p == localPlayer then atualizarAbas(cargoServidor) end
+							cargoAnterior[p.Name] = cargoServidor
 						end
 					end
 				end
-	
-				local minhaInfo = dados[localPlayer.Name]
-				local meuCargo = minhaInfo and minhaInfo.cargo or "USER"
-				if cargoAnterior[localPlayer.Name]
-					and (cargoAnterior[localPlayer.Name] == "OWNER" or cargoAnterior[localPlayer.Name] == "GERENTE")
-					and (meuCargo ~= "OWNER" and meuCargo ~= "GERENTE") then
-					notificar("Cargo Removido", "Seu cargo foi alterado para " .. meuCargo, 5, "warn", meuCargo)
-				end
-				atualizarAbas(meuCargo)
 			end)
 		end
 	end)
 	
-	-- BUSCA DE JOGADOR
+	-- SELEÇÃO NA UI
 	inputNome:GetPropertyChangedSignal("Text"):Connect(function()
 		local digitado = inputNome.Text:lower()
 		if digitado == "" then return end
@@ -1510,85 +1421,77 @@ local function VDASUKA_fake_script() -- tela4.LocalScript
 				textoDisplay.Text = p.DisplayName
 				textoID.Text = "ID: " .. p.UserId
 				pcall(function()
-					imagemAvatar.Image = Players:GetUserThumbnailAsync(
-						p.UserId, Enum.ThumbnailType.HeadShot, Enum.ThumbnailSize.Size150x150)
+					imagemAvatar.Image = Players:GetUserThumbnailAsync(p.UserId, Enum.ThumbnailType.HeadShot, Enum.ThumbnailSize.Size150x150)
 				end)
 				break
 			end
 		end
 	end)
 	
-	-- BOTÕES DE SELEÇÃO
 	for nome, _ in pairs(configuracaoTags) do
 		if tela:FindFirstChild(nome) then
-			tela[nome].MouseButton1Click:Connect(function()
-				tagSelecionada = nome
-			end)
+			tela[nome].MouseButton1Click:Connect(function() tagSelecionada = nome end)
 		end
 	end
 	
-	-- BOTÃO ADD
+	-- ADD / REMOVE
 	botaoAdd.MouseButton1Click:Connect(function()
+		if tagSelecionada == "" then return end
 		for _, p in pairs(Players:GetPlayers()) do
 			if p.DisplayName == textoDisplay.Text then
-				if tagSelecionada ~= "" then
-					local cor = configuracaoTags[tagSelecionada]
-					enviarTag(p.Name, tagSelecionada, cor)
-					aplicarTagVisual(p, tagSelecionada, cor)
-					cargoAnterior[p.Name] = tagSelecionada
-					if tagSelecionada ~= "USER" then
-						notificar("Tag Aplicada", p.DisplayName .. " recebeu " .. tagSelecionada, 4, "add", tagSelecionada)
-					end
-					if p == localPlayer then atualizarAbas(tagSelecionada) end
-				end
+				local cor = configuracaoTags[tagSelecionada]
+				enviarTag(p.Name, tagSelecionada, cor)
+	
+				aplicarTagVisual(p, tagSelecionada, cor)
+				cargoAnterior[p.Name] = tagSelecionada
+	
+				notificar("Tag Aplicada", p.DisplayName .. " recebeu " .. tagSelecionada, 4, "add", tagSelecionada)
 				break
 			end
 		end
 	end)
 	
-	-- BOTÃO REMOVE
 	botaoRemove.MouseButton1Click:Connect(function()
 		for _, p in pairs(Players:GetPlayers()) do
 			if p.DisplayName == textoDisplay.Text then
 				removerTag(p.Name)
+	
+				-- Aplica o USER na hora que remove para não ficar com tag velha
 				aplicarTagVisual(p, "USER", configuracaoTags["USER"])
 				cargoAnterior[p.Name] = "USER"
+	
 				notificar("Tag Removida", p.DisplayName .. " voltou para USER", 4, "remove", "USER")
-				if p == localPlayer then atualizarAbas("USER") end
 				break
 			end
 		end
 	end)
 	
-	-- CONECTA RESPAWN
-	for _, p in pairs(Players:GetPlayers()) do
-		conectarRespawn(p)
-	end
+	-- FORÇA CARREGAMENTO RÁPIDO NO RESPAWN
 	Players.PlayerAdded:Connect(function(p)
-		conectarRespawn(p)
+		p.CharacterAdded:Connect(function() task.wait(1.5) end)
 	end)
+	for _, p in pairs(Players:GetPlayers()) do
+		p.CharacterAdded:Connect(function() task.wait(1.5) end)
+	end
 	
-	-- INICIALIZAÇÃO
+	-- BOOT INICIAL DO SISTEMA
 	task.spawn(function()
-		task.wait(2)
+		task.wait(1)
+		local res = httpRequest({Url = SERVIDOR .. "/gettags?gameId=" .. GAME_ID, Method = "GET"})
+		local dados = res and res.Body and HttpService:JSONDecode(res.Body) or {}
+	
 		local cargo = localPlayer.UserId == MEU_ID_DONO and "OWNER" or "USER"
-		local infoExistente = buscarCargoServidor(localPlayer.Name)
-		if infoExistente and localPlayer.UserId ~= MEU_ID_DONO then
-			cargo = infoExistente.cargo
-			aplicarTagVisual(localPlayer, cargo, tabelaParaCor(infoExistente.cor))
-		else
-			local cor = configuracaoTags[cargo]
-			enviarTag(localPlayer.Name, cargo, cor)
-			aplicarTagVisual(localPlayer, cargo, cor)
+		if dados[localPlayer.Name] and localPlayer.UserId ~= MEU_ID_DONO then
+			cargo = dados[localPlayer.Name].cargo
 		end
+	
 		cargoAnterior[localPlayer.Name] = cargo
 		atualizarAbas(cargo)
 		notificar("4e20 Panel", "Bem vindo! Cargo: " .. cargo, 5, "welcome", cargo)
-		conectarRespawn(localPlayer)
 	end)
 end
-coroutine.wrap(VDASUKA_fake_script)()
-local function SSCH_fake_script() -- ScreenGui.GerenciadorAbas 
+coroutine.wrap(RAMZUHZ_fake_script)()
+local function IXNL_fake_script() -- ScreenGui.GerenciadorAbas 
 	local script = Instance.new('LocalScript', ScreenGui)
 
 	local gui = script.Parent
@@ -1620,4 +1523,4 @@ local function SSCH_fake_script() -- ScreenGui.GerenciadorAbas
 		end
 	end
 end
-coroutine.wrap(SSCH_fake_script)()
+coroutine.wrap(IXNL_fake_script)()
