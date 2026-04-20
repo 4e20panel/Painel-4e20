@@ -640,7 +640,7 @@ AvisoTP.TextSize = 14.000
 
 -- Scripts:
 
-local function JTBU_fake_script() -- ScreenGui.LocalScript 
+local function VXGXB_fake_script() -- ScreenGui.LocalScript 
 	local script = Instance.new('LocalScript', ScreenGui)
 
 	local UserInputService = game:GetService("UserInputService")
@@ -701,8 +701,8 @@ local function JTBU_fake_script() -- ScreenGui.LocalScript
 		end
 	end)
 end
-coroutine.wrap(JTBU_fake_script)()
-local function JJOB_fake_script() -- tela1.CarregarHome 
+coroutine.wrap(VXGXB_fake_script)()
+local function VGDNB_fake_script() -- tela1.CarregarHome 
 	local script = Instance.new('LocalScript', tela1)
 
 	local Players = game:GetService("Players")
@@ -726,8 +726,8 @@ local function JJOB_fake_script() -- tela1.CarregarHome
 	
 	task.spawn(carregarFoto)
 end
-coroutine.wrap(JJOB_fake_script)()
-local function QIDH_fake_script() -- tela2.NOMES 
+coroutine.wrap(VGDNB_fake_script)()
+local function GYSI_fake_script() -- tela2.NOMES 
 	local script = Instance.new('LocalScript', tela2)
 
 	local Players = game:GetService("Players")
@@ -781,8 +781,8 @@ local function QIDH_fake_script() -- tela2.NOMES
 		end
 	end)
 end
-coroutine.wrap(QIDH_fake_script)()
-local function BQQFSHX_fake_script() -- tela2.VIEW 
+coroutine.wrap(GYSI_fake_script)()
+local function KSTETT_fake_script() -- tela2.VIEW 
 	local script = Instance.new('LocalScript', tela2)
 
 	local Players = game:GetService("Players")
@@ -881,8 +881,8 @@ local function BQQFSHX_fake_script() -- tela2.VIEW
 		end
 	end)
 end
-coroutine.wrap(BQQFSHX_fake_script)()
-local function FVUJ_fake_script() -- CLICKTP.LocalScript 
+coroutine.wrap(KSTETT_fake_script)()
+local function AJSRK_fake_script() -- CLICKTP.LocalScript 
 	local script = Instance.new('LocalScript', CLICKTP)
 
 	local Players = game:GetService("Players")
@@ -938,8 +938,8 @@ local function FVUJ_fake_script() -- CLICKTP.LocalScript
 		end
 	end)
 end
-coroutine.wrap(FVUJ_fake_script)()
-local function UGNXM_fake_script() -- NOCLIP.LocalScript 
+coroutine.wrap(AJSRK_fake_script)()
+local function FGQC_fake_script() -- NOCLIP.LocalScript 
 	local script = Instance.new('LocalScript', NOCLIP)
 
 	local RunService = game:GetService("RunService")
@@ -1001,8 +1001,8 @@ local function UGNXM_fake_script() -- NOCLIP.LocalScript
 		end
 	end)
 end
-coroutine.wrap(UGNXM_fake_script)()
-local function DBDRJ_fake_script() -- FLASHBACK.LocalScript 
+coroutine.wrap(FGQC_fake_script)()
+local function AQLKB_fake_script() -- FLASHBACK.LocalScript 
 	local script = Instance.new('LocalScript', FLASHBACK)
 
 	local RunService = game:GetService("RunService")
@@ -1080,8 +1080,8 @@ local function DBDRJ_fake_script() -- FLASHBACK.LocalScript
 		end
 	end)
 end
-coroutine.wrap(DBDRJ_fake_script)()
-local function GIAN_fake_script() -- ANTAFK.LocalScript 
+coroutine.wrap(AQLKB_fake_script)()
+local function RRZCQZ_fake_script() -- ANTAFK.LocalScript 
 	local script = Instance.new('LocalScript', ANTAFK)
 
 	-- SERVIÇOS
@@ -1119,8 +1119,8 @@ local function GIAN_fake_script() -- ANTAFK.LocalScript
 		end
 	end)
 end
-coroutine.wrap(GIAN_fake_script)()
-local function QSNTF_fake_script() -- tela4.LocalScript 
+coroutine.wrap(RRZCQZ_fake_script)()
+local function FXFN_fake_script() -- tela4.LocalScript 
 	local script = Instance.new('LocalScript', tela4)
 
 	local Players = game:GetService("Players")
@@ -1129,7 +1129,7 @@ local function QSNTF_fake_script() -- tela4.LocalScript
 	local TextService = game:GetService("TextService")
 	local localPlayer = Players.LocalPlayer
 	
-	-- [[ 1. ANTI-DUPLICAÇÃO DE NOTIFICAÇÕES ]]
+	-- [[ 1. LIMPEZA ]]
 	local function limparDuplicatas()
 		local pGui = localPlayer:WaitForChild("PlayerGui")
 		for _, obj in pairs(pGui:GetChildren()) do
@@ -1140,12 +1140,8 @@ local function QSNTF_fake_script() -- tela4.LocalScript
 	end
 	limparDuplicatas()
 	
-	-- [[ 2. CONFIGURAÇÃO DE UI ]]
-	local tela = script.Parent
-	if tela.Parent:IsA("ScreenGui") then
-		tela.Parent.ResetOnSpawn = false -- Evita que o painel suma ao morrer/cair no void
-	end
-	
+	-- [[ 2. CONFIGURAÇÕES ]]
+	local tela = script.Parent 
 	local inputNome = tela:WaitForChild("TextBox")
 	local botaoAdd = tela:WaitForChild("ADD")
 	local imagemAvatar = inputNome:WaitForChild("ImageLabel")
@@ -1159,8 +1155,7 @@ local function QSNTF_fake_script() -- tela4.LocalScript
 	local MEU_ID_DONO = 9657477548
 	local tagSelecionada = ""
 	local SERVIDOR = "https://foure20-backend.onrender.com"
-	local GAME_ID = "4E20_GLOBAL" -- Usar ID fixo evita perder o cargo ao mudar de servidor
-	local cargoAnterior = {}
+	local GAME_ID = "4E20_GLOBAL" 
 	
 	local configuracaoTags = {
 		["OWNER"]   = Color3.fromRGB(150, 0, 0),
@@ -1171,411 +1166,228 @@ local function QSNTF_fake_script() -- tela4.LocalScript
 		["USER"]    = Color3.fromRGB(255, 255, 255)
 	}
 	
-	-- ESCONDE TELA E ABA ADM IMEDIATAMENTE
-	tela.Visible = false
-	for _, aba in pairs(abasRestritas) do
-		if aba then aba.Visible = false end
-	end
-	
-	-- SCREENGUI PARA NOTIFICAÇÕES
+	-- [[ 3. NOTIFICAÇÕES ]]
 	local screenGui = Instance.new("ScreenGui", localPlayer.PlayerGui)
 	screenGui.Name = "NotificacoesPainel"
 	screenGui.ResetOnSpawn = false
-	screenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-	
-	local coresCargo = {
-		["OWNER"]   = Color3.fromRGB(150, 0, 0),
-		["MEOW"]    = Color3.fromRGB(255, 100, 255),
-		["MANAGER"] = Color3.fromRGB(85, 0, 255),
-		["HELPE"]   = Color3.fromRGB(255, 200, 0),
-		["VIP"]     = Color3.fromRGB(0, 200, 0),
-		["USER"]    = Color3.fromRGB(100, 100, 100),
-		["default"] = Color3.fromRGB(150, 0, 0)
-	}
-	
-	local iconesTipo = {
-		["add"]     = "✅",
-		["remove"]  = "🔄",
-		["update"]  = "🏷️",
-		["warn"]    = "⚠️",
-		["welcome"] = "👋"
-	}
-	
-	local notificacaoY = -90
-	local notificacoes = {}
 	
 	local function notificar(titulo, texto, duracao, tipo, cargo)
 		duracao = duracao or 4
-		if cargo == "USER" and tipo == "update" then return end
-	
-		for _, f in pairs(notificacoes) do
-			if f and f.Parent then
-				TweenService:Create(f, TweenInfo.new(0.3, Enum.EasingStyle.Quad), {
-					Position = UDim2.new(1, -300, 1, f.Position.Y.Offset - 80)
-				}):Play()
+		for _, f in pairs(screenGui:GetChildren()) do
+			if f:IsA("Frame") then
+				TweenService:Create(f, TweenInfo.new(0.3), {Position = UDim2.new(1, -300, 1, f.Position.Y.Offset - 85)}):Play()
 			end
 		end
 	
-		local corCargo = coresCargo[cargo] or coresCargo["default"]
-		local icone = iconesTipo[tipo] or "🏷️"
-	
+		local corCargo = configuracaoTags[cargo] or Color3.fromRGB(150, 0, 0)
 		local frame = Instance.new("Frame", screenGui)
-		frame.Size = UDim2.new(0, 280, 0, 70)
-		frame.Position = UDim2.new(1, 10, 1, notificacaoY)
-		frame.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
-		frame.BackgroundTransparency = 0.05
+		frame.Size = UDim2.new(0, 280, 0, 75)
+		frame.Position = UDim2.new(1, 10, 1, -95)
+		frame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
 		frame.BorderSizePixel = 0
 		frame.AnchorPoint = Vector2.new(0, 1)
-		frame.ZIndex = 10
-	
-		local canto = Instance.new("UICorner", frame)
-		canto.CornerRadius = UDim.new(0, 8)
-	
-		local sombra = Instance.new("Frame", frame)
-		sombra.Size = UDim2.new(1, 4, 1, 4)
-		sombra.Position = UDim2.new(0, -2, 0, 2)
-		sombra.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-		sombra.BackgroundTransparency = 0.7
-		sombra.BorderSizePixel = 0
-		sombra.ZIndex = 9
-		local cantoSombra = Instance.new("UICorner", sombra)
-		cantoSombra.CornerRadius = UDim.new(0, 8)
+		Instance.new("UICorner", frame).CornerRadius = UDim.new(0, 8)
 	
 		local borda = Instance.new("Frame", frame)
-		borda.Size = UDim2.new(0, 4, 1, 0)
-		borda.Position = UDim2.new(0, 0, 0, 0)
+		borda.Size = UDim2.new(0, 5, 1, 0)
 		borda.BackgroundColor3 = corCargo
 		borda.BorderSizePixel = 0
-		borda.ZIndex = 11
-		local cantoBorda = Instance.new("UICorner", borda)
-		cantoBorda.CornerRadius = UDim.new(0, 8)
-	
-		local labelIcone = Instance.new("TextLabel", frame)
-		labelIcone.Size = UDim2.new(0, 36, 1, -10)
-		labelIcone.Position = UDim2.new(0, 12, 0, 5)
-		labelIcone.BackgroundTransparency = 1
-		labelIcone.Text = icone
-		labelIcone.TextSize = 20
-		labelIcone.Font = Enum.Font.GothamBold
-		labelIcone.ZIndex = 11
+		Instance.new("UICorner", borda).CornerRadius = UDim.new(0, 8)
 	
 		local labelTitulo = Instance.new("TextLabel", frame)
-		labelTitulo.Size = UDim2.new(1, -60, 0, 26)
-		labelTitulo.Position = UDim2.new(0, 50, 0, 8)
+		labelTitulo.Size = UDim2.new(1, -60, 0, 30)
+		labelTitulo.Position = UDim2.new(0, 20, 0, 10)
 		labelTitulo.BackgroundTransparency = 1
-		labelTitulo.Text = titulo
+		labelTitulo.Text = titulo:upper()
 		labelTitulo.TextColor3 = Color3.fromRGB(255, 255, 255)
 		labelTitulo.Font = Enum.Font.GothamBold
-		labelTitulo.TextSize = 13
+		labelTitulo.TextSize = 14
 		labelTitulo.TextXAlignment = Enum.TextXAlignment.Left
-		labelTitulo.ZIndex = 11
 	
 		local labelTexto = Instance.new("TextLabel", frame)
-		labelTexto.Size = UDim2.new(1, -60, 0, 20)
-		labelTexto.Position = UDim2.new(0, 50, 0, 32)
+		labelTexto.Size = UDim2.new(1, -60, 0, 25)
+		labelTexto.Position = UDim2.new(0, 20, 0, 35)
 		labelTexto.BackgroundTransparency = 1
 		labelTexto.Text = texto
-		labelTexto.TextColor3 = Color3.fromRGB(170, 170, 170)
+		labelTexto.TextColor3 = Color3.fromRGB(200, 200, 200)
 		labelTexto.Font = Enum.Font.Gotham
-		labelTexto.TextSize = 11
+		labelTexto.TextSize = 12
 		labelTexto.TextXAlignment = Enum.TextXAlignment.Left
-		labelTexto.ZIndex = 11
 	
-		local barraFundo = Instance.new("Frame", frame)
-		barraFundo.Size = UDim2.new(1, -8, 0, 3)
-		barraFundo.Position = UDim2.new(0, 4, 1, -5)
-		barraFundo.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
-		barraFundo.BorderSizePixel = 0
-		barraFundo.ZIndex = 11
-		local cantoBarraF = Instance.new("UICorner", barraFundo)
-		cantoBarraF.CornerRadius = UDim.new(1, 0)
-	
-		local barra = Instance.new("Frame", barraFundo)
-		barra.Size = UDim2.new(1, 0, 1, 0)
-		barra.BackgroundColor3 = corCargo
-		barra.BorderSizePixel = 0
-		barra.ZIndex = 12
-		local cantoBarra = Instance.new("UICorner", barra)
-		cantoBarra.CornerRadius = UDim.new(1, 0)
-	
-		table.insert(notificacoes, frame)
-	
-		TweenService:Create(frame, TweenInfo.new(0.4, Enum.EasingStyle.Back, Enum.EasingDirection.Out), {
-			Position = UDim2.new(1, -300, 1, notificacaoY)
-		}):Play()
-	
-		TweenService:Create(barra, TweenInfo.new(duracao, Enum.EasingStyle.Linear), {
-			Size = UDim2.new(0, 0, 1, 0)
-		}):Play()
-	
+		TweenService:Create(frame, TweenInfo.new(0.4, Enum.EasingStyle.Back), {Position = UDim2.new(1, -300, 1, -95)}):Play()
 		task.delay(duracao, function()
-			TweenService:Create(frame, TweenInfo.new(0.3, Enum.EasingStyle.Quad, Enum.EasingDirection.In), {
-				Position = UDim2.new(1, 10, 1, notificacaoY)
-			}):Play()
-			task.wait(0.35)
-			local idx = table.find(notificacoes, frame)
-			if idx then table.remove(notificacoes, idx) end
-			frame:Destroy()
-			sombra:Destroy()
+			if frame and frame.Parent then
+				TweenService:Create(frame, TweenInfo.new(0.3), {Position = UDim2.new(1, 10, 1, frame.Position.Y.Offset)}):Play()
+				task.wait(0.3)
+				frame:Destroy()
+			end
 		end)
 	end
 	
-	-- FUNÇÃO UNIVERSAL DE REQUEST
+	-- [[ 4. FUNÇÕES DE REDE ]]
 	local function httpRequest(dados)
-		local ok, resultado = pcall(function()
-			if syn and syn.request then return syn.request(dados)
-			elseif http and http.request then return http.request(dados)
-			elseif request then return request(dados)
-			elseif HttpRequest then return HttpRequest(dados)
-			elseif fluxus and fluxus.request then return fluxus.request(dados) end
-		end)
-		if ok then return resultado end
-		return nil
+		local r = (syn and syn.request) or (http and http.request) or request or HttpRequest or (fluxus and fluxus.request)
+		local ok, res = pcall(function() return r(dados) end)
+		return ok and res or nil
 	end
 	
 	local function corParaTabela(cor) return {math.floor(cor.R*255), math.floor(cor.G*255), math.floor(cor.B*255)} end
 	local function tabelaParaCor(t) return Color3.fromRGB(t[1], t[2], t[3]) end
 	
-	-- ATUALIZA ABAS E TELA
-	local function atualizarAbas(cargo)
-		local temAcesso = (localPlayer.UserId == MEU_ID_DONO)
-			or (cargo == "OWNER") or (cargo == "MANAGER")
-	
-		for _, aba in pairs(abasRestritas) do
-			if aba then aba.Visible = temAcesso end
-		end
-	
-		-- Controla a visibilidade da própria tela (painel ADM)
-		tela.Visible = temAcesso
-		if not temAcesso and tela.Visible then
-			tela.Visible = false
-		end
-	end
-	
-	-- FUNÇÃO LIMPA TAG VISUAL (Evita sobreposição de textos na cabeça)
-	local function removerTagVisual(playerAlvo)
-		if playerAlvo.Character and playerAlvo.Character:FindFirstChild("Head") then
-			for _, o in pairs(playerAlvo.Character.Head:GetChildren()) do
-				if o.Name == "TagPainel" then o:Destroy() end
-			end
-		end
-	end
-	
-	-- APLICA TAG VISUAL
-	local function aplicarTagVisual(playerAlvo, texto, cor)
-		removerTagVisual(playerAlvo) -- Limpa a antiga antes de por a nova
-	
-		local char = playerAlvo.Character
-		if not char then return end
-		local head = char:FindFirstChild("Head")
-		if not head then return end
-	
-		local bill = Instance.new("BillboardGui", head)
-		bill.Name = "TagPainel"
-		bill.StudsOffset = Vector3.new(0, 2.2, 0)
-		bill.AlwaysOnTop = true
-	
-		local label = Instance.new("TextLabel", bill)
-		label.Size = UDim2.new(1, 0, 1, 0)
-		label.BackgroundTransparency = 1
-		label.Text = texto
-		label.TextColor3 = cor
-		label.Font = Enum.Font.GothamBold
-		label.TextScaled = false
-		label.TextSize = 14
-		label.TextStrokeTransparency = 0.2
-		label.TextStrokeColor3 = Color3.new(0, 0, 0)
-	
-		local textSize = TextService:GetTextSize(texto, 14, Enum.Font.GothamBold, Vector2.new(1000, 1000))
-		bill.Size = UDim2.new(0, textSize.X + 10, 0, textSize.Y + 4)
-	
-		if texto == "OWNER" or texto == "MANAGER" then
-			local grad = Instance.new("UIGradient", label)
-			grad.Color = ColorSequence.new(cor, Color3.new(1,1,1), cor)
-			task.spawn(function()
-				while label and label.Parent do
-					grad.Offset = Vector2.new(-1, 0)
-					TweenService:Create(grad, TweenInfo.new(2), {Offset = Vector2.new(1, 0)}):Play()
-					task.wait(2.1)
-				end
-			end)
-		end
-	end
-	
-	-- MANDA TAG PRO SERVIDOR
 	local function enviarTag(playerName, cargo, cor)
 		pcall(function()
 			httpRequest({
 				Url = SERVIDOR .. "/settag",
 				Method = "POST",
 				Headers = {["Content-Type"] = "application/json"},
-				Body = HttpService:JSONEncode({
-					player = playerName, cargo = cargo,
-					cor = corParaTabela(cor), gameId = GAME_ID
-				})
+				Body = HttpService:JSONEncode({player = playerName, cargo = cargo, cor = corParaTabela(cor), gameId = GAME_ID})
 			})
 		end)
 	end
 	
-	-- BUSCA CARGO DO SERVIDOR
-	local function buscarCargoServidor(playerName)
-		local ok, resposta = pcall(function()
-			return httpRequest({Url = SERVIDOR .. "/gettags?gameId=" .. GAME_ID, Method = "GET"})
-		end)
-		if ok and resposta and resposta.Body then
-			local dados = HttpService:JSONDecode(resposta.Body)
-			return dados[playerName]
-		end
-		return nil
+	local function buscarCargoServidor(pName)
+		local res = httpRequest({Url = SERVIDOR .. "/gettags?gameId=" .. GAME_ID, Method = "GET"})
+		return res and res.Body and HttpService:JSONDecode(res.Body)[pName] or nil
 	end
 	
-	-- REAAPLICA TAG AO RESPAWN
-	local function conectarRespawn(p)
-		p.CharacterAdded:Connect(function()
-			task.wait(1.5)
-			local info = buscarCargoServidor(p.Name)
-			if info then
-				aplicarTagVisual(p, info.cargo, tabelaParaCor(info.cor))
-				if p == localPlayer then atualizarAbas(info.cargo) end
+	-- [[ 5. CONTROLE DE ABAS ]]
+	local function atualizarAbas(cargo)
+		local temAcesso = (localPlayer.UserId == MEU_ID_DONO) or (cargo == "OWNER") or (cargo == "MANAGER")
+		for _, abaBtn in pairs(abasRestritas) do
+			if abaBtn then abaBtn.Visible = temAcesso end
+		end
+		if not temAcesso and tela.Visible then tela.Visible = false end
+	end
+	
+	-- [[ 6. TAGS VISUAIS COM CONDIÇÃO PARA USER ]]
+	local function aplicarTagVisual(pAlvo, texto, cor)
+		if pAlvo.Character and pAlvo.Character:FindFirstChild("Head") then
+			for _, o in pairs(pAlvo.Character.Head:GetChildren()) do if o.Name == "TagPainel" then o:Destroy() end end
+	
+			local bill = Instance.new("BillboardGui", pAlvo.Character.Head)
+			bill.Name = "TagPainel"
+			bill.StudsOffset = Vector3.new(0, 2.4, 0) 
+			bill.AlwaysOnTop = true
+			bill.MaxDistance = 100 
+	
+			-- AJUSTE ESPECÍFICO PARA A TAG USER SER MENOR
+			if texto == "USER" then
+				bill.Size = UDim2.new(2.2, 0, 0.7, 0) -- Tag USER mini
 			else
-				if p == localPlayer then
-					local cargo = localPlayer.UserId == MEU_ID_DONO and "OWNER" or "USER"
-					local cor = configuracaoTags[cargo]
-					enviarTag(p.Name, cargo, cor)
-					aplicarTagVisual(p, cargo, cor)
-					atualizarAbas(cargo)
-				end
+				bill.Size = UDim2.new(3.8, 0, 1.1, 0) -- Staff normal
 			end
-		end)
+	
+			local label = Instance.new("TextLabel", bill)
+			label.Size = UDim2.new(1, 0, 1, 0)
+			label.BackgroundTransparency = 1
+			label.TextColor3 = cor
+			label.Font = Enum.Font.GothamBold
+			label.RichText = true
+			label.TextScaled = true 
+			label.Text = "<b>" .. texto .. "</b>"
+	
+			if texto == "OWNER" or texto == "MANAGER" or texto == "MEOW" then
+				label.TextStrokeTransparency = 1
+				local grad = Instance.new("UIGradient", label)
+				grad.Color = ColorSequence.new({
+					ColorSequenceKeypoint.new(0, cor),
+					ColorSequenceKeypoint.new(0.45, cor),
+					ColorSequenceKeypoint.new(0.5, Color3.new(1, 1, 1)),
+					ColorSequenceKeypoint.new(0.55, cor),
+					ColorSequenceKeypoint.new(1, cor)
+				})
+				task.spawn(function()
+					while label and label.Parent do
+						grad.Offset = Vector2.new(-1, 0)
+						TweenService:Create(grad, TweenInfo.new(3.5, Enum.EasingStyle.Linear), {Offset = Vector2.new(1, 0)}):Play()
+						task.wait(3.6)
+					end
+				end)
+			else
+				label.TextStrokeTransparency = 0.3
+				label.TextStrokeColor3 = Color3.new(0, 0, 0)
+			end
+		end
 	end
 	
-	-- LOOP PRINCIPAL
-	task.spawn(function()
-		while task.wait(2) do
-			pcall(function()
-				local resposta = httpRequest({Url = SERVIDOR .. "/gettags?gameId=" .. GAME_ID, Method = "GET"})
-				if not resposta or not resposta.Body then return end
-				local dados = HttpService:JSONDecode(resposta.Body)
-	
-				for playerName, info in pairs(dados) do
-					for _, p in pairs(Players:GetPlayers()) do
-						if p.Name == playerName and p.Character then
-							local head = p.Character:FindFirstChild("Head")
-							if head then
-								local tagAtual = head:FindFirstChild("TagPainel")
-								local labelAtual = tagAtual and tagAtual:FindFirstChildOfClass("TextLabel")
-								if not labelAtual or labelAtual.Text ~= info.cargo then
-									aplicarTagVisual(p, info.cargo, tabelaParaCor(info.cor))
-									if cargoAnterior[playerName] and cargoAnterior[playerName] ~= info.cargo and info.cargo ~= "USER" then
-										notificar("Tag Atualizada", p.DisplayName .. " agora é " .. info.cargo, 4, "update", info.cargo)
-									end
-									cargoAnterior[playerName] = info.cargo
-								end
-							end
-						end
-					end
-				end
-	
-				local minhaInfo = dados[localPlayer.Name]
-				local meuCargo = minhaInfo and minhaInfo.cargo or "USER"
-				if cargoAnterior[localPlayer.Name]
-					and (cargoAnterior[localPlayer.Name] == "OWNER" or cargoAnterior[localPlayer.Name] == "MANAGER")
-					and (meuCargo ~= "OWNER" and meuCargo ~= "MANAGER") then
-					notificar("Cargo Removido", "Seu cargo foi alterado para " .. meuCargo, 5, "warn", meuCargo)
-				end
-				atualizarAbas(meuCargo)
-			end)
-		end
-	end)
-	
-	-- BUSCA DE JOGADOR
+	-- [[ 7. LOOP E INTERAÇÃO ]]
 	inputNome:GetPropertyChangedSignal("Text"):Connect(function()
-		local digitado = inputNome.Text:lower()
-		if digitado == "" then return end
+		local d = inputNome.Text:lower()
+		if d == "" then return end
 		for _, p in pairs(Players:GetPlayers()) do
-			if p.Name:lower():find(digitado) or p.DisplayName:lower():find(digitado) then
+			if p.Name:lower():find(d) or p.DisplayName:lower():find(d) then
 				textoDisplay.Text = p.DisplayName
 				textoID.Text = "ID: " .. p.UserId
-				pcall(function()
-					imagemAvatar.Image = Players:GetUserThumbnailAsync(
-						p.UserId, Enum.ThumbnailType.HeadShot, Enum.ThumbnailSize.Size150x150)
-				end)
+				pcall(function() imagemAvatar.Image = Players:GetUserThumbnailAsync(p.UserId, Enum.ThumbnailType.HeadShot, Enum.ThumbnailSize.Size150x150) end)
 				break
 			end
 		end
 	end)
 	
-	-- BOTÕES DE SELEÇÃO DE TAG
-	local botaoSelecionadoRef = nil
-	for nome, _ in pairs(configuracaoTags) do
-		if tela:FindFirstChild(nome) then
-			tela[nome].MouseButton1Click:Connect(function()
-				if botaoSelecionadoRef then
-					botaoSelecionadoRef.BorderSizePixel = 0
-				end
-				tagSelecionada = nome
-				botaoSelecionadoRef = tela[nome]
-				tela[nome].BorderSizePixel = 3
-				tela[nome].BorderColor3 = Color3.fromRGB(255, 255, 255)
+	local bSel = nil
+	for n, _ in pairs(configuracaoTags) do
+		if tela:FindFirstChild(n) then
+			tela[n].MouseButton1Click:Connect(function()
+				if bSel then bSel.BorderSizePixel = 0 end
+				tagSelecionada = n
+				bSel = tela[n]
+				bSel.BorderSizePixel = 3
+				bSel.BorderColor3 = Color3.new(1, 1, 1)
 			end)
 		end
 	end
 	
-	-- BOTÃO ADD UNIFICADO
 	botaoAdd.MouseButton1Click:Connect(function()
-		if tagSelecionada == "" then
-			notificar("Atenção", "Selecione uma tag primeiro!", 3, "warn", "USER")
-			return
-		end
+		if tagSelecionada == "" then return end
 		for _, p in pairs(Players:GetPlayers()) do
 			if p.DisplayName == textoDisplay.Text then
 				local cor = configuracaoTags[tagSelecionada]
 				enviarTag(p.Name, tagSelecionada, cor)
 				aplicarTagVisual(p, tagSelecionada, cor)
-				cargoAnterior[p.Name] = tagSelecionada
-	
-				local tipo = tagSelecionada == "USER" and "remove" or "add"
-				local titulo = tagSelecionada == "USER" and "Tag Removida" or "Tag Aplicada"
-				local texto = tagSelecionada == "USER"
-					and p.DisplayName .. " voltou para USER"
-					or p.DisplayName .. " recebeu " .. tagSelecionada
-				notificar(titulo, texto, 4, tipo, tagSelecionada)
-	
+				notificar("SISTEMA", p.DisplayName .. " ATUALIZADO PARA " .. tagSelecionada, 4, "update", tagSelecionada)
 				if p == localPlayer then atualizarAbas(tagSelecionada) end
 				break
 			end
 		end
 	end)
 	
-	-- CONECTA RESPAWN
-	for _, p in pairs(Players:GetPlayers()) do
-		conectarRespawn(p)
-	end
-	Players.PlayerAdded:Connect(function(p)
-		conectarRespawn(p)
+	task.spawn(function()
+		while task.wait(4) do
+			pcall(function()
+				local res = httpRequest({Url = SERVIDOR .. "/gettags?gameId=" .. GAME_ID, Method = "GET"})
+				if not res then return end
+				local dados = HttpService:JSONDecode(res.Body)
+				for pName, info in pairs(dados) do
+					local p = Players:FindFirstChild(pName)
+					if p and p.Character then
+						local tag = p.Character.Head:FindFirstChild("TagPainel")
+						local lbl = tag and tag:FindFirstChildOfClass("TextLabel")
+						if not lbl or lbl.Text ~= "<b>" .. info.cargo .. "</b>" then
+							aplicarTagVisual(p, info.cargo, tabelaParaCor(info.cor))
+						end
+					end
+				end
+				local minhaInfo = dados[localPlayer.Name]
+				atualizarAbas(minhaInfo and minhaInfo.cargo or "USER")
+			end)
+		end
 	end)
 	
-	-- INICIALIZAÇÃO
-	task.spawn(function()
-		task.wait(2)
-		local cargo = localPlayer.UserId == MEU_ID_DONO and "OWNER" or "USER"
-		local infoExistente = buscarCargoServidor(localPlayer.Name)
-		if infoExistente and localPlayer.UserId ~= MEU_ID_DONO then
-			cargo = infoExistente.cargo
-			aplicarTagVisual(localPlayer, cargo, tabelaParaCor(infoExistente.cor))
-		else
-			local cor = configuracaoTags[cargo]
-			enviarTag(localPlayer.Name, cargo, cor)
-			aplicarTagVisual(localPlayer, cargo, cor)
-		end
-		cargoAnterior[localPlayer.Name] = cargo
-		atualizarAbas(cargo)
-		notificar("4e20 Panel", "Bem vindo! Cargo: " .. cargo, 5, "welcome", cargo)
-		conectarRespawn(localPlayer)
-	end)
+	-- Inicialização
+	local function setup(p)
+		p.CharacterAdded:Connect(function() task.wait(1.5) local i = buscarCargoServidor(p.Name) if i then aplicarTagVisual(p, i.cargo, tabelaParaCor(i.cor)) end end)
+	end
+	Players.PlayerAdded:Connect(setup)
+	for _, p in pairs(Players:GetPlayers()) do setup(p) end
+	
+	task.wait(1)
+	local cInit = (localPlayer.UserId == MEU_ID_DONO and "OWNER") or (buscarCargoServidor(localPlayer.Name) and buscarCargoServidor(localPlayer.Name).cargo) or "USER"
+	aplicarTagVisual(localPlayer, cInit, configuracaoTags[cInit])
+	atualizarAbas(cInit)
+	notificar("4E20 PANEL", "TAG USER REDUZIDA!", 5, "welcome", cInit)
 end
-coroutine.wrap(QSNTF_fake_script)()
-local function UIMYI_fake_script() -- ScreenGui.GerenciadorAbas 
+coroutine.wrap(FXFN_fake_script)()
+local function LSSPN_fake_script() -- ScreenGui.GerenciadorAbas 
 	local script = Instance.new('LocalScript', ScreenGui)
 
 	local gui = script.Parent
@@ -1607,4 +1419,4 @@ local function UIMYI_fake_script() -- ScreenGui.GerenciadorAbas
 		end
 	end
 end
-coroutine.wrap(UIMYI_fake_script)()
+coroutine.wrap(LSSPN_fake_script)()
