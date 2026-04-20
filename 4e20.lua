@@ -611,7 +611,7 @@ AvisoTP.TextSize = 14.000
 
 -- Scripts:
 
-local function AIKT_fake_script() -- ScreenGui.LocalScript 
+local function JBUAPL_fake_script() -- ScreenGui.LocalScript 
 	local script = Instance.new('LocalScript', ScreenGui)
 
 	local UserInputService = game:GetService("UserInputService")
@@ -672,8 +672,8 @@ local function AIKT_fake_script() -- ScreenGui.LocalScript
 		end
 	end)
 end
-coroutine.wrap(AIKT_fake_script)()
-local function TJKWM_fake_script() -- tela1.CarregarHome 
+coroutine.wrap(JBUAPL_fake_script)()
+local function AKIIOB_fake_script() -- tela1.CarregarHome 
 	local script = Instance.new('LocalScript', tela1)
 
 	local Players = game:GetService("Players")
@@ -697,8 +697,8 @@ local function TJKWM_fake_script() -- tela1.CarregarHome
 	
 	task.spawn(carregarFoto)
 end
-coroutine.wrap(TJKWM_fake_script)()
-local function JXLNO_fake_script() -- tela2.NOMES 
+coroutine.wrap(AKIIOB_fake_script)()
+local function YVJKBWF_fake_script() -- tela2.NOMES 
 	local script = Instance.new('LocalScript', tela2)
 
 	local Players = game:GetService("Players")
@@ -752,8 +752,8 @@ local function JXLNO_fake_script() -- tela2.NOMES
 		end
 	end)
 end
-coroutine.wrap(JXLNO_fake_script)()
-local function IOPF_fake_script() -- tela2.VIEW 
+coroutine.wrap(YVJKBWF_fake_script)()
+local function CRPPEF_fake_script() -- tela2.VIEW 
 	local script = Instance.new('LocalScript', tela2)
 
 	local Players = game:GetService("Players")
@@ -852,8 +852,8 @@ local function IOPF_fake_script() -- tela2.VIEW
 		end
 	end)
 end
-coroutine.wrap(IOPF_fake_script)()
-local function NEZRCOU_fake_script() -- CLICKTP.LocalScript 
+coroutine.wrap(CRPPEF_fake_script)()
+local function BHQJ_fake_script() -- CLICKTP.LocalScript 
 	local script = Instance.new('LocalScript', CLICKTP)
 
 	local Players = game:GetService("Players")
@@ -909,8 +909,8 @@ local function NEZRCOU_fake_script() -- CLICKTP.LocalScript
 		end
 	end)
 end
-coroutine.wrap(NEZRCOU_fake_script)()
-local function TRHLDBY_fake_script() -- NOCLIP.LocalScript 
+coroutine.wrap(BHQJ_fake_script)()
+local function AXKVJ_fake_script() -- NOCLIP.LocalScript 
 	local script = Instance.new('LocalScript', NOCLIP)
 
 	local RunService = game:GetService("RunService")
@@ -972,8 +972,8 @@ local function TRHLDBY_fake_script() -- NOCLIP.LocalScript
 		end
 	end)
 end
-coroutine.wrap(TRHLDBY_fake_script)()
-local function QYIV_fake_script() -- FLASHBACK.LocalScript 
+coroutine.wrap(AXKVJ_fake_script)()
+local function JRUM_fake_script() -- FLASHBACK.LocalScript 
 	local script = Instance.new('LocalScript', FLASHBACK)
 
 	local RunService = game:GetService("RunService")
@@ -1051,11 +1051,10 @@ local function QYIV_fake_script() -- FLASHBACK.LocalScript
 		end
 	end)
 end
-coroutine.wrap(QYIV_fake_script)()
-local function VEHJJ_fake_script() -- tela4.LocalScript 
+coroutine.wrap(JRUM_fake_script)()
+local function FTZIN_fake_script() -- tela4.LocalScript 
 	local script = Instance.new('LocalScript', tela4)
 
-	-- PAINEL EXECUTOR 4E20
 	local Players = game:GetService("Players")
 	local TweenService = game:GetService("TweenService")
 	local localPlayer = Players.LocalPlayer
@@ -1063,53 +1062,41 @@ local function VEHJJ_fake_script() -- tela4.LocalScript
 	local tela = script.Parent
 	local inputNome = tela:WaitForChild("TextBox")
 	local botaoAdd = tela:WaitForChild("ADD")
-	local botaoRemove = tela:WaitForChild("REMOVE") 
-	
-	-- Referências da UI para Busca e Avatar
+	local botaoRemove = tela:WaitForChild("REMOVE")
 	local imagemAvatar = inputNome:WaitForChild("ImageLabel")
 	local textoDisplay = inputNome:WaitForChild("DISPLAY NAME")
 	local textoID = inputNome:WaitForChild("ID")
-	
 	local pastaBotoes = tela.Parent:WaitForChild("ABAS"):WaitForChild("botoes")
 	local abasRestritas = {
-		["ADM"] = pastaBotoes:WaitForChild("butela4"),
+		["ADM"] = pastaBotoes:WaitForChild("butela4")
 	}
 	
-	local MEU_ID_DONO = 9657477548 -- Seu ID Supremo
+	local MEU_ID_DONO = 9657477548
 	local tagSelecionada = ""
 	
 	local configuracaoTags = {
-		["OWNER"] = Color3.fromRGB(150, 0, 0), 
-		["MEOW"]  = Color3.fromRGB(255, 100, 255), 
-		["GERENTE"]= Color3.fromRGB(85, 0, 255),  
-		["HELPE"] = Color3.fromRGB(255, 255, 0), 
-		["VIP"]   = Color3.fromRGB(0, 255, 0)    
+		["OWNER"]   = Color3.fromRGB(150, 0, 0),
+		["MEOW"]    = Color3.fromRGB(255, 100, 255),
+		["GERENTE"] = Color3.fromRGB(85, 0, 255),
+		["HELPE"]   = Color3.fromRGB(255, 255, 0),
+		["VIP"]     = Color3.fromRGB(0, 255, 0),
+		["USER"]    = Color3.fromRGB(255, 255, 255)
 	}
 	
-	-- 1. IDENTIFICADOR DE EXECUÇÃO (CRIA A MARCA PARA O SISTEMA SABER QUEM TEM O PAINEL)
-	local function marcarComoUsuario(player)
-		if not player:FindFirstChild("Executou4E20") then
-			local marca = Instance.new("StringValue")
-			marca.Name = "Executou4E20"
-			marca.Value = (player.UserId == MEU_ID_DONO and "OWNER" or "4E20 USER")
-			marca.Parent = player
-		end
-	end
-	
-	-- 2. FUNÇÃO DE APLICAR TAG (SÓ APARECE SE TIVER A MARCA)
-	local function aplicarTag(playerAlvo, texto, cor, ehUser)
+	-- APLICA TAG VISUAL NO PERSONAGEM
+	local function aplicarTagVisual(playerAlvo, texto, cor)
 		local char = playerAlvo.Character or playerAlvo.CharacterAdded:Wait()
 		local head = char:WaitForChild("Head")
 	
-		for _, o in pairs(head:GetChildren()) do 
-			if o.Name == "TagPainel" then o:Destroy() end 
+		for _, o in pairs(head:GetChildren()) do
+			if o.Name == "TagPainel" then o:Destroy() end
 		end
 	
 		local bill = Instance.new("BillboardGui", head)
 		bill.Name = "TagPainel"
 		bill.Size = UDim2.new(4.5, 0, 1.2, 0)
-		bill.StudsOffset = Vector3.new(0, 2.5, 0) 
-		bill.AlwaysOnTop = true 
+		bill.StudsOffset = Vector3.new(0, 2.5, 0)
+		bill.AlwaysOnTop = true
 	
 		local label = Instance.new("TextLabel", bill)
 		label.Size = UDim2.new(1, 0, 1, 0)
@@ -1117,41 +1104,90 @@ local function VEHJJ_fake_script() -- tela4.LocalScript
 		label.Text = texto
 		label.TextColor3 = cor
 		label.Font = Enum.Font.GothamBold
-		label.TextScaled = true 
-		label.TextStrokeTransparency = (ehUser and 0.8 or 0.2)
-		label.TextStrokeColor3 = (ehUser and Color3.new(0,0,0) or cor)
+		label.TextScaled = true
+		label.TextStrokeTransparency = 0.2
+		label.TextStrokeColor3 = Color3.new(0, 0, 0)
 	
-		if not ehUser then
-			local gradiente = Instance.new("UIGradient", label)
-			gradiente.Color = ColorSequence.new({
-				ColorSequenceKeypoint.new(0, cor),
-				ColorSequenceKeypoint.new(0.5, Color3.new(1,1,1)), 
-				ColorSequenceKeypoint.new(1, cor)
-			})
+		if texto == "OWNER" or texto == "GERENTE" then
+			local grad = Instance.new("UIGradient", label)
+			grad.Color = ColorSequence.new(cor, Color3.new(1, 1, 1), cor)
 			task.spawn(function()
 				while label and label.Parent do
-					gradiente.Offset = Vector2.new(-1, 0)
-					TweenService:Create(gradiente, TweenInfo.new(2.5), {Offset = Vector2.new(1, 0)}):Play()
-					task.wait(3)
+					grad.Offset = Vector2.new(-1, 0)
+					TweenService:Create(grad, TweenInfo.new(2), {Offset = Vector2.new(1, 0)}):Play()
+					task.wait(2.1)
 				end
 			end)
 		end
 	end
 	
-	-- 3. LOOP DE VARREDURA (SÓ MOSTRA TAG DE QUEM EXECUTOU)
+	-- LÊ A TAG ATUAL DO PERSONAGEM
+	local function lerTagDoPersonagem(p)
+		local char = p.Character
+		if not char then return nil end
+		local head = char:FindFirstChild("Head")
+		if not head then return nil end
+		local bill = head:FindFirstChild("TagPainel")
+		if not bill then return nil end
+		local label = bill:FindFirstChildOfClass("TextLabel")
+		if not label then return nil end
+		return label.Text
+	end
+	
+	-- APLICA TAG PADRÃO SE NÃO TIVER NENHUMA
+	local function aplicarTagPadrao(p)
+		task.spawn(function()
+			task.wait(1)
+			local tagAtual = lerTagDoPersonagem(p)
+			if not tagAtual then
+				if p.UserId == MEU_ID_DONO then
+					aplicarTagVisual(p, "OWNER", configuracaoTags["OWNER"])
+				else
+					aplicarTagVisual(p, "USER", configuracaoTags["USER"])
+				end
+			end
+		end)
+	end
+	
+	-- SINCRONIZAÇÃO: mantém tags mesmo após respawn
 	task.spawn(function()
 		while task.wait(1) do
 			for _, p in pairs(Players:GetPlayers()) do
-				local marca = p:FindFirstChild("Executou4E20")
-				if marca then
-					local cor = configuracaoTags[marca.Value] or Color3.new(1,1,1)
-					aplicarTag(p, marca.Value, cor, marca.Value == "4E20 USER")
+				local tagAtual = lerTagDoPersonagem(p)
+				if tagAtual and configuracaoTags[tagAtual] then
+					aplicarTagVisual(p, tagAtual, configuracaoTags[tagAtual])
 				end
+			end
+	
+			-- Trava de abas por cargo
+			local minhaTag = lerTagDoPersonagem(localPlayer)
+			local temAcesso = (localPlayer.UserId == MEU_ID_DONO)
+				or (minhaTag == "OWNER")
+				or (minhaTag == "GERENTE")
+	
+			for _, aba in pairs(abasRestritas) do
+				if aba then aba.Visible = temAcesso end
 			end
 		end
 	end)
 	
-	-- 4. BUSCA PLAYER INTELIGENTE
+	-- JOGADORES JÁ NA SALA ao executar
+	for _, p in pairs(Players:GetPlayers()) do
+		aplicarTagPadrao(p)
+		p.CharacterAdded:Connect(function()
+			aplicarTagPadrao(p)
+		end)
+	end
+	
+	-- NOVOS JOGADORES que entram depois
+	Players.PlayerAdded:Connect(function(p)
+		aplicarTagPadrao(p)
+		p.CharacterAdded:Connect(function()
+			aplicarTagPadrao(p)
+		end)
+	end)
+	
+	-- BUSCA DE JOGADOR NO TEXTBOX
 	inputNome:GetPropertyChangedSignal("Text"):Connect(function()
 		local digitado = inputNome.Text:lower()
 		if digitado == "" then return end
@@ -1160,45 +1196,47 @@ local function VEHJJ_fake_script() -- tela4.LocalScript
 				textoDisplay.Text = p.DisplayName
 				textoID.Text = "ID: " .. p.UserId
 				pcall(function()
-					imagemAvatar.Image = Players:GetUserThumbnailAsync(p.UserId, Enum.ThumbnailType.HeadShot, Enum.ThumbnailSize.Size150x150)
+					imagemAvatar.Image = Players:GetUserThumbnailAsync(
+						p.UserId, Enum.ThumbnailType.HeadShot, Enum.ThumbnailSize.Size150x150)
 				end)
 				break
 			end
 		end
 	end)
 	
-	-- 5. BOTÕES DE CARGO E ABAS
-	local function gerenciarAbas(temCargo)
-		if localPlayer.UserId == MEU_ID_DONO then temCargo = true end
-		for _, btn in pairs(abasRestritas) do
-			if btn then btn.Visible = temCargo end
-		end
-	end
-	
+	-- BOTÕES DE SELEÇÃO DE TAG
 	for nome, _ in pairs(configuracaoTags) do
 		if tela:FindFirstChild(nome) then
-			tela[nome].MouseButton1Click:Connect(function() tagSelecionada = nome end)
+			tela[nome].MouseButton1Click:Connect(function()
+				tagSelecionada = nome
+			end)
 		end
 	end
 	
+	-- BOTÃO ADD
 	botaoAdd.MouseButton1Click:Connect(function()
 		for _, p in pairs(Players:GetPlayers()) do
 			if p.DisplayName == textoDisplay.Text then
-				if p:FindFirstChild("Executou4E20") then
-					p.Executou4E20.Value = tagSelecionada
-					if p == localPlayer then gerenciarAbas(true) end
+				if tagSelecionada ~= "" then
+					aplicarTagVisual(p, tagSelecionada, configuracaoTags[tagSelecionada])
 				end
 				break
 			end
 		end
 	end)
 	
-	-- EXECUÇÃO INICIAL
-	marcarComoUsuario(localPlayer)
-	gerenciarAbas(localPlayer.UserId == MEU_ID_DONO)
+	-- BOTÃO REMOVE (volta para USER)
+	botaoRemove.MouseButton1Click:Connect(function()
+		for _, p in pairs(Players:GetPlayers()) do
+			if p.DisplayName == textoDisplay.Text then
+				aplicarTagVisual(p, "USER", configuracaoTags["USER"])
+				break
+			end
+		end
+	end)
 end
-coroutine.wrap(VEHJJ_fake_script)()
-local function KSUIBET_fake_script() -- ScreenGui.GerenciadorAbas 
+coroutine.wrap(FTZIN_fake_script)()
+local function TPFPCIF_fake_script() -- ScreenGui.GerenciadorAbas 
 	local script = Instance.new('LocalScript', ScreenGui)
 
 	local gui = script.Parent
@@ -1230,4 +1268,4 @@ local function KSUIBET_fake_script() -- ScreenGui.GerenciadorAbas
 		end
 	end
 end
-coroutine.wrap(KSUIBET_fake_script)()
+coroutine.wrap(TPFPCIF_fake_script)()
