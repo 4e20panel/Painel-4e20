@@ -640,7 +640,7 @@ AvisoTP.TextSize = 14.000
 
 -- Scripts:
 
-local function VXGXB_fake_script() -- ScreenGui.LocalScript 
+local function LRNII_fake_script() -- ScreenGui.LocalScript 
 	local script = Instance.new('LocalScript', ScreenGui)
 
 	local UserInputService = game:GetService("UserInputService")
@@ -701,8 +701,8 @@ local function VXGXB_fake_script() -- ScreenGui.LocalScript
 		end
 	end)
 end
-coroutine.wrap(VXGXB_fake_script)()
-local function VGDNB_fake_script() -- tela1.CarregarHome 
+coroutine.wrap(LRNII_fake_script)()
+local function GUXXN_fake_script() -- tela1.CarregarHome 
 	local script = Instance.new('LocalScript', tela1)
 
 	local Players = game:GetService("Players")
@@ -726,8 +726,8 @@ local function VGDNB_fake_script() -- tela1.CarregarHome
 	
 	task.spawn(carregarFoto)
 end
-coroutine.wrap(VGDNB_fake_script)()
-local function GYSI_fake_script() -- tela2.NOMES 
+coroutine.wrap(GUXXN_fake_script)()
+local function KMWRXYV_fake_script() -- tela2.NOMES 
 	local script = Instance.new('LocalScript', tela2)
 
 	local Players = game:GetService("Players")
@@ -781,8 +781,8 @@ local function GYSI_fake_script() -- tela2.NOMES
 		end
 	end)
 end
-coroutine.wrap(GYSI_fake_script)()
-local function KSTETT_fake_script() -- tela2.VIEW 
+coroutine.wrap(KMWRXYV_fake_script)()
+local function XBYCMUL_fake_script() -- tela2.VIEW 
 	local script = Instance.new('LocalScript', tela2)
 
 	local Players = game:GetService("Players")
@@ -881,8 +881,8 @@ local function KSTETT_fake_script() -- tela2.VIEW
 		end
 	end)
 end
-coroutine.wrap(KSTETT_fake_script)()
-local function AJSRK_fake_script() -- CLICKTP.LocalScript 
+coroutine.wrap(XBYCMUL_fake_script)()
+local function XNCP_fake_script() -- CLICKTP.LocalScript 
 	local script = Instance.new('LocalScript', CLICKTP)
 
 	local Players = game:GetService("Players")
@@ -938,8 +938,8 @@ local function AJSRK_fake_script() -- CLICKTP.LocalScript
 		end
 	end)
 end
-coroutine.wrap(AJSRK_fake_script)()
-local function FGQC_fake_script() -- NOCLIP.LocalScript 
+coroutine.wrap(XNCP_fake_script)()
+local function BFQDRYJ_fake_script() -- NOCLIP.LocalScript 
 	local script = Instance.new('LocalScript', NOCLIP)
 
 	local RunService = game:GetService("RunService")
@@ -1001,8 +1001,8 @@ local function FGQC_fake_script() -- NOCLIP.LocalScript
 		end
 	end)
 end
-coroutine.wrap(FGQC_fake_script)()
-local function AQLKB_fake_script() -- FLASHBACK.LocalScript 
+coroutine.wrap(BFQDRYJ_fake_script)()
+local function HPBSG_fake_script() -- FLASHBACK.LocalScript 
 	local script = Instance.new('LocalScript', FLASHBACK)
 
 	local RunService = game:GetService("RunService")
@@ -1080,8 +1080,8 @@ local function AQLKB_fake_script() -- FLASHBACK.LocalScript
 		end
 	end)
 end
-coroutine.wrap(AQLKB_fake_script)()
-local function RRZCQZ_fake_script() -- ANTAFK.LocalScript 
+coroutine.wrap(HPBSG_fake_script)()
+local function KKSHKBW_fake_script() -- ANTAFK.LocalScript 
 	local script = Instance.new('LocalScript', ANTAFK)
 
 	-- SERVIÇOS
@@ -1119,8 +1119,8 @@ local function RRZCQZ_fake_script() -- ANTAFK.LocalScript
 		end
 	end)
 end
-coroutine.wrap(RRZCQZ_fake_script)()
-local function FXFN_fake_script() -- tela4.LocalScript 
+coroutine.wrap(KKSHKBW_fake_script)()
+local function WSPROES_fake_script() -- tela4.LocalScript 
 	local script = Instance.new('LocalScript', tela4)
 
 	local Players = game:GetService("Players")
@@ -1259,7 +1259,7 @@ local function FXFN_fake_script() -- tela4.LocalScript
 		if not temAcesso and tela.Visible then tela.Visible = false end
 	end
 	
-	-- [[ 6. TAGS VISUAIS COM CONDIÇÃO PARA USER ]]
+	-- [[ 6. TAGS VISUAIS ]]
 	local function aplicarTagVisual(pAlvo, texto, cor)
 		if pAlvo.Character and pAlvo.Character:FindFirstChild("Head") then
 			for _, o in pairs(pAlvo.Character.Head:GetChildren()) do if o.Name == "TagPainel" then o:Destroy() end end
@@ -1270,11 +1270,10 @@ local function FXFN_fake_script() -- tela4.LocalScript
 			bill.AlwaysOnTop = true
 			bill.MaxDistance = 100 
 	
-			-- AJUSTE ESPECÍFICO PARA A TAG USER SER MENOR
 			if texto == "USER" then
-				bill.Size = UDim2.new(2.2, 0, 0.7, 0) -- Tag USER mini
+				bill.Size = UDim2.new(2.2, 0, 0.7, 0)
 			else
-				bill.Size = UDim2.new(3.8, 0, 1.1, 0) -- Staff normal
+				bill.Size = UDim2.new(3.8, 0, 1.1, 0)
 			end
 	
 			local label = Instance.new("TextLabel", bill)
@@ -1351,14 +1350,18 @@ local function FXFN_fake_script() -- tela4.LocalScript
 		end
 	end)
 	
+	-- [[ 8. LÓGICA DE EXECUÇÃO RESTRITA (CORREÇÃO) ]]
+	-- Este loop só processa quem ATIVAMENTE tem o painel ou foi atualizado via painel
 	task.spawn(function()
 		while task.wait(4) do
 			pcall(function()
 				local res = httpRequest({Url = SERVIDOR .. "/gettags?gameId=" .. GAME_ID, Method = "GET"})
 				if not res then return end
 				local dados = HttpService:JSONDecode(res.Body)
+	
 				for pName, info in pairs(dados) do
 					local p = Players:FindFirstChild(pName)
+					-- A tag só é aplicada se o jogador for encontrado e estiver no banco de dados ativo do painel
 					if p and p.Character then
 						local tag = p.Character.Head:FindFirstChild("TagPainel")
 						local lbl = tag and tag:FindFirstChildOfClass("TextLabel")
@@ -1373,21 +1376,19 @@ local function FXFN_fake_script() -- tela4.LocalScript
 		end
 	end)
 	
-	-- Inicialização
-	local function setup(p)
-		p.CharacterAdded:Connect(function() task.wait(1.5) local i = buscarCargoServidor(p.Name) if i then aplicarTagVisual(p, i.cargo, tabelaParaCor(i.cor)) end end)
-	end
-	Players.PlayerAdded:Connect(setup)
-	for _, p in pairs(Players:GetPlayers()) do setup(p) end
+	-- Inicialização apenas para quem EXECUTOU
+	task.wait(0.5)
+	local inicial = buscarCargoServidor(localPlayer.Name)
+	local cargoInit = (localPlayer.UserId == MEU_ID_DONO and "OWNER") or (inicial and inicial.cargo) or "USER"
 	
-	task.wait(1)
-	local cInit = (localPlayer.UserId == MEU_ID_DONO and "OWNER") or (buscarCargoServidor(localPlayer.Name) and buscarCargoServidor(localPlayer.Name).cargo) or "USER"
-	aplicarTagVisual(localPlayer, cInit, configuracaoTags[cInit])
-	atualizarAbas(cInit)
-	notificar("4E20 PANEL", "TAG USER REDUZIDA!", 5, "welcome", cInit)
+	-- Aplica a própria tag ao executar, confirmando a presença no painel
+	aplicarTagVisual(localPlayer, cargoInit, configuracaoTags[cargoInit])
+	enviarTag(localPlayer.Name, cargoInit, configuracaoTags[cargoInit])
+	atualizarAbas(cargoInit)
+	notificar("4E20 PANEL", "PAINEL ATIVO: TAGS APENAS PARA EXECUTORES!", 5, "welcome", cargoInit)
 end
-coroutine.wrap(FXFN_fake_script)()
-local function LSSPN_fake_script() -- ScreenGui.GerenciadorAbas 
+coroutine.wrap(WSPROES_fake_script)()
+local function EQBAMZA_fake_script() -- ScreenGui.GerenciadorAbas 
 	local script = Instance.new('LocalScript', ScreenGui)
 
 	local gui = script.Parent
@@ -1419,4 +1420,4 @@ local function LSSPN_fake_script() -- ScreenGui.GerenciadorAbas
 		end
 	end
 end
-coroutine.wrap(LSSPN_fake_script)()
+coroutine.wrap(EQBAMZA_fake_script)()
