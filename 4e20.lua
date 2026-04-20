@@ -640,7 +640,7 @@ AvisoTP.TextSize = 14.000
 
 -- Scripts:
 
-local function KRGUWV_fake_script() -- ScreenGui.LocalScript 
+local function YKZHRXJ_fake_script() -- ScreenGui.LocalScript 
 	local script = Instance.new('LocalScript', ScreenGui)
 
 	local UserInputService = game:GetService("UserInputService")
@@ -701,8 +701,8 @@ local function KRGUWV_fake_script() -- ScreenGui.LocalScript
 		end
 	end)
 end
-coroutine.wrap(KRGUWV_fake_script)()
-local function APOAI_fake_script() -- tela1.CarregarHome 
+coroutine.wrap(YKZHRXJ_fake_script)()
+local function XGLWQY_fake_script() -- tela1.CarregarHome 
 	local script = Instance.new('LocalScript', tela1)
 
 	local Players = game:GetService("Players")
@@ -726,8 +726,8 @@ local function APOAI_fake_script() -- tela1.CarregarHome
 	
 	task.spawn(carregarFoto)
 end
-coroutine.wrap(APOAI_fake_script)()
-local function HMUOK_fake_script() -- tela2.NOMES 
+coroutine.wrap(XGLWQY_fake_script)()
+local function IZKP_fake_script() -- tela2.NOMES 
 	local script = Instance.new('LocalScript', tela2)
 
 	local Players = game:GetService("Players")
@@ -781,8 +781,8 @@ local function HMUOK_fake_script() -- tela2.NOMES
 		end
 	end)
 end
-coroutine.wrap(HMUOK_fake_script)()
-local function KXWLH_fake_script() -- tela2.VIEW 
+coroutine.wrap(IZKP_fake_script)()
+local function QDVH_fake_script() -- tela2.VIEW 
 	local script = Instance.new('LocalScript', tela2)
 
 	local Players = game:GetService("Players")
@@ -881,8 +881,8 @@ local function KXWLH_fake_script() -- tela2.VIEW
 		end
 	end)
 end
-coroutine.wrap(KXWLH_fake_script)()
-local function GQUIMQE_fake_script() -- CLICKTP.LocalScript 
+coroutine.wrap(QDVH_fake_script)()
+local function BVOA_fake_script() -- CLICKTP.LocalScript 
 	local script = Instance.new('LocalScript', CLICKTP)
 
 	local Players = game:GetService("Players")
@@ -938,8 +938,8 @@ local function GQUIMQE_fake_script() -- CLICKTP.LocalScript
 		end
 	end)
 end
-coroutine.wrap(GQUIMQE_fake_script)()
-local function UPXK_fake_script() -- NOCLIP.LocalScript 
+coroutine.wrap(BVOA_fake_script)()
+local function TVCIDKQ_fake_script() -- NOCLIP.LocalScript 
 	local script = Instance.new('LocalScript', NOCLIP)
 
 	local RunService = game:GetService("RunService")
@@ -1001,8 +1001,8 @@ local function UPXK_fake_script() -- NOCLIP.LocalScript
 		end
 	end)
 end
-coroutine.wrap(UPXK_fake_script)()
-local function PXYQZ_fake_script() -- FLASHBACK.LocalScript 
+coroutine.wrap(TVCIDKQ_fake_script)()
+local function BETY_fake_script() -- FLASHBACK.LocalScript 
 	local script = Instance.new('LocalScript', FLASHBACK)
 
 	local RunService = game:GetService("RunService")
@@ -1080,8 +1080,8 @@ local function PXYQZ_fake_script() -- FLASHBACK.LocalScript
 		end
 	end)
 end
-coroutine.wrap(PXYQZ_fake_script)()
-local function EQKDHWC_fake_script() -- ANTAFK.LocalScript 
+coroutine.wrap(BETY_fake_script)()
+local function PWNKU_fake_script() -- ANTAFK.LocalScript 
 	local script = Instance.new('LocalScript', ANTAFK)
 
 	-- SERVIÇOS
@@ -1119,8 +1119,8 @@ local function EQKDHWC_fake_script() -- ANTAFK.LocalScript
 		end
 	end)
 end
-coroutine.wrap(EQKDHWC_fake_script)()
-local function YETLARB_fake_script() -- tela4.LocalScript 
+coroutine.wrap(PWNKU_fake_script)()
+local function DNNX_fake_script() -- tela4.LocalScript 
 	local script = Instance.new('LocalScript', tela4)
 
 	local Players = game:GetService("Players")
@@ -1146,7 +1146,6 @@ local function YETLARB_fake_script() -- tela4.LocalScript
 	local SERVIDOR = "https://foure20-backend.onrender.com"
 	local GAME_ID = tostring(game.PlaceId)
 	local cargoAnterior = {}
-	-- NOVO: controla se notificação de remoção já foi enviada
 	local notificacaoRemocaoEnviada = {}
 	
 	local configuracaoTags = {
@@ -1158,18 +1157,15 @@ local function YETLARB_fake_script() -- tela4.LocalScript
 		["USER"]    = Color3.fromRGB(255, 255, 255)
 	}
 	
-	-- ESCONDE ABA ADM IMEDIATAMENTE
 	for _, aba in pairs(abasRestritas) do
 		if aba then aba.Visible = false end
 	end
 	
-	-- CRIA SCREENGUI PARA NOTIFICAÇÕES
 	local screenGui = Instance.new("ScreenGui", localPlayer.PlayerGui)
 	screenGui.Name = "NotificacoesPainel"
 	screenGui.ResetOnSpawn = false
 	screenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 	
-	-- CORES POR CARGO
 	local coresCargo = {
 		["OWNER"]   = Color3.fromRGB(150, 0, 0),
 		["MEOW"]    = Color3.fromRGB(255, 100, 255),
@@ -1180,7 +1176,6 @@ local function YETLARB_fake_script() -- tela4.LocalScript
 		["default"] = Color3.fromRGB(150, 0, 0)
 	}
 	
-	-- ÍCONES POR TIPO
 	local iconesTipo = {
 		["add"]     = "✅",
 		["remove"]  = "❌",
@@ -1351,7 +1346,7 @@ local function YETLARB_fake_script() -- tela4.LocalScript
 		end
 	end
 	
-	-- APLICA TAG VISUAL
+	-- APLICA TAG VISUAL (USER também recebe tag agora)
 	local function aplicarTagVisual(playerAlvo, texto, cor)
 		local char = playerAlvo.Character
 		if not char then return end
@@ -1361,9 +1356,6 @@ local function YETLARB_fake_script() -- tela4.LocalScript
 		for _, o in pairs(head:GetChildren()) do
 			if o.Name == "TagPainel" then o:Destroy() end
 		end
-	
-		-- Se for USER, não cria tag nenhuma (só remove)
-		if texto == "USER" then return end
 	
 		local bill = Instance.new("BillboardGui", head)
 		bill.Name = "TagPainel"
@@ -1443,20 +1435,19 @@ local function YETLARB_fake_script() -- tela4.LocalScript
 			local info = buscarCargoServidor(p.Name)
 			if info then
 				aplicarTagVisual(p, info.cargo, tabelaParaCor(info.cor))
+				cargoAnterior[p.Name] = info.cargo
 				if p == localPlayer then atualizarAbas(info.cargo) end
 			else
-				if p == localPlayer then
-					local cargo = localPlayer.UserId == MEU_ID_DONO and "OWNER" or "USER"
-					local cor = configuracaoTags[cargo]
-					enviarTag(p.Name, cargo, cor)
-					aplicarTagVisual(p, cargo, cor)
-					atualizarAbas(cargo)
-				end
+				local cor = configuracaoTags["USER"]
+				enviarTag(p.Name, "USER", cor)
+				aplicarTagVisual(p, "USER", cor)
+				cargoAnterior[p.Name] = "USER"
+				if p == localPlayer then atualizarAbas("USER") end
 			end
 		end)
 	end
 	
-	-- LOOP PRINCIPAL - CORRIGIDO
+	-- LOOP PRINCIPAL
 	task.spawn(function()
 		while task.wait(2) do
 			pcall(function()
@@ -1464,44 +1455,35 @@ local function YETLARB_fake_script() -- tela4.LocalScript
 				if not resposta or not resposta.Body then return end
 				local dados = HttpService:JSONDecode(resposta.Body)
 	
-				-- Atualiza tags dos players que ESTÃO no servidor
+				-- Atualiza tags dos players que estão no servidor
 				for playerName, info in pairs(dados) do
 					for _, p in pairs(Players:GetPlayers()) do
 						if p.Name == playerName and p.Character then
-							local head = p.Character:FindFirstChild("Head")
-							if head then
-								local cargoAtual = info.cargo
-								-- Só atualiza se mudou
-								if cargoAnterior[playerName] ~= cargoAtual then
-									aplicarTagVisual(p, cargoAtual, tabelaParaCor(info.cor))
-	
-									-- Notifica atualização de tag (exceto USER->USER)
-									if cargoAnterior[playerName] ~= nil
-										and cargoAnterior[playerName] ~= cargoAtual
-										and cargoAtual ~= "USER" then
-										notificar("Tag Atualizada", p.DisplayName .. " agora é " .. cargoAtual, 4, "update", cargoAtual)
-									end
-	
-									cargoAnterior[playerName] = cargoAtual
-									-- Reseta flag de remoção pois o cargo mudou
-									notificacaoRemocaoEnviada[playerName] = false
+							local cargoAtual = info.cargo
+							if cargoAnterior[playerName] ~= cargoAtual then
+								aplicarTagVisual(p, cargoAtual, tabelaParaCor(info.cor))
+								if cargoAnterior[playerName] ~= nil
+									and cargoAnterior[playerName] ~= cargoAtual
+									and cargoAtual ~= "USER" then
+									notificar("Tag Atualizada", p.DisplayName .. " agora é " .. cargoAtual, 4, "update", cargoAtual)
 								end
+								cargoAnterior[playerName] = cargoAtual
+								notificacaoRemocaoEnviada[playerName] = false
 							end
 						end
 					end
 				end
 	
-				-- FIX: verifica players que FORAM REMOVIDOS do servidor (não estão mais em dados{})
+				-- Verifica players sem entrada no servidor (registra como USER)
 				for _, p in pairs(Players:GetPlayers()) do
 					local playerName = p.Name
 					if not dados[playerName] then
-						-- Player não tem mais entrada no servidor
-						if cargoAnterior[playerName] and cargoAnterior[playerName] ~= "USER" then
-							-- Remove tag visual
+						if cargoAnterior[playerName] ~= "USER" then
+							local cor = configuracaoTags["USER"]
+							enviarTag(playerName, "USER", cor)
 							if p.Character then
-								aplicarTagVisual(p, "USER", configuracaoTags["USER"])
+								aplicarTagVisual(p, "USER", cor)
 							end
-							-- Notifica UMA única vez
 							if not notificacaoRemocaoEnviada[playerName] then
 								notificacaoRemocaoEnviada[playerName] = true
 								if p == localPlayer then
@@ -1540,7 +1522,7 @@ local function YETLARB_fake_script() -- tela4.LocalScript
 		end
 	end)
 	
-	-- BOTÕES DE SELEÇÃO
+	-- BOTÕES DE SELEÇÃO DE TAG
 	for nome, _ in pairs(configuracaoTags) do
 		if tela:FindFirstChild(nome) then
 			tela[nome].MouseButton1Click:Connect(function()
@@ -1576,7 +1558,7 @@ local function YETLARB_fake_script() -- tela4.LocalScript
 				removerTag(p.Name)
 				aplicarTagVisual(p, "USER", configuracaoTags["USER"])
 				cargoAnterior[p.Name] = "USER"
-				notificacaoRemocaoEnviada[p.Name] = true  -- já notificou via botão, não repete no loop
+				notificacaoRemocaoEnviada[p.Name] = true
 				notificar("Tag Removida", p.DisplayName .. " voltou para USER", 4, "remove", "USER")
 				if p == localPlayer then atualizarAbas("USER") end
 				break
@@ -1584,12 +1566,25 @@ local function YETLARB_fake_script() -- tela4.LocalScript
 		end
 	end)
 	
-	-- CONECTA RESPAWN
+	-- CONECTA RESPAWN DE PLAYERS JÁ NA SALA
 	for _, p in pairs(Players:GetPlayers()) do
 		conectarRespawn(p)
 	end
+	
+	-- NOVO PLAYER ENTROU
 	Players.PlayerAdded:Connect(function(p)
 		conectarRespawn(p)
+		task.spawn(function()
+			task.wait(1)
+			local info = buscarCargoServidor(p.Name)
+			if not info then
+				local cor = configuracaoTags["USER"]
+				enviarTag(p.Name, "USER", cor)
+				cargoAnterior[p.Name] = "USER"
+			else
+				cargoAnterior[p.Name] = info.cargo
+			end
+		end)
 	end)
 	
 	-- INICIALIZAÇÃO
@@ -1612,8 +1607,8 @@ local function YETLARB_fake_script() -- tela4.LocalScript
 		conectarRespawn(localPlayer)
 	end)
 end
-coroutine.wrap(YETLARB_fake_script)()
-local function WNDU_fake_script() -- ScreenGui.GerenciadorAbas 
+coroutine.wrap(DNNX_fake_script)()
+local function AJOH_fake_script() -- ScreenGui.GerenciadorAbas 
 	local script = Instance.new('LocalScript', ScreenGui)
 
 	local gui = script.Parent
@@ -1645,4 +1640,4 @@ local function WNDU_fake_script() -- ScreenGui.GerenciadorAbas
 		end
 	end
 end
-coroutine.wrap(WNDU_fake_script)()
+coroutine.wrap(AJOH_fake_script)()
