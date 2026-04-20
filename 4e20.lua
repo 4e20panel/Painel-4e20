@@ -27,16 +27,15 @@ local username = Instance.new("TextBox")
 local coloqueodousuario = Instance.new("TextLabel")
 local ID = Instance.new("TextLabel")
 local DISPLAYNAME = Instance.new("TextLabel")
-local TEXTOS = Instance.new("Frame")
-local TextLabel_5 = Instance.new("TextLabel")
-local TextLabel_6 = Instance.new("TextLabel")
 local tela3 = Instance.new("Frame")
 local CLICKTP = Instance.new("TextButton")
-local TextLabel_7 = Instance.new("TextLabel")
+local TextLabel_5 = Instance.new("TextLabel")
 local NOCLIP = Instance.new("TextButton")
-local TextLabel_8 = Instance.new("TextLabel")
+local TextLabel_6 = Instance.new("TextLabel")
 local FLASHBACK = Instance.new("TextButton")
-local TextLabel_9 = Instance.new("TextLabel")
+local TextLabel_7 = Instance.new("TextLabel")
+local ANTAFK = Instance.new("TextButton")
+local TextLabel_8 = Instance.new("TextLabel")
 local tela4 = Instance.new("Frame")
 local OWNER = Instance.new("TextButton")
 local MEOW = Instance.new("TextButton")
@@ -49,6 +48,9 @@ local TextBox = Instance.new("TextBox")
 local ID_2 = Instance.new("TextLabel")
 local DISPLAYNAME_2 = Instance.new("TextLabel")
 local ImageLabel_2 = Instance.new("ImageLabel")
+local TEXTOS = Instance.new("Frame")
+local TextLabel_9 = Instance.new("TextLabel")
+local TextLabel_10 = Instance.new("TextLabel")
 local AvisoTP = Instance.new("TextLabel")
 
 --Properties:
@@ -152,6 +154,7 @@ tela1.BorderSizePixel = 0
 tela1.ClipsDescendants = true
 tela1.Position = UDim2.new(0.197935313, 0, -0.00354723865, 0)
 tela1.Size = UDim2.new(0, 404, 0, 283)
+tela1.Visible = false
 
 ImageLabel.Parent = tela1
 ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -329,41 +332,6 @@ DISPLAYNAME.TextColor3 = Color3.fromRGB(255, 255, 255)
 DISPLAYNAME.TextSize = 14.000
 DISPLAYNAME.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
 
-TEXTOS.Name = "TEXTOS"
-TEXTOS.Parent = CorpoPainel
-TEXTOS.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
-TEXTOS.BackgroundTransparency = 1.000
-TEXTOS.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TEXTOS.BorderSizePixel = 0
-TEXTOS.Position = UDim2.new(0.36493966, 0, 0.208588958, 0)
-TEXTOS.Size = UDim2.new(0, 404, 0, 284)
-
-TextLabel_5.Parent = TEXTOS
-TextLabel_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_5.BackgroundTransparency = 1.000
-TextLabel_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_5.BorderSizePixel = 0
-TextLabel_5.Position = UDim2.new(0.0445544571, 0, 0.672535241, 0)
-TextLabel_5.Size = UDim2.new(0, 200, 0, 33)
-TextLabel_5.Font = Enum.Font.Unknown
-TextLabel_5.Text = "4e20 Panel"
-TextLabel_5.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_5.TextSize = 17.000
-TextLabel_5.TextWrapped = true
-
-TextLabel_6.Parent = TEXTOS
-TextLabel_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_6.BackgroundTransparency = 1.000
-TextLabel_6.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_6.BorderSizePixel = 0
-TextLabel_6.Position = UDim2.new(0.482673258, 0, 0.672535241, 0)
-TextLabel_6.Size = UDim2.new(0, 200, 0, 33)
-TextLabel_6.Font = Enum.Font.Unknown
-TextLabel_6.Text = "v1.0"
-TextLabel_6.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_6.TextSize = 17.000
-TextLabel_6.TextWrapped = true
-
 tela3.Name = "tela3"
 tela3.Parent = CorpoPainel
 tela3.Active = true
@@ -372,7 +340,6 @@ tela3.BorderColor3 = Color3.fromRGB(255, 255, 255)
 tela3.BorderSizePixel = 0
 tela3.Position = UDim2.new(0.198397487, 0, -0.00525751244, 0)
 tela3.Size = UDim2.new(0, 404, 0, 284)
-tela3.Visible = false
 
 CLICKTP.Name = "CLICK - TP"
 CLICKTP.Parent = tela3
@@ -386,19 +353,19 @@ CLICKTP.Text = "CLICK - TP"
 CLICKTP.TextColor3 = Color3.fromRGB(255, 255, 255)
 CLICKTP.TextSize = 14.000
 
-TextLabel_7.Parent = CLICKTP
-TextLabel_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_7.BackgroundTransparency = 1.000
-TextLabel_7.BorderColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_7.BorderSizePixel = 0
-TextLabel_7.Position = UDim2.new(0.899999976, 0, -0.111111112, 0)
-TextLabel_7.Size = UDim2.new(0, 70, 0, 46)
-TextLabel_7.Font = Enum.Font.Unknown
-TextLabel_7.Text = "+"
-TextLabel_7.TextColor3 = Color3.fromRGB(255, 0, 0)
-TextLabel_7.TextScaled = true
-TextLabel_7.TextSize = 25.000
-TextLabel_7.TextWrapped = true
+TextLabel_5.Parent = CLICKTP
+TextLabel_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_5.BackgroundTransparency = 1.000
+TextLabel_5.BorderColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_5.BorderSizePixel = 0
+TextLabel_5.Position = UDim2.new(0.899999976, 0, -0.111111112, 0)
+TextLabel_5.Size = UDim2.new(0, 70, 0, 46)
+TextLabel_5.Font = Enum.Font.Unknown
+TextLabel_5.Text = "+"
+TextLabel_5.TextColor3 = Color3.fromRGB(255, 0, 0)
+TextLabel_5.TextScaled = true
+TextLabel_5.TextSize = 25.000
+TextLabel_5.TextWrapped = true
 
 NOCLIP.Name = "NOCLIP"
 NOCLIP.Parent = tela3
@@ -412,19 +379,19 @@ NOCLIP.Text = "NOCLIP"
 NOCLIP.TextColor3 = Color3.fromRGB(255, 255, 255)
 NOCLIP.TextSize = 14.000
 
-TextLabel_8.Parent = NOCLIP
-TextLabel_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_8.BackgroundTransparency = 1.000
-TextLabel_8.BorderColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_8.BorderSizePixel = 0
-TextLabel_8.Position = UDim2.new(0.899999976, 0, -0.138888896, 0)
-TextLabel_8.Size = UDim2.new(0, 70, 0, 46)
-TextLabel_8.Font = Enum.Font.Unknown
-TextLabel_8.Text = "+"
-TextLabel_8.TextColor3 = Color3.fromRGB(255, 0, 0)
-TextLabel_8.TextScaled = true
-TextLabel_8.TextSize = 25.000
-TextLabel_8.TextWrapped = true
+TextLabel_6.Parent = NOCLIP
+TextLabel_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_6.BackgroundTransparency = 1.000
+TextLabel_6.BorderColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_6.BorderSizePixel = 0
+TextLabel_6.Position = UDim2.new(0.899999976, 0, -0.138888896, 0)
+TextLabel_6.Size = UDim2.new(0, 70, 0, 46)
+TextLabel_6.Font = Enum.Font.Unknown
+TextLabel_6.Text = "+"
+TextLabel_6.TextColor3 = Color3.fromRGB(255, 0, 0)
+TextLabel_6.TextScaled = true
+TextLabel_6.TextSize = 25.000
+TextLabel_6.TextWrapped = true
 
 FLASHBACK.Name = "FLASHBACK"
 FLASHBACK.Parent = tela3
@@ -438,20 +405,47 @@ FLASHBACK.Text = "FLASHBACK"
 FLASHBACK.TextColor3 = Color3.fromRGB(255, 255, 255)
 FLASHBACK.TextSize = 14.000
 
-TextLabel_9.Parent = FLASHBACK
-TextLabel_9.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_9.BackgroundTransparency = 1.000
-TextLabel_9.BorderColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_9.BorderSizePixel = 0
-TextLabel_9.Position = UDim2.new(0.899999976, 0, -0.138888896, 0)
-TextLabel_9.Size = UDim2.new(0, 70, 0, 46)
-TextLabel_9.Font = Enum.Font.Unknown
-TextLabel_9.Text = "+"
-TextLabel_9.TextColor3 = Color3.fromRGB(255, 0, 0)
-TextLabel_9.TextScaled = true
-TextLabel_9.TextSize = 25.000
-TextLabel_9.TextStrokeColor3 = Color3.fromRGB(255, 0, 0)
-TextLabel_9.TextWrapped = true
+TextLabel_7.Parent = FLASHBACK
+TextLabel_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_7.BackgroundTransparency = 1.000
+TextLabel_7.BorderColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_7.BorderSizePixel = 0
+TextLabel_7.Position = UDim2.new(0.899999976, 0, -0.138888896, 0)
+TextLabel_7.Size = UDim2.new(0, 70, 0, 46)
+TextLabel_7.Font = Enum.Font.Unknown
+TextLabel_7.Text = "+"
+TextLabel_7.TextColor3 = Color3.fromRGB(255, 0, 0)
+TextLabel_7.TextScaled = true
+TextLabel_7.TextSize = 25.000
+TextLabel_7.TextStrokeColor3 = Color3.fromRGB(255, 0, 0)
+TextLabel_7.TextWrapped = true
+
+ANTAFK.Name = "ANT-AFK"
+ANTAFK.Parent = tela3
+ANTAFK.BackgroundColor3 = Color3.fromRGB(98, 98, 98)
+ANTAFK.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ANTAFK.BorderSizePixel = 0
+ANTAFK.Position = UDim2.new(0.0569306947, 0, 0.633802831, 0)
+ANTAFK.Size = UDim2.new(0, 100, 0, 36)
+ANTAFK.Font = Enum.Font.Unknown
+ANTAFK.Text = "ANT-AFK"
+ANTAFK.TextColor3 = Color3.fromRGB(255, 255, 255)
+ANTAFK.TextSize = 14.000
+
+TextLabel_8.Parent = ANTAFK
+TextLabel_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_8.BackgroundTransparency = 1.000
+TextLabel_8.BorderColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_8.BorderSizePixel = 0
+TextLabel_8.Position = UDim2.new(0.899999976, 0, -0.138888896, 0)
+TextLabel_8.Size = UDim2.new(0, 70, 0, 46)
+TextLabel_8.Font = Enum.Font.Unknown
+TextLabel_8.Text = "+"
+TextLabel_8.TextColor3 = Color3.fromRGB(255, 0, 0)
+TextLabel_8.TextScaled = true
+TextLabel_8.TextSize = 25.000
+TextLabel_8.TextStrokeColor3 = Color3.fromRGB(255, 0, 0)
+TextLabel_8.TextWrapped = true
 
 tela4.Name = "tela4"
 tela4.Parent = CorpoPainel
@@ -595,6 +589,41 @@ ImageLabel_2.Position = UDim2.new(-0.000989990192, 0, -2.69846368, 0)
 ImageLabel_2.Size = UDim2.new(0, 71, 0, 65)
 ImageLabel_2.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
 
+TEXTOS.Name = "TEXTOS"
+TEXTOS.Parent = CorpoPainel
+TEXTOS.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+TEXTOS.BackgroundTransparency = 1.000
+TEXTOS.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TEXTOS.BorderSizePixel = 0
+TEXTOS.Position = UDim2.new(0.36493966, 0, 0.208588958, 0)
+TEXTOS.Size = UDim2.new(0, 404, 0, 284)
+
+TextLabel_9.Parent = TEXTOS
+TextLabel_9.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_9.BackgroundTransparency = 1.000
+TextLabel_9.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_9.BorderSizePixel = 0
+TextLabel_9.Position = UDim2.new(0.0445544571, 0, 0.672535241, 0)
+TextLabel_9.Size = UDim2.new(0, 200, 0, 33)
+TextLabel_9.Font = Enum.Font.Unknown
+TextLabel_9.Text = "4e20 Panel"
+TextLabel_9.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_9.TextSize = 17.000
+TextLabel_9.TextWrapped = true
+
+TextLabel_10.Parent = TEXTOS
+TextLabel_10.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_10.BackgroundTransparency = 1.000
+TextLabel_10.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_10.BorderSizePixel = 0
+TextLabel_10.Position = UDim2.new(0.485148519, 0, 0.672535241, 0)
+TextLabel_10.Size = UDim2.new(0, 200, 0, 33)
+TextLabel_10.Font = Enum.Font.Unknown
+TextLabel_10.Text = "v1.0"
+TextLabel_10.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_10.TextSize = 17.000
+TextLabel_10.TextWrapped = true
+
 AvisoTP.Name = "AvisoTP"
 AvisoTP.Parent = ScreenGui
 AvisoTP.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -611,7 +640,7 @@ AvisoTP.TextSize = 14.000
 
 -- Scripts:
 
-local function QYXYJSS_fake_script() -- ScreenGui.LocalScript 
+local function CVTGOI_fake_script() -- ScreenGui.LocalScript 
 	local script = Instance.new('LocalScript', ScreenGui)
 
 	local UserInputService = game:GetService("UserInputService")
@@ -672,8 +701,8 @@ local function QYXYJSS_fake_script() -- ScreenGui.LocalScript
 		end
 	end)
 end
-coroutine.wrap(QYXYJSS_fake_script)()
-local function QFVKT_fake_script() -- tela1.CarregarHome 
+coroutine.wrap(CVTGOI_fake_script)()
+local function DFGN_fake_script() -- tela1.CarregarHome 
 	local script = Instance.new('LocalScript', tela1)
 
 	local Players = game:GetService("Players")
@@ -697,8 +726,8 @@ local function QFVKT_fake_script() -- tela1.CarregarHome
 	
 	task.spawn(carregarFoto)
 end
-coroutine.wrap(QFVKT_fake_script)()
-local function QRTG_fake_script() -- tela2.NOMES 
+coroutine.wrap(DFGN_fake_script)()
+local function EYGYGIB_fake_script() -- tela2.NOMES 
 	local script = Instance.new('LocalScript', tela2)
 
 	local Players = game:GetService("Players")
@@ -752,8 +781,8 @@ local function QRTG_fake_script() -- tela2.NOMES
 		end
 	end)
 end
-coroutine.wrap(QRTG_fake_script)()
-local function AHZYJY_fake_script() -- tela2.VIEW 
+coroutine.wrap(EYGYGIB_fake_script)()
+local function FHSR_fake_script() -- tela2.VIEW 
 	local script = Instance.new('LocalScript', tela2)
 
 	local Players = game:GetService("Players")
@@ -852,8 +881,8 @@ local function AHZYJY_fake_script() -- tela2.VIEW
 		end
 	end)
 end
-coroutine.wrap(AHZYJY_fake_script)()
-local function HPLTPYO_fake_script() -- CLICKTP.LocalScript 
+coroutine.wrap(FHSR_fake_script)()
+local function JKWXKN_fake_script() -- CLICKTP.LocalScript 
 	local script = Instance.new('LocalScript', CLICKTP)
 
 	local Players = game:GetService("Players")
@@ -909,8 +938,8 @@ local function HPLTPYO_fake_script() -- CLICKTP.LocalScript
 		end
 	end)
 end
-coroutine.wrap(HPLTPYO_fake_script)()
-local function KUDT_fake_script() -- NOCLIP.LocalScript 
+coroutine.wrap(JKWXKN_fake_script)()
+local function MOMVREC_fake_script() -- NOCLIP.LocalScript 
 	local script = Instance.new('LocalScript', NOCLIP)
 
 	local RunService = game:GetService("RunService")
@@ -972,8 +1001,8 @@ local function KUDT_fake_script() -- NOCLIP.LocalScript
 		end
 	end)
 end
-coroutine.wrap(KUDT_fake_script)()
-local function RVJGN_fake_script() -- FLASHBACK.LocalScript 
+coroutine.wrap(MOMVREC_fake_script)()
+local function MZAZ_fake_script() -- FLASHBACK.LocalScript 
 	local script = Instance.new('LocalScript', FLASHBACK)
 
 	local RunService = game:GetService("RunService")
@@ -1051,13 +1080,53 @@ local function RVJGN_fake_script() -- FLASHBACK.LocalScript
 		end
 	end)
 end
-coroutine.wrap(RVJGN_fake_script)()
-local function LSQH_fake_script() -- tela4.LocalScript 
+coroutine.wrap(MZAZ_fake_script)()
+local function TAQUA_fake_script() -- ANTAFK.LocalScript 
+	local script = Instance.new('LocalScript', ANTAFK)
+
+	-- SERVIÇOS
+	local Players = game:GetService("Players")
+	local VirtualUser = game:GetService("VirtualUser")
+	local localPlayer = Players.LocalPlayer
+	
+	-- REFERÊNCIAS DO SEU LAYOUT
+	local botao = script.Parent 
+	local iconeStatus = botao:WaitForChild("TextLabel") -- O símbolo de +
+	
+	local permissaoPainel = false -- Liberação pelo painel
+	
+	-- 1. CLIQUE NO PAINEL: ATIVA/DESATIVA A PERMISSÃO
+	botao.MouseButton1Click:Connect(function()
+		permissaoPainel = not permissaoPainel
+	
+		if permissaoPainel then
+			iconeStatus.TextColor3 = Color3.fromRGB(0, 255, 0) -- Verde (Ativado)
+			
+		else
+			iconeStatus.TextColor3 = Color3.fromRGB(255, 0, 0) -- Vermelho (Desativado)
+			
+		end
+	end)
+	
+	-- 2. SISTEMA VIGIA: SÓ AGE SE A PERMISSÃO ESTIVER ATIVA
+	localPlayer.Idled:Connect(function()
+		if permissaoPainel then
+			-- Simula interação técnica para resetar o tempo de inatividade do Roblox
+			VirtualUser:Button2Down(Vector2.new(0,0), workspace.CurrentCamera.CFrame)
+			task.wait(0.5)
+			VirtualUser:Button2Up(Vector2.new(0,0), workspace.CurrentCamera.CFrame)
+			
+		end
+	end)
+end
+coroutine.wrap(TAQUA_fake_script)()
+local function ZRFQODL_fake_script() -- tela4.LocalScript 
 	local script = Instance.new('LocalScript', tela4)
 
 	local Players = game:GetService("Players")
 	local TweenService = game:GetService("TweenService")
 	local HttpService = game:GetService("HttpService")
+	local TextService = game:GetService("TextService")
 	local localPlayer = Players.LocalPlayer
 	
 	local tela = script.Parent
@@ -1076,6 +1145,7 @@ local function LSQH_fake_script() -- tela4.LocalScript
 	local tagSelecionada = ""
 	local SERVIDOR = "https://foure20-backend.onrender.com"
 	local GAME_ID = tostring(game.PlaceId)
+	local cargoAnterior = {}
 	
 	local configuracaoTags = {
 		["OWNER"]   = Color3.fromRGB(150, 0, 0),
@@ -1091,7 +1161,163 @@ local function LSQH_fake_script() -- tela4.LocalScript
 		if aba then aba.Visible = false end
 	end
 	
-	-- FUNÇÃO UNIVERSAL DE REQUEST (funciona em qualquer executor)
+	-- CRIA SCREENGU I PARA NOTIFICAÇÕES
+	local screenGui = Instance.new("ScreenGui", localPlayer.PlayerGui)
+	screenGui.Name = "NotificacoesPainel"
+	screenGui.ResetOnSpawn = false
+	screenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+	
+	-- CORES POR CARGO
+	local coresCargo = {
+		["OWNER"]   = Color3.fromRGB(150, 0, 0),
+		["MEOW"]    = Color3.fromRGB(255, 100, 255),
+		["GERENTE"] = Color3.fromRGB(85, 0, 255),
+		["HELPE"]   = Color3.fromRGB(255, 200, 0),
+		["VIP"]     = Color3.fromRGB(0, 200, 0),
+		["USER"]    = Color3.fromRGB(100, 100, 100),
+		["default"] = Color3.fromRGB(150, 0, 0)
+	}
+	
+	-- ÍCONES POR TIPO
+	local iconesTipo = {
+		["add"]     = "✅",
+		["remove"]  = "❌",
+		["update"]  = "🏷️",
+		["warn"]    = "⚠️",
+		["welcome"] = "👋"
+	}
+	
+	local notificacaoY = -90
+	local notificacoes = {}
+	
+	local function notificar(titulo, texto, duracao, tipo, cargo)
+		duracao = duracao or 4
+		if cargo == "USER" and tipo == "update" then return end
+	
+		-- Empurra notificações antigas pra cima
+		for _, f in pairs(notificacoes) do
+			if f and f.Parent then
+				TweenService:Create(f, TweenInfo.new(0.3, Enum.EasingStyle.Quad), {
+					Position = UDim2.new(1, -300, 1, f.Position.Y.Offset - 80)
+				}):Play()
+			end
+		end
+	
+		local corCargo = coresCargo[cargo] or coresCargo["default"]
+		local icone = iconesTipo[tipo] or "🏷️"
+	
+		local frame = Instance.new("Frame", screenGui)
+		frame.Size = UDim2.new(0, 280, 0, 70)
+		frame.Position = UDim2.new(1, 10, 1, notificacaoY)
+		frame.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
+		frame.BackgroundTransparency = 0.05
+		frame.BorderSizePixel = 0
+		frame.AnchorPoint = Vector2.new(0, 1)
+		frame.ZIndex = 10
+	
+		local canto = Instance.new("UICorner", frame)
+		canto.CornerRadius = UDim.new(0, 8)
+	
+		-- Sombra
+		local sombra = Instance.new("Frame", frame)
+		sombra.Size = UDim2.new(1, 4, 1, 4)
+		sombra.Position = UDim2.new(0, -2, 0, 2)
+		sombra.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+		sombra.BackgroundTransparency = 0.7
+		sombra.BorderSizePixel = 0
+		sombra.ZIndex = 9
+		local cantoSombra = Instance.new("UICorner", sombra)
+		cantoSombra.CornerRadius = UDim.new(0, 8)
+	
+		-- Borda esquerda colorida
+		local borda = Instance.new("Frame", frame)
+		borda.Size = UDim2.new(0, 4, 1, 0)
+		borda.Position = UDim2.new(0, 0, 0, 0)
+		borda.BackgroundColor3 = corCargo
+		borda.BorderSizePixel = 0
+		borda.ZIndex = 11
+		local cantoBorda = Instance.new("UICorner", borda)
+		cantoBorda.CornerRadius = UDim.new(0, 8)
+	
+		-- Ícone
+		local labelIcone = Instance.new("TextLabel", frame)
+		labelIcone.Size = UDim2.new(0, 36, 1, -10)
+		labelIcone.Position = UDim2.new(0, 12, 0, 5)
+		labelIcone.BackgroundTransparency = 1
+		labelIcone.Text = icone
+		labelIcone.TextSize = 20
+		labelIcone.Font = Enum.Font.GothamBold
+		labelIcone.ZIndex = 11
+	
+		-- Título
+		local labelTitulo = Instance.new("TextLabel", frame)
+		labelTitulo.Size = UDim2.new(1, -60, 0, 26)
+		labelTitulo.Position = UDim2.new(0, 50, 0, 8)
+		labelTitulo.BackgroundTransparency = 1
+		labelTitulo.Text = titulo
+		labelTitulo.TextColor3 = Color3.fromRGB(255, 255, 255)
+		labelTitulo.Font = Enum.Font.GothamBold
+		labelTitulo.TextSize = 13
+		labelTitulo.TextXAlignment = Enum.TextXAlignment.Left
+		labelTitulo.ZIndex = 11
+	
+		-- Texto
+		local labelTexto = Instance.new("TextLabel", frame)
+		labelTexto.Size = UDim2.new(1, -60, 0, 20)
+		labelTexto.Position = UDim2.new(0, 50, 0, 32)
+		labelTexto.BackgroundTransparency = 1
+		labelTexto.Text = texto
+		labelTexto.TextColor3 = Color3.fromRGB(170, 170, 170)
+		labelTexto.Font = Enum.Font.Gotham
+		labelTexto.TextSize = 11
+		labelTexto.TextXAlignment = Enum.TextXAlignment.Left
+		labelTexto.ZIndex = 11
+	
+		-- Barra de progresso fundo
+		local barraFundo = Instance.new("Frame", frame)
+		barraFundo.Size = UDim2.new(1, -8, 0, 3)
+		barraFundo.Position = UDim2.new(0, 4, 1, -5)
+		barraFundo.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+		barraFundo.BorderSizePixel = 0
+		barraFundo.ZIndex = 11
+		local cantoBarraF = Instance.new("UICorner", barraFundo)
+		cantoBarraF.CornerRadius = UDim.new(1, 0)
+	
+		-- Barra de progresso
+		local barra = Instance.new("Frame", barraFundo)
+		barra.Size = UDim2.new(1, 0, 1, 0)
+		barra.BackgroundColor3 = corCargo
+		barra.BorderSizePixel = 0
+		barra.ZIndex = 12
+		local cantoBarra = Instance.new("UICorner", barra)
+		cantoBarra.CornerRadius = UDim.new(1, 0)
+	
+		table.insert(notificacoes, frame)
+	
+		-- Entrada
+		TweenService:Create(frame, TweenInfo.new(0.4, Enum.EasingStyle.Back, Enum.EasingDirection.Out), {
+			Position = UDim2.new(1, -300, 1, notificacaoY)
+		}):Play()
+	
+		-- Barra diminuindo
+		TweenService:Create(barra, TweenInfo.new(duracao, Enum.EasingStyle.Linear), {
+			Size = UDim2.new(0, 0, 1, 0)
+		}):Play()
+	
+		-- Saída
+		task.delay(duracao, function()
+			TweenService:Create(frame, TweenInfo.new(0.3, Enum.EasingStyle.Quad, Enum.EasingDirection.In), {
+				Position = UDim2.new(1, 10, 1, notificacaoY)
+			}):Play()
+			task.wait(0.35)
+			local idx = table.find(notificacoes, frame)
+			if idx then table.remove(notificacoes, idx) end
+			frame:Destroy()
+			sombra:Destroy()
+		end)
+	end
+	
+	-- FUNÇÃO UNIVERSAL DE REQUEST
 	local function httpRequest(dados)
 		local ok, resultado = pcall(function()
 			if syn and syn.request then
@@ -1110,34 +1336,36 @@ local function LSQH_fake_script() -- tela4.LocalScript
 		return nil
 	end
 	
-	-- CONVERTE Color3 pra tabela {r,g,b}
 	local function corParaTabela(cor)
-		return {
-			math.floor(cor.R * 255),
-			math.floor(cor.G * 255),
-			math.floor(cor.B * 255)
-		}
+		return {math.floor(cor.R*255), math.floor(cor.G*255), math.floor(cor.B*255)}
 	end
 	
-	-- CONVERTE tabela {r,g,b} pra Color3
 	local function tabelaParaCor(t)
 		return Color3.fromRGB(t[1], t[2], t[3])
 	end
 	
-	-- ATUALIZA VISIBILIDADE DAS ABAS
+	-- ATUALIZA ABAS
 	local function atualizarAbas(cargo)
 		local temAcesso = (localPlayer.UserId == MEU_ID_DONO)
-			or (cargo == "OWNER")
-			or (cargo == "GERENTE")
+			or (cargo == "OWNER") or (cargo == "GERENTE")
 		for _, aba in pairs(abasRestritas) do
-			if aba then aba.Visible = temAcesso end
+			if aba then
+				aba.Visible = temAcesso
+				if not temAcesso then
+					local painelADM = tela.Parent:FindFirstChild("butela4")
+						or tela.Parent:FindFirstChild("ADM")
+					if painelADM then painelADM.Visible = false end
+				end
+			end
 		end
 	end
 	
-	-- APLICA TAG VISUAL NO PERSONAGEM
+	-- APLICA TAG VISUAL
 	local function aplicarTagVisual(playerAlvo, texto, cor)
-		local char = playerAlvo.Character or playerAlvo.CharacterAdded:Wait()
-		local head = char:WaitForChild("Head")
+		local char = playerAlvo.Character
+		if not char then return end
+		local head = char:FindFirstChild("Head")
+		if not head then return end
 	
 		for _, o in pairs(head:GetChildren()) do
 			if o.Name == "TagPainel" then o:Destroy() end
@@ -1145,8 +1373,7 @@ local function LSQH_fake_script() -- tela4.LocalScript
 	
 		local bill = Instance.new("BillboardGui", head)
 		bill.Name = "TagPainel"
-		bill.Size = UDim2.new(4.5, 0, 1.2, 0)
-		bill.StudsOffset = Vector3.new(0, 2.5, 0)
+		bill.StudsOffset = Vector3.new(0, 2.2, 0)
 		bill.AlwaysOnTop = true
 	
 		local label = Instance.new("TextLabel", bill)
@@ -1155,13 +1382,17 @@ local function LSQH_fake_script() -- tela4.LocalScript
 		label.Text = texto
 		label.TextColor3 = cor
 		label.Font = Enum.Font.GothamBold
-		label.TextScaled = true
+		label.TextScaled = false
+		label.TextSize = 14
 		label.TextStrokeTransparency = 0.2
 		label.TextStrokeColor3 = Color3.new(0, 0, 0)
 	
+		local textSize = TextService:GetTextSize(texto, 14, Enum.Font.GothamBold, Vector2.new(1000, 1000))
+		bill.Size = UDim2.new(0, textSize.X + 10, 0, textSize.Y + 4)
+	
 		if texto == "OWNER" or texto == "GERENTE" then
 			local grad = Instance.new("UIGradient", label)
-			grad.Color = ColorSequence.new(cor, Color3.new(1, 1, 1), cor)
+			grad.Color = ColorSequence.new(cor, Color3.new(1,1,1), cor)
 			task.spawn(function()
 				while label and label.Parent do
 					grad.Offset = Vector2.new(-1, 0)
@@ -1175,17 +1406,14 @@ local function LSQH_fake_script() -- tela4.LocalScript
 	-- MANDA TAG PRO SERVIDOR
 	local function enviarTag(playerName, cargo, cor)
 		pcall(function()
-			local body = HttpService:JSONEncode({
-				player = playerName,
-				cargo = cargo,
-				cor = corParaTabela(cor),
-				gameId = GAME_ID
-			})
 			httpRequest({
 				Url = SERVIDOR .. "/settag",
 				Method = "POST",
 				Headers = {["Content-Type"] = "application/json"},
-				Body = body
+				Body = HttpService:JSONEncode({
+					player = playerName, cargo = cargo,
+					cor = corParaTabela(cor), gameId = GAME_ID
+				})
 			})
 		end)
 	end
@@ -1193,30 +1421,53 @@ local function LSQH_fake_script() -- tela4.LocalScript
 	-- REMOVE TAG DO SERVIDOR
 	local function removerTag(playerName)
 		pcall(function()
-			local body = HttpService:JSONEncode({
-				player = playerName,
-				gameId = GAME_ID
-			})
 			httpRequest({
 				Url = SERVIDOR .. "/removetag",
 				Method = "POST",
 				Headers = {["Content-Type"] = "application/json"},
-				Body = body
+				Body = HttpService:JSONEncode({player = playerName, gameId = GAME_ID})
 			})
 		end)
 	end
 	
-	-- LOOP: busca tags do servidor e aplica em tempo real
+	-- BUSCA CARGO DO SERVIDOR
+	local function buscarCargoServidor(playerName)
+		local ok, resposta = pcall(function()
+			return httpRequest({Url = SERVIDOR .. "/gettags?gameId=" .. GAME_ID, Method = "GET"})
+		end)
+		if ok and resposta and resposta.Body then
+			local dados = HttpService:JSONDecode(resposta.Body)
+			return dados[playerName]
+		end
+		return nil
+	end
+	
+	-- REAAPLICA TAG AO RESPAWN
+	local function conectarRespawn(p)
+		p.CharacterAdded:Connect(function()
+			task.wait(1.5)
+			local info = buscarCargoServidor(p.Name)
+			if info then
+				aplicarTagVisual(p, info.cargo, tabelaParaCor(info.cor))
+				if p == localPlayer then atualizarAbas(info.cargo) end
+			else
+				if p == localPlayer then
+					local cargo = localPlayer.UserId == MEU_ID_DONO and "OWNER" or "USER"
+					local cor = configuracaoTags[cargo]
+					enviarTag(p.Name, cargo, cor)
+					aplicarTagVisual(p, cargo, cor)
+					atualizarAbas(cargo)
+				end
+			end
+		end)
+	end
+	
+	-- LOOP PRINCIPAL
 	task.spawn(function()
 		while task.wait(2) do
 			pcall(function()
-				local resposta = httpRequest({
-					Url = SERVIDOR .. "/gettags?gameId=" .. GAME_ID,
-					Method = "GET"
-				})
-	
+				local resposta = httpRequest({Url = SERVIDOR .. "/gettags?gameId=" .. GAME_ID, Method = "GET"})
 				if not resposta or not resposta.Body then return end
-	
 				local dados = HttpService:JSONDecode(resposta.Body)
 	
 				for playerName, info in pairs(dados) do
@@ -1228,21 +1479,29 @@ local function LSQH_fake_script() -- tela4.LocalScript
 								local labelAtual = tagAtual and tagAtual:FindFirstChildOfClass("TextLabel")
 								if not labelAtual or labelAtual.Text ~= info.cargo then
 									aplicarTagVisual(p, info.cargo, tabelaParaCor(info.cor))
+									if cargoAnterior[playerName] and cargoAnterior[playerName] ~= info.cargo and info.cargo ~= "USER" then
+										notificar("Tag Atualizada", p.DisplayName .. " agora é " .. info.cargo, 4, "update", info.cargo)
+									end
+									cargoAnterior[playerName] = info.cargo
 								end
 							end
 						end
 					end
 				end
 	
-				-- Atualiza visibilidade da aba ADM
 				local minhaInfo = dados[localPlayer.Name]
 				local meuCargo = minhaInfo and minhaInfo.cargo or "USER"
+				if cargoAnterior[localPlayer.Name]
+					and (cargoAnterior[localPlayer.Name] == "OWNER" or cargoAnterior[localPlayer.Name] == "GERENTE")
+					and (meuCargo ~= "OWNER" and meuCargo ~= "GERENTE") then
+					notificar("Cargo Removido", "Seu cargo foi alterado para " .. meuCargo, 5, "warn", meuCargo)
+				end
 				atualizarAbas(meuCargo)
 			end)
 		end
 	end)
 	
-	-- BUSCA DE JOGADOR NO TEXTBOX
+	-- BUSCA DE JOGADOR
 	inputNome:GetPropertyChangedSignal("Text"):Connect(function()
 		local digitado = inputNome.Text:lower()
 		if digitado == "" then return end
@@ -1259,7 +1518,7 @@ local function LSQH_fake_script() -- tela4.LocalScript
 		end
 	end)
 	
-	-- BOTÕES DE SELEÇÃO DE TAG
+	-- BOTÕES DE SELEÇÃO
 	for nome, _ in pairs(configuracaoTags) do
 		if tela:FindFirstChild(nome) then
 			tela[nome].MouseButton1Click:Connect(function()
@@ -1276,9 +1535,11 @@ local function LSQH_fake_script() -- tela4.LocalScript
 					local cor = configuracaoTags[tagSelecionada]
 					enviarTag(p.Name, tagSelecionada, cor)
 					aplicarTagVisual(p, tagSelecionada, cor)
-					if p == localPlayer then
-						atualizarAbas(tagSelecionada)
+					cargoAnterior[p.Name] = tagSelecionada
+					if tagSelecionada ~= "USER" then
+						notificar("Tag Aplicada", p.DisplayName .. " recebeu " .. tagSelecionada, 4, "add", tagSelecionada)
 					end
+					if p == localPlayer then atualizarAbas(tagSelecionada) end
 				end
 				break
 			end
@@ -1291,34 +1552,43 @@ local function LSQH_fake_script() -- tela4.LocalScript
 			if p.DisplayName == textoDisplay.Text then
 				removerTag(p.Name)
 				aplicarTagVisual(p, "USER", configuracaoTags["USER"])
-				if p == localPlayer then
-					atualizarAbas("USER")
-				end
+				cargoAnterior[p.Name] = "USER"
+				notificar("Tag Removida", p.DisplayName .. " voltou para USER", 4, "remove", "USER")
+				if p == localPlayer then atualizarAbas("USER") end
 				break
 			end
 		end
+	end)
+	
+	-- CONECTA RESPAWN
+	for _, p in pairs(Players:GetPlayers()) do
+		conectarRespawn(p)
+	end
+	Players.PlayerAdded:Connect(function(p)
+		conectarRespawn(p)
 	end)
 	
 	-- INICIALIZAÇÃO
 	task.spawn(function()
 		task.wait(2)
 		local cargo = localPlayer.UserId == MEU_ID_DONO and "OWNER" or "USER"
-		local cor = configuracaoTags[cargo]
-	
-		enviarTag(localPlayer.Name, cargo, cor)
-		aplicarTagVisual(localPlayer, cargo, cor)
-		atualizarAbas(cargo)
-	
-		localPlayer.CharacterAdded:Connect(function()
-			task.wait(1)
+		local infoExistente = buscarCargoServidor(localPlayer.Name)
+		if infoExistente and localPlayer.UserId ~= MEU_ID_DONO then
+			cargo = infoExistente.cargo
+			aplicarTagVisual(localPlayer, cargo, tabelaParaCor(infoExistente.cor))
+		else
+			local cor = configuracaoTags[cargo]
 			enviarTag(localPlayer.Name, cargo, cor)
 			aplicarTagVisual(localPlayer, cargo, cor)
-			atualizarAbas(cargo)
-		end)
+		end
+		cargoAnterior[localPlayer.Name] = cargo
+		atualizarAbas(cargo)
+		notificar("4e20 Panel", "Bem vindo! Cargo: " .. cargo, 5, "welcome", cargo)
+		conectarRespawn(localPlayer)
 	end)
 end
-coroutine.wrap(LSQH_fake_script)()
-local function RYYXFV_fake_script() -- ScreenGui.GerenciadorAbas 
+coroutine.wrap(ZRFQODL_fake_script)()
+local function KIOP_fake_script() -- ScreenGui.GerenciadorAbas 
 	local script = Instance.new('LocalScript', ScreenGui)
 
 	local gui = script.Parent
@@ -1350,4 +1620,4 @@ local function RYYXFV_fake_script() -- ScreenGui.GerenciadorAbas
 		end
 	end
 end
-coroutine.wrap(RYYXFV_fake_script)()
+coroutine.wrap(KIOP_fake_script)()
