@@ -640,7 +640,7 @@ AvisoTP.TextSize = 14.000
 
 -- Scripts:
 
-local function FRYXZSP_fake_script() -- ScreenGui.LocalScript 
+local function XVBKPER_fake_script() -- ScreenGui.LocalScript 
 	local script = Instance.new('LocalScript', ScreenGui)
 
 	local UserInputService = game:GetService("UserInputService")
@@ -701,8 +701,8 @@ local function FRYXZSP_fake_script() -- ScreenGui.LocalScript
 		end
 	end)
 end
-coroutine.wrap(FRYXZSP_fake_script)()
-local function NLBQY_fake_script() -- tela1.CarregarHome 
+coroutine.wrap(XVBKPER_fake_script)()
+local function GAZJ_fake_script() -- tela1.CarregarHome 
 	local script = Instance.new('LocalScript', tela1)
 
 	local Players = game:GetService("Players")
@@ -726,8 +726,8 @@ local function NLBQY_fake_script() -- tela1.CarregarHome
 	
 	task.spawn(carregarFoto)
 end
-coroutine.wrap(NLBQY_fake_script)()
-local function MUCOH_fake_script() -- tela2.NOMES 
+coroutine.wrap(GAZJ_fake_script)()
+local function XKVI_fake_script() -- tela2.NOMES 
 	local script = Instance.new('LocalScript', tela2)
 
 	local Players = game:GetService("Players")
@@ -781,8 +781,8 @@ local function MUCOH_fake_script() -- tela2.NOMES
 		end
 	end)
 end
-coroutine.wrap(MUCOH_fake_script)()
-local function RNOTX_fake_script() -- tela2.VIEW 
+coroutine.wrap(XKVI_fake_script)()
+local function LLFSYEK_fake_script() -- tela2.VIEW 
 	local script = Instance.new('LocalScript', tela2)
 
 	local Players = game:GetService("Players")
@@ -881,8 +881,8 @@ local function RNOTX_fake_script() -- tela2.VIEW
 		end
 	end)
 end
-coroutine.wrap(RNOTX_fake_script)()
-local function ZNEXZIO_fake_script() -- CLICKTP.LocalScript 
+coroutine.wrap(LLFSYEK_fake_script)()
+local function BYHZ_fake_script() -- CLICKTP.LocalScript 
 	local script = Instance.new('LocalScript', CLICKTP)
 
 	local Players = game:GetService("Players")
@@ -938,8 +938,8 @@ local function ZNEXZIO_fake_script() -- CLICKTP.LocalScript
 		end
 	end)
 end
-coroutine.wrap(ZNEXZIO_fake_script)()
-local function ZHMWLF_fake_script() -- NOCLIP.LocalScript 
+coroutine.wrap(BYHZ_fake_script)()
+local function VXDSPX_fake_script() -- NOCLIP.LocalScript 
 	local script = Instance.new('LocalScript', NOCLIP)
 
 	local RunService = game:GetService("RunService")
@@ -1001,8 +1001,8 @@ local function ZHMWLF_fake_script() -- NOCLIP.LocalScript
 		end
 	end)
 end
-coroutine.wrap(ZHMWLF_fake_script)()
-local function WUCP_fake_script() -- FLASHBACK.LocalScript 
+coroutine.wrap(VXDSPX_fake_script)()
+local function GIRTEB_fake_script() -- FLASHBACK.LocalScript 
 	local script = Instance.new('LocalScript', FLASHBACK)
 
 	local RunService = game:GetService("RunService")
@@ -1080,8 +1080,8 @@ local function WUCP_fake_script() -- FLASHBACK.LocalScript
 		end
 	end)
 end
-coroutine.wrap(WUCP_fake_script)()
-local function PBRQ_fake_script() -- ANTAFK.LocalScript 
+coroutine.wrap(GIRTEB_fake_script)()
+local function ADORD_fake_script() -- ANTAFK.LocalScript 
 	local script = Instance.new('LocalScript', ANTAFK)
 
 	-- SERVIÇOS
@@ -1119,8 +1119,8 @@ local function PBRQ_fake_script() -- ANTAFK.LocalScript
 		end
 	end)
 end
-coroutine.wrap(PBRQ_fake_script)()
-local function EJLLKI_fake_script() -- tela4.LocalScript 
+coroutine.wrap(ADORD_fake_script)()
+local function YEEWMN_fake_script() -- tela4.LocalScript 
 	local script = Instance.new('LocalScript', tela4)
 
 	local Players = game:GetService("Players")
@@ -1565,8 +1565,8 @@ local function EJLLKI_fake_script() -- tela4.LocalScript
 		conectarRespawn(localPlayer)
 	end)
 end
-coroutine.wrap(EJLLKI_fake_script)()
-local function GGWECG_fake_script() -- ScreenGui.GerenciadorAbas 
+coroutine.wrap(YEEWMN_fake_script)()
+local function PPDIQOA_fake_script() -- ScreenGui.GerenciadorAbas 
 	local script = Instance.new('LocalScript', ScreenGui)
 
 	local gui = script.Parent
@@ -1598,4 +1598,4 @@ local function GGWECG_fake_script() -- ScreenGui.GerenciadorAbas
 		end
 	end
 end
-coroutine.wrap(GGWECG_fake_script)()
+coroutine.wrap(PPDIQOA_fake_script)()
