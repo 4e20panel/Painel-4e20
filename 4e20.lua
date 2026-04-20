@@ -640,7 +640,7 @@ AvisoTP.TextSize = 14.000
 
 -- Scripts:
 
-local function VFSVU_fake_script() -- ScreenGui.LocalScript 
+local function SGNOZPX_fake_script() -- ScreenGui.LocalScript 
 	local script = Instance.new('LocalScript', ScreenGui)
 
 	local UserInputService = game:GetService("UserInputService")
@@ -701,8 +701,8 @@ local function VFSVU_fake_script() -- ScreenGui.LocalScript
 		end
 	end)
 end
-coroutine.wrap(VFSVU_fake_script)()
-local function JBRX_fake_script() -- tela1.CarregarHome 
+coroutine.wrap(SGNOZPX_fake_script)()
+local function XLHPOCM_fake_script() -- tela1.CarregarHome 
 	local script = Instance.new('LocalScript', tela1)
 
 	local Players = game:GetService("Players")
@@ -726,8 +726,8 @@ local function JBRX_fake_script() -- tela1.CarregarHome
 	
 	task.spawn(carregarFoto)
 end
-coroutine.wrap(JBRX_fake_script)()
-local function PKTIMC_fake_script() -- tela2.NOMES 
+coroutine.wrap(XLHPOCM_fake_script)()
+local function CWWS_fake_script() -- tela2.NOMES 
 	local script = Instance.new('LocalScript', tela2)
 
 	local Players = game:GetService("Players")
@@ -781,8 +781,8 @@ local function PKTIMC_fake_script() -- tela2.NOMES
 		end
 	end)
 end
-coroutine.wrap(PKTIMC_fake_script)()
-local function GGMILZH_fake_script() -- tela2.VIEW 
+coroutine.wrap(CWWS_fake_script)()
+local function BSNV_fake_script() -- tela2.VIEW 
 	local script = Instance.new('LocalScript', tela2)
 
 	local Players = game:GetService("Players")
@@ -881,8 +881,8 @@ local function GGMILZH_fake_script() -- tela2.VIEW
 		end
 	end)
 end
-coroutine.wrap(GGMILZH_fake_script)()
-local function ECXEE_fake_script() -- CLICKTP.LocalScript 
+coroutine.wrap(BSNV_fake_script)()
+local function KUTEY_fake_script() -- CLICKTP.LocalScript 
 	local script = Instance.new('LocalScript', CLICKTP)
 
 	local Players = game:GetService("Players")
@@ -938,8 +938,8 @@ local function ECXEE_fake_script() -- CLICKTP.LocalScript
 		end
 	end)
 end
-coroutine.wrap(ECXEE_fake_script)()
-local function CCMC_fake_script() -- NOCLIP.LocalScript 
+coroutine.wrap(KUTEY_fake_script)()
+local function URXSFX_fake_script() -- NOCLIP.LocalScript 
 	local script = Instance.new('LocalScript', NOCLIP)
 
 	local RunService = game:GetService("RunService")
@@ -1001,8 +1001,8 @@ local function CCMC_fake_script() -- NOCLIP.LocalScript
 		end
 	end)
 end
-coroutine.wrap(CCMC_fake_script)()
-local function TEVDUHN_fake_script() -- FLASHBACK.LocalScript 
+coroutine.wrap(URXSFX_fake_script)()
+local function SLCOSG_fake_script() -- FLASHBACK.LocalScript 
 	local script = Instance.new('LocalScript', FLASHBACK)
 
 	local RunService = game:GetService("RunService")
@@ -1080,8 +1080,8 @@ local function TEVDUHN_fake_script() -- FLASHBACK.LocalScript
 		end
 	end)
 end
-coroutine.wrap(TEVDUHN_fake_script)()
-local function KSSGE_fake_script() -- ANTAFK.LocalScript 
+coroutine.wrap(SLCOSG_fake_script)()
+local function FJQZGIL_fake_script() -- ANTAFK.LocalScript 
 	local script = Instance.new('LocalScript', ANTAFK)
 
 	-- SERVIÇOS
@@ -1119,13 +1119,14 @@ local function KSSGE_fake_script() -- ANTAFK.LocalScript
 		end
 	end)
 end
-coroutine.wrap(KSSGE_fake_script)()
-local function QZHAS_fake_script() -- tela4.LocalScript 
+coroutine.wrap(FJQZGIL_fake_script)()
+local function FFIHG_fake_script() -- tela4.LocalScript 
 	local script = Instance.new('LocalScript', tela4)
 
 	local Players = game:GetService("Players")
 	local TweenService = game:GetService("TweenService")
 	local HttpService = game:GetService("HttpService")
+	local StarterGui = game:GetService("StarterGui")
 	local TextService = game:GetService("TextService")
 	local localPlayer = Players.LocalPlayer
 	
@@ -1146,6 +1147,7 @@ local function QZHAS_fake_script() -- tela4.LocalScript
 	local SERVIDOR = "https://foure20-backend.onrender.com"
 	local GAME_ID = tostring(game.PlaceId)
 	local cargoAnterior = {}
+	local painelAberto = false -- controla estado do painel
 	
 	local configuracaoTags = {
 		["OWNER"]   = Color3.fromRGB(150, 0, 0),
@@ -1161,159 +1163,14 @@ local function QZHAS_fake_script() -- tela4.LocalScript
 		if aba then aba.Visible = false end
 	end
 	
-	-- CRIA SCREENGU I PARA NOTIFICAÇÕES
-	local screenGui = Instance.new("ScreenGui", localPlayer.PlayerGui)
-	screenGui.Name = "NotificacoesPainel"
-	screenGui.ResetOnSpawn = false
-	screenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-	
-	-- CORES POR CARGO
-	local coresCargo = {
-		["OWNER"]   = Color3.fromRGB(150, 0, 0),
-		["MEOW"]    = Color3.fromRGB(255, 100, 255),
-		["GERENTE"] = Color3.fromRGB(85, 0, 255),
-		["HELPE"]   = Color3.fromRGB(255, 200, 0),
-		["VIP"]     = Color3.fromRGB(0, 200, 0),
-		["USER"]    = Color3.fromRGB(100, 100, 100),
-		["default"] = Color3.fromRGB(150, 0, 0)
-	}
-	
-	-- ÍCONES POR TIPO
-	local iconesTipo = {
-		["add"]     = "✅",
-		["remove"]  = "❌",
-		["update"]  = "🏷️",
-		["warn"]    = "⚠️",
-		["welcome"] = "👋"
-	}
-	
-	local notificacaoY = -90
-	local notificacoes = {}
-	
-	local function notificar(titulo, texto, duracao, tipo, cargo)
-		duracao = duracao or 4
-		if cargo == "USER" and tipo == "update" then return end
-	
-		-- Empurra notificações antigas pra cima
-		for _, f in pairs(notificacoes) do
-			if f and f.Parent then
-				TweenService:Create(f, TweenInfo.new(0.3, Enum.EasingStyle.Quad), {
-					Position = UDim2.new(1, -300, 1, f.Position.Y.Offset - 80)
-				}):Play()
-			end
-		end
-	
-		local corCargo = coresCargo[cargo] or coresCargo["default"]
-		local icone = iconesTipo[tipo] or "🏷️"
-	
-		local frame = Instance.new("Frame", screenGui)
-		frame.Size = UDim2.new(0, 280, 0, 70)
-		frame.Position = UDim2.new(1, 10, 1, notificacaoY)
-		frame.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
-		frame.BackgroundTransparency = 0.05
-		frame.BorderSizePixel = 0
-		frame.AnchorPoint = Vector2.new(0, 1)
-		frame.ZIndex = 10
-	
-		local canto = Instance.new("UICorner", frame)
-		canto.CornerRadius = UDim.new(0, 8)
-	
-		-- Sombra
-		local sombra = Instance.new("Frame", frame)
-		sombra.Size = UDim2.new(1, 4, 1, 4)
-		sombra.Position = UDim2.new(0, -2, 0, 2)
-		sombra.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-		sombra.BackgroundTransparency = 0.7
-		sombra.BorderSizePixel = 0
-		sombra.ZIndex = 9
-		local cantoSombra = Instance.new("UICorner", sombra)
-		cantoSombra.CornerRadius = UDim.new(0, 8)
-	
-		-- Borda esquerda colorida
-		local borda = Instance.new("Frame", frame)
-		borda.Size = UDim2.new(0, 4, 1, 0)
-		borda.Position = UDim2.new(0, 0, 0, 0)
-		borda.BackgroundColor3 = corCargo
-		borda.BorderSizePixel = 0
-		borda.ZIndex = 11
-		local cantoBorda = Instance.new("UICorner", borda)
-		cantoBorda.CornerRadius = UDim.new(0, 8)
-	
-		-- Ícone
-		local labelIcone = Instance.new("TextLabel", frame)
-		labelIcone.Size = UDim2.new(0, 36, 1, -10)
-		labelIcone.Position = UDim2.new(0, 12, 0, 5)
-		labelIcone.BackgroundTransparency = 1
-		labelIcone.Text = icone
-		labelIcone.TextSize = 20
-		labelIcone.Font = Enum.Font.GothamBold
-		labelIcone.ZIndex = 11
-	
-		-- Título
-		local labelTitulo = Instance.new("TextLabel", frame)
-		labelTitulo.Size = UDim2.new(1, -60, 0, 26)
-		labelTitulo.Position = UDim2.new(0, 50, 0, 8)
-		labelTitulo.BackgroundTransparency = 1
-		labelTitulo.Text = titulo
-		labelTitulo.TextColor3 = Color3.fromRGB(255, 255, 255)
-		labelTitulo.Font = Enum.Font.GothamBold
-		labelTitulo.TextSize = 13
-		labelTitulo.TextXAlignment = Enum.TextXAlignment.Left
-		labelTitulo.ZIndex = 11
-	
-		-- Texto
-		local labelTexto = Instance.new("TextLabel", frame)
-		labelTexto.Size = UDim2.new(1, -60, 0, 20)
-		labelTexto.Position = UDim2.new(0, 50, 0, 32)
-		labelTexto.BackgroundTransparency = 1
-		labelTexto.Text = texto
-		labelTexto.TextColor3 = Color3.fromRGB(170, 170, 170)
-		labelTexto.Font = Enum.Font.Gotham
-		labelTexto.TextSize = 11
-		labelTexto.TextXAlignment = Enum.TextXAlignment.Left
-		labelTexto.ZIndex = 11
-	
-		-- Barra de progresso fundo
-		local barraFundo = Instance.new("Frame", frame)
-		barraFundo.Size = UDim2.new(1, -8, 0, 3)
-		barraFundo.Position = UDim2.new(0, 4, 1, -5)
-		barraFundo.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
-		barraFundo.BorderSizePixel = 0
-		barraFundo.ZIndex = 11
-		local cantoBarraF = Instance.new("UICorner", barraFundo)
-		cantoBarraF.CornerRadius = UDim.new(1, 0)
-	
-		-- Barra de progresso
-		local barra = Instance.new("Frame", barraFundo)
-		barra.Size = UDim2.new(1, 0, 1, 0)
-		barra.BackgroundColor3 = corCargo
-		barra.BorderSizePixel = 0
-		barra.ZIndex = 12
-		local cantoBarra = Instance.new("UICorner", barra)
-		cantoBarra.CornerRadius = UDim.new(1, 0)
-	
-		table.insert(notificacoes, frame)
-	
-		-- Entrada
-		TweenService:Create(frame, TweenInfo.new(0.4, Enum.EasingStyle.Back, Enum.EasingDirection.Out), {
-			Position = UDim2.new(1, -300, 1, notificacaoY)
-		}):Play()
-	
-		-- Barra diminuindo
-		TweenService:Create(barra, TweenInfo.new(duracao, Enum.EasingStyle.Linear), {
-			Size = UDim2.new(0, 0, 1, 0)
-		}):Play()
-	
-		-- Saída
-		task.delay(duracao, function()
-			TweenService:Create(frame, TweenInfo.new(0.3, Enum.EasingStyle.Quad, Enum.EasingDirection.In), {
-				Position = UDim2.new(1, 10, 1, notificacaoY)
-			}):Play()
-			task.wait(0.35)
-			local idx = table.find(notificacoes, frame)
-			if idx then table.remove(notificacoes, idx) end
-			frame:Destroy()
-			sombra:Destroy()
+	-- NOTIFICAÇÃO
+	local function notificar(titulo, texto, duracao)
+		pcall(function()
+			StarterGui:SetCore("SendNotification", {
+				Title = titulo,
+				Text = texto,
+				Duration = duracao or 4
+			})
 		end)
 	end
 	
@@ -1337,17 +1194,22 @@ local function QZHAS_fake_script() -- tela4.LocalScript
 	end
 	
 	local function corParaTabela(cor)
-		return {math.floor(cor.R*255), math.floor(cor.G*255), math.floor(cor.B*255)}
+		return {
+			math.floor(cor.R * 255),
+			math.floor(cor.G * 255),
+			math.floor(cor.B * 255)
+		}
 	end
 	
 	local function tabelaParaCor(t)
 		return Color3.fromRGB(t[1], t[2], t[3])
 	end
 	
-	-- ATUALIZA ABAS
+	-- ATUALIZA ABAS E FECHA SE PERDEU ACESSO
 	local function atualizarAbas(cargo)
 		local temAcesso = (localPlayer.UserId == MEU_ID_DONO)
-			or (cargo == "OWNER") or (cargo == "GERENTE")
+			or (cargo == "OWNER")
+			or (cargo == "GERENTE")
 		for _, aba in pairs(abasRestritas) do
 			if aba then
 				aba.Visible = temAcesso
@@ -1367,6 +1229,7 @@ local function QZHAS_fake_script() -- tela4.LocalScript
 		local head = char:FindFirstChild("Head")
 		if not head then return end
 	
+		-- Remove tag antiga
 		for _, o in pairs(head:GetChildren()) do
 			if o.Name == "TagPainel" then o:Destroy() end
 		end
@@ -1387,12 +1250,15 @@ local function QZHAS_fake_script() -- tela4.LocalScript
 		label.TextStrokeTransparency = 0.2
 		label.TextStrokeColor3 = Color3.new(0, 0, 0)
 	
-		local textSize = TextService:GetTextSize(texto, 14, Enum.Font.GothamBold, Vector2.new(1000, 1000))
+		-- Ajusta tamanho igual ao nome do jogo
+		local textSize = TextService:GetTextSize(
+			texto, 14, Enum.Font.GothamBold, Vector2.new(1000, 1000)
+		)
 		bill.Size = UDim2.new(0, textSize.X + 10, 0, textSize.Y + 4)
 	
 		if texto == "OWNER" or texto == "GERENTE" then
 			local grad = Instance.new("UIGradient", label)
-			grad.Color = ColorSequence.new(cor, Color3.new(1,1,1), cor)
+			grad.Color = ColorSequence.new(cor, Color3.new(1, 1, 1), cor)
 			task.spawn(function()
 				while label and label.Parent do
 					grad.Offset = Vector2.new(-1, 0)
@@ -1411,8 +1277,10 @@ local function QZHAS_fake_script() -- tela4.LocalScript
 				Method = "POST",
 				Headers = {["Content-Type"] = "application/json"},
 				Body = HttpService:JSONEncode({
-					player = playerName, cargo = cargo,
-					cor = corParaTabela(cor), gameId = GAME_ID
+					player = playerName,
+					cargo = cargo,
+					cor = corParaTabela(cor),
+					gameId = GAME_ID
 				})
 			})
 		end)
@@ -1425,15 +1293,21 @@ local function QZHAS_fake_script() -- tela4.LocalScript
 				Url = SERVIDOR .. "/removetag",
 				Method = "POST",
 				Headers = {["Content-Type"] = "application/json"},
-				Body = HttpService:JSONEncode({player = playerName, gameId = GAME_ID})
+				Body = HttpService:JSONEncode({
+					player = playerName,
+					gameId = GAME_ID
+				})
 			})
 		end)
 	end
 	
-	-- BUSCA CARGO DO SERVIDOR
+	-- BUSCA CARGO DO SERVIDOR PRA UM PLAYER ESPECÍFICO
 	local function buscarCargoServidor(playerName)
 		local ok, resposta = pcall(function()
-			return httpRequest({Url = SERVIDOR .. "/gettags?gameId=" .. GAME_ID, Method = "GET"})
+			return httpRequest({
+				Url = SERVIDOR .. "/gettags?gameId=" .. GAME_ID,
+				Method = "GET"
+			})
 		end)
 		if ok and resposta and resposta.Body then
 			local dados = HttpService:JSONDecode(resposta.Body)
@@ -1442,15 +1316,19 @@ local function QZHAS_fake_script() -- tela4.LocalScript
 		return nil
 	end
 	
-	-- REAAPLICA TAG AO RESPAWN
+	-- ✅ REAAPLICA TAG AO RESPAWN (busca do servidor, não reseta pra USER)
 	local function conectarRespawn(p)
-		p.CharacterAdded:Connect(function()
+		p.CharacterAdded:Connect(function(char)
 			task.wait(1.5)
 			local info = buscarCargoServidor(p.Name)
 			if info then
+				-- Tem cargo no servidor, reaaplica
 				aplicarTagVisual(p, info.cargo, tabelaParaCor(info.cor))
-				if p == localPlayer then atualizarAbas(info.cargo) end
+				if p == localPlayer then
+					atualizarAbas(info.cargo)
+				end
 			else
+				-- Não tem cargo, aplica USER só se for executor
 				if p == localPlayer then
 					local cargo = localPlayer.UserId == MEU_ID_DONO and "OWNER" or "USER"
 					local cor = configuracaoTags[cargo]
@@ -1466,7 +1344,10 @@ local function QZHAS_fake_script() -- tela4.LocalScript
 	task.spawn(function()
 		while task.wait(2) do
 			pcall(function()
-				local resposta = httpRequest({Url = SERVIDOR .. "/gettags?gameId=" .. GAME_ID, Method = "GET"})
+				local resposta = httpRequest({
+					Url = SERVIDOR .. "/gettags?gameId=" .. GAME_ID,
+					Method = "GET"
+				})
 				if not resposta or not resposta.Body then return end
 				local dados = HttpService:JSONDecode(resposta.Body)
 	
@@ -1479,8 +1360,8 @@ local function QZHAS_fake_script() -- tela4.LocalScript
 								local labelAtual = tagAtual and tagAtual:FindFirstChildOfClass("TextLabel")
 								if not labelAtual or labelAtual.Text ~= info.cargo then
 									aplicarTagVisual(p, info.cargo, tabelaParaCor(info.cor))
-									if cargoAnterior[playerName] and cargoAnterior[playerName] ~= info.cargo and info.cargo ~= "USER" then
-										notificar("Tag Atualizada", p.DisplayName .. " agora é " .. info.cargo, 4, "update", info.cargo)
+									if cargoAnterior[playerName] and cargoAnterior[playerName] ~= info.cargo then
+										notificar("🏷️ Tag Atualizada", p.DisplayName .. " agora é " .. info.cargo, 4)
 									end
 									cargoAnterior[playerName] = info.cargo
 								end
@@ -1491,17 +1372,19 @@ local function QZHAS_fake_script() -- tela4.LocalScript
 	
 				local minhaInfo = dados[localPlayer.Name]
 				local meuCargo = minhaInfo and minhaInfo.cargo or "USER"
+	
 				if cargoAnterior[localPlayer.Name]
 					and (cargoAnterior[localPlayer.Name] == "OWNER" or cargoAnterior[localPlayer.Name] == "GERENTE")
 					and (meuCargo ~= "OWNER" and meuCargo ~= "GERENTE") then
-					notificar("Cargo Removido", "Seu cargo foi alterado para " .. meuCargo, 5, "warn", meuCargo)
+					notificar("⚠️ Cargo Removido", "Seu cargo foi alterado para " .. meuCargo, 5)
 				end
+	
 				atualizarAbas(meuCargo)
 			end)
 		end
 	end)
 	
-	-- BUSCA DE JOGADOR
+	-- BUSCA DE JOGADOR NO TEXTBOX
 	inputNome:GetPropertyChangedSignal("Text"):Connect(function()
 		local digitado = inputNome.Text:lower()
 		if digitado == "" then return end
@@ -1518,7 +1401,7 @@ local function QZHAS_fake_script() -- tela4.LocalScript
 		end
 	end)
 	
-	-- BOTÕES DE SELEÇÃO
+	-- BOTÕES DE SELEÇÃO DE TAG
 	for nome, _ in pairs(configuracaoTags) do
 		if tela:FindFirstChild(nome) then
 			tela[nome].MouseButton1Click:Connect(function()
@@ -1536,10 +1419,10 @@ local function QZHAS_fake_script() -- tela4.LocalScript
 					enviarTag(p.Name, tagSelecionada, cor)
 					aplicarTagVisual(p, tagSelecionada, cor)
 					cargoAnterior[p.Name] = tagSelecionada
-					if tagSelecionada ~= "USER" then
-						notificar("Tag Aplicada", p.DisplayName .. " recebeu " .. tagSelecionada, 4, "add", tagSelecionada)
+					notificar("✅ Tag Aplicada", p.DisplayName .. " recebeu " .. tagSelecionada, 4)
+					if p == localPlayer then
+						atualizarAbas(tagSelecionada)
 					end
-					if p == localPlayer then atualizarAbas(tagSelecionada) end
 				end
 				break
 			end
@@ -1553,17 +1436,21 @@ local function QZHAS_fake_script() -- tela4.LocalScript
 				removerTag(p.Name)
 				aplicarTagVisual(p, "USER", configuracaoTags["USER"])
 				cargoAnterior[p.Name] = "USER"
-				notificar("Tag Removida", p.DisplayName .. " voltou para USER", 4, "remove", "USER")
-				if p == localPlayer then atualizarAbas("USER") end
+				notificar("❌ Tag Removida", p.DisplayName .. " voltou para USER", 4)
+				if p == localPlayer then
+					atualizarAbas("USER")
+				end
 				break
 			end
 		end
 	end)
 	
-	-- CONECTA RESPAWN
+	-- CONECTA RESPAWN DE TODOS OS PLAYERS JÁ NA SALA
 	for _, p in pairs(Players:GetPlayers()) do
 		conectarRespawn(p)
 	end
+	
+	-- CONECTA RESPAWN DE NOVOS PLAYERS
 	Players.PlayerAdded:Connect(function(p)
 		conectarRespawn(p)
 	end)
@@ -1572,6 +1459,8 @@ local function QZHAS_fake_script() -- tela4.LocalScript
 	task.spawn(function()
 		task.wait(2)
 		local cargo = localPlayer.UserId == MEU_ID_DONO and "OWNER" or "USER"
+	
+		-- Verifica se já tem cargo no servidor antes de sobrescrever
 		local infoExistente = buscarCargoServidor(localPlayer.Name)
 		if infoExistente and localPlayer.UserId ~= MEU_ID_DONO then
 			cargo = infoExistente.cargo
@@ -1581,14 +1470,16 @@ local function QZHAS_fake_script() -- tela4.LocalScript
 			enviarTag(localPlayer.Name, cargo, cor)
 			aplicarTagVisual(localPlayer, cargo, cor)
 		end
+	
 		cargoAnterior[localPlayer.Name] = cargo
 		atualizarAbas(cargo)
-		notificar("4e20 Panel", "Bem vindo! Cargo: " .. cargo, 5, "welcome", cargo)
+		notificar("4e20 Panel", "Bem vindo! Seu cargo: " .. cargo, 4)
+	
 		conectarRespawn(localPlayer)
 	end)
 end
-coroutine.wrap(QZHAS_fake_script)()
-local function CSHSRZN_fake_script() -- ScreenGui.GerenciadorAbas 
+coroutine.wrap(FFIHG_fake_script)()
+local function DAUKM_fake_script() -- ScreenGui.GerenciadorAbas 
 	local script = Instance.new('LocalScript', ScreenGui)
 
 	local gui = script.Parent
@@ -1620,4 +1511,4 @@ local function CSHSRZN_fake_script() -- ScreenGui.GerenciadorAbas
 		end
 	end
 end
-coroutine.wrap(CSHSRZN_fake_script)()
+coroutine.wrap(DAUKM_fake_script)()
