@@ -824,7 +824,7 @@ TextLabel_16.TextWrapped = true
 
 -- Scripts:
 
-local function ABQG_fake_script() -- ScreenGui.GerenciadorAbas 
+local function PNFG_fake_script() -- ScreenGui.GerenciadorAbas 
 	local script = Instance.new('LocalScript', ScreenGui)
 
 	local gui = script.Parent
@@ -858,8 +858,8 @@ local function ABQG_fake_script() -- ScreenGui.GerenciadorAbas
 		end
 	end
 end
-coroutine.wrap(ABQG_fake_script)()
-local function FJIKQIC_fake_script() -- ScreenGui.LocalScript 
+coroutine.wrap(PNFG_fake_script)()
+local function ZQQKA_fake_script() -- ScreenGui.LocalScript 
 	local script = Instance.new('LocalScript', ScreenGui)
 
 	local UserInputService = game:GetService("UserInputService")
@@ -920,8 +920,8 @@ local function FJIKQIC_fake_script() -- ScreenGui.LocalScript
 		end
 	end)
 end
-coroutine.wrap(FJIKQIC_fake_script)()
-local function BQOHES_fake_script() -- tela1.CarregarHome 
+coroutine.wrap(ZQQKA_fake_script)()
+local function LCJAZVK_fake_script() -- tela1.CarregarHome 
 	local script = Instance.new('LocalScript', tela1)
 
 	local Players = game:GetService("Players")
@@ -945,8 +945,8 @@ local function BQOHES_fake_script() -- tela1.CarregarHome
 	
 	task.spawn(carregarFoto)
 end
-coroutine.wrap(BQOHES_fake_script)()
-local function XAJGD_fake_script() -- tela2.NOMES 
+coroutine.wrap(LCJAZVK_fake_script)()
+local function OFCRUN_fake_script() -- tela2.NOMES 
 	local script = Instance.new('LocalScript', tela2)
 
 	local Players = game:GetService("Players")
@@ -1000,8 +1000,8 @@ local function XAJGD_fake_script() -- tela2.NOMES
 		end
 	end)
 end
-coroutine.wrap(XAJGD_fake_script)()
-local function UJCWIS_fake_script() -- tela2.VIEW 
+coroutine.wrap(OFCRUN_fake_script)()
+local function VXNKNQA_fake_script() -- tela2.VIEW 
 	local script = Instance.new('LocalScript', tela2)
 
 	local Players = game:GetService("Players")
@@ -1100,8 +1100,8 @@ local function UJCWIS_fake_script() -- tela2.VIEW
 		end
 	end)
 end
-coroutine.wrap(UJCWIS_fake_script)()
-local function HSAB_fake_script() -- CLICKTP.LocalScript 
+coroutine.wrap(VXNKNQA_fake_script)()
+local function XKDH_fake_script() -- CLICKTP.LocalScript 
 	local script = Instance.new('LocalScript', CLICKTP)
 
 	local Players = game:GetService("Players")
@@ -1157,8 +1157,8 @@ local function HSAB_fake_script() -- CLICKTP.LocalScript
 		end
 	end)
 end
-coroutine.wrap(HSAB_fake_script)()
-local function MWTKNOQ_fake_script() -- FLASHBACK.LocalScript 
+coroutine.wrap(XKDH_fake_script)()
+local function SYHK_fake_script() -- FLASHBACK.LocalScript 
 	local script = Instance.new('LocalScript', FLASHBACK)
 
 	local RunService = game:GetService("RunService")
@@ -1236,8 +1236,8 @@ local function MWTKNOQ_fake_script() -- FLASHBACK.LocalScript
 		end
 	end)
 end
-coroutine.wrap(MWTKNOQ_fake_script)()
-local function XBOLXC_fake_script() -- NOCLIP.LocalScript 
+coroutine.wrap(SYHK_fake_script)()
+local function JPGKMWI_fake_script() -- NOCLIP.LocalScript 
 	local script = Instance.new('LocalScript', NOCLIP)
 
 	local RunService = game:GetService("RunService")
@@ -1299,8 +1299,8 @@ local function XBOLXC_fake_script() -- NOCLIP.LocalScript
 		end
 	end)
 end
-coroutine.wrap(XBOLXC_fake_script)()
-local function RYCDDQQ_fake_script() -- ANTAFK.LocalScript 
+coroutine.wrap(JPGKMWI_fake_script)()
+local function GEBYKWR_fake_script() -- ANTAFK.LocalScript 
 	local script = Instance.new('LocalScript', ANTAFK)
 
 	-- SERVIÇOS
@@ -1338,14 +1338,13 @@ local function RYCDDQQ_fake_script() -- ANTAFK.LocalScript
 		end
 	end)
 end
-coroutine.wrap(RYCDDQQ_fake_script)()
-local function ABKSBW_fake_script() -- tela4.LocalScript 
+coroutine.wrap(GEBYKWR_fake_script)()
+local function AEOK_fake_script() -- tela4.LocalScript 
 	local script = Instance.new('LocalScript', tela4)
 
 	local Players = game:GetService("Players")
 	local TweenService = game:GetService("TweenService")
 	local HttpService = game:GetService("HttpService")
-	local TextService = game:GetService("TextService")
 	local localPlayer = Players.LocalPlayer
 	
 	-- [[ 1. LIMPEZA ]]
@@ -1360,21 +1359,27 @@ local function ABKSBW_fake_script() -- tela4.LocalScript
 	limparDuplicatas()
 	
 	-- [[ 2. CONFIGURAÇÕES ]]
-	local tela = script.Parent 
+	local tela = script.Parent
 	local inputNome = tela:WaitForChild("TextBox")
 	local botaoAdd = tela:WaitForChild("ADD")
 	local imagemAvatar = inputNome:WaitForChild("ImageLabel")
 	local textoDisplay = inputNome:WaitForChild("DISPLAY NAME")
 	local textoID = inputNome:WaitForChild("ID")
 	local pastaBotoes = tela.Parent:WaitForChild("ABAS"):WaitForChild("botoes")
+	
 	local abasRestritas = {
-		["ADM"] = pastaBotoes:WaitForChild("butela4")
+		["ADM"] = pastaBotoes:WaitForChild("butela4"),
+		["VIP"] = pastaBotoes:WaitForChild("butela5"),
+	}
+	local telasRestritas = {
+		["ADM"] = tela.Parent:WaitForChild("tela4"),
+		["VIP"] = tela.Parent:WaitForChild("tela5"),
 	}
 	
 	local MEU_ID_DONO = 9657477548
 	local tagSelecionada = ""
 	local SERVIDOR = "https://foure20-backend.onrender.com"
-	local GAME_ID = "4E20_GLOBAL" 
+	local GAME_ID = "4E20_GLOBAL"
 	
 	local configuracaoTags = {
 		["OWNER"]   = Color3.fromRGB(150, 0, 0),
@@ -1385,6 +1390,18 @@ local function ABKSBW_fake_script() -- tela4.LocalScript
 		["USER"]    = Color3.fromRGB(255, 255, 255)
 	}
 	
+	local tagsADM = {["OWNER"] = true, ["MANAGER"] = true}
+	local tagsVIP = {["OWNER"] = true, ["MANAGER"] = true, ["MEOW"] = true, ["VIP"] = true}
+	
+	-- Só mostra tag de quem está nessa tabela (executou o painel nessa sessão)
+	local playersCadastrados = {}
+	
+	-- Esconde tudo IMEDIATAMENTE
+	if abasRestritas["ADM"] then abasRestritas["ADM"].Visible = false end
+	if abasRestritas["VIP"] then abasRestritas["VIP"].Visible = false end
+	if telasRestritas["ADM"] then telasRestritas["ADM"].Visible = false end
+	if telasRestritas["VIP"] then telasRestritas["VIP"].Visible = false end
+	
 	-- [[ 3. NOTIFICAÇÕES ]]
 	local screenGui = Instance.new("ScreenGui", localPlayer.PlayerGui)
 	screenGui.Name = "NotificacoesPainel"
@@ -1394,7 +1411,9 @@ local function ABKSBW_fake_script() -- tela4.LocalScript
 		duracao = duracao or 4
 		for _, f in pairs(screenGui:GetChildren()) do
 			if f:IsA("Frame") then
-				TweenService:Create(f, TweenInfo.new(0.3), {Position = UDim2.new(1, -300, 1, f.Position.Y.Offset - 85)}):Play()
+				TweenService:Create(f, TweenInfo.new(0.3), {
+					Position = UDim2.new(1, -300, 1, f.Position.Y.Offset - 85)
+				}):Play()
 			end
 		end
 	
@@ -1433,10 +1452,15 @@ local function ABKSBW_fake_script() -- tela4.LocalScript
 		labelTexto.TextSize = 12
 		labelTexto.TextXAlignment = Enum.TextXAlignment.Left
 	
-		TweenService:Create(frame, TweenInfo.new(0.4, Enum.EasingStyle.Back), {Position = UDim2.new(1, -300, 1, -95)}):Play()
+		TweenService:Create(frame, TweenInfo.new(0.4, Enum.EasingStyle.Back), {
+			Position = UDim2.new(1, -300, 1, -95)
+		}):Play()
+	
 		task.delay(duracao, function()
 			if frame and frame.Parent then
-				TweenService:Create(frame, TweenInfo.new(0.3), {Position = UDim2.new(1, 10, 1, frame.Position.Y.Offset)}):Play()
+				TweenService:Create(frame, TweenInfo.new(0.3), {
+					Position = UDim2.new(1, 10, 1, frame.Position.Y.Offset)
+				}):Play()
 				task.wait(0.3)
 				frame:Destroy()
 			end
@@ -1450,8 +1474,13 @@ local function ABKSBW_fake_script() -- tela4.LocalScript
 		return ok and res or nil
 	end
 	
-	local function corParaTabela(cor) return {math.floor(cor.R*255), math.floor(cor.G*255), math.floor(cor.B*255)} end
-	local function tabelaParaCor(t) return Color3.fromRGB(t[1], t[2], t[3]) end
+	local function corParaTabela(cor)
+		return {math.floor(cor.R*255), math.floor(cor.G*255), math.floor(cor.B*255)}
+	end
+	
+	local function tabelaParaCor(t)
+		return Color3.fromRGB(t[1], t[2], t[3])
+	end
 	
 	local function enviarTag(playerName, cargo, cor)
 		pcall(function()
@@ -1459,76 +1488,88 @@ local function ABKSBW_fake_script() -- tela4.LocalScript
 				Url = SERVIDOR .. "/settag",
 				Method = "POST",
 				Headers = {["Content-Type"] = "application/json"},
-				Body = HttpService:JSONEncode({player = playerName, cargo = cargo, cor = corParaTabela(cor), gameId = GAME_ID})
+				Body = HttpService:JSONEncode({
+					player = playerName,
+					cargo = cargo,
+					cor = corParaTabela(cor),
+					gameId = GAME_ID
+				})
 			})
 		end)
 	end
 	
-	local function buscarCargoServidor(pName)
+	local function buscarTodosCargos()
 		local res = httpRequest({Url = SERVIDOR .. "/gettags?gameId=" .. GAME_ID, Method = "GET"})
-		return res and res.Body and HttpService:JSONDecode(res.Body)[pName] or nil
+		return res and res.Body and HttpService:JSONDecode(res.Body) or nil
 	end
 	
 	-- [[ 5. CONTROLE DE ABAS ]]
 	local function atualizarAbas(cargo)
-		local temAcesso = (localPlayer.UserId == MEU_ID_DONO) or (cargo == "OWNER") or (cargo == "MANAGER")
-		for _, abaBtn in pairs(abasRestritas) do
-			if abaBtn then abaBtn.Visible = temAcesso end
-		end
-		if not temAcesso and tela.Visible then tela.Visible = false end
+		local temADM = (localPlayer.UserId == MEU_ID_DONO) or (tagsADM[cargo] == true)
+		local temVIP = (localPlayer.UserId == MEU_ID_DONO) or (tagsVIP[cargo] == true)
+	
+		if abasRestritas["ADM"] then abasRestritas["ADM"].Visible = temADM end
+		if abasRestritas["VIP"] then abasRestritas["VIP"].Visible = temVIP end
+		if telasRestritas["ADM"] and not temADM then telasRestritas["ADM"].Visible = false end
+		if telasRestritas["VIP"] and not temVIP then telasRestritas["VIP"].Visible = false end
 	end
 	
 	-- [[ 6. TAGS VISUAIS ]]
 	local function aplicarTagVisual(pAlvo, texto, cor)
-		if pAlvo.Character and pAlvo.Character:FindFirstChild("Head") then
-			for _, o in pairs(pAlvo.Character.Head:GetChildren()) do if o.Name == "TagPainel" then o:Destroy() end end
+		if not (pAlvo.Character and pAlvo.Character:FindFirstChild("Head")) then return end
 	
-			local bill = Instance.new("BillboardGui", pAlvo.Character.Head)
-			bill.Name = "TagPainel"
-			bill.StudsOffset = Vector3.new(0, 2.4, 0) 
-			bill.AlwaysOnTop = true
-			bill.MaxDistance = 100 
+		for _, o in pairs(pAlvo.Character.Head:GetChildren()) do
+			if o.Name == "TagPainel" then o:Destroy() end
+		end
 	
-			if texto == "USER" then
-				bill.Size = UDim2.new(2.2, 0, 0.7, 0)
-			else
-				bill.Size = UDim2.new(3.8, 0, 1.1, 0)
-			end
+		local bill = Instance.new("BillboardGui", pAlvo.Character.Head)
+		bill.Name = "TagPainel"
+		bill.StudsOffset = Vector3.new(0, 2.1, 0)
+		bill.AlwaysOnTop = true
+		bill.MaxDistance = 100
+		bill.Size = texto == "USER" and UDim2.new(1.6, 0, 0.5, 0) or UDim2.new(2.8, 0, 0.75, 0)
 	
-			local label = Instance.new("TextLabel", bill)
-			label.Size = UDim2.new(1, 0, 1, 0)
-			label.BackgroundTransparency = 1
-			label.TextColor3 = cor
-			label.Font = Enum.Font.GothamBold
-			label.RichText = true
-			label.TextScaled = true 
-			label.Text = "<b>" .. texto .. "</b>"
+		local label = Instance.new("TextLabel", bill)
+		label.Size = UDim2.new(1, 0, 1, 0)
+		label.BackgroundTransparency = 1
+		label.TextColor3 = cor
+		label.Font = Enum.Font.GothamBold
+		label.RichText = true
+		label.TextScaled = true
+		label.Text = "<b>" .. texto .. "</b>"
 	
-			if texto == "OWNER" or texto == "MANAGER" or texto == "MEOW" then
-				label.TextStrokeTransparency = 1
-				local grad = Instance.new("UIGradient", label)
-				grad.Color = ColorSequence.new({
-					ColorSequenceKeypoint.new(0, cor),
-					ColorSequenceKeypoint.new(0.45, cor),
-					ColorSequenceKeypoint.new(0.5, Color3.new(1, 1, 1)),
-					ColorSequenceKeypoint.new(0.55, cor),
-					ColorSequenceKeypoint.new(1, cor)
-				})
-				task.spawn(function()
-					while label and label.Parent do
-						grad.Offset = Vector2.new(-1, 0)
-						TweenService:Create(grad, TweenInfo.new(3.5, Enum.EasingStyle.Linear), {Offset = Vector2.new(1, 0)}):Play()
-						task.wait(3.6)
-					end
-				end)
-			else
-				label.TextStrokeTransparency = 0.3
-				label.TextStrokeColor3 = Color3.new(0, 0, 0)
-			end
+		if texto == "OWNER" or texto == "MANAGER" or texto == "MEOW" then
+			label.TextStrokeTransparency = 1
+	
+			-- Gradiente: cor base → branco puro forte no centro → cor base
+			local grad = Instance.new("UIGradient", label)
+			grad.Color = ColorSequence.new({
+				ColorSequenceKeypoint.new(0,    cor),
+				ColorSequenceKeypoint.new(0.30, cor),
+				ColorSequenceKeypoint.new(0.44, Color3.fromRGB(255, 255, 255)),
+				ColorSequenceKeypoint.new(0.50, Color3.fromRGB(255, 255, 255)),
+				ColorSequenceKeypoint.new(0.56, Color3.fromRGB(255, 255, 255)),
+				ColorSequenceKeypoint.new(0.70, cor),
+				ColorSequenceKeypoint.new(1,    cor)
+			})
+	
+			-- Animação mais lenta e suave — 3s de ida, pausa, repete
+			task.spawn(function()
+				while label and label.Parent do
+					grad.Offset = Vector2.new(-1.5, 0)
+					TweenService:Create(grad, TweenInfo.new(3.0, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), {
+						Offset = Vector2.new(1.5, 0)
+					}):Play()
+					task.wait(3.8)
+				end
+			end)
+		else
+			label.TextStrokeTransparency = 0.3
+			label.TextStrokeColor3 = Color3.new(0, 0, 0)
 		end
 	end
 	
-	-- [[ 7. LOOP E INTERAÇÃO ]]
+	-- [[ 7. BUSCA DE JOGADOR ]]
 	inputNome:GetPropertyChangedSignal("Text"):Connect(function()
 		local d = inputNome.Text:lower()
 		if d == "" then return end
@@ -1536,12 +1577,16 @@ local function ABKSBW_fake_script() -- tela4.LocalScript
 			if p.Name:lower():find(d) or p.DisplayName:lower():find(d) then
 				textoDisplay.Text = p.DisplayName
 				textoID.Text = "ID: " .. p.UserId
-				pcall(function() imagemAvatar.Image = Players:GetUserThumbnailAsync(p.UserId, Enum.ThumbnailType.HeadShot, Enum.ThumbnailSize.Size150x150) end)
+				pcall(function()
+					imagemAvatar.Image = Players:GetUserThumbnailAsync(
+						p.UserId, Enum.ThumbnailType.HeadShot, Enum.ThumbnailSize.Size150x150)
+				end)
 				break
 			end
 		end
 	end)
 	
+	-- [[ 8. BOTÕES DE SELEÇÃO DE TAG ]]
 	local bSel = nil
 	for n, _ in pairs(configuracaoTags) do
 		if tela:FindFirstChild(n) then
@@ -1555,6 +1600,7 @@ local function ABKSBW_fake_script() -- tela4.LocalScript
 		end
 	end
 	
+	-- [[ 9. BOTÃO ADD ]]
 	botaoAdd.MouseButton1Click:Connect(function()
 		if tagSelecionada == "" then return end
 		for _, p in pairs(Players:GetPlayers()) do
@@ -1562,6 +1608,8 @@ local function ABKSBW_fake_script() -- tela4.LocalScript
 				local cor = configuracaoTags[tagSelecionada]
 				enviarTag(p.Name, tagSelecionada, cor)
 				aplicarTagVisual(p, tagSelecionada, cor)
+				-- Marca como cadastrado para o loop mostrar a tag dele
+				playersCadastrados[p.Name] = true
 				notificar("SISTEMA", p.DisplayName .. " ATUALIZADO PARA " .. tagSelecionada, 4, "update", tagSelecionada)
 				if p == localPlayer then atualizarAbas(tagSelecionada) end
 				break
@@ -1569,45 +1617,67 @@ local function ABKSBW_fake_script() -- tela4.LocalScript
 		end
 	end)
 	
-	-- [[ 8. LÓGICA DE EXECUÇÃO RESTRITA (CORREÇÃO) ]]
-	-- Este loop só processa quem ATIVAMENTE tem o painel ou foi atualizado via painel
+	-- [[ 10. LOOP PRINCIPAL ]]
+	-- Só aplica tag em quem está em playersCadastrados (executou o painel nessa sessão)
 	task.spawn(function()
-		while task.wait(4) do
+		while task.wait(2) do
 			pcall(function()
-				local res = httpRequest({Url = SERVIDOR .. "/gettags?gameId=" .. GAME_ID, Method = "GET"})
-				if not res then return end
-				local dados = HttpService:JSONDecode(res.Body)
+				local dados = buscarTodosCargos()
+				if not dados then return end
 	
 				for pName, info in pairs(dados) do
-					local p = Players:FindFirstChild(pName)
-					-- A tag só é aplicada se o jogador for encontrado e estiver no banco de dados ativo do painel
-					if p and p.Character then
-						local tag = p.Character.Head:FindFirstChild("TagPainel")
-						local lbl = tag and tag:FindFirstChildOfClass("TextLabel")
-						if not lbl or lbl.Text ~= "<b>" .. info.cargo .. "</b>" then
-							aplicarTagVisual(p, info.cargo, tabelaParaCor(info.cor))
+					-- FILTRO: só processa quem executou o painel
+					if playersCadastrados[pName] then
+						local p = Players:FindFirstChild(pName)
+						if p and p.Character and p.Character:FindFirstChild("Head") then
+							local tag = p.Character.Head:FindFirstChild("TagPainel")
+							local lbl = tag and tag:FindFirstChildOfClass("TextLabel")
+							if not lbl or lbl.Text ~= "<b>" .. info.cargo .. "</b>" then
+								aplicarTagVisual(p, info.cargo, tabelaParaCor(info.cor))
+							end
 						end
 					end
 				end
+	
 				local minhaInfo = dados[localPlayer.Name]
-				atualizarAbas(minhaInfo and minhaInfo.cargo or "USER")
+				local meuCargo = minhaInfo and minhaInfo.cargo or "USER"
+				atualizarAbas(meuCargo)
 			end)
 		end
 	end)
 	
-	-- Inicialização apenas para quem EXECUTOU
-	task.wait(0.5)
-	local inicial = buscarCargoServidor(localPlayer.Name)
-	local cargoInit = (localPlayer.UserId == MEU_ID_DONO and "OWNER") or (inicial and inicial.cargo) or "USER"
+	-- [[ 11. INICIALIZAÇÃO ]]
+	task.spawn(function()
+		-- Aplica imediatamente sem esperar servidor
+		local cargoInit = localPlayer.UserId == MEU_ID_DONO and "OWNER" or "USER"
+		aplicarTagVisual(localPlayer, cargoInit, configuracaoTags[cargoInit])
+		atualizarAbas(cargoInit)
 	
-	-- Aplica a própria tag ao executar, confirmando a presença no painel
-	aplicarTagVisual(localPlayer, cargoInit, configuracaoTags[cargoInit])
-	enviarTag(localPlayer.Name, cargoInit, configuracaoTags[cargoInit])
-	atualizarAbas(cargoInit)
-	notificar("4E20 PANEL", "PAINEL ATIVO: TAGS APENAS PARA EXECUTORES!", 5, "welcome", cargoInit)
+		-- Tenta buscar cargo salvo (até 5 tentativas)
+		local tentativas = 0
+		repeat
+			tentativas = tentativas + 1
+			local dados = buscarTodosCargos()
+			if dados and dados[localPlayer.Name] then
+				if localPlayer.UserId ~= MEU_ID_DONO then
+					cargoInit = dados[localPlayer.Name].cargo
+				end
+				break
+			end
+			task.wait(0.5)
+		until tentativas >= 5
+	
+		-- Registra no servidor e marca como cadastrado
+		enviarTag(localPlayer.Name, cargoInit, configuracaoTags[cargoInit])
+		playersCadastrados[localPlayer.Name] = true
+	
+		aplicarTagVisual(localPlayer, cargoInit, configuracaoTags[cargoInit])
+		atualizarAbas(cargoInit)
+		notificar("4E20 PANEL", "PAINEL ATIVO — CARGO: " .. cargoInit, 5, "welcome", cargoInit)
+	end)
 end
-coroutine.wrap(ABKSBW_fake_script)()
-local function ITJJ_fake_script() -- PINCEL.LocalScript 
+coroutine.wrap(AEOK_fake_script)()
+local function CAXYMYE_fake_script() -- PINCEL.LocalScript 
 	local script = Instance.new('LocalScript', PINCEL)
 
 	-- [[ SISTEMA DE TEMAS 4E20 PANEL - 20 CORES ]] --
@@ -1668,8 +1738,8 @@ local function ITJJ_fake_script() -- PINCEL.LocalScript
 		aplicarTema(novaCor)
 	end)
 end
-coroutine.wrap(ITJJ_fake_script)()
-local function BOIHWLX_fake_script() -- FLING.LocalScript 
+coroutine.wrap(CAXYMYE_fake_script)()
+local function XYBC_fake_script() -- FLING.LocalScript 
 	local script = Instance.new('LocalScript', FLING)
 
 	local RunService = game:GetService("RunService")
@@ -1859,8 +1929,8 @@ local function BOIHWLX_fake_script() -- FLING.LocalScript
 		end
 	end)
 end
-coroutine.wrap(BOIHWLX_fake_script)()
-local function HBOUNR_fake_script() -- INVISIVEL.LocalScript 
+coroutine.wrap(XYBC_fake_script)()
+local function KHFRRC_fake_script() -- INVISIVEL.LocalScript 
 	local script = Instance.new('LocalScript', INVISIVEL)
 
 	local UserInputService = game:GetService("UserInputService")
@@ -2063,8 +2133,8 @@ local function HBOUNR_fake_script() -- INVISIVEL.LocalScript
 		end
 	end)
 end
-coroutine.wrap(HBOUNR_fake_script)()
-local function HNBJG_fake_script() -- JUMP.LocalScript 
+coroutine.wrap(KHFRRC_fake_script)()
+local function WDDMHQ_fake_script() -- JUMP.LocalScript 
 	local script = Instance.new('LocalScript', JUMP)
 
 	local UserInputService = game:GetService("UserInputService")
@@ -2114,8 +2184,8 @@ local function HNBJG_fake_script() -- JUMP.LocalScript
 		end
 	end)
 end
-coroutine.wrap(HNBJG_fake_script)()
-local function GFFIS_fake_script() -- SPIN.LocalScript 
+coroutine.wrap(WDDMHQ_fake_script)()
+local function KEQUKIU_fake_script() -- SPIN.LocalScript 
 	local script = Instance.new('LocalScript', SPIN)
 
 	local RunService = game:GetService("RunService")
@@ -2200,8 +2270,8 @@ local function GFFIS_fake_script() -- SPIN.LocalScript
 		removerForca()
 	end)
 end
-coroutine.wrap(GFFIS_fake_script)()
-local function BTEAYT_fake_script() -- JERKOFF.LocalScript 
+coroutine.wrap(KEQUKIU_fake_script)()
+local function ORWKE_fake_script() -- JERKOFF.LocalScript 
 	local script = Instance.new('LocalScript', JERKOFF)
 
 	local RunService = game:GetService("RunService")
@@ -2355,4 +2425,4 @@ local function BTEAYT_fake_script() -- JERKOFF.LocalScript
 		end
 	end)
 end
-coroutine.wrap(BTEAYT_fake_script)()
+coroutine.wrap(ORWKE_fake_script)()
