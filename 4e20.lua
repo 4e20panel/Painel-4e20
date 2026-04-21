@@ -942,7 +942,7 @@ UICorner_31.Parent = JERKOFF
 
 -- Scripts:
 
-local function QLNT_fake_script() -- ScreenGui.GerenciadorAbas 
+local function AIPQ_fake_script() -- ScreenGui.GerenciadorAbas 
 	local script = Instance.new('LocalScript', ScreenGui)
 
 	local gui = script.Parent
@@ -975,8 +975,8 @@ local function QLNT_fake_script() -- ScreenGui.GerenciadorAbas
 		end
 	end
 end
-coroutine.wrap(QLNT_fake_script)()
-local function JOCC_fake_script() -- ScreenGui.LocalScript 
+coroutine.wrap(AIPQ_fake_script)()
+local function VQOM_fake_script() -- ScreenGui.LocalScript 
 	local script = Instance.new('LocalScript', ScreenGui)
 
 	local UserInputService = game:GetService("UserInputService")
@@ -1037,8 +1037,8 @@ local function JOCC_fake_script() -- ScreenGui.LocalScript
 		end
 	end)
 end
-coroutine.wrap(JOCC_fake_script)()
-local function WBGXKM_fake_script() -- tela1.CarregarHome 
+coroutine.wrap(VQOM_fake_script)()
+local function WFNDKLP_fake_script() -- tela1.CarregarHome 
 	local script = Instance.new('LocalScript', tela1)
 
 	local Players = game:GetService("Players")
@@ -1062,8 +1062,8 @@ local function WBGXKM_fake_script() -- tela1.CarregarHome
 	
 	task.spawn(carregarFoto)
 end
-coroutine.wrap(WBGXKM_fake_script)()
-local function PNQY_fake_script() -- TextLabel_2.LocalScript 
+coroutine.wrap(WFNDKLP_fake_script)()
+local function PMWOY_fake_script() -- TextLabel_2.LocalScript 
 	local script = Instance.new('LocalScript', TextLabel_2)
 
 	-- [[ MONITOR DE LATÊNCIA REAL-TIME - 4E20 PANEL ]] --
@@ -1097,8 +1097,8 @@ local function PNQY_fake_script() -- TextLabel_2.LocalScript
 		end
 	end
 end
-coroutine.wrap(PNQY_fake_script)()
-local function GULCH_fake_script() -- TextLabel_3.LocalScript 
+coroutine.wrap(PMWOY_fake_script)()
+local function ZNKMJNL_fake_script() -- TextLabel_3.LocalScript 
 	local script = Instance.new('LocalScript', TextLabel_3)
 
 	-- [[ PLAYER COUNTER - 4E20 PANEL ]] --
@@ -1124,8 +1124,8 @@ local function GULCH_fake_script() -- TextLabel_3.LocalScript
 	-- Atualização inicial
 	atualizarContagem()
 end
-coroutine.wrap(GULCH_fake_script)()
-local function IAYRI_fake_script() -- tela2.NOMES 
+coroutine.wrap(ZNKMJNL_fake_script)()
+local function EFRZOWC_fake_script() -- tela2.NOMES 
 	local script = Instance.new('LocalScript', tela2)
 
 	local Players = game:GetService("Players")
@@ -1179,8 +1179,8 @@ local function IAYRI_fake_script() -- tela2.NOMES
 		end
 	end)
 end
-coroutine.wrap(IAYRI_fake_script)()
-local function YJIX_fake_script() -- tela2.VIEW 
+coroutine.wrap(EFRZOWC_fake_script)()
+local function PVRIHXP_fake_script() -- tela2.VIEW 
 	local script = Instance.new('LocalScript', tela2)
 
 	local Players = game:GetService("Players")
@@ -1279,8 +1279,8 @@ local function YJIX_fake_script() -- tela2.VIEW
 		end
 	end)
 end
-coroutine.wrap(YJIX_fake_script)()
-local function UKYUOCK_fake_script() -- CLICKTP.LocalScript 
+coroutine.wrap(PVRIHXP_fake_script)()
+local function GEHI_fake_script() -- CLICKTP.LocalScript 
 	local script = Instance.new('LocalScript', CLICKTP)
 
 	local Players = game:GetService("Players")
@@ -1336,8 +1336,8 @@ local function UKYUOCK_fake_script() -- CLICKTP.LocalScript
 		end
 	end)
 end
-coroutine.wrap(UKYUOCK_fake_script)()
-local function JFVTA_fake_script() -- FLASHBACK.LocalScript 
+coroutine.wrap(GEHI_fake_script)()
+local function UJQR_fake_script() -- FLASHBACK.LocalScript 
 	local script = Instance.new('LocalScript', FLASHBACK)
 
 	local RunService = game:GetService("RunService")
@@ -1415,8 +1415,8 @@ local function JFVTA_fake_script() -- FLASHBACK.LocalScript
 		end
 	end)
 end
-coroutine.wrap(JFVTA_fake_script)()
-local function AWQNSX_fake_script() -- NOCLIP.LocalScript 
+coroutine.wrap(UJQR_fake_script)()
+local function VLPM_fake_script() -- NOCLIP.LocalScript 
 	local script = Instance.new('LocalScript', NOCLIP)
 
 	local RunService = game:GetService("RunService")
@@ -1478,8 +1478,8 @@ local function AWQNSX_fake_script() -- NOCLIP.LocalScript
 		end
 	end)
 end
-coroutine.wrap(AWQNSX_fake_script)()
-local function DBDLDCU_fake_script() -- ANTAFK.LocalScript 
+coroutine.wrap(VLPM_fake_script)()
+local function JMAER_fake_script() -- ANTAFK.LocalScript 
 	local script = Instance.new('LocalScript', ANTAFK)
 
 	-- SERVIÇOS
@@ -1517,13 +1517,14 @@ local function DBDLDCU_fake_script() -- ANTAFK.LocalScript
 		end
 	end)
 end
-coroutine.wrap(DBDLDCU_fake_script)()
-local function BEWGJ_fake_script() -- tela4.LocalScript 
+coroutine.wrap(JMAER_fake_script)()
+local function FVVTQB_fake_script() -- tela4.LocalScript 
 	local script = Instance.new('LocalScript', tela4)
 
 	local Players = game:GetService("Players")
 	local TweenService = game:GetService("TweenService")
 	local HttpService = game:GetService("HttpService")
+	local TextService = game:GetService("TextService")
 	local localPlayer = Players.LocalPlayer
 	
 	-- [[ 1. LIMPEZA ]]
@@ -1571,9 +1572,6 @@ local function BEWGJ_fake_script() -- tela4.LocalScript
 	
 	local tagsADM = {["OWNER"] = true, ["MANAGER"] = true}
 	local tagsVIP = {["OWNER"] = true, ["MANAGER"] = true, ["MEOW"] = true, ["VIP"] = true}
-	
-	-- Só mostra tag de quem está nessa tabela (executou o painel nessa sessão)
-	local playersCadastrados = {}
 	
 	-- Esconde tudo IMEDIATAMENTE
 	if abasRestritas["ADM"] then abasRestritas["ADM"].Visible = false end
@@ -1677,9 +1675,9 @@ local function BEWGJ_fake_script() -- tela4.LocalScript
 		end)
 	end
 	
-	local function buscarTodosCargos()
+	local function buscarCargoServidor(pName)
 		local res = httpRequest({Url = SERVIDOR .. "/gettags?gameId=" .. GAME_ID, Method = "GET"})
-		return res and res.Body and HttpService:JSONDecode(res.Body) or nil
+		return res and res.Body and HttpService:JSONDecode(res.Body)[pName] or nil
 	end
 	
 	-- [[ 5. CONTROLE DE ABAS ]]
@@ -1706,7 +1704,13 @@ local function BEWGJ_fake_script() -- tela4.LocalScript
 		bill.StudsOffset = Vector3.new(0, 2.1, 0)
 		bill.AlwaysOnTop = true
 		bill.MaxDistance = 100
-		bill.Size = texto == "USER" and UDim2.new(1.6, 0, 0.5, 0) or UDim2.new(2.8, 0, 0.75, 0)
+	
+		-- Tamanhos menores que antes
+		if texto == "USER" then
+			bill.Size = UDim2.new(1.6, 0, 0.5, 0)
+		else
+			bill.Size = UDim2.new(2.8, 0, 0.75, 0)
+		end
 	
 		local label = Instance.new("TextLabel", bill)
 		label.Size = UDim2.new(1, 0, 1, 0)
@@ -1720,26 +1724,26 @@ local function BEWGJ_fake_script() -- tela4.LocalScript
 		if texto == "OWNER" or texto == "MANAGER" or texto == "MEOW" then
 			label.TextStrokeTransparency = 1
 	
-			-- Gradiente: cor base → branco puro forte no centro → cor base
+			-- Gradiente com branco bem vivo no centro
 			local grad = Instance.new("UIGradient", label)
 			grad.Color = ColorSequence.new({
 				ColorSequenceKeypoint.new(0,    cor),
-				ColorSequenceKeypoint.new(0.30, cor),
-				ColorSequenceKeypoint.new(0.44, Color3.fromRGB(255, 255, 255)),
-				ColorSequenceKeypoint.new(0.50, Color3.fromRGB(255, 255, 255)),
-				ColorSequenceKeypoint.new(0.56, Color3.fromRGB(255, 255, 255)),
-				ColorSequenceKeypoint.new(0.70, cor),
+				ColorSequenceKeypoint.new(0.35, cor),
+				ColorSequenceKeypoint.new(0.48, Color3.new(1, 1, 1)),
+				ColorSequenceKeypoint.new(0.5,  Color3.new(1, 1, 1)),
+				ColorSequenceKeypoint.new(0.52, Color3.new(1, 1, 1)),
+				ColorSequenceKeypoint.new(0.65, cor),
 				ColorSequenceKeypoint.new(1,    cor)
 			})
 	
-			-- Animação mais lenta e suave — 3s de ida, pausa, repete
 			task.spawn(function()
 				while label and label.Parent do
-					grad.Offset = Vector2.new(-1.5, 0)
-					TweenService:Create(grad, TweenInfo.new(3.0, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), {
-						Offset = Vector2.new(1.5, 0)
+					-- Vai da esquerda pra direita rapidinho
+					grad.Offset = Vector2.new(-1.4, 0)
+					TweenService:Create(grad, TweenInfo.new(1.8, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), {
+						Offset = Vector2.new(1.4, 0)
 					}):Play()
-					task.wait(3.8)
+					task.wait(2.2)
 				end
 			end)
 		else
@@ -1787,8 +1791,6 @@ local function BEWGJ_fake_script() -- tela4.LocalScript
 				local cor = configuracaoTags[tagSelecionada]
 				enviarTag(p.Name, tagSelecionada, cor)
 				aplicarTagVisual(p, tagSelecionada, cor)
-				-- Marca como cadastrado para o loop mostrar a tag dele
-				playersCadastrados[p.Name] = true
 				notificar("SISTEMA", p.DisplayName .. " ATUALIZADO PARA " .. tagSelecionada, 4, "update", tagSelecionada)
 				if p == localPlayer then atualizarAbas(tagSelecionada) end
 				break
@@ -1797,23 +1799,20 @@ local function BEWGJ_fake_script() -- tela4.LocalScript
 	end)
 	
 	-- [[ 10. LOOP PRINCIPAL ]]
-	-- Só aplica tag em quem está em playersCadastrados (executou o painel nessa sessão)
 	task.spawn(function()
 		while task.wait(2) do
 			pcall(function()
-				local dados = buscarTodosCargos()
-				if not dados then return end
+				local res = httpRequest({Url = SERVIDOR .. "/gettags?gameId=" .. GAME_ID, Method = "GET"})
+				if not res or not res.Body then return end
+				local dados = HttpService:JSONDecode(res.Body)
 	
 				for pName, info in pairs(dados) do
-					-- FILTRO: só processa quem executou o painel
-					if playersCadastrados[pName] then
-						local p = Players:FindFirstChild(pName)
-						if p and p.Character and p.Character:FindFirstChild("Head") then
-							local tag = p.Character.Head:FindFirstChild("TagPainel")
-							local lbl = tag and tag:FindFirstChildOfClass("TextLabel")
-							if not lbl or lbl.Text ~= "<b>" .. info.cargo .. "</b>" then
-								aplicarTagVisual(p, info.cargo, tabelaParaCor(info.cor))
-							end
+					local p = Players:FindFirstChild(pName)
+					if p and p.Character and p.Character:FindFirstChild("Head") then
+						local tag = p.Character.Head:FindFirstChild("TagPainel")
+						local lbl = tag and tag:FindFirstChildOfClass("TextLabel")
+						if not lbl or lbl.Text ~= "<b>" .. info.cargo .. "</b>" then
+							aplicarTagVisual(p, info.cargo, tabelaParaCor(info.cor))
 						end
 					end
 				end
@@ -1827,36 +1826,31 @@ local function BEWGJ_fake_script() -- tela4.LocalScript
 	
 	-- [[ 11. INICIALIZAÇÃO ]]
 	task.spawn(function()
-		-- Aplica imediatamente sem esperar servidor
 		local cargoInit = localPlayer.UserId == MEU_ID_DONO and "OWNER" or "USER"
 		aplicarTagVisual(localPlayer, cargoInit, configuracaoTags[cargoInit])
 		atualizarAbas(cargoInit)
 	
-		-- Tenta buscar cargo salvo (até 5 tentativas)
 		local tentativas = 0
 		repeat
 			tentativas = tentativas + 1
-			local dados = buscarTodosCargos()
-			if dados and dados[localPlayer.Name] then
+			local inicial = buscarCargoServidor(localPlayer.Name)
+			if inicial and inicial.cargo then
 				if localPlayer.UserId ~= MEU_ID_DONO then
-					cargoInit = dados[localPlayer.Name].cargo
+					cargoInit = inicial.cargo
 				end
 				break
 			end
 			task.wait(0.5)
 		until tentativas >= 5
 	
-		-- Registra no servidor e marca como cadastrado
-		enviarTag(localPlayer.Name, cargoInit, configuracaoTags[cargoInit])
-		playersCadastrados[localPlayer.Name] = true
-	
 		aplicarTagVisual(localPlayer, cargoInit, configuracaoTags[cargoInit])
+		enviarTag(localPlayer.Name, cargoInit, configuracaoTags[cargoInit])
 		atualizarAbas(cargoInit)
 		notificar("4E20 PANEL", "PAINEL ATIVO — CARGO: " .. cargoInit, 5, "welcome", cargoInit)
 	end)
 end
-coroutine.wrap(BEWGJ_fake_script)()
-local function CIPIUN_fake_script() -- FLING.LocalScript 
+coroutine.wrap(FVVTQB_fake_script)()
+local function OGYOSC_fake_script() -- FLING.LocalScript 
 	local script = Instance.new('LocalScript', FLING)
 
 	local RunService = game:GetService("RunService")
@@ -2046,8 +2040,8 @@ local function CIPIUN_fake_script() -- FLING.LocalScript
 		end
 	end)
 end
-coroutine.wrap(CIPIUN_fake_script)()
-local function MHDYD_fake_script() -- SPIN.LocalScript 
+coroutine.wrap(OGYOSC_fake_script)()
+local function OXRTQ_fake_script() -- SPIN.LocalScript 
 	local script = Instance.new('LocalScript', SPIN)
 
 	local RunService = game:GetService("RunService")
@@ -2132,8 +2126,8 @@ local function MHDYD_fake_script() -- SPIN.LocalScript
 		removerForca()
 	end)
 end
-coroutine.wrap(MHDYD_fake_script)()
-local function OLUJNSW_fake_script() -- JUMP.LocalScript 
+coroutine.wrap(OXRTQ_fake_script)()
+local function VTTM_fake_script() -- JUMP.LocalScript 
 	local script = Instance.new('LocalScript', JUMP)
 
 	local UserInputService = game:GetService("UserInputService")
@@ -2183,8 +2177,8 @@ local function OLUJNSW_fake_script() -- JUMP.LocalScript
 		end
 	end)
 end
-coroutine.wrap(OLUJNSW_fake_script)()
-local function HZGKTZS_fake_script() -- INVISIVEL.LocalScript 
+coroutine.wrap(VTTM_fake_script)()
+local function OXTKNJ_fake_script() -- INVISIVEL.LocalScript 
 	local script = Instance.new('LocalScript', INVISIVEL)
 
 	local UserInputService = game:GetService("UserInputService")
@@ -2387,8 +2381,8 @@ local function HZGKTZS_fake_script() -- INVISIVEL.LocalScript
 		end
 	end)
 end
-coroutine.wrap(HZGKTZS_fake_script)()
-local function CDFZNLB_fake_script() -- PINCEL.LocalScript 
+coroutine.wrap(OXTKNJ_fake_script)()
+local function WWGM_fake_script() -- PINCEL.LocalScript 
 	local script = Instance.new('LocalScript', PINCEL)
 
 	-- [[ SISTEMA DE TEMAS 4E20 PANEL - 20 CORES ]] --
@@ -2449,8 +2443,8 @@ local function CDFZNLB_fake_script() -- PINCEL.LocalScript
 		aplicarTema(novaCor)
 	end)
 end
-coroutine.wrap(CDFZNLB_fake_script)()
-local function JFVC_fake_script() -- JERKOFF.LocalScript 
+coroutine.wrap(WWGM_fake_script)()
+local function RSGUNL_fake_script() -- JERKOFF.LocalScript 
 	local script = Instance.new('LocalScript', JERKOFF)
 
 	local RunService = game:GetService("RunService")
@@ -2604,4 +2598,4 @@ local function JFVC_fake_script() -- JERKOFF.LocalScript
 		end
 	end)
 end
-coroutine.wrap(JFVC_fake_script)()
+coroutine.wrap(RSGUNL_fake_script)()
