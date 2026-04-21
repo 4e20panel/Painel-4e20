@@ -1,792 +1,990 @@
--- Gui to Lua
--- Version: 3.2
+-- Generated using RoadToGlory's Converter v1.1 (RoadToGlory#9879)
 
 -- Instances:
 
-local ScreenGui = Instance.new("ScreenGui")
-local AvisoTP = Instance.new("TextLabel")
-local CorpoPainel = Instance.new("Frame")
-local tela1 = Instance.new("Frame")
-local ImageLabel = Instance.new("ImageLabel")
-local TextLabel = Instance.new("TextLabel")
-local UICorner = Instance.new("UICorner")
-local TextLabel_2 = Instance.new("TextLabel")
-local TextLabel_3 = Instance.new("TextLabel")
-local tela2 = Instance.new("Frame")
-local AVATA = Instance.new("ImageLabel")
-local VIEW = Instance.new("TextButton")
-local TextLabel_4 = Instance.new("TextLabel")
-local UICorner_2 = Instance.new("UICorner")
-local FOLLOW = Instance.new("TextButton")
-local TextLabel_5 = Instance.new("TextLabel")
-local UICorner_3 = Instance.new("UICorner")
-local FOCUS = Instance.new("TextButton")
-local TextLabel_6 = Instance.new("TextLabel")
-local UICorner_4 = Instance.new("UICorner")
-local username = Instance.new("TextBox")
-local coloqueodousuario = Instance.new("TextLabel")
-local ID = Instance.new("TextLabel")
-local DISPLAYNAME = Instance.new("TextLabel")
-local UICorner_5 = Instance.new("UICorner")
-local UICorner_6 = Instance.new("UICorner")
-local tela3 = Instance.new("Frame")
-local UICorner_7 = Instance.new("UICorner")
-local CLICKTP = Instance.new("TextButton")
-local TextLabel_7 = Instance.new("TextLabel")
-local UICorner_8 = Instance.new("UICorner")
-local FLASHBACK = Instance.new("TextButton")
-local TextLabel_8 = Instance.new("TextLabel")
-local UICorner_9 = Instance.new("UICorner")
-local NOCLIP = Instance.new("TextButton")
-local TextLabel_9 = Instance.new("TextLabel")
-local UICorner_10 = Instance.new("UICorner")
-local ANTAFK = Instance.new("TextButton")
-local TextLabel_10 = Instance.new("TextLabel")
-local UICorner_11 = Instance.new("UICorner")
-local tela4 = Instance.new("Frame")
-local ADD = Instance.new("TextButton")
-local UICorner_12 = Instance.new("UICorner")
-local HELPE = Instance.new("TextButton")
-local UICorner_13 = Instance.new("UICorner")
-local MANAGER = Instance.new("TextButton")
-local UICorner_14 = Instance.new("UICorner")
-local MEOW = Instance.new("TextButton")
-local UICorner_15 = Instance.new("UICorner")
-local OWNER = Instance.new("TextButton")
-local UICorner_16 = Instance.new("UICorner")
-local TextBox = Instance.new("TextBox")
-local ID_2 = Instance.new("TextLabel")
-local DISPLAYNAME_2 = Instance.new("TextLabel")
-local ImageLabel_2 = Instance.new("ImageLabel")
-local UICorner_17 = Instance.new("UICorner")
-local USER = Instance.new("TextButton")
-local UICorner_18 = Instance.new("UICorner")
-local VIP = Instance.new("TextButton")
-local UICorner_19 = Instance.new("UICorner")
-local UICorner_20 = Instance.new("UICorner")
-local ABAS = Instance.new("Frame")
-local botoes = Instance.new("Frame")
-local UICorner_21 = Instance.new("UICorner")
-local butela5 = Instance.new("TextButton")
-local UICorner_22 = Instance.new("UICorner")
-local butela4 = Instance.new("TextButton")
-local UICorner_23 = Instance.new("UICorner")
-local butela3 = Instance.new("TextButton")
-local UICorner_24 = Instance.new("UICorner")
-local butela2 = Instance.new("TextButton")
-local UICorner_25 = Instance.new("UICorner")
-local butela1 = Instance.new("TextButton")
-local UICorner_26 = Instance.new("UICorner")
-local TEXTOS = Instance.new("Frame")
-local TextLabel_11 = Instance.new("TextLabel")
-local TextLabel_12 = Instance.new("TextLabel")
-local TextLabel_13 = Instance.new("TextLabel")
-local tela5 = Instance.new("Frame")
-local PINCEL = Instance.new("ImageButton")
-
---Properties:
-
-ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-
-AvisoTP.Name = "AvisoTP"
-AvisoTP.Parent = ScreenGui
-AvisoTP.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-AvisoTP.BackgroundTransparency = 1.000
-AvisoTP.BorderColor3 = Color3.fromRGB(0, 0, 0)
-AvisoTP.BorderSizePixel = 0
-AvisoTP.Position = UDim2.new(0.83263284, 0, 0.859222949, 0)
-AvisoTP.Size = UDim2.new(0, 200, 0, 50)
-AvisoTP.Visible = false
-AvisoTP.Font = Enum.Font.SourceSans
-AvisoTP.Text = "aviso tp"
-AvisoTP.TextColor3 = Color3.fromRGB(0, 0, 0)
-AvisoTP.TextSize = 14.000
-
-CorpoPainel.Name = "CorpoPainel"
-CorpoPainel.Parent = ScreenGui
-CorpoPainel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CorpoPainel.BackgroundTransparency = 1.000
-CorpoPainel.BorderColor3 = Color3.fromRGB(0, 0, 0)
-CorpoPainel.BorderSizePixel = 0
-CorpoPainel.Position = UDim2.new(0.294336736, 0, 0.134980991, 0)
-CorpoPainel.Size = UDim2.new(0, 505, 0, 284)
-CorpoPainel.ZIndex = 5
-
-tela1.Name = "tela1"
-tela1.Parent = CorpoPainel
-tela1.Active = true
-tela1.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
-tela1.BackgroundTransparency = 0.100
-tela1.BorderColor3 = Color3.fromRGB(0, 0, 0)
-tela1.BorderSizePixel = 0
-tela1.ClipsDescendants = true
-tela1.Position = UDim2.new(0.197935313, 0, -0.00354723865, 0)
-tela1.Size = UDim2.new(0, 404, 0, 283)
-
-ImageLabel.Parent = tela1
-ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-ImageLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
-ImageLabel.BorderSizePixel = 0
-ImageLabel.Position = UDim2.new(0.0841584131, 0, 0.0845070407, 0)
-ImageLabel.Size = UDim2.new(0, 100, 0, 100)
-ImageLabel.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
-
-TextLabel.Parent = ImageLabel
-TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel.BackgroundTransparency = 1.000
-TextLabel.BorderColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel.BorderSizePixel = 0
-TextLabel.Position = UDim2.new(1.14999998, 0, 0.25, 0)
-TextLabel.Size = UDim2.new(0, 200, 0, 50)
-TextLabel.Font = Enum.Font.Jura
-TextLabel.Text = "Olá Seja Bem vindo! user ( B ) abrir/fechar painel"
-TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel.TextScaled = true
-TextLabel.TextSize = 14.000
-TextLabel.TextWrapped = true
-
-UICorner.Parent = tela1
-
-TextLabel_2.Parent = tela1
-TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_2.BackgroundTransparency = 1.000
-TextLabel_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_2.BorderSizePixel = 0
-TextLabel_2.Position = UDim2.new(-0.0396039598, 0, 0.40989399, 0)
-TextLabel_2.Size = UDim2.new(0, 200, 0, 50)
-TextLabel_2.Font = Enum.Font.Jura
-TextLabel_2.TextColor3 = Color3.fromRGB(173, 173, 173)
-TextLabel_2.TextSize = 14.000
-
-TextLabel_3.Parent = tela1
-TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_3.BackgroundTransparency = 1.000
-TextLabel_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_3.BorderSizePixel = 0
-TextLabel_3.Position = UDim2.new(0.368811876, 0, 0.646643102, 0)
-TextLabel_3.Size = UDim2.new(0, 200, 0, 50)
-TextLabel_3.Font = Enum.Font.Jura
-TextLabel_3.Text = "JOGADORES ONLINE:"
-TextLabel_3.TextColor3 = Color3.fromRGB(173, 173, 173)
-TextLabel_3.TextSize = 14.000
-
-tela2.Name = "tela2"
-tela2.Parent = CorpoPainel
-tela2.Active = true
-tela2.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
-tela2.BackgroundTransparency = 0.100
-tela2.BorderColor3 = Color3.fromRGB(255, 255, 255)
-tela2.BorderSizePixel = 0
-tela2.Position = UDim2.new(0.194437101, 0, -0.00525751244, 0)
-tela2.Size = UDim2.new(0, 404, 0, 284)
-tela2.Visible = false
-
-AVATA.Name = "AVATA"
-AVATA.Parent = tela2
-AVATA.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-AVATA.BackgroundTransparency = 1.000
-AVATA.BorderColor3 = Color3.fromRGB(0, 0, 0)
-AVATA.BorderSizePixel = 0
-AVATA.Position = UDim2.new(0.599009871, 0, 0.119718313, 0)
-AVATA.Size = UDim2.new(0, 71, 0, 65)
-AVATA.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
-
-VIEW.Name = "VIEW"
-VIEW.Parent = tela2
-VIEW.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
-VIEW.BorderColor3 = Color3.fromRGB(0, 0, 0)
-VIEW.BorderSizePixel = 0
-VIEW.Position = UDim2.new(0.0569306947, 0, 0.0845070407, 0)
-VIEW.Size = UDim2.new(0, 100, 0, 36)
-VIEW.Font = Enum.Font.Unknown
-VIEW.Text = "VIEW"
-VIEW.TextColor3 = Color3.fromRGB(255, 255, 255)
-VIEW.TextSize = 14.000
-
-TextLabel_4.Parent = VIEW
-TextLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_4.BackgroundTransparency = 1.000
-TextLabel_4.BorderColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_4.BorderSizePixel = 0
-TextLabel_4.Position = UDim2.new(0.899999976, 0, -0.111111112, 0)
-TextLabel_4.Size = UDim2.new(0, 70, 0, 46)
-TextLabel_4.Font = Enum.Font.Unknown
-TextLabel_4.Text = "+"
-TextLabel_4.TextColor3 = Color3.fromRGB(255, 0, 0)
-TextLabel_4.TextScaled = true
-TextLabel_4.TextSize = 25.000
-TextLabel_4.TextWrapped = true
-
-UICorner_2.Parent = VIEW
-
-FOLLOW.Name = "FOLLOW"
-FOLLOW.Parent = tela2
-FOLLOW.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
-FOLLOW.BorderColor3 = Color3.fromRGB(0, 0, 0)
-FOLLOW.BorderSizePixel = 0
-FOLLOW.Position = UDim2.new(0.0569306947, 0, 0.274647892, 0)
-FOLLOW.Size = UDim2.new(0, 100, 0, 36)
-FOLLOW.Font = Enum.Font.Unknown
-FOLLOW.Text = "FOLLOW"
-FOLLOW.TextColor3 = Color3.fromRGB(255, 255, 255)
-FOLLOW.TextSize = 14.000
-
-TextLabel_5.Parent = FOLLOW
-TextLabel_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_5.BackgroundTransparency = 1.000
-TextLabel_5.BorderColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_5.BorderSizePixel = 0
-TextLabel_5.Position = UDim2.new(0.899999976, 0, -0.138888896, 0)
-TextLabel_5.Size = UDim2.new(0, 70, 0, 46)
-TextLabel_5.Font = Enum.Font.Unknown
-TextLabel_5.Text = "+"
-TextLabel_5.TextColor3 = Color3.fromRGB(255, 0, 0)
-TextLabel_5.TextScaled = true
-TextLabel_5.TextSize = 25.000
-TextLabel_5.TextWrapped = true
-
-UICorner_3.Parent = FOLLOW
-
-FOCUS.Name = "FOCUS"
-FOCUS.Parent = tela2
-FOCUS.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
-FOCUS.BorderColor3 = Color3.fromRGB(0, 0, 0)
-FOCUS.BorderSizePixel = 0
-FOCUS.Position = UDim2.new(0.0569306947, 0, 0.46126762, 0)
-FOCUS.Size = UDim2.new(0, 100, 0, 36)
-FOCUS.Font = Enum.Font.Unknown
-FOCUS.Text = "FOCUS"
-FOCUS.TextColor3 = Color3.fromRGB(255, 255, 255)
-FOCUS.TextSize = 14.000
-
-TextLabel_6.Parent = FOCUS
-TextLabel_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_6.BackgroundTransparency = 1.000
-TextLabel_6.BorderColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_6.BorderSizePixel = 0
-TextLabel_6.Position = UDim2.new(0.899999976, 0, -0.138888896, 0)
-TextLabel_6.Size = UDim2.new(0, 70, 0, 46)
-TextLabel_6.Font = Enum.Font.Unknown
-TextLabel_6.Text = "+"
-TextLabel_6.TextColor3 = Color3.fromRGB(255, 0, 0)
-TextLabel_6.TextScaled = true
-TextLabel_6.TextSize = 25.000
-TextLabel_6.TextStrokeColor3 = Color3.fromRGB(255, 0, 0)
-TextLabel_6.TextWrapped = true
-
-UICorner_4.Parent = FOCUS
-
-username.Name = "@username"
-username.Parent = tela2
-username.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
-username.BorderColor3 = Color3.fromRGB(255, 255, 255)
-username.BorderSizePixel = 0
-username.Position = UDim2.new(0.438118815, 0, 0.556338012, 0)
-username.Size = UDim2.new(0, 200, 0, 23)
-username.Font = Enum.Font.SourceSans
-username.Text = ""
-username.TextColor3 = Color3.fromRGB(255, 255, 255)
-username.TextSize = 14.000
-username.TextWrapped = true
-
-coloqueodousuario.Name = "coloque o @ do usuario!"
-coloqueodousuario.Parent = username
-coloqueodousuario.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-coloqueodousuario.BackgroundTransparency = 1.000
-coloqueodousuario.BorderColor3 = Color3.fromRGB(0, 0, 0)
-coloqueodousuario.BorderSizePixel = 0
-coloqueodousuario.Position = UDim2.new(0, 0, 0.999999344, 0)
-coloqueodousuario.Size = UDim2.new(0, 200, 0, 21)
-coloqueodousuario.Font = Enum.Font.Jura
-coloqueodousuario.Text = "coloque o @ do usuario!"
-coloqueodousuario.TextColor3 = Color3.fromRGB(255, 255, 255)
-coloqueodousuario.TextSize = 14.000
-coloqueodousuario.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-
-ID.Name = "ID"
-ID.Parent = username
-ID.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-ID.BackgroundTransparency = 1.000
-ID.BorderColor3 = Color3.fromRGB(0, 0, 0)
-ID.BorderSizePixel = 0
-ID.Position = UDim2.new(0, 0, -2.43478394, 0)
-ID.Size = UDim2.new(0, 200, 0, 21)
-ID.Font = Enum.Font.Jura
-ID.Text = "ID"
-ID.TextColor3 = Color3.fromRGB(255, 255, 255)
-ID.TextSize = 14.000
-ID.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-
-DISPLAYNAME.Name = "DISPLAY NAME"
-DISPLAYNAME.Parent = username
-DISPLAYNAME.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-DISPLAYNAME.BackgroundTransparency = 1.000
-DISPLAYNAME.BorderColor3 = Color3.fromRGB(0, 0, 0)
-DISPLAYNAME.BorderSizePixel = 0
-DISPLAYNAME.Position = UDim2.new(0, 0, -1.52174044, 0)
-DISPLAYNAME.Size = UDim2.new(0, 200, 0, 21)
-DISPLAYNAME.Font = Enum.Font.Jura
-DISPLAYNAME.Text = "DISPLAY NAME"
-DISPLAYNAME.TextColor3 = Color3.fromRGB(255, 255, 255)
-DISPLAYNAME.TextSize = 14.000
-DISPLAYNAME.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-
-UICorner_5.Parent = username
-
-UICorner_6.Parent = tela2
-
-tela3.Name = "tela3"
-tela3.Parent = CorpoPainel
-tela3.Active = true
-tela3.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
-tela3.BackgroundTransparency = 0.100
-tela3.BorderColor3 = Color3.fromRGB(255, 255, 255)
-tela3.BorderSizePixel = 0
-tela3.Position = UDim2.new(0.198397487, 0, -0.00525751244, 0)
-tela3.Size = UDim2.new(0, 404, 0, 284)
-tela3.Visible = false
-
-UICorner_7.Parent = tela3
-
-CLICKTP.Name = "CLICK - TP"
-CLICKTP.Parent = tela3
-CLICKTP.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
-CLICKTP.BorderColor3 = Color3.fromRGB(0, 0, 0)
-CLICKTP.BorderSizePixel = 0
-CLICKTP.Position = UDim2.new(0.0569306947, 0, 0.0845070407, 0)
-CLICKTP.Size = UDim2.new(0, 100, 0, 36)
-CLICKTP.Font = Enum.Font.Unknown
-CLICKTP.Text = "CLICK - TP"
-CLICKTP.TextColor3 = Color3.fromRGB(255, 255, 255)
-CLICKTP.TextSize = 14.000
-
-TextLabel_7.Parent = CLICKTP
-TextLabel_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_7.BackgroundTransparency = 1.000
-TextLabel_7.BorderColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_7.BorderSizePixel = 0
-TextLabel_7.Position = UDim2.new(0.899999976, 0, -0.111111112, 0)
-TextLabel_7.Size = UDim2.new(0, 70, 0, 46)
-TextLabel_7.Font = Enum.Font.Unknown
-TextLabel_7.Text = "+"
-TextLabel_7.TextColor3 = Color3.fromRGB(255, 0, 0)
-TextLabel_7.TextScaled = true
-TextLabel_7.TextSize = 25.000
-TextLabel_7.TextWrapped = true
-
-UICorner_8.Parent = CLICKTP
-
-FLASHBACK.Name = "FLASHBACK"
-FLASHBACK.Parent = tela3
-FLASHBACK.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
-FLASHBACK.BorderColor3 = Color3.fromRGB(0, 0, 0)
-FLASHBACK.BorderSizePixel = 0
-FLASHBACK.Position = UDim2.new(0.0569306947, 0, 0.46126762, 0)
-FLASHBACK.Size = UDim2.new(0, 100, 0, 36)
-FLASHBACK.Font = Enum.Font.Unknown
-FLASHBACK.Text = "FLASHBACK"
-FLASHBACK.TextColor3 = Color3.fromRGB(255, 255, 255)
-FLASHBACK.TextSize = 14.000
-
-TextLabel_8.Parent = FLASHBACK
-TextLabel_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_8.BackgroundTransparency = 1.000
-TextLabel_8.BorderColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_8.BorderSizePixel = 0
-TextLabel_8.Position = UDim2.new(0.899999976, 0, -0.138888896, 0)
-TextLabel_8.Size = UDim2.new(0, 70, 0, 46)
-TextLabel_8.Font = Enum.Font.Unknown
-TextLabel_8.Text = "+"
-TextLabel_8.TextColor3 = Color3.fromRGB(255, 0, 0)
-TextLabel_8.TextScaled = true
-TextLabel_8.TextSize = 25.000
-TextLabel_8.TextStrokeColor3 = Color3.fromRGB(255, 0, 0)
-TextLabel_8.TextWrapped = true
-
-UICorner_9.Parent = FLASHBACK
-
-NOCLIP.Name = "NOCLIP"
-NOCLIP.Parent = tela3
-NOCLIP.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
-NOCLIP.BorderColor3 = Color3.fromRGB(0, 0, 0)
-NOCLIP.BorderSizePixel = 0
-NOCLIP.Position = UDim2.new(0.0569306947, 0, 0.274647892, 0)
-NOCLIP.Size = UDim2.new(0, 100, 0, 36)
-NOCLIP.Font = Enum.Font.Unknown
-NOCLIP.Text = "NOCLIP"
-NOCLIP.TextColor3 = Color3.fromRGB(255, 255, 255)
-NOCLIP.TextSize = 14.000
-
-TextLabel_9.Parent = NOCLIP
-TextLabel_9.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_9.BackgroundTransparency = 1.000
-TextLabel_9.BorderColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_9.BorderSizePixel = 0
-TextLabel_9.Position = UDim2.new(0.899999976, 0, -0.138888896, 0)
-TextLabel_9.Size = UDim2.new(0, 70, 0, 46)
-TextLabel_9.Font = Enum.Font.Unknown
-TextLabel_9.Text = "+"
-TextLabel_9.TextColor3 = Color3.fromRGB(255, 0, 0)
-TextLabel_9.TextScaled = true
-TextLabel_9.TextSize = 25.000
-TextLabel_9.TextWrapped = true
-
-UICorner_10.Parent = NOCLIP
-
-ANTAFK.Name = "ANT-AFK"
-ANTAFK.Parent = tela3
-ANTAFK.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
-ANTAFK.BorderColor3 = Color3.fromRGB(0, 0, 0)
-ANTAFK.BorderSizePixel = 0
-ANTAFK.Position = UDim2.new(0.0569306947, 0, 0.633802831, 0)
-ANTAFK.Size = UDim2.new(0, 100, 0, 36)
-ANTAFK.Font = Enum.Font.Unknown
-ANTAFK.Text = "ANT-AFK"
-ANTAFK.TextColor3 = Color3.fromRGB(255, 255, 255)
-ANTAFK.TextSize = 14.000
-
-TextLabel_10.Parent = ANTAFK
-TextLabel_10.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_10.BackgroundTransparency = 1.000
-TextLabel_10.BorderColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_10.BorderSizePixel = 0
-TextLabel_10.Position = UDim2.new(0.899999976, 0, -0.138888896, 0)
-TextLabel_10.Size = UDim2.new(0, 70, 0, 46)
-TextLabel_10.Font = Enum.Font.Unknown
-TextLabel_10.Text = "+"
-TextLabel_10.TextColor3 = Color3.fromRGB(255, 0, 0)
-TextLabel_10.TextScaled = true
-TextLabel_10.TextSize = 25.000
-TextLabel_10.TextStrokeColor3 = Color3.fromRGB(255, 0, 0)
-TextLabel_10.TextWrapped = true
-
-UICorner_11.Parent = ANTAFK
-
-tela4.Name = "tela4"
-tela4.Parent = CorpoPainel
-tela4.Active = true
-tela4.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
-tela4.BackgroundTransparency = 0.100
-tela4.BorderColor3 = Color3.fromRGB(255, 255, 255)
-tela4.BorderSizePixel = 0
-tela4.Position = UDim2.new(0.198397487, 0, -0.00525751244, 0)
-tela4.Size = UDim2.new(0, 404, 0, 284)
-tela4.Visible = false
-
-ADD.Name = "ADD"
-ADD.Parent = tela4
-ADD.BackgroundColor3 = Color3.fromRGB(91, 255, 3)
-ADD.BorderColor3 = Color3.fromRGB(0, 0, 0)
-ADD.BorderSizePixel = 0
-ADD.Position = UDim2.new(0.566831708, 0, 0.517605662, 0)
-ADD.Size = UDim2.new(0, 86, 0, 36)
-ADD.Font = Enum.Font.Unknown
-ADD.Text = "ADD"
-ADD.TextColor3 = Color3.fromRGB(30, 30, 30)
-ADD.TextSize = 14.000
-
-UICorner_12.Parent = ADD
-
-HELPE.Name = "HELPE"
-HELPE.Parent = tela4
-HELPE.BackgroundColor3 = Color3.fromRGB(255, 255, 0)
-HELPE.BorderColor3 = Color3.fromRGB(0, 0, 0)
-HELPE.BorderSizePixel = 0
-HELPE.Position = UDim2.new(0.0569306947, 0, 0.517605722, 0)
-HELPE.Size = UDim2.new(0, 100, 0, 36)
-HELPE.Font = Enum.Font.Unknown
-HELPE.Text = "HELPE"
-HELPE.TextColor3 = Color3.fromRGB(30, 30, 30)
-HELPE.TextSize = 14.000
-
-UICorner_13.Parent = HELPE
-
-MANAGER.Name = "MANAGER"
-MANAGER.Parent = tela4
-MANAGER.BackgroundColor3 = Color3.fromRGB(85, 0, 255)
-MANAGER.BorderColor3 = Color3.fromRGB(0, 0, 0)
-MANAGER.BorderSizePixel = 0
-MANAGER.Position = UDim2.new(0.0569306947, 0, 0.362676114, 0)
-MANAGER.Size = UDim2.new(0, 100, 0, 36)
-MANAGER.Font = Enum.Font.Unknown
-MANAGER.Text = "MANAGER"
-MANAGER.TextColor3 = Color3.fromRGB(255, 255, 255)
-MANAGER.TextSize = 14.000
-
-UICorner_14.Parent = MANAGER
-
-MEOW.Name = "MEOW"
-MEOW.Parent = tela4
-MEOW.BackgroundColor3 = Color3.fromRGB(255, 85, 255)
-MEOW.BorderColor3 = Color3.fromRGB(0, 0, 0)
-MEOW.BorderSizePixel = 0
-MEOW.Position = UDim2.new(0.0569306947, 0, 0.197183102, 0)
-MEOW.Size = UDim2.new(0, 100, 0, 36)
-MEOW.Font = Enum.Font.Unknown
-MEOW.Text = "MEOW"
-MEOW.TextColor3 = Color3.fromRGB(255, 255, 255)
-MEOW.TextSize = 14.000
-
-UICorner_15.Parent = MEOW
-
-OWNER.Name = "OWNER"
-OWNER.Parent = tela4
-OWNER.BackgroundColor3 = Color3.fromRGB(98, 0, 0)
-OWNER.BorderColor3 = Color3.fromRGB(0, 0, 0)
-OWNER.BorderSizePixel = 0
-OWNER.Position = UDim2.new(0.0569306947, 0, 0.0457746461, 0)
-OWNER.Size = UDim2.new(0, 100, 0, 36)
-OWNER.Font = Enum.Font.Unknown
-OWNER.Text = "OWNER"
-OWNER.TextColor3 = Color3.fromRGB(255, 255, 255)
-OWNER.TextSize = 14.000
-
-UICorner_16.Parent = OWNER
-
-TextBox.Parent = tela4
-TextBox.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
-TextBox.BorderColor3 = Color3.fromRGB(255, 255, 255)
-TextBox.BorderSizePixel = 0
-TextBox.Position = UDim2.new(0.425742567, 0, 0.362676114, 0)
-TextBox.Size = UDim2.new(0, 200, 0, 33)
-TextBox.Font = Enum.Font.SourceSans
-TextBox.Text = ""
-TextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextBox.TextSize = 14.000
-
-ID_2.Name = "ID"
-ID_2.Parent = TextBox
-ID_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-ID_2.BackgroundTransparency = 1.000
-ID_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-ID_2.BorderSizePixel = 0
-ID_2.Position = UDim2.new(0.109999999, 0, -2.06023884, 0)
-ID_2.Size = UDim2.new(0, 200, 0, 21)
-ID_2.Font = Enum.Font.Jura
-ID_2.Text = "ID"
-ID_2.TextColor3 = Color3.fromRGB(255, 255, 255)
-ID_2.TextSize = 14.000
-ID_2.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-
-DISPLAYNAME_2.Name = "DISPLAY NAME"
-DISPLAYNAME_2.Parent = TextBox
-DISPLAYNAME_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-DISPLAYNAME_2.BackgroundTransparency = 1.000
-DISPLAYNAME_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-DISPLAYNAME_2.BorderSizePixel = 0
-DISPLAYNAME_2.Position = UDim2.new(0.11088226, 0, -1.31108928, 0)
-DISPLAYNAME_2.Size = UDim2.new(0, 200, 0, 21)
-DISPLAYNAME_2.Font = Enum.Font.Jura
-DISPLAYNAME_2.Text = "DISPLAY NAME"
-DISPLAYNAME_2.TextColor3 = Color3.fromRGB(255, 255, 255)
-DISPLAYNAME_2.TextSize = 14.000
-DISPLAYNAME_2.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-
-ImageLabel_2.Parent = TextBox
-ImageLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-ImageLabel_2.BackgroundTransparency = 1.000
-ImageLabel_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-ImageLabel_2.BorderSizePixel = 0
-ImageLabel_2.Position = UDim2.new(-0.000989990192, 0, -2.69846368, 0)
-ImageLabel_2.Size = UDim2.new(0, 71, 0, 65)
-ImageLabel_2.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
-
-UICorner_17.Parent = TextBox
-
-USER.Name = "USER"
-USER.Parent = tela4
-USER.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-USER.BorderColor3 = Color3.fromRGB(255, 255, 255)
-USER.BorderSizePixel = 0
-USER.Position = UDim2.new(0.0569306947, 0, 0.823943794, 0)
-USER.Size = UDim2.new(0, 100, 0, 36)
-USER.Font = Enum.Font.Unknown
-USER.Text = "USER"
-USER.TextColor3 = Color3.fromRGB(0, 0, 0)
-USER.TextSize = 14.000
-
-UICorner_18.Parent = USER
-
-VIP.Name = "VIP"
-VIP.Parent = tela4
-VIP.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
-VIP.BorderColor3 = Color3.fromRGB(255, 255, 255)
-VIP.BorderSizePixel = 0
-VIP.Position = UDim2.new(0.0569306947, 0, 0.6725353, 0)
-VIP.Size = UDim2.new(0, 100, 0, 36)
-VIP.Font = Enum.Font.Unknown
-VIP.Text = "VIP"
-VIP.TextColor3 = Color3.fromRGB(0, 0, 0)
-VIP.TextSize = 14.000
-
-UICorner_19.Parent = VIP
-
-UICorner_20.Parent = tela4
-
-ABAS.Name = "ABAS"
-ABAS.Parent = CorpoPainel
-ABAS.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-ABAS.BackgroundTransparency = 1.000
-ABAS.BorderColor3 = Color3.fromRGB(0, 0, 0)
-ABAS.BorderSizePixel = 0
-ABAS.Position = UDim2.new(0.284243047, 0, 0.13389121, 0)
-ABAS.Size = UDim2.new(0, 100, 0, 100)
-
-botoes.Name = "botoes"
-botoes.Parent = ABAS
-botoes.BackgroundColor3 = Color3.fromRGB(53, 53, 53)
-botoes.BackgroundTransparency = 0.100
-botoes.BorderColor3 = Color3.fromRGB(0, 0, 0)
-botoes.BorderSizePixel = 0
-botoes.Position = UDim2.new(-1.45186985, 0, -0.392296761, 0)
-botoes.Size = UDim2.new(0, 101, 0, 284)
-
-UICorner_21.Parent = botoes
-
-butela5.Name = "butela5"
-butela5.Parent = botoes
-butela5.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
-butela5.BorderColor3 = Color3.fromRGB(0, 0, 0)
-butela5.BorderSizePixel = 0
-butela5.Position = UDim2.new(0, 0, 0.64788729, 0)
-butela5.Size = UDim2.new(0, 100, 0, 36)
-butela5.Font = Enum.Font.Unknown
-butela5.Text = "VIP"
-butela5.TextColor3 = Color3.fromRGB(255, 255, 255)
-butela5.TextSize = 14.000
-
-UICorner_22.Parent = butela5
-
-butela4.Name = "butela4"
-butela4.Parent = botoes
-butela4.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
-butela4.BorderColor3 = Color3.fromRGB(0, 0, 0)
-butela4.BorderSizePixel = 0
-butela4.Position = UDim2.new(0.00990098994, 0, 0.799295723, 0)
-butela4.Size = UDim2.new(0, 100, 0, 35)
-butela4.Font = Enum.Font.Unknown
-butela4.Text = "ADM"
-butela4.TextColor3 = Color3.fromRGB(255, 255, 255)
-butela4.TextSize = 14.000
-
-UICorner_23.Parent = butela4
-
-butela3.Name = "butela3"
-butela3.Parent = botoes
-butela3.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
-butela3.BorderColor3 = Color3.fromRGB(0, 0, 0)
-butela3.BorderSizePixel = 0
-butela3.Position = UDim2.new(0.00990098994, 0, 0.5, 0)
-butela3.Size = UDim2.new(0, 100, 0, 35)
-butela3.Font = Enum.Font.Unknown
-butela3.Text = "MISC"
-butela3.TextColor3 = Color3.fromRGB(255, 255, 255)
-butela3.TextSize = 14.000
-
-UICorner_24.Parent = butela3
-
-butela2.Name = "butela2"
-butela2.Parent = botoes
-butela2.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
-butela2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-butela2.BorderSizePixel = 0
-butela2.Position = UDim2.new(0, 0, 0.348591536, 0)
-butela2.Size = UDim2.new(0, 100, 0, 35)
-butela2.Font = Enum.Font.Unknown
-butela2.Text = "TARGET"
-butela2.TextColor3 = Color3.fromRGB(255, 255, 255)
-butela2.TextSize = 14.000
-
-UICorner_25.Parent = butela2
-
-butela1.Name = "butela1"
-butela1.Parent = botoes
-butela1.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
-butela1.BorderColor3 = Color3.fromRGB(36, 36, 36)
-butela1.BorderSizePixel = 0
-butela1.Position = UDim2.new(0.00990098994, 0, 0.197183102, 0)
-butela1.Size = UDim2.new(0, 100, 0, 35)
-butela1.Font = Enum.Font.Unknown
-butela1.Text = "HOME"
-butela1.TextColor3 = Color3.fromRGB(255, 255, 255)
-butela1.TextSize = 14.000
-
-UICorner_26.Parent = butela1
-
-TEXTOS.Name = "TEXTOS"
-TEXTOS.Parent = CorpoPainel
-TEXTOS.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
-TEXTOS.BackgroundTransparency = 1.000
-TEXTOS.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TEXTOS.BorderSizePixel = 0
-TEXTOS.Position = UDim2.new(0.36493966, 0, 0.208588958, 0)
-TEXTOS.Size = UDim2.new(0, 404, 0, 284)
-
-TextLabel_11.Parent = TEXTOS
-TextLabel_11.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_11.BackgroundTransparency = 1.000
-TextLabel_11.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_11.BorderSizePixel = 0
-TextLabel_11.Position = UDim2.new(0.485148519, 0, 0.672535241, 0)
-TextLabel_11.Size = UDim2.new(0, 200, 0, 33)
-TextLabel_11.Font = Enum.Font.Unknown
-TextLabel_11.Text = "v1.1"
-TextLabel_11.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_11.TextSize = 17.000
-TextLabel_11.TextWrapped = true
-
-TextLabel_12.Parent = TEXTOS
-TextLabel_12.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_12.BackgroundTransparency = 1.000
-TextLabel_12.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_12.BorderSizePixel = 0
-TextLabel_12.Position = UDim2.new(-0.584158421, 0, -0.158450708, 0)
-TextLabel_12.Size = UDim2.new(0, 200, 0, 33)
-TextLabel_12.Font = Enum.Font.Unknown
-TextLabel_12.Text = "Panel"
-TextLabel_12.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_12.TextSize = 17.000
-TextLabel_12.TextWrapped = true
-
-TextLabel_13.Parent = TEXTOS
-TextLabel_13.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_13.BackgroundTransparency = 1.000
-TextLabel_13.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_13.BorderSizePixel = 0
-TextLabel_13.Position = UDim2.new(-0.581683159, 0, -0.221830979, 0)
-TextLabel_13.Size = UDim2.new(0, 200, 0, 33)
-TextLabel_13.Font = Enum.Font.Unknown
-TextLabel_13.Text = "4e20"
-TextLabel_13.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_13.TextSize = 25.000
-TextLabel_13.TextWrapped = true
-
-tela5.Name = "tela5"
-tela5.Parent = CorpoPainel
-tela5.Active = true
-tela5.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
-tela5.BackgroundTransparency = 0.100
-tela5.BorderColor3 = Color3.fromRGB(255, 255, 255)
-tela5.BorderSizePixel = 0
-tela5.Position = UDim2.new(0.198397487, 0, -0.00525751244, 0)
-tela5.Size = UDim2.new(0, 404, 0, 284)
-tela5.Visible = false
-
-PINCEL.Name = "PINCEL"
-PINCEL.Parent = tela5
-PINCEL.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-PINCEL.BackgroundTransparency = 0.100
-PINCEL.BorderColor3 = Color3.fromRGB(0, 0, 0)
-PINCEL.BorderSizePixel = 0
-PINCEL.Position = UDim2.new(0.784653485, 0, 0.739436626, 0)
-PINCEL.Size = UDim2.new(0, 63, 0, 57)
-PINCEL.Image = "rbxassetid://85851959324603"
-
--- Scripts:
-
-local function IRIOADD_fake_script() -- ScreenGui.GerenciadorAbas 
-	local script = Instance.new('LocalScript', ScreenGui)
+local Converted = {
+	["_ScreenGui"] = Instance.new("ScreenGui");
+	["_AvisoTP"] = Instance.new("TextLabel");
+	["_GerenciadorAbas"] = Instance.new("LocalScript");
+	["_LocalScript"] = Instance.new("LocalScript");
+	["_CorpoPainel"] = Instance.new("Frame");
+	["_tela1"] = Instance.new("Frame");
+	["_ImageLabel"] = Instance.new("ImageLabel");
+	["_TextLabel"] = Instance.new("TextLabel");
+	["_CarregarHome"] = Instance.new("LocalScript");
+	["_UICorner"] = Instance.new("UICorner");
+	["_TextLabel1"] = Instance.new("TextLabel");
+	["_LocalScript1"] = Instance.new("LocalScript");
+	["_TextLabel2"] = Instance.new("TextLabel");
+	["_LocalScript2"] = Instance.new("LocalScript");
+	["_tela2"] = Instance.new("Frame");
+	["_AVATA"] = Instance.new("ImageLabel");
+	["_VIEW"] = Instance.new("TextButton");
+	["_TextLabel3"] = Instance.new("TextLabel");
+	["_UICorner1"] = Instance.new("UICorner");
+	["_FOLLOW"] = Instance.new("TextButton");
+	["_TextLabel4"] = Instance.new("TextLabel");
+	["_UICorner2"] = Instance.new("UICorner");
+	["_FOCUS"] = Instance.new("TextButton");
+	["_TextLabel5"] = Instance.new("TextLabel");
+	["_UICorner3"] = Instance.new("UICorner");
+	["_@username"] = Instance.new("TextBox");
+	["_coloque o @ do usuario!"] = Instance.new("TextLabel");
+	["_ID"] = Instance.new("TextLabel");
+	["_DISPLAY NAME"] = Instance.new("TextLabel");
+	["_UICorner4"] = Instance.new("UICorner");
+	["_NOMES"] = Instance.new("LocalScript");
+	["_VIEW1"] = Instance.new("LocalScript");
+	["_UICorner5"] = Instance.new("UICorner");
+	["_tela3"] = Instance.new("Frame");
+	["_UICorner6"] = Instance.new("UICorner");
+	["_CLICK - TP"] = Instance.new("TextButton");
+	["_TextLabel6"] = Instance.new("TextLabel");
+	["_UICorner7"] = Instance.new("UICorner");
+	["_LocalScript3"] = Instance.new("LocalScript");
+	["_FLASHBACK"] = Instance.new("TextButton");
+	["_TextLabel7"] = Instance.new("TextLabel");
+	["_UICorner8"] = Instance.new("UICorner");
+	["_LocalScript4"] = Instance.new("LocalScript");
+	["_NOCLIP"] = Instance.new("TextButton");
+	["_TextLabel8"] = Instance.new("TextLabel");
+	["_UICorner9"] = Instance.new("UICorner");
+	["_LocalScript5"] = Instance.new("LocalScript");
+	["_ANT-AFK"] = Instance.new("TextButton");
+	["_TextLabel9"] = Instance.new("TextLabel");
+	["_UICorner10"] = Instance.new("UICorner");
+	["_LocalScript6"] = Instance.new("LocalScript");
+	["_tela4"] = Instance.new("Frame");
+	["_LocalScript7"] = Instance.new("LocalScript");
+	["_ADD"] = Instance.new("TextButton");
+	["_UICorner11"] = Instance.new("UICorner");
+	["_HELPE"] = Instance.new("TextButton");
+	["_UICorner12"] = Instance.new("UICorner");
+	["_MANAGER"] = Instance.new("TextButton");
+	["_UICorner13"] = Instance.new("UICorner");
+	["_MEOW"] = Instance.new("TextButton");
+	["_UICorner14"] = Instance.new("UICorner");
+	["_OWNER"] = Instance.new("TextButton");
+	["_UICorner15"] = Instance.new("UICorner");
+	["_TextBox"] = Instance.new("TextBox");
+	["_ID1"] = Instance.new("TextLabel");
+	["_DISPLAY NAME1"] = Instance.new("TextLabel");
+	["_ImageLabel1"] = Instance.new("ImageLabel");
+	["_UICorner16"] = Instance.new("UICorner");
+	["_USER"] = Instance.new("TextButton");
+	["_UICorner17"] = Instance.new("UICorner");
+	["_VIP"] = Instance.new("TextButton");
+	["_UICorner18"] = Instance.new("UICorner");
+	["_UICorner19"] = Instance.new("UICorner");
+	["_ABAS"] = Instance.new("Frame");
+	["_botoes"] = Instance.new("Frame");
+	["_UICorner20"] = Instance.new("UICorner");
+	["_butela5"] = Instance.new("TextButton");
+	["_UICorner21"] = Instance.new("UICorner");
+	["_butela4"] = Instance.new("TextButton");
+	["_UICorner22"] = Instance.new("UICorner");
+	["_butela3"] = Instance.new("TextButton");
+	["_UICorner23"] = Instance.new("UICorner");
+	["_butela2"] = Instance.new("TextButton");
+	["_UICorner24"] = Instance.new("UICorner");
+	["_butela1"] = Instance.new("TextButton");
+	["_UICorner25"] = Instance.new("UICorner");
+	["_TEXTOS"] = Instance.new("Frame");
+	["_TextLabel10"] = Instance.new("TextLabel");
+	["_TextLabel11"] = Instance.new("TextLabel");
+	["_TextLabel12"] = Instance.new("TextLabel");
+	["_tela5"] = Instance.new("Frame");
+	["_PINCEL"] = Instance.new("ImageButton");
+	["_LocalScript8"] = Instance.new("LocalScript");
+	["_FLING"] = Instance.new("TextButton");
+	["_TextLabel13"] = Instance.new("TextLabel");
+	["_UICorner26"] = Instance.new("UICorner");
+	["_LocalScript9"] = Instance.new("LocalScript");
+	["_INVISIVEL"] = Instance.new("TextButton");
+	["_TextLabel14"] = Instance.new("TextLabel");
+	["_UICorner27"] = Instance.new("UICorner");
+	["_LocalScript10"] = Instance.new("LocalScript");
+	["_JUMP"] = Instance.new("TextButton");
+	["_TextLabel15"] = Instance.new("TextLabel");
+	["_UICorner28"] = Instance.new("UICorner");
+	["_LocalScript11"] = Instance.new("LocalScript");
+	["_SPIN"] = Instance.new("TextButton");
+	["_TextLabel16"] = Instance.new("TextLabel");
+	["_UICorner29"] = Instance.new("UICorner");
+	["_LocalScript12"] = Instance.new("LocalScript");
+	["_JERKOFF"] = Instance.new("TextButton");
+	["_TextLabel17"] = Instance.new("TextLabel");
+	["_UICorner30"] = Instance.new("UICorner");
+	["_LocalScript13"] = Instance.new("LocalScript");
+}
+
+-- Properties:
+
+Converted["_ScreenGui"].ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+Converted["_ScreenGui"].Parent = game:GetService("CoreGui")
+
+Converted["_AvisoTP"].Font = Enum.Font.SourceSans
+Converted["_AvisoTP"].Text = "aviso tp"
+Converted["_AvisoTP"].TextColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_AvisoTP"].TextSize = 14
+Converted["_AvisoTP"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_AvisoTP"].BackgroundTransparency = 1
+Converted["_AvisoTP"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_AvisoTP"].BorderSizePixel = 0
+Converted["_AvisoTP"].Position = UDim2.new(0.83263284, 0, 0.859222949, 0)
+Converted["_AvisoTP"].Size = UDim2.new(0, 200, 0, 50)
+Converted["_AvisoTP"].Visible = false
+Converted["_AvisoTP"].Name = "AvisoTP"
+Converted["_AvisoTP"].Parent = Converted["_ScreenGui"]
+
+Converted["_CorpoPainel"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_CorpoPainel"].BackgroundTransparency = 1
+Converted["_CorpoPainel"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_CorpoPainel"].BorderSizePixel = 0
+Converted["_CorpoPainel"].Position = UDim2.new(0.294336736, 0, 0.134980991, 0)
+Converted["_CorpoPainel"].Size = UDim2.new(0, 505, 0, 284)
+Converted["_CorpoPainel"].ZIndex = 5
+Converted["_CorpoPainel"].Name = "CorpoPainel"
+Converted["_CorpoPainel"].Parent = Converted["_ScreenGui"]
+
+Converted["_tela1"].Active = true
+Converted["_tela1"].BackgroundColor3 = Color3.fromRGB(35.00000171363354, 35.00000171363354, 35.00000171363354)
+Converted["_tela1"].BackgroundTransparency = 0.10000000149011612
+Converted["_tela1"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_tela1"].BorderSizePixel = 0
+Converted["_tela1"].ClipsDescendants = true
+Converted["_tela1"].Position = UDim2.new(0.197935313, 0, -0.00354723865, 0)
+Converted["_tela1"].Size = UDim2.new(0, 404, 0, 283)
+Converted["_tela1"].Name = "tela1"
+Converted["_tela1"].Parent = Converted["_CorpoPainel"]
+
+Converted["_ImageLabel"].Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
+Converted["_ImageLabel"].ImageContent = Content{SourceType=Uri, Uri=rbxasset://textures/ui/GuiImagePlaceholder.png}
+Converted["_ImageLabel"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_ImageLabel"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_ImageLabel"].BorderSizePixel = 0
+Converted["_ImageLabel"].Position = UDim2.new(0.0841584131, 0, 0.0845070407, 0)
+Converted["_ImageLabel"].Size = UDim2.new(0, 100, 0, 100)
+Converted["_ImageLabel"].Parent = Converted["_tela1"]
+
+Converted["_TextLabel"].Font = Enum.Font.Jura
+Converted["_TextLabel"].Text = "Olá Seja Bem vindo! user ( B ) abrir/fechar painel"
+Converted["_TextLabel"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_TextLabel"].TextScaled = true
+Converted["_TextLabel"].TextSize = 14
+Converted["_TextLabel"].TextWrapped = true
+Converted["_TextLabel"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_TextLabel"].BackgroundTransparency = 1
+Converted["_TextLabel"].BorderColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_TextLabel"].BorderSizePixel = 0
+Converted["_TextLabel"].Position = UDim2.new(1.14999998, 0, 0.25, 0)
+Converted["_TextLabel"].Size = UDim2.new(0, 200, 0, 50)
+Converted["_TextLabel"].Parent = Converted["_ImageLabel"]
+
+Converted["_UICorner"].Parent = Converted["_tela1"]
+
+Converted["_TextLabel1"].Font = Enum.Font.Jura
+Converted["_TextLabel1"].TextColor3 = Color3.fromRGB(173.00000488758087, 173.00000488758087, 173.00000488758087)
+Converted["_TextLabel1"].TextSize = 14
+Converted["_TextLabel1"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_TextLabel1"].BackgroundTransparency = 1
+Converted["_TextLabel1"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_TextLabel1"].BorderSizePixel = 0
+Converted["_TextLabel1"].Position = UDim2.new(-0.0396039598, 0, 0.40989399, 0)
+Converted["_TextLabel1"].Size = UDim2.new(0, 200, 0, 50)
+Converted["_TextLabel1"].Parent = Converted["_tela1"]
+
+Converted["_TextLabel2"].Font = Enum.Font.Jura
+Converted["_TextLabel2"].Text = "JOGADORES ONLINE:"
+Converted["_TextLabel2"].TextColor3 = Color3.fromRGB(173.00000488758087, 173.00000488758087, 173.00000488758087)
+Converted["_TextLabel2"].TextSize = 14
+Converted["_TextLabel2"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_TextLabel2"].BackgroundTransparency = 1
+Converted["_TextLabel2"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_TextLabel2"].BorderSizePixel = 0
+Converted["_TextLabel2"].Position = UDim2.new(0.368811876, 0, 0.646643102, 0)
+Converted["_TextLabel2"].Size = UDim2.new(0, 200, 0, 50)
+Converted["_TextLabel2"].Parent = Converted["_tela1"]
+
+Converted["_tela2"].Active = true
+Converted["_tela2"].BackgroundColor3 = Color3.fromRGB(35.00000171363354, 35.00000171363354, 35.00000171363354)
+Converted["_tela2"].BackgroundTransparency = 0.10000000149011612
+Converted["_tela2"].BorderColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_tela2"].BorderSizePixel = 0
+Converted["_tela2"].Position = UDim2.new(0.194437101, 0, -0.00525751244, 0)
+Converted["_tela2"].Size = UDim2.new(0, 404, 0, 284)
+Converted["_tela2"].Visible = false
+Converted["_tela2"].Name = "tela2"
+Converted["_tela2"].Parent = Converted["_CorpoPainel"]
+
+Converted["_AVATA"].Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
+Converted["_AVATA"].ImageContent = Content{SourceType=Uri, Uri=rbxasset://textures/ui/GuiImagePlaceholder.png}
+Converted["_AVATA"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_AVATA"].BackgroundTransparency = 1
+Converted["_AVATA"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_AVATA"].BorderSizePixel = 0
+Converted["_AVATA"].Position = UDim2.new(0.599009871, 0, 0.119718313, 0)
+Converted["_AVATA"].Size = UDim2.new(0, 71, 0, 65)
+Converted["_AVATA"].Name = "AVATA"
+Converted["_AVATA"].Parent = Converted["_tela2"]
+
+Converted["_VIEW"].Font = Enum.Font.Unknown
+Converted["_VIEW"].Text = "VIEW"
+Converted["_VIEW"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_VIEW"].TextSize = 14
+Converted["_VIEW"].BackgroundColor3 = Color3.fromRGB(29.000000171363354, 29.000000171363354, 29.000000171363354)
+Converted["_VIEW"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_VIEW"].BorderSizePixel = 0
+Converted["_VIEW"].Position = UDim2.new(0.0569306947, 0, 0.0845070407, 0)
+Converted["_VIEW"].Size = UDim2.new(0, 100, 0, 36)
+Converted["_VIEW"].Name = "VIEW"
+Converted["_VIEW"].Parent = Converted["_tela2"]
+
+Converted["_TextLabel3"].Font = Enum.Font.Unknown
+Converted["_TextLabel3"].Text = "+"
+Converted["_TextLabel3"].TextColor3 = Color3.fromRGB(255, 0, 0)
+Converted["_TextLabel3"].TextScaled = true
+Converted["_TextLabel3"].TextSize = 25
+Converted["_TextLabel3"].TextWrapped = true
+Converted["_TextLabel3"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_TextLabel3"].BackgroundTransparency = 1
+Converted["_TextLabel3"].BorderColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_TextLabel3"].BorderSizePixel = 0
+Converted["_TextLabel3"].Position = UDim2.new(0.899999976, 0, -0.111111112, 0)
+Converted["_TextLabel3"].Size = UDim2.new(0, 70, 0, 46)
+Converted["_TextLabel3"].Parent = Converted["_VIEW"]
+
+Converted["_UICorner1"].Parent = Converted["_VIEW"]
+
+Converted["_FOLLOW"].Font = Enum.Font.Unknown
+Converted["_FOLLOW"].Text = "FOLLOW"
+Converted["_FOLLOW"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_FOLLOW"].TextSize = 14
+Converted["_FOLLOW"].BackgroundColor3 = Color3.fromRGB(29.000000171363354, 29.000000171363354, 29.000000171363354)
+Converted["_FOLLOW"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_FOLLOW"].BorderSizePixel = 0
+Converted["_FOLLOW"].Position = UDim2.new(0.0569306947, 0, 0.274647892, 0)
+Converted["_FOLLOW"].Size = UDim2.new(0, 100, 0, 36)
+Converted["_FOLLOW"].Name = "FOLLOW"
+Converted["_FOLLOW"].Parent = Converted["_tela2"]
+
+Converted["_TextLabel4"].Font = Enum.Font.Unknown
+Converted["_TextLabel4"].Text = "+"
+Converted["_TextLabel4"].TextColor3 = Color3.fromRGB(255, 0, 0)
+Converted["_TextLabel4"].TextScaled = true
+Converted["_TextLabel4"].TextSize = 25
+Converted["_TextLabel4"].TextWrapped = true
+Converted["_TextLabel4"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_TextLabel4"].BackgroundTransparency = 1
+Converted["_TextLabel4"].BorderColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_TextLabel4"].BorderSizePixel = 0
+Converted["_TextLabel4"].Position = UDim2.new(0.899999976, 0, -0.138888896, 0)
+Converted["_TextLabel4"].Size = UDim2.new(0, 70, 0, 46)
+Converted["_TextLabel4"].Parent = Converted["_FOLLOW"]
+
+Converted["_UICorner2"].Parent = Converted["_FOLLOW"]
+
+Converted["_FOCUS"].Font = Enum.Font.Unknown
+Converted["_FOCUS"].Text = "FOCUS"
+Converted["_FOCUS"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_FOCUS"].TextSize = 14
+Converted["_FOCUS"].BackgroundColor3 = Color3.fromRGB(29.000000171363354, 29.000000171363354, 29.000000171363354)
+Converted["_FOCUS"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_FOCUS"].BorderSizePixel = 0
+Converted["_FOCUS"].Position = UDim2.new(0.0569306947, 0, 0.46126762, 0)
+Converted["_FOCUS"].Size = UDim2.new(0, 100, 0, 36)
+Converted["_FOCUS"].Name = "FOCUS"
+Converted["_FOCUS"].Parent = Converted["_tela2"]
+
+Converted["_TextLabel5"].Font = Enum.Font.Unknown
+Converted["_TextLabel5"].Text = "+"
+Converted["_TextLabel5"].TextColor3 = Color3.fromRGB(255, 0, 0)
+Converted["_TextLabel5"].TextScaled = true
+Converted["_TextLabel5"].TextSize = 25
+Converted["_TextLabel5"].TextStrokeColor3 = Color3.fromRGB(255, 0, 0)
+Converted["_TextLabel5"].TextWrapped = true
+Converted["_TextLabel5"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_TextLabel5"].BackgroundTransparency = 1
+Converted["_TextLabel5"].BorderColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_TextLabel5"].BorderSizePixel = 0
+Converted["_TextLabel5"].Position = UDim2.new(0.899999976, 0, -0.138888896, 0)
+Converted["_TextLabel5"].Size = UDim2.new(0, 70, 0, 46)
+Converted["_TextLabel5"].Parent = Converted["_FOCUS"]
+
+Converted["_UICorner3"].Parent = Converted["_FOCUS"]
+
+Converted["_@username"].Font = Enum.Font.SourceSans
+Converted["_@username"].Text = ""
+Converted["_@username"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_@username"].TextSize = 14
+Converted["_@username"].TextWrapped = true
+Converted["_@username"].BackgroundColor3 = Color3.fromRGB(29.000000171363354, 29.000000171363354, 29.000000171363354)
+Converted["_@username"].BorderColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_@username"].BorderSizePixel = 0
+Converted["_@username"].Position = UDim2.new(0.438118815, 0, 0.556338012, 0)
+Converted["_@username"].Size = UDim2.new(0, 200, 0, 23)
+Converted["_@username"].Name = "@username"
+Converted["_@username"].Parent = Converted["_tela2"]
+
+Converted["_coloque o @ do usuario!"].Font = Enum.Font.Jura
+Converted["_coloque o @ do usuario!"].Text = "coloque o @ do usuario!"
+Converted["_coloque o @ do usuario!"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_coloque o @ do usuario!"].TextSize = 14
+Converted["_coloque o @ do usuario!"].TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_coloque o @ do usuario!"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_coloque o @ do usuario!"].BackgroundTransparency = 1
+Converted["_coloque o @ do usuario!"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_coloque o @ do usuario!"].BorderSizePixel = 0
+Converted["_coloque o @ do usuario!"].Position = UDim2.new(0, 0, 0.999999344, 0)
+Converted["_coloque o @ do usuario!"].Size = UDim2.new(0, 200, 0, 21)
+Converted["_coloque o @ do usuario!"].Name = "coloque o @ do usuario!"
+Converted["_coloque o @ do usuario!"].Parent = Converted["_@username"]
+
+Converted["_ID"].Font = Enum.Font.Jura
+Converted["_ID"].Text = "ID"
+Converted["_ID"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_ID"].TextSize = 14
+Converted["_ID"].TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_ID"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_ID"].BackgroundTransparency = 1
+Converted["_ID"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_ID"].BorderSizePixel = 0
+Converted["_ID"].Position = UDim2.new(0, 0, -2.43478394, 0)
+Converted["_ID"].Size = UDim2.new(0, 200, 0, 21)
+Converted["_ID"].Name = "ID"
+Converted["_ID"].Parent = Converted["_@username"]
+
+Converted["_DISPLAY NAME"].Font = Enum.Font.Jura
+Converted["_DISPLAY NAME"].Text = "DISPLAY NAME"
+Converted["_DISPLAY NAME"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_DISPLAY NAME"].TextSize = 14
+Converted["_DISPLAY NAME"].TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_DISPLAY NAME"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_DISPLAY NAME"].BackgroundTransparency = 1
+Converted["_DISPLAY NAME"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_DISPLAY NAME"].BorderSizePixel = 0
+Converted["_DISPLAY NAME"].Position = UDim2.new(0, 0, -1.52174044, 0)
+Converted["_DISPLAY NAME"].Size = UDim2.new(0, 200, 0, 21)
+Converted["_DISPLAY NAME"].Name = "DISPLAY NAME"
+Converted["_DISPLAY NAME"].Parent = Converted["_@username"]
+
+Converted["_UICorner4"].Parent = Converted["_@username"]
+
+Converted["_UICorner5"].Parent = Converted["_tela2"]
+
+Converted["_tela3"].Active = true
+Converted["_tela3"].BackgroundColor3 = Color3.fromRGB(35.00000171363354, 35.00000171363354, 35.00000171363354)
+Converted["_tela3"].BackgroundTransparency = 0.10000000149011612
+Converted["_tela3"].BorderColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_tela3"].BorderSizePixel = 0
+Converted["_tela3"].Position = UDim2.new(0.198397487, 0, -0.00525751244, 0)
+Converted["_tela3"].Size = UDim2.new(0, 404, 0, 284)
+Converted["_tela3"].Visible = false
+Converted["_tela3"].Name = "tela3"
+Converted["_tela3"].Parent = Converted["_CorpoPainel"]
+
+Converted["_UICorner6"].Parent = Converted["_tela3"]
+
+Converted["_CLICK - TP"].Font = Enum.Font.Unknown
+Converted["_CLICK - TP"].Text = "CLICK - TP"
+Converted["_CLICK - TP"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_CLICK - TP"].TextSize = 14
+Converted["_CLICK - TP"].BackgroundColor3 = Color3.fromRGB(29.000000171363354, 29.000000171363354, 29.000000171363354)
+Converted["_CLICK - TP"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_CLICK - TP"].BorderSizePixel = 0
+Converted["_CLICK - TP"].Position = UDim2.new(0.0569306947, 0, 0.0845070407, 0)
+Converted["_CLICK - TP"].Size = UDim2.new(0, 100, 0, 36)
+Converted["_CLICK - TP"].Name = "CLICK - TP"
+Converted["_CLICK - TP"].Parent = Converted["_tela3"]
+
+Converted["_TextLabel6"].Font = Enum.Font.Unknown
+Converted["_TextLabel6"].Text = "+"
+Converted["_TextLabel6"].TextColor3 = Color3.fromRGB(255, 0, 0)
+Converted["_TextLabel6"].TextScaled = true
+Converted["_TextLabel6"].TextSize = 25
+Converted["_TextLabel6"].TextWrapped = true
+Converted["_TextLabel6"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_TextLabel6"].BackgroundTransparency = 1
+Converted["_TextLabel6"].BorderColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_TextLabel6"].BorderSizePixel = 0
+Converted["_TextLabel6"].Position = UDim2.new(0.899999976, 0, -0.111111112, 0)
+Converted["_TextLabel6"].Size = UDim2.new(0, 70, 0, 46)
+Converted["_TextLabel6"].Parent = Converted["_CLICK - TP"]
+
+Converted["_UICorner7"].Parent = Converted["_CLICK - TP"]
+
+Converted["_FLASHBACK"].Font = Enum.Font.Unknown
+Converted["_FLASHBACK"].Text = "FLASHBACK"
+Converted["_FLASHBACK"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_FLASHBACK"].TextSize = 14
+Converted["_FLASHBACK"].BackgroundColor3 = Color3.fromRGB(29.000000171363354, 29.000000171363354, 29.000000171363354)
+Converted["_FLASHBACK"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_FLASHBACK"].BorderSizePixel = 0
+Converted["_FLASHBACK"].Position = UDim2.new(0.0569306947, 0, 0.46126762, 0)
+Converted["_FLASHBACK"].Size = UDim2.new(0, 100, 0, 36)
+Converted["_FLASHBACK"].Name = "FLASHBACK"
+Converted["_FLASHBACK"].Parent = Converted["_tela3"]
+
+Converted["_TextLabel7"].Font = Enum.Font.Unknown
+Converted["_TextLabel7"].Text = "+"
+Converted["_TextLabel7"].TextColor3 = Color3.fromRGB(255, 0, 0)
+Converted["_TextLabel7"].TextScaled = true
+Converted["_TextLabel7"].TextSize = 25
+Converted["_TextLabel7"].TextStrokeColor3 = Color3.fromRGB(255, 0, 0)
+Converted["_TextLabel7"].TextWrapped = true
+Converted["_TextLabel7"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_TextLabel7"].BackgroundTransparency = 1
+Converted["_TextLabel7"].BorderColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_TextLabel7"].BorderSizePixel = 0
+Converted["_TextLabel7"].Position = UDim2.new(0.899999976, 0, -0.138888896, 0)
+Converted["_TextLabel7"].Size = UDim2.new(0, 70, 0, 46)
+Converted["_TextLabel7"].Parent = Converted["_FLASHBACK"]
+
+Converted["_UICorner8"].Parent = Converted["_FLASHBACK"]
+
+Converted["_NOCLIP"].Font = Enum.Font.Unknown
+Converted["_NOCLIP"].Text = "NOCLIP"
+Converted["_NOCLIP"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_NOCLIP"].TextSize = 14
+Converted["_NOCLIP"].BackgroundColor3 = Color3.fromRGB(29.000000171363354, 29.000000171363354, 29.000000171363354)
+Converted["_NOCLIP"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_NOCLIP"].BorderSizePixel = 0
+Converted["_NOCLIP"].Position = UDim2.new(0.0569306947, 0, 0.274647892, 0)
+Converted["_NOCLIP"].Size = UDim2.new(0, 100, 0, 36)
+Converted["_NOCLIP"].Name = "NOCLIP"
+Converted["_NOCLIP"].Parent = Converted["_tela3"]
+
+Converted["_TextLabel8"].Font = Enum.Font.Unknown
+Converted["_TextLabel8"].Text = "+"
+Converted["_TextLabel8"].TextColor3 = Color3.fromRGB(255, 0, 0)
+Converted["_TextLabel8"].TextScaled = true
+Converted["_TextLabel8"].TextSize = 25
+Converted["_TextLabel8"].TextWrapped = true
+Converted["_TextLabel8"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_TextLabel8"].BackgroundTransparency = 1
+Converted["_TextLabel8"].BorderColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_TextLabel8"].BorderSizePixel = 0
+Converted["_TextLabel8"].Position = UDim2.new(0.899999976, 0, -0.138888896, 0)
+Converted["_TextLabel8"].Size = UDim2.new(0, 70, 0, 46)
+Converted["_TextLabel8"].Parent = Converted["_NOCLIP"]
+
+Converted["_UICorner9"].Parent = Converted["_NOCLIP"]
+
+Converted["_ANT-AFK"].Font = Enum.Font.Unknown
+Converted["_ANT-AFK"].Text = "ANT-AFK"
+Converted["_ANT-AFK"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_ANT-AFK"].TextSize = 14
+Converted["_ANT-AFK"].BackgroundColor3 = Color3.fromRGB(29.000000171363354, 29.000000171363354, 29.000000171363354)
+Converted["_ANT-AFK"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_ANT-AFK"].BorderSizePixel = 0
+Converted["_ANT-AFK"].Position = UDim2.new(0.0569306947, 0, 0.633802831, 0)
+Converted["_ANT-AFK"].Size = UDim2.new(0, 100, 0, 36)
+Converted["_ANT-AFK"].Name = "ANT-AFK"
+Converted["_ANT-AFK"].Parent = Converted["_tela3"]
+
+Converted["_TextLabel9"].Font = Enum.Font.Unknown
+Converted["_TextLabel9"].Text = "+"
+Converted["_TextLabel9"].TextColor3 = Color3.fromRGB(255, 0, 0)
+Converted["_TextLabel9"].TextScaled = true
+Converted["_TextLabel9"].TextSize = 25
+Converted["_TextLabel9"].TextStrokeColor3 = Color3.fromRGB(255, 0, 0)
+Converted["_TextLabel9"].TextWrapped = true
+Converted["_TextLabel9"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_TextLabel9"].BackgroundTransparency = 1
+Converted["_TextLabel9"].BorderColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_TextLabel9"].BorderSizePixel = 0
+Converted["_TextLabel9"].Position = UDim2.new(0.899999976, 0, -0.138888896, 0)
+Converted["_TextLabel9"].Size = UDim2.new(0, 70, 0, 46)
+Converted["_TextLabel9"].Parent = Converted["_ANT-AFK"]
+
+Converted["_UICorner10"].Parent = Converted["_ANT-AFK"]
+
+Converted["_tela4"].Active = true
+Converted["_tela4"].BackgroundColor3 = Color3.fromRGB(35.00000171363354, 35.00000171363354, 35.00000171363354)
+Converted["_tela4"].BackgroundTransparency = 0.10000000149011612
+Converted["_tela4"].BorderColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_tela4"].BorderSizePixel = 0
+Converted["_tela4"].Position = UDim2.new(0.198397487, 0, -0.00525751244, 0)
+Converted["_tela4"].Size = UDim2.new(0, 404, 0, 284)
+Converted["_tela4"].Visible = false
+Converted["_tela4"].Name = "tela4"
+Converted["_tela4"].Parent = Converted["_CorpoPainel"]
+
+Converted["_ADD"].Font = Enum.Font.Unknown
+Converted["_ADD"].Text = "ADD"
+Converted["_ADD"].TextColor3 = Color3.fromRGB(30.00000201165676, 30.00000201165676, 30.00000201165676)
+Converted["_ADD"].TextSize = 14
+Converted["_ADD"].BackgroundColor3 = Color3.fromRGB(91.00000217556953, 255, 3.0000002961605787)
+Converted["_ADD"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_ADD"].BorderSizePixel = 0
+Converted["_ADD"].Position = UDim2.new(0.566831708, 0, 0.517605662, 0)
+Converted["_ADD"].Size = UDim2.new(0, 86, 0, 36)
+Converted["_ADD"].Name = "ADD"
+Converted["_ADD"].Parent = Converted["_tela4"]
+
+Converted["_UICorner11"].Parent = Converted["_ADD"]
+
+Converted["_HELPE"].Font = Enum.Font.Unknown
+Converted["_HELPE"].Text = "HELPE"
+Converted["_HELPE"].TextColor3 = Color3.fromRGB(30.00000201165676, 30.00000201165676, 30.00000201165676)
+Converted["_HELPE"].TextSize = 14
+Converted["_HELPE"].BackgroundColor3 = Color3.fromRGB(255, 255, 0)
+Converted["_HELPE"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_HELPE"].BorderSizePixel = 0
+Converted["_HELPE"].Position = UDim2.new(0.0569306947, 0, 0.517605722, 0)
+Converted["_HELPE"].Size = UDim2.new(0, 100, 0, 36)
+Converted["_HELPE"].Name = "HELPE"
+Converted["_HELPE"].Parent = Converted["_tela4"]
+
+Converted["_UICorner12"].Parent = Converted["_HELPE"]
+
+Converted["_MANAGER"].Font = Enum.Font.Unknown
+Converted["_MANAGER"].Text = "MANAGER"
+Converted["_MANAGER"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_MANAGER"].TextSize = 14
+Converted["_MANAGER"].BackgroundColor3 = Color3.fromRGB(85.0000025331974, 0, 255)
+Converted["_MANAGER"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_MANAGER"].BorderSizePixel = 0
+Converted["_MANAGER"].Position = UDim2.new(0.0569306947, 0, 0.362676114, 0)
+Converted["_MANAGER"].Size = UDim2.new(0, 100, 0, 36)
+Converted["_MANAGER"].Name = "MANAGER"
+Converted["_MANAGER"].Parent = Converted["_tela4"]
+
+Converted["_UICorner13"].Parent = Converted["_MANAGER"]
+
+Converted["_MEOW"].Font = Enum.Font.Unknown
+Converted["_MEOW"].Text = "MEOW"
+Converted["_MEOW"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_MEOW"].TextSize = 14
+Converted["_MEOW"].BackgroundColor3 = Color3.fromRGB(255, 85.0000025331974, 255)
+Converted["_MEOW"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_MEOW"].BorderSizePixel = 0
+Converted["_MEOW"].Position = UDim2.new(0.0569306947, 0, 0.197183102, 0)
+Converted["_MEOW"].Size = UDim2.new(0, 100, 0, 36)
+Converted["_MEOW"].Name = "MEOW"
+Converted["_MEOW"].Parent = Converted["_tela4"]
+
+Converted["_UICorner14"].Parent = Converted["_MEOW"]
+
+Converted["_OWNER"].Font = Enum.Font.Unknown
+Converted["_OWNER"].Text = "OWNER"
+Converted["_OWNER"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_OWNER"].TextSize = 14
+Converted["_OWNER"].BackgroundColor3 = Color3.fromRGB(98.00000935792923, 0, 0)
+Converted["_OWNER"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_OWNER"].BorderSizePixel = 0
+Converted["_OWNER"].Position = UDim2.new(0.0569306947, 0, 0.0457746461, 0)
+Converted["_OWNER"].Size = UDim2.new(0, 100, 0, 36)
+Converted["_OWNER"].Name = "OWNER"
+Converted["_OWNER"].Parent = Converted["_tela4"]
+
+Converted["_UICorner15"].Parent = Converted["_OWNER"]
+
+Converted["_TextBox"].Font = Enum.Font.SourceSans
+Converted["_TextBox"].Text = ""
+Converted["_TextBox"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_TextBox"].TextSize = 14
+Converted["_TextBox"].BackgroundColor3 = Color3.fromRGB(29.000000171363354, 29.000000171363354, 29.000000171363354)
+Converted["_TextBox"].BorderColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_TextBox"].BorderSizePixel = 0
+Converted["_TextBox"].Position = UDim2.new(0.425742567, 0, 0.362676114, 0)
+Converted["_TextBox"].Size = UDim2.new(0, 200, 0, 33)
+Converted["_TextBox"].Parent = Converted["_tela4"]
+
+Converted["_ID1"].Font = Enum.Font.Jura
+Converted["_ID1"].Text = "ID"
+Converted["_ID1"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_ID1"].TextSize = 14
+Converted["_ID1"].TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_ID1"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_ID1"].BackgroundTransparency = 1
+Converted["_ID1"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_ID1"].BorderSizePixel = 0
+Converted["_ID1"].Position = UDim2.new(0.109999999, 0, -2.06023884, 0)
+Converted["_ID1"].Size = UDim2.new(0, 200, 0, 21)
+Converted["_ID1"].Name = "ID"
+Converted["_ID1"].Parent = Converted["_TextBox"]
+
+Converted["_DISPLAY NAME1"].Font = Enum.Font.Jura
+Converted["_DISPLAY NAME1"].Text = "DISPLAY NAME"
+Converted["_DISPLAY NAME1"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_DISPLAY NAME1"].TextSize = 14
+Converted["_DISPLAY NAME1"].TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_DISPLAY NAME1"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_DISPLAY NAME1"].BackgroundTransparency = 1
+Converted["_DISPLAY NAME1"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_DISPLAY NAME1"].BorderSizePixel = 0
+Converted["_DISPLAY NAME1"].Position = UDim2.new(0.11088226, 0, -1.31108928, 0)
+Converted["_DISPLAY NAME1"].Size = UDim2.new(0, 200, 0, 21)
+Converted["_DISPLAY NAME1"].Name = "DISPLAY NAME"
+Converted["_DISPLAY NAME1"].Parent = Converted["_TextBox"]
+
+Converted["_ImageLabel1"].Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
+Converted["_ImageLabel1"].ImageContent = Content{SourceType=Uri, Uri=rbxasset://textures/ui/GuiImagePlaceholder.png}
+Converted["_ImageLabel1"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_ImageLabel1"].BackgroundTransparency = 1
+Converted["_ImageLabel1"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_ImageLabel1"].BorderSizePixel = 0
+Converted["_ImageLabel1"].Position = UDim2.new(-0.000989990192, 0, -2.69846368, 0)
+Converted["_ImageLabel1"].Size = UDim2.new(0, 71, 0, 65)
+Converted["_ImageLabel1"].Parent = Converted["_TextBox"]
+
+Converted["_UICorner16"].Parent = Converted["_TextBox"]
+
+Converted["_USER"].Font = Enum.Font.Unknown
+Converted["_USER"].Text = "USER"
+Converted["_USER"].TextColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_USER"].TextSize = 14
+Converted["_USER"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_USER"].BorderColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_USER"].BorderSizePixel = 0
+Converted["_USER"].Position = UDim2.new(0.0569306947, 0, 0.823943794, 0)
+Converted["_USER"].Size = UDim2.new(0, 100, 0, 36)
+Converted["_USER"].Name = "USER"
+Converted["_USER"].Parent = Converted["_tela4"]
+
+Converted["_UICorner17"].Parent = Converted["_USER"]
+
+Converted["_VIP"].Font = Enum.Font.Unknown
+Converted["_VIP"].Text = "VIP"
+Converted["_VIP"].TextColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_VIP"].TextSize = 14
+Converted["_VIP"].BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+Converted["_VIP"].BorderColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_VIP"].BorderSizePixel = 0
+Converted["_VIP"].Position = UDim2.new(0.0569306947, 0, 0.6725353, 0)
+Converted["_VIP"].Size = UDim2.new(0, 100, 0, 36)
+Converted["_VIP"].Name = "VIP"
+Converted["_VIP"].Parent = Converted["_tela4"]
+
+Converted["_UICorner18"].Parent = Converted["_VIP"]
+
+Converted["_UICorner19"].Parent = Converted["_tela4"]
+
+Converted["_ABAS"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_ABAS"].BackgroundTransparency = 1
+Converted["_ABAS"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_ABAS"].BorderSizePixel = 0
+Converted["_ABAS"].Position = UDim2.new(0.284243047, 0, 0.13389121, 0)
+Converted["_ABAS"].Size = UDim2.new(0, 100, 0, 100)
+Converted["_ABAS"].Name = "ABAS"
+Converted["_ABAS"].Parent = Converted["_CorpoPainel"]
+
+Converted["_botoes"].BackgroundColor3 = Color3.fromRGB(53.000004440546036, 53.000004440546036, 53.000004440546036)
+Converted["_botoes"].BackgroundTransparency = 0.10000000149011612
+Converted["_botoes"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_botoes"].BorderSizePixel = 0
+Converted["_botoes"].Position = UDim2.new(-1.45186985, 0, -0.392296761, 0)
+Converted["_botoes"].Size = UDim2.new(0, 101, 0, 284)
+Converted["_botoes"].Name = "botoes"
+Converted["_botoes"].Parent = Converted["_ABAS"]
+
+Converted["_UICorner20"].Parent = Converted["_botoes"]
+
+Converted["_butela5"].Font = Enum.Font.Unknown
+Converted["_butela5"].Text = "VIP"
+Converted["_butela5"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_butela5"].TextSize = 14
+Converted["_butela5"].BackgroundColor3 = Color3.fromRGB(29.000000171363354, 29.000000171363354, 29.000000171363354)
+Converted["_butela5"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_butela5"].BorderSizePixel = 0
+Converted["_butela5"].Position = UDim2.new(0, 0, 0.64788729, 0)
+Converted["_butela5"].Size = UDim2.new(0, 100, 0, 36)
+Converted["_butela5"].Name = "butela5"
+Converted["_butela5"].Parent = Converted["_botoes"]
+
+Converted["_UICorner21"].Parent = Converted["_butela5"]
+
+Converted["_butela4"].Font = Enum.Font.Unknown
+Converted["_butela4"].Text = "ADM"
+Converted["_butela4"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_butela4"].TextSize = 14
+Converted["_butela4"].BackgroundColor3 = Color3.fromRGB(29.000000171363354, 29.000000171363354, 29.000000171363354)
+Converted["_butela4"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_butela4"].BorderSizePixel = 0
+Converted["_butela4"].Position = UDim2.new(0.00990098994, 0, 0.799295723, 0)
+Converted["_butela4"].Size = UDim2.new(0, 100, 0, 35)
+Converted["_butela4"].Name = "butela4"
+Converted["_butela4"].Parent = Converted["_botoes"]
+
+Converted["_UICorner22"].Parent = Converted["_butela4"]
+
+Converted["_butela3"].Font = Enum.Font.Unknown
+Converted["_butela3"].Text = "MISC"
+Converted["_butela3"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_butela3"].TextSize = 14
+Converted["_butela3"].BackgroundColor3 = Color3.fromRGB(29.000000171363354, 29.000000171363354, 29.000000171363354)
+Converted["_butela3"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_butela3"].BorderSizePixel = 0
+Converted["_butela3"].Position = UDim2.new(0.00990098994, 0, 0.5, 0)
+Converted["_butela3"].Size = UDim2.new(0, 100, 0, 35)
+Converted["_butela3"].Name = "butela3"
+Converted["_butela3"].Parent = Converted["_botoes"]
+
+Converted["_UICorner23"].Parent = Converted["_butela3"]
+
+Converted["_butela2"].Font = Enum.Font.Unknown
+Converted["_butela2"].Text = "TARGET"
+Converted["_butela2"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_butela2"].TextSize = 14
+Converted["_butela2"].BackgroundColor3 = Color3.fromRGB(29.000000171363354, 29.000000171363354, 29.000000171363354)
+Converted["_butela2"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_butela2"].BorderSizePixel = 0
+Converted["_butela2"].Position = UDim2.new(0, 0, 0.348591536, 0)
+Converted["_butela2"].Size = UDim2.new(0, 100, 0, 35)
+Converted["_butela2"].Name = "butela2"
+Converted["_butela2"].Parent = Converted["_botoes"]
+
+Converted["_UICorner24"].Parent = Converted["_butela2"]
+
+Converted["_butela1"].Font = Enum.Font.Unknown
+Converted["_butela1"].Text = "HOME"
+Converted["_butela1"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_butela1"].TextSize = 14
+Converted["_butela1"].BackgroundColor3 = Color3.fromRGB(29.000000171363354, 29.000000171363354, 29.000000171363354)
+Converted["_butela1"].BorderColor3 = Color3.fromRGB(36.00000165402889, 36.00000165402889, 36.00000165402889)
+Converted["_butela1"].BorderSizePixel = 0
+Converted["_butela1"].Position = UDim2.new(0.00990098994, 0, 0.197183102, 0)
+Converted["_butela1"].Size = UDim2.new(0, 100, 0, 35)
+Converted["_butela1"].Name = "butela1"
+Converted["_butela1"].Parent = Converted["_botoes"]
+
+Converted["_UICorner25"].Parent = Converted["_butela1"]
+
+Converted["_TEXTOS"].BackgroundColor3 = Color3.fromRGB(35.00000171363354, 35.00000171363354, 35.00000171363354)
+Converted["_TEXTOS"].BackgroundTransparency = 1
+Converted["_TEXTOS"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_TEXTOS"].BorderSizePixel = 0
+Converted["_TEXTOS"].Position = UDim2.new(0.36493966, 0, 0.208588958, 0)
+Converted["_TEXTOS"].Size = UDim2.new(0, 404, 0, 284)
+Converted["_TEXTOS"].Name = "TEXTOS"
+Converted["_TEXTOS"].Parent = Converted["_CorpoPainel"]
+
+Converted["_TextLabel10"].Font = Enum.Font.Unknown
+Converted["_TextLabel10"].RichText = true
+Converted["_TextLabel10"].Text = "v1.1"
+Converted["_TextLabel10"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_TextLabel10"].TextSize = 17
+Converted["_TextLabel10"].TextWrapped = true
+Converted["_TextLabel10"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_TextLabel10"].BackgroundTransparency = 1
+Converted["_TextLabel10"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_TextLabel10"].BorderSizePixel = 0
+Converted["_TextLabel10"].Position = UDim2.new(0.485148519, 0, 0.672535241, 0)
+Converted["_TextLabel10"].Size = UDim2.new(0, 200, 0, 33)
+Converted["_TextLabel10"].Parent = Converted["_TEXTOS"]
+
+Converted["_TextLabel11"].Font = Enum.Font.Unknown
+Converted["_TextLabel11"].RichText = true
+Converted["_TextLabel11"].Text = "Panel"
+Converted["_TextLabel11"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_TextLabel11"].TextSize = 17
+Converted["_TextLabel11"].TextWrapped = true
+Converted["_TextLabel11"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_TextLabel11"].BackgroundTransparency = 1
+Converted["_TextLabel11"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_TextLabel11"].BorderSizePixel = 0
+Converted["_TextLabel11"].Position = UDim2.new(-0.584158421, 0, -0.158450708, 0)
+Converted["_TextLabel11"].Size = UDim2.new(0, 200, 0, 33)
+Converted["_TextLabel11"].Parent = Converted["_TEXTOS"]
+
+Converted["_TextLabel12"].Font = Enum.Font.Unknown
+Converted["_TextLabel12"].RichText = true
+Converted["_TextLabel12"].Text = "4e20"
+Converted["_TextLabel12"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_TextLabel12"].TextSize = 25
+Converted["_TextLabel12"].TextWrapped = true
+Converted["_TextLabel12"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_TextLabel12"].BackgroundTransparency = 1
+Converted["_TextLabel12"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_TextLabel12"].BorderSizePixel = 0
+Converted["_TextLabel12"].Position = UDim2.new(-0.581683159, 0, -0.221830979, 0)
+Converted["_TextLabel12"].Size = UDim2.new(0, 200, 0, 33)
+Converted["_TextLabel12"].Parent = Converted["_TEXTOS"]
+
+Converted["_tela5"].Active = true
+Converted["_tela5"].BackgroundColor3 = Color3.fromRGB(35.00000171363354, 35.00000171363354, 35.00000171363354)
+Converted["_tela5"].BackgroundTransparency = 0.10000000149011612
+Converted["_tela5"].BorderColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_tela5"].BorderSizePixel = 0
+Converted["_tela5"].Position = UDim2.new(0.198397487, 0, -0.00525751244, 0)
+Converted["_tela5"].Size = UDim2.new(0, 404, 0, 284)
+Converted["_tela5"].Visible = false
+Converted["_tela5"].Name = "tela5"
+Converted["_tela5"].Parent = Converted["_CorpoPainel"]
+
+Converted["_PINCEL"].Image = "rbxassetid://85851959324603"
+Converted["_PINCEL"].ImageContent = Content{SourceType=Uri, Uri=rbxassetid://85851959324603}
+Converted["_PINCEL"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_PINCEL"].BackgroundTransparency = 0.10000000149011612
+Converted["_PINCEL"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_PINCEL"].BorderSizePixel = 0
+Converted["_PINCEL"].Position = UDim2.new(0.784653485, 0, 0.739436626, 0)
+Converted["_PINCEL"].Size = UDim2.new(0, 63, 0, 57)
+Converted["_PINCEL"].Name = "PINCEL"
+Converted["_PINCEL"].Parent = Converted["_tela5"]
+
+Converted["_FLING"].Font = Enum.Font.Unknown
+Converted["_FLING"].Text = "FLING"
+Converted["_FLING"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_FLING"].TextSize = 14
+Converted["_FLING"].BackgroundColor3 = Color3.fromRGB(29.000000171363354, 29.000000171363354, 29.000000171363354)
+Converted["_FLING"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_FLING"].BorderSizePixel = 0
+Converted["_FLING"].Position = UDim2.new(0.0569306947, 0, 0.274647892, 0)
+Converted["_FLING"].Size = UDim2.new(0, 100, 0, 36)
+Converted["_FLING"].Name = "FLING"
+Converted["_FLING"].Parent = Converted["_tela5"]
+
+Converted["_TextLabel13"].Font = Enum.Font.Unknown
+Converted["_TextLabel13"].Text = "+"
+Converted["_TextLabel13"].TextColor3 = Color3.fromRGB(255, 0, 0)
+Converted["_TextLabel13"].TextScaled = true
+Converted["_TextLabel13"].TextSize = 25
+Converted["_TextLabel13"].TextWrapped = true
+Converted["_TextLabel13"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_TextLabel13"].BackgroundTransparency = 1
+Converted["_TextLabel13"].BorderColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_TextLabel13"].BorderSizePixel = 0
+Converted["_TextLabel13"].Position = UDim2.new(0.899999976, 0, -0.138888896, 0)
+Converted["_TextLabel13"].Size = UDim2.new(0, 70, 0, 46)
+Converted["_TextLabel13"].Parent = Converted["_FLING"]
+
+Converted["_UICorner26"].Parent = Converted["_FLING"]
+
+Converted["_INVISIVEL"].Font = Enum.Font.Unknown
+Converted["_INVISIVEL"].Text = "Invisibility"
+Converted["_INVISIVEL"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_INVISIVEL"].TextSize = 14
+Converted["_INVISIVEL"].BackgroundColor3 = Color3.fromRGB(29.000000171363354, 29.000000171363354, 29.000000171363354)
+Converted["_INVISIVEL"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_INVISIVEL"].BorderSizePixel = 0
+Converted["_INVISIVEL"].Position = UDim2.new(0.0569306947, 0, 0.633802831, 0)
+Converted["_INVISIVEL"].Size = UDim2.new(0, 100, 0, 36)
+Converted["_INVISIVEL"].Name = "INVISIVEL"
+Converted["_INVISIVEL"].Parent = Converted["_tela5"]
+
+Converted["_TextLabel14"].Font = Enum.Font.Unknown
+Converted["_TextLabel14"].Text = "+"
+Converted["_TextLabel14"].TextColor3 = Color3.fromRGB(255, 0, 0)
+Converted["_TextLabel14"].TextScaled = true
+Converted["_TextLabel14"].TextSize = 25
+Converted["_TextLabel14"].TextStrokeColor3 = Color3.fromRGB(255, 0, 0)
+Converted["_TextLabel14"].TextWrapped = true
+Converted["_TextLabel14"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_TextLabel14"].BackgroundTransparency = 1
+Converted["_TextLabel14"].BorderColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_TextLabel14"].BorderSizePixel = 0
+Converted["_TextLabel14"].Position = UDim2.new(0.899999976, 0, -0.138888896, 0)
+Converted["_TextLabel14"].Size = UDim2.new(0, 70, 0, 46)
+Converted["_TextLabel14"].Parent = Converted["_INVISIVEL"]
+
+Converted["_UICorner27"].Parent = Converted["_INVISIVEL"]
+
+Converted["_JUMP"].Font = Enum.Font.Unknown
+Converted["_JUMP"].Text = "JUMP"
+Converted["_JUMP"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_JUMP"].TextSize = 14
+Converted["_JUMP"].BackgroundColor3 = Color3.fromRGB(29.000000171363354, 29.000000171363354, 29.000000171363354)
+Converted["_JUMP"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_JUMP"].BorderSizePixel = 0
+Converted["_JUMP"].Position = UDim2.new(0.0569306947, 0, 0.0845070407, 0)
+Converted["_JUMP"].Size = UDim2.new(0, 100, 0, 36)
+Converted["_JUMP"].Name = "JUMP"
+Converted["_JUMP"].Parent = Converted["_tela5"]
+
+Converted["_TextLabel15"].Font = Enum.Font.Unknown
+Converted["_TextLabel15"].Text = "+"
+Converted["_TextLabel15"].TextColor3 = Color3.fromRGB(255, 0, 0)
+Converted["_TextLabel15"].TextScaled = true
+Converted["_TextLabel15"].TextSize = 25
+Converted["_TextLabel15"].TextWrapped = true
+Converted["_TextLabel15"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_TextLabel15"].BackgroundTransparency = 1
+Converted["_TextLabel15"].BorderColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_TextLabel15"].BorderSizePixel = 0
+Converted["_TextLabel15"].Position = UDim2.new(0.899999976, 0, -0.111111112, 0)
+Converted["_TextLabel15"].Size = UDim2.new(0, 70, 0, 46)
+Converted["_TextLabel15"].Parent = Converted["_JUMP"]
+
+Converted["_UICorner28"].Parent = Converted["_JUMP"]
+
+Converted["_SPIN"].Font = Enum.Font.Unknown
+Converted["_SPIN"].Text = "SPIN"
+Converted["_SPIN"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_SPIN"].TextSize = 14
+Converted["_SPIN"].BackgroundColor3 = Color3.fromRGB(29.000000171363354, 29.000000171363354, 29.000000171363354)
+Converted["_SPIN"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_SPIN"].BorderSizePixel = 0
+Converted["_SPIN"].Position = UDim2.new(0.0569306947, 0, 0.46126762, 0)
+Converted["_SPIN"].Size = UDim2.new(0, 100, 0, 36)
+Converted["_SPIN"].Name = "SPIN"
+Converted["_SPIN"].Parent = Converted["_tela5"]
+
+Converted["_TextLabel16"].Font = Enum.Font.Unknown
+Converted["_TextLabel16"].Text = "+"
+Converted["_TextLabel16"].TextColor3 = Color3.fromRGB(255, 0, 0)
+Converted["_TextLabel16"].TextScaled = true
+Converted["_TextLabel16"].TextSize = 25
+Converted["_TextLabel16"].TextStrokeColor3 = Color3.fromRGB(255, 0, 0)
+Converted["_TextLabel16"].TextWrapped = true
+Converted["_TextLabel16"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_TextLabel16"].BackgroundTransparency = 1
+Converted["_TextLabel16"].BorderColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_TextLabel16"].BorderSizePixel = 0
+Converted["_TextLabel16"].Position = UDim2.new(0.899999976, 0, -0.138888896, 0)
+Converted["_TextLabel16"].Size = UDim2.new(0, 70, 0, 46)
+Converted["_TextLabel16"].Parent = Converted["_SPIN"]
+
+Converted["_UICorner29"].Parent = Converted["_SPIN"]
+
+Converted["_JERKOFF"].Font = Enum.Font.Unknown
+Converted["_JERKOFF"].Text = "JECKOFF"
+Converted["_JERKOFF"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_JERKOFF"].TextSize = 14
+Converted["_JERKOFF"].BackgroundColor3 = Color3.fromRGB(29.000000171363354, 29.000000171363354, 29.000000171363354)
+Converted["_JERKOFF"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_JERKOFF"].BorderSizePixel = 0
+Converted["_JERKOFF"].Position = UDim2.new(0.0569306947, 0, 0.813380301, 0)
+Converted["_JERKOFF"].Size = UDim2.new(0, 100, 0, 36)
+Converted["_JERKOFF"].Name = "JERKOFF"
+Converted["_JERKOFF"].Parent = Converted["_tela5"]
+
+Converted["_TextLabel17"].Font = Enum.Font.Unknown
+Converted["_TextLabel17"].Text = "+"
+Converted["_TextLabel17"].TextColor3 = Color3.fromRGB(255, 0, 0)
+Converted["_TextLabel17"].TextScaled = true
+Converted["_TextLabel17"].TextSize = 25
+Converted["_TextLabel17"].TextWrapped = true
+Converted["_TextLabel17"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_TextLabel17"].BackgroundTransparency = 1
+Converted["_TextLabel17"].BorderColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_TextLabel17"].BorderSizePixel = 0
+Converted["_TextLabel17"].Position = UDim2.new(0.899999976, 0, -0.138888896, 0)
+Converted["_TextLabel17"].Size = UDim2.new(0, 70, 0, 46)
+Converted["_TextLabel17"].Parent = Converted["_JERKOFF"]
+
+Converted["_UICorner30"].Parent = Converted["_JERKOFF"]
+
+-- Fake Module Scripts:
+
+local fake_module_scripts = {}
+
+
+-- Fake Local Scripts:
+
+local function JGLBV_fake_script() -- Fake Script: StarterGui.ScreenGui.GerenciadorAbas
+    local script = Instance.new("LocalScript")
+    script.Name = "GerenciadorAbas"
+    script.Parent = Converted["_ScreenGui"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
 
 	local gui = script.Parent
 	local corpo = gui:WaitForChild("CorpoPainel") -- Entra no frame principal
@@ -818,9 +1016,18 @@ local function IRIOADD_fake_script() -- ScreenGui.GerenciadorAbas
 		end
 	end
 end
-coroutine.wrap(IRIOADD_fake_script)()
-local function LEBN_fake_script() -- ScreenGui.LocalScript 
-	local script = Instance.new('LocalScript', ScreenGui)
+local function GJTQ_fake_script() -- Fake Script: StarterGui.ScreenGui.LocalScript
+    local script = Instance.new("LocalScript")
+    script.Name = "LocalScript"
+    script.Parent = Converted["_ScreenGui"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
 
 	local UserInputService = game:GetService("UserInputService")
 	local TweenService = game:GetService("TweenService")
@@ -880,9 +1087,18 @@ local function LEBN_fake_script() -- ScreenGui.LocalScript
 		end
 	end)
 end
-coroutine.wrap(LEBN_fake_script)()
-local function YJVJM_fake_script() -- tela1.CarregarHome 
-	local script = Instance.new('LocalScript', tela1)
+local function PLJUHWL_fake_script() -- Fake Script: StarterGui.ScreenGui.CorpoPainel.tela1.CarregarHome
+    local script = Instance.new("LocalScript")
+    script.Name = "CarregarHome"
+    script.Parent = Converted["_tela1"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
 
 	local Players = game:GetService("Players")
 	local player = Players.LocalPlayer
@@ -905,9 +1121,18 @@ local function YJVJM_fake_script() -- tela1.CarregarHome
 	
 	task.spawn(carregarFoto)
 end
-coroutine.wrap(YJVJM_fake_script)()
-local function BKOYH_fake_script() -- TextLabel_2.LocalScript 
-	local script = Instance.new('LocalScript', TextLabel_2)
+local function KSOJLY_fake_script() -- Fake Script: StarterGui.ScreenGui.CorpoPainel.tela1.TextLabel.LocalScript
+    local script = Instance.new("LocalScript")
+    script.Name = "LocalScript"
+    script.Parent = Converted["_TextLabel1"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
 
 	-- [[ MONITOR DE LATÊNCIA REAL-TIME - 4E20 PANEL ]] --
 	local label = script.Parent
@@ -940,9 +1165,18 @@ local function BKOYH_fake_script() -- TextLabel_2.LocalScript
 		end
 	end
 end
-coroutine.wrap(BKOYH_fake_script)()
-local function YTRTFP_fake_script() -- TextLabel_3.LocalScript 
-	local script = Instance.new('LocalScript', TextLabel_3)
+local function UJJH_fake_script() -- Fake Script: StarterGui.ScreenGui.CorpoPainel.tela1.TextLabel.LocalScript
+    local script = Instance.new("LocalScript")
+    script.Name = "LocalScript"
+    script.Parent = Converted["_TextLabel2"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
 
 	-- [[ PLAYER COUNTER - 4E20 PANEL ]] --
 	local label = script.Parent
@@ -967,9 +1201,18 @@ local function YTRTFP_fake_script() -- TextLabel_3.LocalScript
 	-- Atualização inicial
 	atualizarContagem()
 end
-coroutine.wrap(YTRTFP_fake_script)()
-local function GQCHJMY_fake_script() -- tela2.NOMES 
-	local script = Instance.new('LocalScript', tela2)
+local function AMRP_fake_script() -- Fake Script: StarterGui.ScreenGui.CorpoPainel.tela2.NOMES
+    local script = Instance.new("LocalScript")
+    script.Name = "NOMES"
+    script.Parent = Converted["_tela2"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
 
 	local Players = game:GetService("Players")
 	
@@ -1022,9 +1265,18 @@ local function GQCHJMY_fake_script() -- tela2.NOMES
 		end
 	end)
 end
-coroutine.wrap(GQCHJMY_fake_script)()
-local function TNUPRTW_fake_script() -- tela2.VIEW 
-	local script = Instance.new('LocalScript', tela2)
+local function TDNF_fake_script() -- Fake Script: StarterGui.ScreenGui.CorpoPainel.tela2.VIEW
+    local script = Instance.new("LocalScript")
+    script.Name = "VIEW"
+    script.Parent = Converted["_tela2"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
 
 	local Players = game:GetService("Players")
 	local camera = workspace.CurrentCamera
@@ -1122,9 +1374,18 @@ local function TNUPRTW_fake_script() -- tela2.VIEW
 		end
 	end)
 end
-coroutine.wrap(TNUPRTW_fake_script)()
-local function WUWPIAO_fake_script() -- CLICKTP.LocalScript 
-	local script = Instance.new('LocalScript', CLICKTP)
+local function ADTSOPV_fake_script() -- Fake Script: StarterGui.ScreenGui.CorpoPainel.tela3.CLICK - TP.LocalScript
+    local script = Instance.new("LocalScript")
+    script.Name = "LocalScript"
+    script.Parent = Converted["_CLICK - TP"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
 
 	local Players = game:GetService("Players")
 	local UserInputService = game:GetService("UserInputService")
@@ -1179,9 +1440,18 @@ local function WUWPIAO_fake_script() -- CLICKTP.LocalScript
 		end
 	end)
 end
-coroutine.wrap(WUWPIAO_fake_script)()
-local function CJLAR_fake_script() -- FLASHBACK.LocalScript 
-	local script = Instance.new('LocalScript', FLASHBACK)
+local function XIZEXI_fake_script() -- Fake Script: StarterGui.ScreenGui.CorpoPainel.tela3.FLASHBACK.LocalScript
+    local script = Instance.new("LocalScript")
+    script.Name = "LocalScript"
+    script.Parent = Converted["_FLASHBACK"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
 
 	local RunService = game:GetService("RunService")
 	local UserInputService = game:GetService("UserInputService")
@@ -1258,9 +1528,18 @@ local function CJLAR_fake_script() -- FLASHBACK.LocalScript
 		end
 	end)
 end
-coroutine.wrap(CJLAR_fake_script)()
-local function YVAMFFR_fake_script() -- NOCLIP.LocalScript 
-	local script = Instance.new('LocalScript', NOCLIP)
+local function HQJQSV_fake_script() -- Fake Script: StarterGui.ScreenGui.CorpoPainel.tela3.NOCLIP.LocalScript
+    local script = Instance.new("LocalScript")
+    script.Name = "LocalScript"
+    script.Parent = Converted["_NOCLIP"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
 
 	local RunService = game:GetService("RunService")
 	local UserInputService = game:GetService("UserInputService")
@@ -1321,9 +1600,18 @@ local function YVAMFFR_fake_script() -- NOCLIP.LocalScript
 		end
 	end)
 end
-coroutine.wrap(YVAMFFR_fake_script)()
-local function CMWF_fake_script() -- ANTAFK.LocalScript 
-	local script = Instance.new('LocalScript', ANTAFK)
+local function YIVYF_fake_script() -- Fake Script: StarterGui.ScreenGui.CorpoPainel.tela3.ANT-AFK.LocalScript
+    local script = Instance.new("LocalScript")
+    script.Name = "LocalScript"
+    script.Parent = Converted["_ANT-AFK"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
 
 	-- SERVIÇOS
 	local Players = game:GetService("Players")
@@ -1360,9 +1648,18 @@ local function CMWF_fake_script() -- ANTAFK.LocalScript
 		end
 	end)
 end
-coroutine.wrap(CMWF_fake_script)()
-local function LPYM_fake_script() -- tela4.LocalScript 
-	local script = Instance.new('LocalScript', tela4)
+local function BKNARZK_fake_script() -- Fake Script: StarterGui.ScreenGui.CorpoPainel.tela4.LocalScript
+    local script = Instance.new("LocalScript")
+    script.Name = "LocalScript"
+    script.Parent = Converted["_tela4"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
 
 	local Players = game:GetService("Players")
 	local TweenService = game:GetService("TweenService")
@@ -1628,9 +1925,18 @@ local function LPYM_fake_script() -- tela4.LocalScript
 	atualizarAbas(cargoInit)
 	notificar("4E20 PANEL", "PAINEL ATIVO: TAGS APENAS PARA EXECUTORES!", 5, "welcome", cargoInit)
 end
-coroutine.wrap(LPYM_fake_script)()
-local function WHDCDU_fake_script() -- PINCEL.LocalScript 
-	local script = Instance.new('LocalScript', PINCEL)
+local function SPNZUP_fake_script() -- Fake Script: StarterGui.ScreenGui.CorpoPainel.tela5.PINCEL.LocalScript
+    local script = Instance.new("LocalScript")
+    script.Name = "LocalScript"
+    script.Parent = Converted["_PINCEL"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
 
 	-- [[ SISTEMA DE TEMAS 4E20 PANEL - 20 CORES ]] --
 	local botaoPincel = script.Parent
@@ -1690,4 +1996,754 @@ local function WHDCDU_fake_script() -- PINCEL.LocalScript
 		aplicarTema(novaCor)
 	end)
 end
-coroutine.wrap(WHDCDU_fake_script)()
+local function NZIQI_fake_script() -- Fake Script: StarterGui.ScreenGui.CorpoPainel.tela5.FLING.LocalScript
+    local script = Instance.new("LocalScript")
+    script.Name = "LocalScript"
+    script.Parent = Converted["_FLING"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
+
+	local RunService = game:GetService("RunService")
+	local UserInputService = game:GetService("UserInputService")
+	local Players = game:GetService("Players")
+	local TweenService = game:GetService("TweenService")
+	local player = Players.LocalPlayer
+	local botao = script.Parent
+	local iconeStatus = botao:WaitForChild("TextLabel")
+	
+	local permissaoPainel = false
+	local flingAtivo = false
+	local bAV = nil
+	local conexaoNoclip = nil
+	local conexaoFling = nil
+	
+	-- NOTIFICAÇÃO BONITA
+	local screenGui = Instance.new("ScreenGui", player.PlayerGui)
+	screenGui.Name = "NotifFling"
+	screenGui.ResetOnSpawn = false
+	
+	local function notificar(titulo, texto, cor)
+		cor = cor or Color3.fromRGB(150, 0, 0)
+		local frame = Instance.new("Frame", screenGui)
+		frame.Size = UDim2.new(0, 260, 0, 60)
+		frame.Position = UDim2.new(0, 20, 1, 10)
+		frame.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
+		frame.BackgroundTransparency = 0.05
+		frame.BorderSizePixel = 0
+		frame.AnchorPoint = Vector2.new(0, 1)
+		frame.ZIndex = 10
+		Instance.new("UICorner", frame).CornerRadius = UDim.new(0, 8)
+	
+		local borda = Instance.new("Frame", frame)
+		borda.Size = UDim2.new(0, 4, 1, 0)
+		borda.BackgroundColor3 = cor
+		borda.BorderSizePixel = 0
+		borda.ZIndex = 11
+		Instance.new("UICorner", borda).CornerRadius = UDim.new(0, 8)
+	
+		local labelT = Instance.new("TextLabel", frame)
+		labelT.Size = UDim2.new(1, -16, 0, 24)
+		labelT.Position = UDim2.new(0, 14, 0, 6)
+		labelT.BackgroundTransparency = 1
+		labelT.Text = titulo
+		labelT.TextColor3 = Color3.fromRGB(255, 255, 255)
+		labelT.Font = Enum.Font.GothamBold
+		labelT.TextSize = 13
+		labelT.TextXAlignment = Enum.TextXAlignment.Left
+		labelT.ZIndex = 11
+	
+		local labelS = Instance.new("TextLabel", frame)
+		labelS.Size = UDim2.new(1, -16, 0, 18)
+		labelS.Position = UDim2.new(0, 14, 0, 30)
+		labelS.BackgroundTransparency = 1
+		labelS.Text = texto
+		labelS.TextColor3 = Color3.fromRGB(170, 170, 170)
+		labelS.Font = Enum.Font.Gotham
+		labelS.TextSize = 11
+		labelS.TextXAlignment = Enum.TextXAlignment.Left
+		labelS.ZIndex = 11
+	
+		TweenService:Create(frame, TweenInfo.new(0.4, Enum.EasingStyle.Back, Enum.EasingDirection.Out), {
+			Position = UDim2.new(0, 20, 1, -20)
+		}):Play()
+	
+		task.delay(3.5, function()
+			TweenService:Create(frame, TweenInfo.new(0.3, Enum.EasingStyle.Quad, Enum.EasingDirection.In), {
+				Position = UDim2.new(0, 20, 1, 10)
+			}):Play()
+			task.wait(0.35)
+			frame:Destroy()
+		end)
+	end
+	
+	-- DESATIVA TUDO COM SEGURANÇA
+	local function desativarTudo()
+		flingAtivo = false
+	
+		if bAV then
+			pcall(function() bAV:Destroy() end)
+			bAV = nil
+		end
+		if conexaoNoclip then
+			conexaoNoclip:Disconnect()
+			conexaoNoclip = nil
+		end
+		if conexaoFling then
+			conexaoFling:Disconnect()
+			conexaoFling = nil
+		end
+	
+		-- Restaura colisão do personagem
+		local char = player.Character
+		if char then
+			for _, p in pairs(char:GetDescendants()) do
+				if p:IsA("BasePart") then
+					p.CanCollide = true
+				end
+			end
+		end
+	end
+	
+	-- ATIVA O FLING
+	local function ativarFling()
+		local char = player.Character
+		if not char then return end
+		local root = char:FindFirstChild("HumanoidRootPart")
+		if not root then return end
+	
+		desativarTudo()
+		flingAtivo = true
+	
+		-- Cria força de rotação
+		bAV = Instance.new("BodyAngularVelocity")
+		bAV.Name = "FlingForce"
+		bAV.MaxTorque = Vector3.new(math.huge, math.huge, math.huge)
+		bAV.P = 30000 -- Aumentado pra ser mais efetivo
+		bAV.AngularVelocity = Vector3.new(10000, 10000, 10000) -- Mais forte
+		bAV.Parent = root
+	
+		-- Noclip pra não travar nas paredes
+		conexaoNoclip = RunService.Stepped:Connect(function()
+			local c = player.Character
+			if not c then return end
+			for _, p in pairs(c:GetDescendants()) do
+				if p:IsA("BasePart") then
+					p.CanCollide = false
+				end
+			end
+		end)
+	
+		-- Loop que mantém o fling ativo e pulsa a velocidade
+		local tick = 0
+		conexaoFling = RunService.Heartbeat:Connect(function(dt)
+			tick = tick + dt
+			local c = player.Character
+			if not c then return end
+			local r = c:FindFirstChild("HumanoidRootPart")
+			if not r then return end
+			local b = r:FindFirstChild("FlingForce")
+			if not b then return end
+	
+			-- Pulsa a direção pra aumentar o efeito de fling
+			local direcao = math.sin(tick * 5) * 10000
+			b.AngularVelocity = Vector3.new(direcao, 10000, direcao)
+		end)
+	
+		iconeStatus.TextColor3 = Color3.fromRGB(255, 50, 50)
+		notificar("💥 Fling ATIVADO", "Chegue perto de alguém!", Color3.fromRGB(255, 50, 50))
+	end
+	
+	-- BOTÃO DO PAINEL
+	botao.MouseButton1Click:Connect(function()
+		permissaoPainel = not permissaoPainel
+		if permissaoPainel then
+			iconeStatus.TextColor3 = Color3.fromRGB(0, 255, 0)
+			notificar("💥 Fling Liberado", "Pressione X para ativar", Color3.fromRGB(0, 200, 0))
+		else
+			iconeStatus.TextColor3 = Color3.fromRGB(255, 0, 0)
+			desativarTudo()
+			notificar("💥 Fling Bloqueado", "Desativado pelo painel", Color3.fromRGB(100, 100, 100))
+		end
+	end)
+	
+	-- TECLA X
+	UserInputService.InputBegan:Connect(function(input, gameProcessed)
+		if gameProcessed then return end
+		if not permissaoPainel then return end
+		if input.KeyCode == Enum.KeyCode.X then
+			if flingAtivo then
+				desativarTudo()
+				iconeStatus.TextColor3 = Color3.fromRGB(0, 255, 0)
+				notificar("💥 Fling DESATIVADO", "Voltou ao normal", Color3.fromRGB(0, 200, 0))
+			else
+				ativarFling()
+			end
+		end
+	end)
+	
+	-- RESETA AO MORRER OU RESPAWNAR
+	player.CharacterAdded:Connect(function()
+		task.wait(0.5)
+		desativarTudo()
+		if permissaoPainel then
+			iconeStatus.TextColor3 = Color3.fromRGB(0, 255, 0)
+		end
+	end)
+end
+local function KZTX_fake_script() -- Fake Script: StarterGui.ScreenGui.CorpoPainel.tela5.INVISIVEL.LocalScript
+    local script = Instance.new("LocalScript")
+    script.Name = "LocalScript"
+    script.Parent = Converted["_INVISIVEL"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
+
+	local UserInputService = game:GetService("UserInputService")
+	local Players = game:GetService("Players")
+	local RunService = game:GetService("RunService")
+	local player = Players.LocalPlayer
+	local botao = script.Parent
+	local iconeStatus = botao:WaitForChild("TextLabel")
+	
+	local permissaoPainel = false
+	local invisivelAtivo = false
+	local transparenciasOriginais = {}
+	local colisaoOriginal = {}
+	
+	-- NOTIFICAÇÃO BONITA (igual ao painel)
+	local TweenService = game:GetService("TweenService")
+	local screenGui = Instance.new("ScreenGui", player.PlayerGui)
+	screenGui.Name = "NotifInvis"
+	screenGui.ResetOnSpawn = false
+	
+	local function notificar(titulo, texto, cor)
+		cor = cor or Color3.fromRGB(30, 30, 30)
+		local frame = Instance.new("Frame", screenGui)
+		frame.Size = UDim2.new(0, 260, 0, 60)
+		frame.Position = UDim2.new(0, 20, 1, 10)
+		frame.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
+		frame.BackgroundTransparency = 0.05
+		frame.BorderSizePixel = 0
+		frame.AnchorPoint = Vector2.new(0, 1)
+		frame.ZIndex = 10
+		Instance.new("UICorner", frame).CornerRadius = UDim.new(0, 8)
+	
+		local borda = Instance.new("Frame", frame)
+		borda.Size = UDim2.new(0, 4, 1, 0)
+		borda.BackgroundColor3 = cor
+		borda.BorderSizePixel = 0
+		borda.ZIndex = 11
+		Instance.new("UICorner", borda).CornerRadius = UDim.new(0, 8)
+	
+		local labelT = Instance.new("TextLabel", frame)
+		labelT.Size = UDim2.new(1, -16, 0, 24)
+		labelT.Position = UDim2.new(0, 14, 0, 6)
+		labelT.BackgroundTransparency = 1
+		labelT.Text = titulo
+		labelT.TextColor3 = Color3.fromRGB(255, 255, 255)
+		labelT.Font = Enum.Font.GothamBold
+		labelT.TextSize = 13
+		labelT.TextXAlignment = Enum.TextXAlignment.Left
+		labelT.ZIndex = 11
+	
+		local labelS = Instance.new("TextLabel", frame)
+		labelS.Size = UDim2.new(1, -16, 0, 18)
+		labelS.Position = UDim2.new(0, 14, 0, 30)
+		labelS.BackgroundTransparency = 1
+		labelS.Text = texto
+		labelS.TextColor3 = Color3.fromRGB(170, 170, 170)
+		labelS.Font = Enum.Font.Gotham
+		labelS.TextSize = 11
+		labelS.TextXAlignment = Enum.TextXAlignment.Left
+		labelS.ZIndex = 11
+	
+		-- Entrada
+		TweenService:Create(frame, TweenInfo.new(0.4, Enum.EasingStyle.Back, Enum.EasingDirection.Out), {
+			Position = UDim2.new(0, 20, 1, -20)
+		}):Play()
+	
+		-- Saída
+		task.delay(3.5, function()
+			TweenService:Create(frame, TweenInfo.new(0.3, Enum.EasingStyle.Quad, Enum.EasingDirection.In), {
+				Position = UDim2.new(0, 20, 1, 10)
+			}):Play()
+			task.wait(0.35)
+			frame:Destroy()
+		end)
+	end
+	
+	-- SALVA TRANSPARÊNCIA E COLISÃO ORIGINAIS
+	local function salvarOriginais(char)
+		transparenciasOriginais = {}
+		colisaoOriginal = {}
+		for _, v in pairs(char:GetDescendants()) do
+			if v:IsA("BasePart") then
+				transparenciasOriginais[v] = v.Transparency
+				colisaoOriginal[v] = v.CanCollide
+			elseif v:IsA("Decal") then
+				transparenciasOriginais[v] = v.Transparency
+			end
+		end
+	end
+	
+	-- ATIVA INVISIBILIDADE
+	local function ativarInvis()
+		local char = player.Character
+		if not char then return end
+		salvarOriginais(char)
+	
+		for _, v in pairs(char:GetDescendants()) do
+			if v:IsA("BasePart") then
+				-- Mantém HumanoidRootPart funcional mas invisível
+				v.Transparency = 1
+				if v.Name ~= "HumanoidRootPart" then
+					v.CanCollide = false
+				end
+			elseif v:IsA("Decal") then
+				v.Transparency = 1
+			end
+		end
+	
+		-- Mostra só pra você que tá invisível (torna semi-transparente localmente)
+		task.spawn(function()
+			local char2 = player.Character
+			if not char2 then return end
+			for _, v in pairs(char2:GetDescendants()) do
+				if v:IsA("BasePart") and v.Name ~= "HumanoidRootPart" then
+					v.LocalTransparencyModifier = 0.6
+				end
+			end
+		end)
+	end
+	
+	-- DESATIVA INVISIBILIDADE
+	local function desativarInvis()
+		local char = player.Character
+		if not char then return end
+	
+		for _, v in pairs(char:GetDescendants()) do
+			if v:IsA("BasePart") then
+				v.Transparency = transparenciasOriginais[v] or 0
+				v.CanCollide = colisaoOriginal[v] or true
+				v.LocalTransparencyModifier = 0
+			elseif v:IsA("Decal") then
+				v.Transparency = transparenciasOriginais[v] or 0
+			end
+		end
+		transparenciasOriginais = {}
+		colisaoOriginal = {}
+	end
+	
+	-- MANTÉM INVISÍVEL MESMO SE O JOGO TENTAR RESETAR
+	local conexaoInvis = nil
+	local function manterInvis()
+		if conexaoInvis then conexaoInvis:Disconnect() end
+		conexaoInvis = RunService.Heartbeat:Connect(function()
+			if not invisivelAtivo then return end
+			local char = player.Character
+			if not char then return end
+			for _, v in pairs(char:GetDescendants()) do
+				if v:IsA("BasePart") and v.Name ~= "HumanoidRootPart" then
+					if v.Transparency ~= 1 then
+						v.Transparency = 1
+					end
+				end
+			end
+		end)
+	end
+	
+	-- RECONECTA AO RESPAWN
+	player.CharacterAdded:Connect(function()
+		task.wait(1)
+		invisivelAtivo = false
+		transparenciasOriginais = {}
+		colisaoOriginal = {}
+		if conexaoInvis then conexaoInvis:Disconnect() end
+	end)
+	
+	-- BOTÃO DO PAINEL
+	botao.MouseButton1Click:Connect(function()
+		permissaoPainel = not permissaoPainel
+		if permissaoPainel then
+			iconeStatus.TextColor3 = Color3.fromRGB(0, 255, 0)
+			notificar("👻 Modo Fantasma", "Liberado! Pressione L para ativar", Color3.fromRGB(0, 200, 255))
+		else
+			iconeStatus.TextColor3 = Color3.fromRGB(255, 0, 0)
+			if invisivelAtivo then
+				desativarInvis()
+				invisivelAtivo = false
+				if conexaoInvis then conexaoInvis:Disconnect() end
+			end
+			notificar("👻 Modo Fantasma", "Desativado", Color3.fromRGB(255, 50, 50))
+		end
+	end)
+	
+	-- TECLA L
+	UserInputService.InputBegan:Connect(function(input, gameProcessed)
+		if gameProcessed then return end
+		if not permissaoPainel then return end
+		if input.KeyCode == Enum.KeyCode.L then
+			invisivelAtivo = not invisivelAtivo
+			if invisivelAtivo then
+				ativarInvis()
+				manterInvis()
+				iconeStatus.TextColor3 = Color3.fromRGB(0, 255, 255)
+				notificar("👻 Invisível ATIVADO", "Outros jogadores não te veem", Color3.fromRGB(0, 200, 255))
+			else
+				desativarInvis()
+				if conexaoInvis then conexaoInvis:Disconnect() end
+				iconeStatus.TextColor3 = Color3.fromRGB(0, 255, 0)
+				notificar("👁️ Visível", "Você voltou a aparecer", Color3.fromRGB(0, 255, 100))
+			end
+		end
+	end)
+end
+local function AEESUY_fake_script() -- Fake Script: StarterGui.ScreenGui.CorpoPainel.tela5.JUMP.LocalScript
+    local script = Instance.new("LocalScript")
+    script.Name = "LocalScript"
+    script.Parent = Converted["_JUMP"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
+
+	local UserInputService = game:GetService("UserInputService")
+	local StarterGui = game:GetService("StarterGui")
+	local Players = game:GetService("Players")
+	local player = Players.LocalPlayer
+	
+	local botao = script.Parent
+	local iconeStatus = botao:WaitForChild("TextLabel")
+	
+	local permissaoPainel = false -- Chave mestra no painel
+	
+	-- Função de Notificação Customizada
+	local function avisar(titulo, texto)
+		StarterGui:SetCore("SendNotification", {
+			Title = titulo;
+			Text = texto;
+			Duration = 4;
+		})
+	end
+	
+	-- 1. BOTÃO DO PAINEL: LIBERA OU BLOQUEIA A FUNÇÃO
+	botao.MouseButton1Click:Connect(function()
+		permissaoPainel = not permissaoPainel
+	
+		if permissaoPainel then
+			iconeStatus.TextColor3 = Color3.fromRGB(0, 255, 0) -- Verde
+			-- AVISO CUSTOMIZADO
+			avisar("Pulo Infinito", "Liberado! Agora você pode pular no ar à vontade.")
+		else
+			iconeStatus.TextColor3 = Color3.fromRGB(255, 0, 0) -- Vermelho
+			avisar("Pulo Infinito", "Função bloqueada pelo painel.")
+		end
+	end)
+	
+	-- 2. LÓGICA DO PULO INFINITO
+	UserInputService.JumpRequest:Connect(function()
+		-- A lógica só dispara se a permissão no painel estiver ativa (Verde)
+		if permissaoPainel then
+			local char = player.Character
+			local humanoid = char and char:FindFirstChildOfClass("Humanoid")
+	
+			if humanoid then
+				-- Força o estado de "Jumping", permitindo o pulo mesmo sem tocar o chão
+				humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+			end
+		end
+	end)
+end
+local function DEMWPUD_fake_script() -- Fake Script: StarterGui.ScreenGui.CorpoPainel.tela5.SPIN.LocalScript
+    local script = Instance.new("LocalScript")
+    script.Name = "LocalScript"
+    script.Parent = Converted["_SPIN"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
+
+	local RunService = game:GetService("RunService")
+	local UserInputService = game:GetService("UserInputService")
+	local StarterGui = game:GetService("StarterGui")
+	local Players = game:GetService("Players")
+	local player = Players.LocalPlayer
+	
+	local botao = script.Parent
+	local iconeStatus = botao:WaitForChild("TextLabel")
+	
+	local permissaoPainel = false 
+	local spinAtivo = false      
+	local bAV = nil               
+	
+	-- Função de Notificação
+	local function avisar(titulo, texto)
+		StarterGui:SetCore("SendNotification", {
+			Title = titulo;
+			Text = texto;
+			Duration = 4;
+		})
+	end
+	
+	-- Função para destruir o objeto de giro
+	local function removerForca()
+		if bAV then 
+			bAV:Destroy() 
+			bAV = nil 
+		end
+	end
+	
+	-- 1. CLIQUE NO PAINEL (LIBERAÇÃO)
+	botao.MouseButton1Click:Connect(function()
+		permissaoPainel = not permissaoPainel
+	
+		if permissaoPainel then
+			iconeStatus.TextColor3 = Color3.fromRGB(0, 255, 0) -- Verde
+			avisar("Painel: SPIN", "Permissão concedida! Use 'M' para Ligar/Desligar.")
+		else
+			iconeStatus.TextColor3 = Color3.fromRGB(255, 0, 0) -- Vermelho
+			spinAtivo = false
+			removerForca()
+			avisar("Painel: SPIN", "Função bloqueada e desligada.")
+		end
+	end)
+	
+	-- 2. TECLA M (LIGA E DESLIGA O GIRO)
+	UserInputService.InputBegan:Connect(function(input, gameProcessed)
+		if gameProcessed then return end
+	
+		-- Só executa se o botão do painel estiver ativado (verde)
+		if permissaoPainel and input.KeyCode == Enum.KeyCode.M then
+			spinAtivo = not spinAtivo -- Alterna entre ligado e desligado
+	
+			if spinAtivo then
+				local char = player.Character
+				local root = char and char:FindFirstChild("HumanoidRootPart")
+	
+				if root then
+					removerForca() -- Garante que não existam dois giros ao mesmo tempo
+	
+					bAV = Instance.new("BodyAngularVelocity")
+					bAV.Name = "SpinForce"
+					bAV.Parent = root
+					bAV.MaxTorque = Vector3.new(0, math.huge, 0) 
+					bAV.P = 1250 
+					bAV.AngularVelocity = Vector3.new(0, 1, 0) -- Giro lento
+	
+					avisar("Spin", "Giro ATIVADO")
+				end
+			else
+				removerForca()
+				avisar("Spin", "Giro DESATIVADO")
+			end
+		end
+	end)
+	
+	-- Resetar tudo se o personagem morrer
+	player.CharacterAdded:Connect(function()
+		spinAtivo = false
+		removerForca()
+	end)
+end
+local function ILCBTQ_fake_script() -- Fake Script: StarterGui.ScreenGui.CorpoPainel.tela5.JERKOFF.LocalScript
+    local script = Instance.new("LocalScript")
+    script.Name = "LocalScript"
+    script.Parent = Converted["_JERKOFF"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
+
+	local RunService = game:GetService("RunService")
+	local UserInputService = game:GetService("UserInputService")
+	local Players = game:GetService("Players")
+	local TweenService = game:GetService("TweenService")
+	local player = Players.LocalPlayer
+	local botao = script.Parent
+	local iconeStatus = botao:WaitForChild("TextLabel")
+	
+	local permissaoPainel = false
+	local ativo = false
+	local animTrack = nil
+	
+	-- NOTIFICAÇÃO BONITA
+	local screenGui = Instance.new("ScreenGui", player.PlayerGui)
+	screenGui.Name = "NotifSpasm"
+	screenGui.ResetOnSpawn = false
+	
+	local function notificar(titulo, texto, cor)
+		cor = cor or Color3.fromRGB(150, 0, 0)
+		local frame = Instance.new("Frame", screenGui)
+		frame.Size = UDim2.new(0, 260, 0, 60)
+		frame.Position = UDim2.new(0, 20, 1, 10)
+		frame.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
+		frame.BackgroundTransparency = 0.05
+		frame.BorderSizePixel = 0
+		frame.AnchorPoint = Vector2.new(0, 1)
+		frame.ZIndex = 10
+		Instance.new("UICorner", frame).CornerRadius = UDim.new(0, 8)
+	
+		local borda = Instance.new("Frame", frame)
+		borda.Size = UDim2.new(0, 4, 1, 0)
+		borda.BackgroundColor3 = cor
+		borda.BorderSizePixel = 0
+		borda.ZIndex = 11
+		Instance.new("UICorner", borda).CornerRadius = UDim.new(0, 8)
+	
+		local labelT = Instance.new("TextLabel", frame)
+		labelT.Size = UDim2.new(1, -16, 0, 24)
+		labelT.Position = UDim2.new(0, 14, 0, 6)
+		labelT.BackgroundTransparency = 1
+		labelT.Text = titulo
+		labelT.TextColor3 = Color3.fromRGB(255, 255, 255)
+		labelT.Font = Enum.Font.GothamBold
+		labelT.TextSize = 13
+		labelT.TextXAlignment = Enum.TextXAlignment.Left
+		labelT.ZIndex = 11
+	
+		local labelS = Instance.new("TextLabel", frame)
+		labelS.Size = UDim2.new(1, -16, 0, 18)
+		labelS.Position = UDim2.new(0, 14, 0, 30)
+		labelS.BackgroundTransparency = 1
+		labelS.Text = texto
+		labelS.TextColor3 = Color3.fromRGB(170, 170, 170)
+		labelS.Font = Enum.Font.Gotham
+		labelS.TextSize = 11
+		labelS.TextXAlignment = Enum.TextXAlignment.Left
+		labelS.ZIndex = 11
+	
+		TweenService:Create(frame, TweenInfo.new(0.4, Enum.EasingStyle.Back, Enum.EasingDirection.Out), {
+			Position = UDim2.new(0, 20, 1, -20)
+		}):Play()
+	
+		task.delay(3.5, function()
+			TweenService:Create(frame, TweenInfo.new(0.3, Enum.EasingStyle.Quad, Enum.EasingDirection.In), {
+				Position = UDim2.new(0, 20, 1, 10)
+			}):Play()
+			task.wait(0.35)
+			frame:Destroy()
+		end)
+	end
+	
+	-- DESATIVA
+	local function desativar()
+		ativo = false
+		if animTrack then
+			animTrack:Stop()
+			animTrack = nil
+		end
+	end
+	
+	-- ATIVA
+	local function ativar()
+		local char = player.Character
+		if not char then return end
+		local humanoid = char:FindFirstChildOfClass("Humanoid")
+		local animator = humanoid and humanoid:FindFirstChildOfClass("Animator")
+		if not humanoid or not animator then return end
+	
+		desativar()
+		ativo = true
+	
+		-- Cria e carrega a animação
+		local anim = Instance.new("Animation")
+		anim.AnimationId = "rbxassetid://132137977778163"
+	
+		animTrack = animator:LoadAnimation(anim)
+		animTrack.Priority = Enum.AnimationPriority.Action4 -- Prioridade máxima
+		animTrack.Looped = true  -- Loop infinito
+		animTrack:Play()
+		animTrack:AdjustSpeed(5) -- Velocidade 5x mais rápida
+	
+		-- Garante que não para nunca
+		animTrack.Stopped:Connect(function()
+			if ativo then
+				animTrack:Play()
+				animTrack:AdjustSpeed(5)
+			end
+		end)
+	end
+	
+	-- BOTÃO DO PAINEL
+	botao.MouseButton1Click:Connect(function()
+		permissaoPainel = not permissaoPainel
+		if permissaoPainel then
+			iconeStatus.TextColor3 = Color3.fromRGB(0, 255, 0)
+			notificar("🤝 Animação Liberada", "Pressione J para ativar", Color3.fromRGB(85, 0, 255))
+		else
+			iconeStatus.TextColor3 = Color3.fromRGB(255, 0, 0)
+			desativar()
+			notificar("🤝 Animação Bloqueada", "Desativado pelo painel", Color3.fromRGB(100, 100, 100))
+		end
+	end)
+	
+	-- TECLA J
+	UserInputService.InputBegan:Connect(function(input, gameProcessed)
+		if gameProcessed then return end
+		if not permissaoPainel then return end
+		if input.KeyCode == Enum.KeyCode.J then
+			if ativo then
+				desativar()
+				iconeStatus.TextColor3 = Color3.fromRGB(0, 255, 0)
+				notificar("🤝 Animação DESATIVADA", "Voltou ao normal", Color3.fromRGB(0, 200, 0))
+			else
+				ativar()
+				iconeStatus.TextColor3 = Color3.fromRGB(255, 100, 255)
+				notificar("🤝 Animação ATIVADA", "Rodando em loop!", Color3.fromRGB(85, 0, 255))
+			end
+		end
+	end)
+	
+	-- RESETA AO MORRER
+	player.CharacterAdded:Connect(function()
+		task.wait(0.5)
+		desativar()
+		if permissaoPainel then
+			iconeStatus.TextColor3 = Color3.fromRGB(0, 255, 0)
+			-- Reativa automaticamente se estava ativo antes de morrer
+			if ativo then ativar() end
+		end
+	end)
+end
+
+coroutine.wrap(JGLBV_fake_script)()
+coroutine.wrap(GJTQ_fake_script)()
+coroutine.wrap(PLJUHWL_fake_script)()
+coroutine.wrap(KSOJLY_fake_script)()
+coroutine.wrap(UJJH_fake_script)()
+coroutine.wrap(AMRP_fake_script)()
+coroutine.wrap(TDNF_fake_script)()
+coroutine.wrap(ADTSOPV_fake_script)()
+coroutine.wrap(XIZEXI_fake_script)()
+coroutine.wrap(HQJQSV_fake_script)()
+coroutine.wrap(YIVYF_fake_script)()
+coroutine.wrap(BKNARZK_fake_script)()
+coroutine.wrap(SPNZUP_fake_script)()
+coroutine.wrap(NZIQI_fake_script)()
+coroutine.wrap(KZTX_fake_script)()
+coroutine.wrap(AEESUY_fake_script)()
+coroutine.wrap(DEMWPUD_fake_script)()
+coroutine.wrap(ILCBTQ_fake_script)()
