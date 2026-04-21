@@ -9,90 +9,62 @@ local CorpoPainel = Instance.new("Frame")
 local tela1 = Instance.new("Frame")
 local ImageLabel = Instance.new("ImageLabel")
 local TextLabel = Instance.new("TextLabel")
-local TextLabel_2 = Instance.new("TextLabel")
-local TextLabel_3 = Instance.new("TextLabel")
 local tela2 = Instance.new("Frame")
 local AVATA = Instance.new("ImageLabel")
 local VIEW = Instance.new("TextButton")
-local TextLabel_4 = Instance.new("TextLabel")
-local UICorner = Instance.new("UICorner")
+local TextLabel_2 = Instance.new("TextLabel")
 local FOLLOW = Instance.new("TextButton")
-local TextLabel_5 = Instance.new("TextLabel")
-local UICorner_2 = Instance.new("UICorner")
+local TextLabel_3 = Instance.new("TextLabel")
 local FOCUS = Instance.new("TextButton")
-local TextLabel_6 = Instance.new("TextLabel")
-local UICorner_3 = Instance.new("UICorner")
+local TextLabel_4 = Instance.new("TextLabel")
 local username = Instance.new("TextBox")
 local coloqueodousuario = Instance.new("TextLabel")
 local ID = Instance.new("TextLabel")
 local DISPLAYNAME = Instance.new("TextLabel")
-local UICorner_4 = Instance.new("UICorner")
 local tela3 = Instance.new("Frame")
 local CLICKTP = Instance.new("TextButton")
-local TextLabel_7 = Instance.new("TextLabel")
-local UICorner_5 = Instance.new("UICorner")
+local TextLabel_5 = Instance.new("TextLabel")
 local FLASHBACK = Instance.new("TextButton")
-local TextLabel_8 = Instance.new("TextLabel")
-local UICorner_6 = Instance.new("UICorner")
+local TextLabel_6 = Instance.new("TextLabel")
 local NOCLIP = Instance.new("TextButton")
-local TextLabel_9 = Instance.new("TextLabel")
-local UICorner_7 = Instance.new("UICorner")
+local TextLabel_7 = Instance.new("TextLabel")
 local ANTAFK = Instance.new("TextButton")
-local TextLabel_10 = Instance.new("TextLabel")
-local UICorner_8 = Instance.new("UICorner")
+local TextLabel_8 = Instance.new("TextLabel")
 local tela4 = Instance.new("Frame")
 local ADD = Instance.new("TextButton")
-local UICorner_9 = Instance.new("UICorner")
 local HELPE = Instance.new("TextButton")
-local UICorner_10 = Instance.new("UICorner")
 local MANAGER = Instance.new("TextButton")
-local UICorner_11 = Instance.new("UICorner")
 local MEOW = Instance.new("TextButton")
-local UICorner_12 = Instance.new("UICorner")
 local OWNER = Instance.new("TextButton")
-local UICorner_13 = Instance.new("UICorner")
 local TextBox = Instance.new("TextBox")
 local ID_2 = Instance.new("TextLabel")
 local DISPLAYNAME_2 = Instance.new("TextLabel")
 local ImageLabel_2 = Instance.new("ImageLabel")
-local UICorner_14 = Instance.new("UICorner")
 local USER = Instance.new("TextButton")
-local UICorner_15 = Instance.new("UICorner")
 local VIP = Instance.new("TextButton")
-local UICorner_16 = Instance.new("UICorner")
 local ABAS = Instance.new("Frame")
 local botoes = Instance.new("Frame")
-local butela5 = Instance.new("TextButton")
-local UICorner_17 = Instance.new("UICorner")
-local butela4 = Instance.new("TextButton")
-local UICorner_18 = Instance.new("UICorner")
 local butela3 = Instance.new("TextButton")
-local UICorner_19 = Instance.new("UICorner")
 local butela2 = Instance.new("TextButton")
-local UICorner_20 = Instance.new("UICorner")
 local butela1 = Instance.new("TextButton")
-local UICorner_21 = Instance.new("UICorner")
+local butela4 = Instance.new("TextButton")
+local butela5 = Instance.new("TextButton")
 local tela5 = Instance.new("Frame")
 local PINCEL = Instance.new("ImageButton")
 local FLING = Instance.new("TextButton")
-local TextLabel_11 = Instance.new("TextLabel")
-local UICorner_22 = Instance.new("UICorner")
+local TextLabel_9 = Instance.new("TextLabel")
 local INVISIVEL = Instance.new("TextButton")
-local TextLabel_12 = Instance.new("TextLabel")
-local UICorner_23 = Instance.new("UICorner")
+local TextLabel_10 = Instance.new("TextLabel")
 local JUMP = Instance.new("TextButton")
-local TextLabel_13 = Instance.new("TextLabel")
-local UICorner_24 = Instance.new("UICorner")
+local TextLabel_11 = Instance.new("TextLabel")
 local SPIN = Instance.new("TextButton")
-local TextLabel_14 = Instance.new("TextLabel")
-local UICorner_25 = Instance.new("UICorner")
+local TextLabel_12 = Instance.new("TextLabel")
 local JERKOFF = Instance.new("TextButton")
-local TextLabel_15 = Instance.new("TextLabel")
-local UICorner_26 = Instance.new("UICorner")
+local TextLabel_13 = Instance.new("TextLabel")
 local TEXTOS = Instance.new("Frame")
+local TextLabel_14 = Instance.new("TextLabel")
+local TextLabel_15 = Instance.new("TextLabel")
 local TextLabel_16 = Instance.new("TextLabel")
-local TextLabel_17 = Instance.new("TextLabel")
-local TextLabel_18 = Instance.new("TextLabel")
 
 --Properties:
 
@@ -156,29 +128,6 @@ TextLabel.TextScaled = true
 TextLabel.TextSize = 14.000
 TextLabel.TextWrapped = true
 
-TextLabel_2.Parent = tela1
-TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_2.BackgroundTransparency = 1.000
-TextLabel_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_2.BorderSizePixel = 0
-TextLabel_2.Position = UDim2.new(-0.0396039598, 0, 0.40989399, 0)
-TextLabel_2.Size = UDim2.new(0, 200, 0, 50)
-TextLabel_2.Font = Enum.Font.Jura
-TextLabel_2.TextColor3 = Color3.fromRGB(173, 173, 173)
-TextLabel_2.TextSize = 14.000
-
-TextLabel_3.Parent = tela1
-TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_3.BackgroundTransparency = 1.000
-TextLabel_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_3.BorderSizePixel = 0
-TextLabel_3.Position = UDim2.new(0.368811876, 0, 0.646643102, 0)
-TextLabel_3.Size = UDim2.new(0, 200, 0, 50)
-TextLabel_3.Font = Enum.Font.Jura
-TextLabel_3.Text = "JOGADORES ONLINE:"
-TextLabel_3.TextColor3 = Color3.fromRGB(173, 173, 173)
-TextLabel_3.TextSize = 14.000
-
 tela2.Name = "tela2"
 tela2.Parent = CorpoPainel
 tela2.Active = true
@@ -212,21 +161,19 @@ VIEW.Text = "VIEW"
 VIEW.TextColor3 = Color3.fromRGB(255, 255, 255)
 VIEW.TextSize = 14.000
 
-TextLabel_4.Parent = VIEW
-TextLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_4.BackgroundTransparency = 1.000
-TextLabel_4.BorderColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_4.BorderSizePixel = 0
-TextLabel_4.Position = UDim2.new(0.899999976, 0, -0.111111112, 0)
-TextLabel_4.Size = UDim2.new(0, 70, 0, 46)
-TextLabel_4.Font = Enum.Font.Unknown
-TextLabel_4.Text = "+"
-TextLabel_4.TextColor3 = Color3.fromRGB(255, 0, 0)
-TextLabel_4.TextScaled = true
-TextLabel_4.TextSize = 25.000
-TextLabel_4.TextWrapped = true
-
-UICorner.Parent = VIEW
+TextLabel_2.Parent = VIEW
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.BorderColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BorderSizePixel = 0
+TextLabel_2.Position = UDim2.new(0.899999976, 0, -0.111111112, 0)
+TextLabel_2.Size = UDim2.new(0, 70, 0, 46)
+TextLabel_2.Font = Enum.Font.Unknown
+TextLabel_2.Text = "+"
+TextLabel_2.TextColor3 = Color3.fromRGB(255, 0, 0)
+TextLabel_2.TextScaled = true
+TextLabel_2.TextSize = 25.000
+TextLabel_2.TextWrapped = true
 
 FOLLOW.Name = "FOLLOW"
 FOLLOW.Parent = tela2
@@ -240,21 +187,19 @@ FOLLOW.Text = "FOLLOW"
 FOLLOW.TextColor3 = Color3.fromRGB(255, 255, 255)
 FOLLOW.TextSize = 14.000
 
-TextLabel_5.Parent = FOLLOW
-TextLabel_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_5.BackgroundTransparency = 1.000
-TextLabel_5.BorderColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_5.BorderSizePixel = 0
-TextLabel_5.Position = UDim2.new(0.899999976, 0, -0.138888896, 0)
-TextLabel_5.Size = UDim2.new(0, 70, 0, 46)
-TextLabel_5.Font = Enum.Font.Unknown
-TextLabel_5.Text = "+"
-TextLabel_5.TextColor3 = Color3.fromRGB(255, 0, 0)
-TextLabel_5.TextScaled = true
-TextLabel_5.TextSize = 25.000
-TextLabel_5.TextWrapped = true
-
-UICorner_2.Parent = FOLLOW
+TextLabel_3.Parent = FOLLOW
+TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.BackgroundTransparency = 1.000
+TextLabel_3.BorderColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.BorderSizePixel = 0
+TextLabel_3.Position = UDim2.new(0.899999976, 0, -0.138888896, 0)
+TextLabel_3.Size = UDim2.new(0, 70, 0, 46)
+TextLabel_3.Font = Enum.Font.Unknown
+TextLabel_3.Text = "+"
+TextLabel_3.TextColor3 = Color3.fromRGB(255, 0, 0)
+TextLabel_3.TextScaled = true
+TextLabel_3.TextSize = 25.000
+TextLabel_3.TextWrapped = true
 
 FOCUS.Name = "FOCUS"
 FOCUS.Parent = tela2
@@ -268,22 +213,20 @@ FOCUS.Text = "FOCUS"
 FOCUS.TextColor3 = Color3.fromRGB(255, 255, 255)
 FOCUS.TextSize = 14.000
 
-TextLabel_6.Parent = FOCUS
-TextLabel_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_6.BackgroundTransparency = 1.000
-TextLabel_6.BorderColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_6.BorderSizePixel = 0
-TextLabel_6.Position = UDim2.new(0.899999976, 0, -0.138888896, 0)
-TextLabel_6.Size = UDim2.new(0, 70, 0, 46)
-TextLabel_6.Font = Enum.Font.Unknown
-TextLabel_6.Text = "+"
-TextLabel_6.TextColor3 = Color3.fromRGB(255, 0, 0)
-TextLabel_6.TextScaled = true
-TextLabel_6.TextSize = 25.000
-TextLabel_6.TextStrokeColor3 = Color3.fromRGB(255, 0, 0)
-TextLabel_6.TextWrapped = true
-
-UICorner_3.Parent = FOCUS
+TextLabel_4.Parent = FOCUS
+TextLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_4.BackgroundTransparency = 1.000
+TextLabel_4.BorderColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_4.BorderSizePixel = 0
+TextLabel_4.Position = UDim2.new(0.899999976, 0, -0.138888896, 0)
+TextLabel_4.Size = UDim2.new(0, 70, 0, 46)
+TextLabel_4.Font = Enum.Font.Unknown
+TextLabel_4.Text = "+"
+TextLabel_4.TextColor3 = Color3.fromRGB(255, 0, 0)
+TextLabel_4.TextScaled = true
+TextLabel_4.TextSize = 25.000
+TextLabel_4.TextStrokeColor3 = Color3.fromRGB(255, 0, 0)
+TextLabel_4.TextWrapped = true
 
 username.Name = "@username"
 username.Parent = tela2
@@ -340,8 +283,6 @@ DISPLAYNAME.TextColor3 = Color3.fromRGB(255, 255, 255)
 DISPLAYNAME.TextSize = 14.000
 DISPLAYNAME.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
 
-UICorner_4.Parent = username
-
 tela3.Name = "tela3"
 tela3.Parent = CorpoPainel
 tela3.Active = true
@@ -365,21 +306,19 @@ CLICKTP.Text = "CLICK - TP"
 CLICKTP.TextColor3 = Color3.fromRGB(255, 255, 255)
 CLICKTP.TextSize = 14.000
 
-TextLabel_7.Parent = CLICKTP
-TextLabel_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_7.BackgroundTransparency = 1.000
-TextLabel_7.BorderColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_7.BorderSizePixel = 0
-TextLabel_7.Position = UDim2.new(0.899999976, 0, -0.111111112, 0)
-TextLabel_7.Size = UDim2.new(0, 70, 0, 46)
-TextLabel_7.Font = Enum.Font.Unknown
-TextLabel_7.Text = "+"
-TextLabel_7.TextColor3 = Color3.fromRGB(255, 0, 0)
-TextLabel_7.TextScaled = true
-TextLabel_7.TextSize = 25.000
-TextLabel_7.TextWrapped = true
-
-UICorner_5.Parent = CLICKTP
+TextLabel_5.Parent = CLICKTP
+TextLabel_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_5.BackgroundTransparency = 1.000
+TextLabel_5.BorderColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_5.BorderSizePixel = 0
+TextLabel_5.Position = UDim2.new(0.899999976, 0, -0.111111112, 0)
+TextLabel_5.Size = UDim2.new(0, 70, 0, 46)
+TextLabel_5.Font = Enum.Font.Unknown
+TextLabel_5.Text = "+"
+TextLabel_5.TextColor3 = Color3.fromRGB(255, 0, 0)
+TextLabel_5.TextScaled = true
+TextLabel_5.TextSize = 25.000
+TextLabel_5.TextWrapped = true
 
 FLASHBACK.Name = "FLASHBACK"
 FLASHBACK.Parent = tela3
@@ -393,22 +332,20 @@ FLASHBACK.Text = "FLASHBACK"
 FLASHBACK.TextColor3 = Color3.fromRGB(255, 255, 255)
 FLASHBACK.TextSize = 14.000
 
-TextLabel_8.Parent = FLASHBACK
-TextLabel_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_8.BackgroundTransparency = 1.000
-TextLabel_8.BorderColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_8.BorderSizePixel = 0
-TextLabel_8.Position = UDim2.new(0.899999976, 0, -0.138888896, 0)
-TextLabel_8.Size = UDim2.new(0, 70, 0, 46)
-TextLabel_8.Font = Enum.Font.Unknown
-TextLabel_8.Text = "+"
-TextLabel_8.TextColor3 = Color3.fromRGB(255, 0, 0)
-TextLabel_8.TextScaled = true
-TextLabel_8.TextSize = 25.000
-TextLabel_8.TextStrokeColor3 = Color3.fromRGB(255, 0, 0)
-TextLabel_8.TextWrapped = true
-
-UICorner_6.Parent = FLASHBACK
+TextLabel_6.Parent = FLASHBACK
+TextLabel_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_6.BackgroundTransparency = 1.000
+TextLabel_6.BorderColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_6.BorderSizePixel = 0
+TextLabel_6.Position = UDim2.new(0.899999976, 0, -0.138888896, 0)
+TextLabel_6.Size = UDim2.new(0, 70, 0, 46)
+TextLabel_6.Font = Enum.Font.Unknown
+TextLabel_6.Text = "+"
+TextLabel_6.TextColor3 = Color3.fromRGB(255, 0, 0)
+TextLabel_6.TextScaled = true
+TextLabel_6.TextSize = 25.000
+TextLabel_6.TextStrokeColor3 = Color3.fromRGB(255, 0, 0)
+TextLabel_6.TextWrapped = true
 
 NOCLIP.Name = "NOCLIP"
 NOCLIP.Parent = tela3
@@ -422,21 +359,19 @@ NOCLIP.Text = "NOCLIP"
 NOCLIP.TextColor3 = Color3.fromRGB(255, 255, 255)
 NOCLIP.TextSize = 14.000
 
-TextLabel_9.Parent = NOCLIP
-TextLabel_9.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_9.BackgroundTransparency = 1.000
-TextLabel_9.BorderColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_9.BorderSizePixel = 0
-TextLabel_9.Position = UDim2.new(0.899999976, 0, -0.138888896, 0)
-TextLabel_9.Size = UDim2.new(0, 70, 0, 46)
-TextLabel_9.Font = Enum.Font.Unknown
-TextLabel_9.Text = "+"
-TextLabel_9.TextColor3 = Color3.fromRGB(255, 0, 0)
-TextLabel_9.TextScaled = true
-TextLabel_9.TextSize = 25.000
-TextLabel_9.TextWrapped = true
-
-UICorner_7.Parent = NOCLIP
+TextLabel_7.Parent = NOCLIP
+TextLabel_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_7.BackgroundTransparency = 1.000
+TextLabel_7.BorderColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_7.BorderSizePixel = 0
+TextLabel_7.Position = UDim2.new(0.899999976, 0, -0.138888896, 0)
+TextLabel_7.Size = UDim2.new(0, 70, 0, 46)
+TextLabel_7.Font = Enum.Font.Unknown
+TextLabel_7.Text = "+"
+TextLabel_7.TextColor3 = Color3.fromRGB(255, 0, 0)
+TextLabel_7.TextScaled = true
+TextLabel_7.TextSize = 25.000
+TextLabel_7.TextWrapped = true
 
 ANTAFK.Name = "ANT-AFK"
 ANTAFK.Parent = tela3
@@ -450,22 +385,20 @@ ANTAFK.Text = "ANT-AFK"
 ANTAFK.TextColor3 = Color3.fromRGB(255, 255, 255)
 ANTAFK.TextSize = 14.000
 
-TextLabel_10.Parent = ANTAFK
-TextLabel_10.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_10.BackgroundTransparency = 1.000
-TextLabel_10.BorderColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_10.BorderSizePixel = 0
-TextLabel_10.Position = UDim2.new(0.899999976, 0, -0.138888896, 0)
-TextLabel_10.Size = UDim2.new(0, 70, 0, 46)
-TextLabel_10.Font = Enum.Font.Unknown
-TextLabel_10.Text = "+"
-TextLabel_10.TextColor3 = Color3.fromRGB(255, 0, 0)
-TextLabel_10.TextScaled = true
-TextLabel_10.TextSize = 25.000
-TextLabel_10.TextStrokeColor3 = Color3.fromRGB(255, 0, 0)
-TextLabel_10.TextWrapped = true
-
-UICorner_8.Parent = ANTAFK
+TextLabel_8.Parent = ANTAFK
+TextLabel_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_8.BackgroundTransparency = 1.000
+TextLabel_8.BorderColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_8.BorderSizePixel = 0
+TextLabel_8.Position = UDim2.new(0.899999976, 0, -0.138888896, 0)
+TextLabel_8.Size = UDim2.new(0, 70, 0, 46)
+TextLabel_8.Font = Enum.Font.Unknown
+TextLabel_8.Text = "+"
+TextLabel_8.TextColor3 = Color3.fromRGB(255, 0, 0)
+TextLabel_8.TextScaled = true
+TextLabel_8.TextSize = 25.000
+TextLabel_8.TextStrokeColor3 = Color3.fromRGB(255, 0, 0)
+TextLabel_8.TextWrapped = true
 
 tela4.Name = "tela4"
 tela4.Parent = CorpoPainel
@@ -490,8 +423,6 @@ ADD.Text = "ADD"
 ADD.TextColor3 = Color3.fromRGB(30, 30, 30)
 ADD.TextSize = 14.000
 
-UICorner_9.Parent = ADD
-
 HELPE.Name = "HELPE"
 HELPE.Parent = tela4
 HELPE.BackgroundColor3 = Color3.fromRGB(255, 255, 0)
@@ -503,8 +434,6 @@ HELPE.Font = Enum.Font.Unknown
 HELPE.Text = "HELPE"
 HELPE.TextColor3 = Color3.fromRGB(30, 30, 30)
 HELPE.TextSize = 14.000
-
-UICorner_10.Parent = HELPE
 
 MANAGER.Name = "MANAGER"
 MANAGER.Parent = tela4
@@ -518,8 +447,6 @@ MANAGER.Text = "MANAGER"
 MANAGER.TextColor3 = Color3.fromRGB(255, 255, 255)
 MANAGER.TextSize = 14.000
 
-UICorner_11.Parent = MANAGER
-
 MEOW.Name = "MEOW"
 MEOW.Parent = tela4
 MEOW.BackgroundColor3 = Color3.fromRGB(255, 85, 255)
@@ -532,8 +459,6 @@ MEOW.Text = "MEOW"
 MEOW.TextColor3 = Color3.fromRGB(255, 255, 255)
 MEOW.TextSize = 14.000
 
-UICorner_12.Parent = MEOW
-
 OWNER.Name = "OWNER"
 OWNER.Parent = tela4
 OWNER.BackgroundColor3 = Color3.fromRGB(98, 0, 0)
@@ -545,8 +470,6 @@ OWNER.Font = Enum.Font.Unknown
 OWNER.Text = "OWNER"
 OWNER.TextColor3 = Color3.fromRGB(255, 255, 255)
 OWNER.TextSize = 14.000
-
-UICorner_13.Parent = OWNER
 
 TextBox.Parent = tela4
 TextBox.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
@@ -596,8 +519,6 @@ ImageLabel_2.Position = UDim2.new(-0.000989990192, 0, -2.69846368, 0)
 ImageLabel_2.Size = UDim2.new(0, 71, 0, 65)
 ImageLabel_2.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
 
-UICorner_14.Parent = TextBox
-
 USER.Name = "USER"
 USER.Parent = tela4
 USER.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -610,8 +531,6 @@ USER.Text = "USER"
 USER.TextColor3 = Color3.fromRGB(0, 0, 0)
 USER.TextSize = 14.000
 
-UICorner_15.Parent = USER
-
 VIP.Name = "VIP"
 VIP.Parent = tela4
 VIP.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
@@ -623,8 +542,6 @@ VIP.Font = Enum.Font.Unknown
 VIP.Text = "VIP"
 VIP.TextColor3 = Color3.fromRGB(0, 0, 0)
 VIP.TextSize = 14.000
-
-UICorner_16.Parent = VIP
 
 ABAS.Name = "ABAS"
 ABAS.Parent = CorpoPainel
@@ -644,34 +561,6 @@ botoes.BorderSizePixel = 0
 botoes.Position = UDim2.new(-1.45186985, 0, -0.392296761, 0)
 botoes.Size = UDim2.new(0, 101, 0, 284)
 
-butela5.Name = "butela5"
-butela5.Parent = botoes
-butela5.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
-butela5.BorderColor3 = Color3.fromRGB(0, 0, 0)
-butela5.BorderSizePixel = 0
-butela5.Position = UDim2.new(0, 0, 0.64788729, 0)
-butela5.Size = UDim2.new(0, 100, 0, 36)
-butela5.Font = Enum.Font.Unknown
-butela5.Text = "VIP"
-butela5.TextColor3 = Color3.fromRGB(255, 255, 255)
-butela5.TextSize = 14.000
-
-UICorner_17.Parent = butela5
-
-butela4.Name = "butela4"
-butela4.Parent = botoes
-butela4.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
-butela4.BorderColor3 = Color3.fromRGB(0, 0, 0)
-butela4.BorderSizePixel = 0
-butela4.Position = UDim2.new(0.00990098994, 0, 0.799295723, 0)
-butela4.Size = UDim2.new(0, 100, 0, 35)
-butela4.Font = Enum.Font.Unknown
-butela4.Text = "ADM"
-butela4.TextColor3 = Color3.fromRGB(255, 255, 255)
-butela4.TextSize = 14.000
-
-UICorner_18.Parent = butela4
-
 butela3.Name = "butela3"
 butela3.Parent = botoes
 butela3.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
@@ -683,8 +572,6 @@ butela3.Font = Enum.Font.Unknown
 butela3.Text = "MISC"
 butela3.TextColor3 = Color3.fromRGB(255, 255, 255)
 butela3.TextSize = 14.000
-
-UICorner_19.Parent = butela3
 
 butela2.Name = "butela2"
 butela2.Parent = botoes
@@ -698,8 +585,6 @@ butela2.Text = "TARGET"
 butela2.TextColor3 = Color3.fromRGB(255, 255, 255)
 butela2.TextSize = 14.000
 
-UICorner_20.Parent = butela2
-
 butela1.Name = "butela1"
 butela1.Parent = botoes
 butela1.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
@@ -712,7 +597,29 @@ butela1.Text = "HOME"
 butela1.TextColor3 = Color3.fromRGB(255, 255, 255)
 butela1.TextSize = 14.000
 
-UICorner_21.Parent = butela1
+butela4.Name = "butela4"
+butela4.Parent = botoes
+butela4.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
+butela4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+butela4.BorderSizePixel = 0
+butela4.Position = UDim2.new(0.00990098994, 0, 0.799295723, 0)
+butela4.Size = UDim2.new(0, 100, 0, 35)
+butela4.Font = Enum.Font.Unknown
+butela4.Text = "ADM"
+butela4.TextColor3 = Color3.fromRGB(255, 255, 255)
+butela4.TextSize = 14.000
+
+butela5.Name = "butela5"
+butela5.Parent = botoes
+butela5.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
+butela5.BorderColor3 = Color3.fromRGB(0, 0, 0)
+butela5.BorderSizePixel = 0
+butela5.Position = UDim2.new(0, 0, 0.64788729, 0)
+butela5.Size = UDim2.new(0, 100, 0, 36)
+butela5.Font = Enum.Font.Unknown
+butela5.Text = "VIP"
+butela5.TextColor3 = Color3.fromRGB(255, 255, 255)
+butela5.TextSize = 14.000
 
 tela5.Name = "tela5"
 tela5.Parent = CorpoPainel
@@ -747,21 +654,19 @@ FLING.Text = "FLING"
 FLING.TextColor3 = Color3.fromRGB(255, 255, 255)
 FLING.TextSize = 14.000
 
-TextLabel_11.Parent = FLING
-TextLabel_11.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_11.BackgroundTransparency = 1.000
-TextLabel_11.BorderColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_11.BorderSizePixel = 0
-TextLabel_11.Position = UDim2.new(0.899999976, 0, -0.138888896, 0)
-TextLabel_11.Size = UDim2.new(0, 70, 0, 46)
-TextLabel_11.Font = Enum.Font.Unknown
-TextLabel_11.Text = "+"
-TextLabel_11.TextColor3 = Color3.fromRGB(255, 0, 0)
-TextLabel_11.TextScaled = true
-TextLabel_11.TextSize = 25.000
-TextLabel_11.TextWrapped = true
-
-UICorner_22.Parent = FLING
+TextLabel_9.Parent = FLING
+TextLabel_9.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_9.BackgroundTransparency = 1.000
+TextLabel_9.BorderColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_9.BorderSizePixel = 0
+TextLabel_9.Position = UDim2.new(0.899999976, 0, -0.138888896, 0)
+TextLabel_9.Size = UDim2.new(0, 70, 0, 46)
+TextLabel_9.Font = Enum.Font.Unknown
+TextLabel_9.Text = "+"
+TextLabel_9.TextColor3 = Color3.fromRGB(255, 0, 0)
+TextLabel_9.TextScaled = true
+TextLabel_9.TextSize = 25.000
+TextLabel_9.TextWrapped = true
 
 INVISIVEL.Name = "INVISIVEL"
 INVISIVEL.Parent = tela5
@@ -775,7 +680,60 @@ INVISIVEL.Text = "Invisibility"
 INVISIVEL.TextColor3 = Color3.fromRGB(255, 255, 255)
 INVISIVEL.TextSize = 14.000
 
-TextLabel_12.Parent = INVISIVEL
+TextLabel_10.Parent = INVISIVEL
+TextLabel_10.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_10.BackgroundTransparency = 1.000
+TextLabel_10.BorderColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_10.BorderSizePixel = 0
+TextLabel_10.Position = UDim2.new(0.899999976, 0, -0.138888896, 0)
+TextLabel_10.Size = UDim2.new(0, 70, 0, 46)
+TextLabel_10.Font = Enum.Font.Unknown
+TextLabel_10.Text = "+"
+TextLabel_10.TextColor3 = Color3.fromRGB(255, 0, 0)
+TextLabel_10.TextScaled = true
+TextLabel_10.TextSize = 25.000
+TextLabel_10.TextStrokeColor3 = Color3.fromRGB(255, 0, 0)
+TextLabel_10.TextWrapped = true
+
+JUMP.Name = "JUMP"
+JUMP.Parent = tela5
+JUMP.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
+JUMP.BorderColor3 = Color3.fromRGB(0, 0, 0)
+JUMP.BorderSizePixel = 0
+JUMP.Position = UDim2.new(0.0569306947, 0, 0.0845070407, 0)
+JUMP.Size = UDim2.new(0, 100, 0, 36)
+JUMP.Font = Enum.Font.Unknown
+JUMP.Text = "JUMP"
+JUMP.TextColor3 = Color3.fromRGB(255, 255, 255)
+JUMP.TextSize = 14.000
+
+TextLabel_11.Parent = JUMP
+TextLabel_11.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_11.BackgroundTransparency = 1.000
+TextLabel_11.BorderColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_11.BorderSizePixel = 0
+TextLabel_11.Position = UDim2.new(0.899999976, 0, -0.111111112, 0)
+TextLabel_11.Size = UDim2.new(0, 70, 0, 46)
+TextLabel_11.Font = Enum.Font.Unknown
+TextLabel_11.Text = "+"
+TextLabel_11.TextColor3 = Color3.fromRGB(255, 0, 0)
+TextLabel_11.TextScaled = true
+TextLabel_11.TextSize = 25.000
+TextLabel_11.TextWrapped = true
+
+SPIN.Name = "SPIN"
+SPIN.Parent = tela5
+SPIN.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
+SPIN.BorderColor3 = Color3.fromRGB(0, 0, 0)
+SPIN.BorderSizePixel = 0
+SPIN.Position = UDim2.new(0.0569306947, 0, 0.46126762, 0)
+SPIN.Size = UDim2.new(0, 100, 0, 36)
+SPIN.Font = Enum.Font.Unknown
+SPIN.Text = "SPIN"
+SPIN.TextColor3 = Color3.fromRGB(255, 255, 255)
+SPIN.TextSize = 14.000
+
+TextLabel_12.Parent = SPIN
 TextLabel_12.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_12.BackgroundTransparency = 1.000
 TextLabel_12.BorderColor3 = Color3.fromRGB(255, 255, 255)
@@ -790,65 +748,6 @@ TextLabel_12.TextSize = 25.000
 TextLabel_12.TextStrokeColor3 = Color3.fromRGB(255, 0, 0)
 TextLabel_12.TextWrapped = true
 
-UICorner_23.Parent = INVISIVEL
-
-JUMP.Name = "JUMP"
-JUMP.Parent = tela5
-JUMP.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
-JUMP.BorderColor3 = Color3.fromRGB(0, 0, 0)
-JUMP.BorderSizePixel = 0
-JUMP.Position = UDim2.new(0.0569306947, 0, 0.0845070407, 0)
-JUMP.Size = UDim2.new(0, 100, 0, 36)
-JUMP.Font = Enum.Font.Unknown
-JUMP.Text = "JUMP"
-JUMP.TextColor3 = Color3.fromRGB(255, 255, 255)
-JUMP.TextSize = 14.000
-
-TextLabel_13.Parent = JUMP
-TextLabel_13.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_13.BackgroundTransparency = 1.000
-TextLabel_13.BorderColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_13.BorderSizePixel = 0
-TextLabel_13.Position = UDim2.new(0.899999976, 0, -0.111111112, 0)
-TextLabel_13.Size = UDim2.new(0, 70, 0, 46)
-TextLabel_13.Font = Enum.Font.Unknown
-TextLabel_13.Text = "+"
-TextLabel_13.TextColor3 = Color3.fromRGB(255, 0, 0)
-TextLabel_13.TextScaled = true
-TextLabel_13.TextSize = 25.000
-TextLabel_13.TextWrapped = true
-
-UICorner_24.Parent = JUMP
-
-SPIN.Name = "SPIN"
-SPIN.Parent = tela5
-SPIN.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
-SPIN.BorderColor3 = Color3.fromRGB(0, 0, 0)
-SPIN.BorderSizePixel = 0
-SPIN.Position = UDim2.new(0.0569306947, 0, 0.46126762, 0)
-SPIN.Size = UDim2.new(0, 100, 0, 36)
-SPIN.Font = Enum.Font.Unknown
-SPIN.Text = "SPIN"
-SPIN.TextColor3 = Color3.fromRGB(255, 255, 255)
-SPIN.TextSize = 14.000
-
-TextLabel_14.Parent = SPIN
-TextLabel_14.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_14.BackgroundTransparency = 1.000
-TextLabel_14.BorderColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_14.BorderSizePixel = 0
-TextLabel_14.Position = UDim2.new(0.899999976, 0, -0.138888896, 0)
-TextLabel_14.Size = UDim2.new(0, 70, 0, 46)
-TextLabel_14.Font = Enum.Font.Unknown
-TextLabel_14.Text = "+"
-TextLabel_14.TextColor3 = Color3.fromRGB(255, 0, 0)
-TextLabel_14.TextScaled = true
-TextLabel_14.TextSize = 25.000
-TextLabel_14.TextStrokeColor3 = Color3.fromRGB(255, 0, 0)
-TextLabel_14.TextWrapped = true
-
-UICorner_25.Parent = SPIN
-
 JERKOFF.Name = "JERKOFF"
 JERKOFF.Parent = tela5
 JERKOFF.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
@@ -861,21 +760,19 @@ JERKOFF.Text = "JECKOFF"
 JERKOFF.TextColor3 = Color3.fromRGB(255, 255, 255)
 JERKOFF.TextSize = 14.000
 
-TextLabel_15.Parent = JERKOFF
-TextLabel_15.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_15.BackgroundTransparency = 1.000
-TextLabel_15.BorderColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_15.BorderSizePixel = 0
-TextLabel_15.Position = UDim2.new(0.899999976, 0, -0.138888896, 0)
-TextLabel_15.Size = UDim2.new(0, 70, 0, 46)
-TextLabel_15.Font = Enum.Font.Unknown
-TextLabel_15.Text = "+"
-TextLabel_15.TextColor3 = Color3.fromRGB(255, 0, 0)
-TextLabel_15.TextScaled = true
-TextLabel_15.TextSize = 25.000
-TextLabel_15.TextWrapped = true
-
-UICorner_26.Parent = JERKOFF
+TextLabel_13.Parent = JERKOFF
+TextLabel_13.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_13.BackgroundTransparency = 1.000
+TextLabel_13.BorderColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_13.BorderSizePixel = 0
+TextLabel_13.Position = UDim2.new(0.899999976, 0, -0.138888896, 0)
+TextLabel_13.Size = UDim2.new(0, 70, 0, 46)
+TextLabel_13.Font = Enum.Font.Unknown
+TextLabel_13.Text = "+"
+TextLabel_13.TextColor3 = Color3.fromRGB(255, 0, 0)
+TextLabel_13.TextScaled = true
+TextLabel_13.TextSize = 25.000
+TextLabel_13.TextWrapped = true
 
 TEXTOS.Name = "TEXTOS"
 TEXTOS.Parent = CorpoPainel
@@ -886,48 +783,48 @@ TEXTOS.BorderSizePixel = 0
 TEXTOS.Position = UDim2.new(0.36493966, 0, 0.208588958, 0)
 TEXTOS.Size = UDim2.new(0, 404, 0, 284)
 
+TextLabel_14.Parent = TEXTOS
+TextLabel_14.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_14.BackgroundTransparency = 1.000
+TextLabel_14.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_14.BorderSizePixel = 0
+TextLabel_14.Position = UDim2.new(0.485148519, 0, 0.672535241, 0)
+TextLabel_14.Size = UDim2.new(0, 200, 0, 33)
+TextLabel_14.Font = Enum.Font.Unknown
+TextLabel_14.Text = "v1.1"
+TextLabel_14.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_14.TextSize = 17.000
+TextLabel_14.TextWrapped = true
+
+TextLabel_15.Parent = TEXTOS
+TextLabel_15.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_15.BackgroundTransparency = 1.000
+TextLabel_15.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_15.BorderSizePixel = 0
+TextLabel_15.Position = UDim2.new(0.12128713, 0, 0.672535241, 0)
+TextLabel_15.Size = UDim2.new(0, 200, 0, 33)
+TextLabel_15.Font = Enum.Font.Unknown
+TextLabel_15.Text = "Panel"
+TextLabel_15.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_15.TextSize = 17.000
+TextLabel_15.TextWrapped = true
+
 TextLabel_16.Parent = TEXTOS
 TextLabel_16.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_16.BackgroundTransparency = 1.000
 TextLabel_16.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextLabel_16.BorderSizePixel = 0
-TextLabel_16.Position = UDim2.new(0.485148519, 0, 0.672535241, 0)
+TextLabel_16.Position = UDim2.new(-0.0668316856, 0, 0.672535241, 0)
 TextLabel_16.Size = UDim2.new(0, 200, 0, 33)
 TextLabel_16.Font = Enum.Font.Unknown
-TextLabel_16.Text = "v1.1"
+TextLabel_16.Text = "4e20"
 TextLabel_16.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_16.TextSize = 17.000
+TextLabel_16.TextSize = 25.000
 TextLabel_16.TextWrapped = true
-
-TextLabel_17.Parent = TEXTOS
-TextLabel_17.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_17.BackgroundTransparency = 1.000
-TextLabel_17.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_17.BorderSizePixel = 0
-TextLabel_17.Position = UDim2.new(0.12128713, 0, 0.672535241, 0)
-TextLabel_17.Size = UDim2.new(0, 200, 0, 33)
-TextLabel_17.Font = Enum.Font.Unknown
-TextLabel_17.Text = "Panel"
-TextLabel_17.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_17.TextSize = 17.000
-TextLabel_17.TextWrapped = true
-
-TextLabel_18.Parent = TEXTOS
-TextLabel_18.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_18.BackgroundTransparency = 1.000
-TextLabel_18.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_18.BorderSizePixel = 0
-TextLabel_18.Position = UDim2.new(-0.0668316856, 0, 0.672535241, 0)
-TextLabel_18.Size = UDim2.new(0, 200, 0, 33)
-TextLabel_18.Font = Enum.Font.Unknown
-TextLabel_18.Text = "4e20"
-TextLabel_18.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_18.TextSize = 25.000
-TextLabel_18.TextWrapped = true
 
 -- Scripts:
 
-local function TAUG_fake_script() -- ScreenGui.GerenciadorAbas 
+local function ABQG_fake_script() -- ScreenGui.GerenciadorAbas 
 	local script = Instance.new('LocalScript', ScreenGui)
 
 	local gui = script.Parent
@@ -961,8 +858,8 @@ local function TAUG_fake_script() -- ScreenGui.GerenciadorAbas
 		end
 	end
 end
-coroutine.wrap(TAUG_fake_script)()
-local function ENENTWP_fake_script() -- ScreenGui.LocalScript 
+coroutine.wrap(ABQG_fake_script)()
+local function FJIKQIC_fake_script() -- ScreenGui.LocalScript 
 	local script = Instance.new('LocalScript', ScreenGui)
 
 	local UserInputService = game:GetService("UserInputService")
@@ -1023,8 +920,8 @@ local function ENENTWP_fake_script() -- ScreenGui.LocalScript
 		end
 	end)
 end
-coroutine.wrap(ENENTWP_fake_script)()
-local function QIJEJ_fake_script() -- tela1.CarregarHome 
+coroutine.wrap(FJIKQIC_fake_script)()
+local function BQOHES_fake_script() -- tela1.CarregarHome 
 	local script = Instance.new('LocalScript', tela1)
 
 	local Players = game:GetService("Players")
@@ -1048,70 +945,8 @@ local function QIJEJ_fake_script() -- tela1.CarregarHome
 	
 	task.spawn(carregarFoto)
 end
-coroutine.wrap(QIJEJ_fake_script)()
-local function HZONPEC_fake_script() -- TextLabel_2.LocalScript 
-	local script = Instance.new('LocalScript', TextLabel_2)
-
-	-- [[ MONITOR DE LATÊNCIA REAL-TIME - 4E20 PANEL ]] --
-	local label = script.Parent
-	local stats = game:GetService("Stats")
-	
-	-- Garante que o texto comece limpo
-	label.Text = "BUSCANDO..."
-	
-	-- Tenta encontrar o item de Ping especificamente
-	local networkStats = stats:WaitForChild("Network")
-	local serverStats = networkStats:WaitForChild("ServerStatsItem")
-	local dataPing = serverStats:WaitForChild("Data Ping")
-	
-	while task.wait(0.5) do -- Atualiza mais rápido (2x por segundo)
-		local pingValue = math.floor(dataPing:GetValue())
-	
-		-- Se o valor for 0, ele ainda está conectando
-		if pingValue <= 0 then
-			label.Text = "ESTABILIZANDO..."
-			label.TextColor3 = Color3.fromRGB(255, 255, 0) -- Amarelo
-		else
-			label.Text = "PING: " .. pingValue .. "ms"
-	
-			-- Cores dinâmicas
-			if pingValue > 150 then
-				label.TextColor3 = Color3.fromRGB(255, 0, 0)   -- Vermelho (Lag)
-			else
-				label.TextColor3 = Color3.fromRGB(0, 255, 127) -- Verde (Liso)
-			end
-		end
-	end
-end
-coroutine.wrap(HZONPEC_fake_script)()
-local function QRQLVRC_fake_script() -- TextLabel_3.LocalScript 
-	local script = Instance.new('LocalScript', TextLabel_3)
-
-	-- [[ PLAYER COUNTER - 4E20 PANEL ]] --
-	local label = script.Parent
-	local Players = game:GetService("Players")
-	
-	-- Configuração visual (Cyber-Tech)
-	label.TextColor3 = Color3.fromRGB(0, 170, 255) -- Azul Neon
-	label.Font = Enum.Font.GothamBold
-	
-	local function atualizarContagem()
-		local totalJogadores = #Players:GetPlayers()
-		local maxJogadores = game.ServerAdmins -- Ou use um número fixo se preferir
-	
-		-- Se o servidor tiver limite definido, mostra (Atual/Max), senão mostra apenas o total
-		label.Text = "PLAYERS: " .. totalJogadores
-	end
-	
-	-- Atualiza quando alguém entra ou sai
-	Players.PlayerAdded:Connect(atualizarContagem)
-	Players.PlayerRemoving:Connect(atualizarContagem)
-	
-	-- Atualização inicial
-	atualizarContagem()
-end
-coroutine.wrap(QRQLVRC_fake_script)()
-local function KTQGFNF_fake_script() -- tela2.NOMES 
+coroutine.wrap(BQOHES_fake_script)()
+local function XAJGD_fake_script() -- tela2.NOMES 
 	local script = Instance.new('LocalScript', tela2)
 
 	local Players = game:GetService("Players")
@@ -1165,8 +1000,8 @@ local function KTQGFNF_fake_script() -- tela2.NOMES
 		end
 	end)
 end
-coroutine.wrap(KTQGFNF_fake_script)()
-local function WRPNRJ_fake_script() -- tela2.VIEW 
+coroutine.wrap(XAJGD_fake_script)()
+local function UJCWIS_fake_script() -- tela2.VIEW 
 	local script = Instance.new('LocalScript', tela2)
 
 	local Players = game:GetService("Players")
@@ -1265,8 +1100,8 @@ local function WRPNRJ_fake_script() -- tela2.VIEW
 		end
 	end)
 end
-coroutine.wrap(WRPNRJ_fake_script)()
-local function RAMGH_fake_script() -- CLICKTP.LocalScript 
+coroutine.wrap(UJCWIS_fake_script)()
+local function HSAB_fake_script() -- CLICKTP.LocalScript 
 	local script = Instance.new('LocalScript', CLICKTP)
 
 	local Players = game:GetService("Players")
@@ -1322,8 +1157,8 @@ local function RAMGH_fake_script() -- CLICKTP.LocalScript
 		end
 	end)
 end
-coroutine.wrap(RAMGH_fake_script)()
-local function GBDF_fake_script() -- FLASHBACK.LocalScript 
+coroutine.wrap(HSAB_fake_script)()
+local function MWTKNOQ_fake_script() -- FLASHBACK.LocalScript 
 	local script = Instance.new('LocalScript', FLASHBACK)
 
 	local RunService = game:GetService("RunService")
@@ -1401,8 +1236,8 @@ local function GBDF_fake_script() -- FLASHBACK.LocalScript
 		end
 	end)
 end
-coroutine.wrap(GBDF_fake_script)()
-local function ODEEWXS_fake_script() -- NOCLIP.LocalScript 
+coroutine.wrap(MWTKNOQ_fake_script)()
+local function XBOLXC_fake_script() -- NOCLIP.LocalScript 
 	local script = Instance.new('LocalScript', NOCLIP)
 
 	local RunService = game:GetService("RunService")
@@ -1464,8 +1299,8 @@ local function ODEEWXS_fake_script() -- NOCLIP.LocalScript
 		end
 	end)
 end
-coroutine.wrap(ODEEWXS_fake_script)()
-local function BMVCLQ_fake_script() -- ANTAFK.LocalScript 
+coroutine.wrap(XBOLXC_fake_script)()
+local function RYCDDQQ_fake_script() -- ANTAFK.LocalScript 
 	local script = Instance.new('LocalScript', ANTAFK)
 
 	-- SERVIÇOS
@@ -1503,8 +1338,8 @@ local function BMVCLQ_fake_script() -- ANTAFK.LocalScript
 		end
 	end)
 end
-coroutine.wrap(BMVCLQ_fake_script)()
-local function YNVE_fake_script() -- tela4.LocalScript 
+coroutine.wrap(RYCDDQQ_fake_script)()
+local function ABKSBW_fake_script() -- tela4.LocalScript 
 	local script = Instance.new('LocalScript', tela4)
 
 	local Players = game:GetService("Players")
@@ -1771,8 +1606,8 @@ local function YNVE_fake_script() -- tela4.LocalScript
 	atualizarAbas(cargoInit)
 	notificar("4E20 PANEL", "PAINEL ATIVO: TAGS APENAS PARA EXECUTORES!", 5, "welcome", cargoInit)
 end
-coroutine.wrap(YNVE_fake_script)()
-local function SQEIO_fake_script() -- PINCEL.LocalScript 
+coroutine.wrap(ABKSBW_fake_script)()
+local function ITJJ_fake_script() -- PINCEL.LocalScript 
 	local script = Instance.new('LocalScript', PINCEL)
 
 	-- [[ SISTEMA DE TEMAS 4E20 PANEL - 20 CORES ]] --
@@ -1833,8 +1668,8 @@ local function SQEIO_fake_script() -- PINCEL.LocalScript
 		aplicarTema(novaCor)
 	end)
 end
-coroutine.wrap(SQEIO_fake_script)()
-local function BONNM_fake_script() -- FLING.LocalScript 
+coroutine.wrap(ITJJ_fake_script)()
+local function BOIHWLX_fake_script() -- FLING.LocalScript 
 	local script = Instance.new('LocalScript', FLING)
 
 	local RunService = game:GetService("RunService")
@@ -2024,8 +1859,8 @@ local function BONNM_fake_script() -- FLING.LocalScript
 		end
 	end)
 end
-coroutine.wrap(BONNM_fake_script)()
-local function ZCFMIY_fake_script() -- INVISIVEL.LocalScript 
+coroutine.wrap(BOIHWLX_fake_script)()
+local function HBOUNR_fake_script() -- INVISIVEL.LocalScript 
 	local script = Instance.new('LocalScript', INVISIVEL)
 
 	local UserInputService = game:GetService("UserInputService")
@@ -2228,8 +2063,8 @@ local function ZCFMIY_fake_script() -- INVISIVEL.LocalScript
 		end
 	end)
 end
-coroutine.wrap(ZCFMIY_fake_script)()
-local function BUCIH_fake_script() -- JUMP.LocalScript 
+coroutine.wrap(HBOUNR_fake_script)()
+local function HNBJG_fake_script() -- JUMP.LocalScript 
 	local script = Instance.new('LocalScript', JUMP)
 
 	local UserInputService = game:GetService("UserInputService")
@@ -2279,8 +2114,8 @@ local function BUCIH_fake_script() -- JUMP.LocalScript
 		end
 	end)
 end
-coroutine.wrap(BUCIH_fake_script)()
-local function KWWK_fake_script() -- SPIN.LocalScript 
+coroutine.wrap(HNBJG_fake_script)()
+local function GFFIS_fake_script() -- SPIN.LocalScript 
 	local script = Instance.new('LocalScript', SPIN)
 
 	local RunService = game:GetService("RunService")
@@ -2365,8 +2200,8 @@ local function KWWK_fake_script() -- SPIN.LocalScript
 		removerForca()
 	end)
 end
-coroutine.wrap(KWWK_fake_script)()
-local function JJGQTEG_fake_script() -- JERKOFF.LocalScript 
+coroutine.wrap(GFFIS_fake_script)()
+local function BTEAYT_fake_script() -- JERKOFF.LocalScript 
 	local script = Instance.new('LocalScript', JERKOFF)
 
 	local RunService = game:GetService("RunService")
@@ -2520,4 +2355,4 @@ local function JJGQTEG_fake_script() -- JERKOFF.LocalScript
 		end
 	end)
 end
-coroutine.wrap(JJGQTEG_fake_script)()
+coroutine.wrap(BTEAYT_fake_script)()
