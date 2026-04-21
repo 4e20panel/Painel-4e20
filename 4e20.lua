@@ -942,7 +942,7 @@ UICorner_31.Parent = JERKOFF
 
 -- Scripts:
 
-local function AIPQ_fake_script() -- ScreenGui.GerenciadorAbas 
+local function EFAXFIM_fake_script() -- ScreenGui.GerenciadorAbas 
 	local script = Instance.new('LocalScript', ScreenGui)
 
 	local gui = script.Parent
@@ -975,8 +975,8 @@ local function AIPQ_fake_script() -- ScreenGui.GerenciadorAbas
 		end
 	end
 end
-coroutine.wrap(AIPQ_fake_script)()
-local function VQOM_fake_script() -- ScreenGui.LocalScript 
+coroutine.wrap(EFAXFIM_fake_script)()
+local function NTCXJY_fake_script() -- ScreenGui.LocalScript 
 	local script = Instance.new('LocalScript', ScreenGui)
 
 	local UserInputService = game:GetService("UserInputService")
@@ -1037,8 +1037,8 @@ local function VQOM_fake_script() -- ScreenGui.LocalScript
 		end
 	end)
 end
-coroutine.wrap(VQOM_fake_script)()
-local function WFNDKLP_fake_script() -- tela1.CarregarHome 
+coroutine.wrap(NTCXJY_fake_script)()
+local function UHYNXW_fake_script() -- tela1.CarregarHome 
 	local script = Instance.new('LocalScript', tela1)
 
 	local Players = game:GetService("Players")
@@ -1062,8 +1062,8 @@ local function WFNDKLP_fake_script() -- tela1.CarregarHome
 	
 	task.spawn(carregarFoto)
 end
-coroutine.wrap(WFNDKLP_fake_script)()
-local function PMWOY_fake_script() -- TextLabel_2.LocalScript 
+coroutine.wrap(UHYNXW_fake_script)()
+local function TJOI_fake_script() -- TextLabel_2.LocalScript 
 	local script = Instance.new('LocalScript', TextLabel_2)
 
 	-- [[ MONITOR DE LATÊNCIA REAL-TIME - 4E20 PANEL ]] --
@@ -1097,8 +1097,8 @@ local function PMWOY_fake_script() -- TextLabel_2.LocalScript
 		end
 	end
 end
-coroutine.wrap(PMWOY_fake_script)()
-local function ZNKMJNL_fake_script() -- TextLabel_3.LocalScript 
+coroutine.wrap(TJOI_fake_script)()
+local function MWYHSMM_fake_script() -- TextLabel_3.LocalScript 
 	local script = Instance.new('LocalScript', TextLabel_3)
 
 	-- [[ PLAYER COUNTER - 4E20 PANEL ]] --
@@ -1124,8 +1124,8 @@ local function ZNKMJNL_fake_script() -- TextLabel_3.LocalScript
 	-- Atualização inicial
 	atualizarContagem()
 end
-coroutine.wrap(ZNKMJNL_fake_script)()
-local function EFRZOWC_fake_script() -- tela2.NOMES 
+coroutine.wrap(MWYHSMM_fake_script)()
+local function IMPWB_fake_script() -- tela2.NOMES 
 	local script = Instance.new('LocalScript', tela2)
 
 	local Players = game:GetService("Players")
@@ -1179,8 +1179,8 @@ local function EFRZOWC_fake_script() -- tela2.NOMES
 		end
 	end)
 end
-coroutine.wrap(EFRZOWC_fake_script)()
-local function PVRIHXP_fake_script() -- tela2.VIEW 
+coroutine.wrap(IMPWB_fake_script)()
+local function XBXXQI_fake_script() -- tela2.VIEW 
 	local script = Instance.new('LocalScript', tela2)
 
 	local Players = game:GetService("Players")
@@ -1279,8 +1279,8 @@ local function PVRIHXP_fake_script() -- tela2.VIEW
 		end
 	end)
 end
-coroutine.wrap(PVRIHXP_fake_script)()
-local function GEHI_fake_script() -- CLICKTP.LocalScript 
+coroutine.wrap(XBXXQI_fake_script)()
+local function WTDNQV_fake_script() -- CLICKTP.LocalScript 
 	local script = Instance.new('LocalScript', CLICKTP)
 
 	local Players = game:GetService("Players")
@@ -1336,8 +1336,8 @@ local function GEHI_fake_script() -- CLICKTP.LocalScript
 		end
 	end)
 end
-coroutine.wrap(GEHI_fake_script)()
-local function UJQR_fake_script() -- FLASHBACK.LocalScript 
+coroutine.wrap(WTDNQV_fake_script)()
+local function LMKJAGC_fake_script() -- FLASHBACK.LocalScript 
 	local script = Instance.new('LocalScript', FLASHBACK)
 
 	local RunService = game:GetService("RunService")
@@ -1415,8 +1415,8 @@ local function UJQR_fake_script() -- FLASHBACK.LocalScript
 		end
 	end)
 end
-coroutine.wrap(UJQR_fake_script)()
-local function VLPM_fake_script() -- NOCLIP.LocalScript 
+coroutine.wrap(LMKJAGC_fake_script)()
+local function GOTW_fake_script() -- NOCLIP.LocalScript 
 	local script = Instance.new('LocalScript', NOCLIP)
 
 	local RunService = game:GetService("RunService")
@@ -1478,8 +1478,8 @@ local function VLPM_fake_script() -- NOCLIP.LocalScript
 		end
 	end)
 end
-coroutine.wrap(VLPM_fake_script)()
-local function JMAER_fake_script() -- ANTAFK.LocalScript 
+coroutine.wrap(GOTW_fake_script)()
+local function ZTUZHC_fake_script() -- ANTAFK.LocalScript 
 	local script = Instance.new('LocalScript', ANTAFK)
 
 	-- SERVIÇOS
@@ -1517,8 +1517,8 @@ local function JMAER_fake_script() -- ANTAFK.LocalScript
 		end
 	end)
 end
-coroutine.wrap(JMAER_fake_script)()
-local function FVVTQB_fake_script() -- tela4.LocalScript 
+coroutine.wrap(ZTUZHC_fake_script)()
+local function GJPVMJ_fake_script() -- tela4.LocalScript 
 	local script = Instance.new('LocalScript', tela4)
 
 	local Players = game:GetService("Players")
@@ -1849,8 +1849,8 @@ local function FVVTQB_fake_script() -- tela4.LocalScript
 		notificar("4E20 PANEL", "PAINEL ATIVO — CARGO: " .. cargoInit, 5, "welcome", cargoInit)
 	end)
 end
-coroutine.wrap(FVVTQB_fake_script)()
-local function OGYOSC_fake_script() -- FLING.LocalScript 
+coroutine.wrap(GJPVMJ_fake_script)()
+local function DWDG_fake_script() -- FLING.LocalScript 
 	local script = Instance.new('LocalScript', FLING)
 
 	local RunService = game:GetService("RunService")
@@ -2040,8 +2040,8 @@ local function OGYOSC_fake_script() -- FLING.LocalScript
 		end
 	end)
 end
-coroutine.wrap(OGYOSC_fake_script)()
-local function OXRTQ_fake_script() -- SPIN.LocalScript 
+coroutine.wrap(DWDG_fake_script)()
+local function TBPWW_fake_script() -- SPIN.LocalScript 
 	local script = Instance.new('LocalScript', SPIN)
 
 	local RunService = game:GetService("RunService")
@@ -2126,8 +2126,8 @@ local function OXRTQ_fake_script() -- SPIN.LocalScript
 		removerForca()
 	end)
 end
-coroutine.wrap(OXRTQ_fake_script)()
-local function VTTM_fake_script() -- JUMP.LocalScript 
+coroutine.wrap(TBPWW_fake_script)()
+local function YUQJ_fake_script() -- JUMP.LocalScript 
 	local script = Instance.new('LocalScript', JUMP)
 
 	local UserInputService = game:GetService("UserInputService")
@@ -2177,8 +2177,8 @@ local function VTTM_fake_script() -- JUMP.LocalScript
 		end
 	end)
 end
-coroutine.wrap(VTTM_fake_script)()
-local function OXTKNJ_fake_script() -- INVISIVEL.LocalScript 
+coroutine.wrap(YUQJ_fake_script)()
+local function MFEG_fake_script() -- INVISIVEL.LocalScript 
 	local script = Instance.new('LocalScript', INVISIVEL)
 
 	local UserInputService = game:GetService("UserInputService")
@@ -2381,8 +2381,8 @@ local function OXTKNJ_fake_script() -- INVISIVEL.LocalScript
 		end
 	end)
 end
-coroutine.wrap(OXTKNJ_fake_script)()
-local function WWGM_fake_script() -- PINCEL.LocalScript 
+coroutine.wrap(MFEG_fake_script)()
+local function KJDNZD_fake_script() -- PINCEL.LocalScript 
 	local script = Instance.new('LocalScript', PINCEL)
 
 	-- [[ SISTEMA DE TEMAS 4E20 PANEL - 20 CORES ]] --
@@ -2443,8 +2443,8 @@ local function WWGM_fake_script() -- PINCEL.LocalScript
 		aplicarTema(novaCor)
 	end)
 end
-coroutine.wrap(WWGM_fake_script)()
-local function RSGUNL_fake_script() -- JERKOFF.LocalScript 
+coroutine.wrap(KJDNZD_fake_script)()
+local function NZLNM_fake_script() -- JERKOFF.LocalScript 
 	local script = Instance.new('LocalScript', JERKOFF)
 
 	local RunService = game:GetService("RunService")
@@ -2598,4 +2598,4 @@ local function RSGUNL_fake_script() -- JERKOFF.LocalScript
 		end
 	end)
 end
-coroutine.wrap(RSGUNL_fake_script)()
+coroutine.wrap(NZLNM_fake_script)()
