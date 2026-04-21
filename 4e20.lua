@@ -82,18 +82,6 @@ local TextLabel_11 = Instance.new("TextLabel")
 local TextLabel_12 = Instance.new("TextLabel")
 local TextLabel_13 = Instance.new("TextLabel")
 local tela5 = Instance.new("Frame")
-local FLING = Instance.new("TextButton")
-local TextLabel_14 = Instance.new("TextLabel")
-local UICorner_27 = Instance.new("UICorner")
-local SPIN = Instance.new("TextButton")
-local TextLabel_15 = Instance.new("TextLabel")
-local UICorner_28 = Instance.new("UICorner")
-local JUMP = Instance.new("TextButton")
-local TextLabel_16 = Instance.new("TextLabel")
-local UICorner_29 = Instance.new("UICorner")
-local INVISIVEL = Instance.new("TextButton")
-local TextLabel_17 = Instance.new("TextLabel")
-local UICorner_30 = Instance.new("UICorner")
 local PINCEL = Instance.new("ImageButton")
 
 --Properties:
@@ -785,120 +773,6 @@ tela5.Position = UDim2.new(0.198397487, 0, -0.00525751244, 0)
 tela5.Size = UDim2.new(0, 404, 0, 284)
 tela5.Visible = false
 
-FLING.Name = "FLING"
-FLING.Parent = tela5
-FLING.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
-FLING.BorderColor3 = Color3.fromRGB(0, 0, 0)
-FLING.BorderSizePixel = 0
-FLING.Position = UDim2.new(0.0569306947, 0, 0.274647892, 0)
-FLING.Size = UDim2.new(0, 100, 0, 36)
-FLING.Font = Enum.Font.Unknown
-FLING.Text = "FLING"
-FLING.TextColor3 = Color3.fromRGB(255, 255, 255)
-FLING.TextSize = 14.000
-
-TextLabel_14.Parent = FLING
-TextLabel_14.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_14.BackgroundTransparency = 1.000
-TextLabel_14.BorderColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_14.BorderSizePixel = 0
-TextLabel_14.Position = UDim2.new(0.899999976, 0, -0.138888896, 0)
-TextLabel_14.Size = UDim2.new(0, 70, 0, 46)
-TextLabel_14.Font = Enum.Font.Unknown
-TextLabel_14.Text = "+"
-TextLabel_14.TextColor3 = Color3.fromRGB(255, 0, 0)
-TextLabel_14.TextScaled = true
-TextLabel_14.TextSize = 25.000
-TextLabel_14.TextWrapped = true
-
-UICorner_27.Parent = FLING
-
-SPIN.Name = "SPIN"
-SPIN.Parent = tela5
-SPIN.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
-SPIN.BorderColor3 = Color3.fromRGB(0, 0, 0)
-SPIN.BorderSizePixel = 0
-SPIN.Position = UDim2.new(0.0569306947, 0, 0.46126762, 0)
-SPIN.Size = UDim2.new(0, 100, 0, 36)
-SPIN.Font = Enum.Font.Unknown
-SPIN.Text = "SPIN"
-SPIN.TextColor3 = Color3.fromRGB(255, 255, 255)
-SPIN.TextSize = 14.000
-
-TextLabel_15.Parent = SPIN
-TextLabel_15.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_15.BackgroundTransparency = 1.000
-TextLabel_15.BorderColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_15.BorderSizePixel = 0
-TextLabel_15.Position = UDim2.new(0.899999976, 0, -0.138888896, 0)
-TextLabel_15.Size = UDim2.new(0, 70, 0, 46)
-TextLabel_15.Font = Enum.Font.Unknown
-TextLabel_15.Text = "+"
-TextLabel_15.TextColor3 = Color3.fromRGB(255, 0, 0)
-TextLabel_15.TextScaled = true
-TextLabel_15.TextSize = 25.000
-TextLabel_15.TextStrokeColor3 = Color3.fromRGB(255, 0, 0)
-TextLabel_15.TextWrapped = true
-
-UICorner_28.Parent = SPIN
-
-JUMP.Name = "JUMP"
-JUMP.Parent = tela5
-JUMP.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
-JUMP.BorderColor3 = Color3.fromRGB(0, 0, 0)
-JUMP.BorderSizePixel = 0
-JUMP.Position = UDim2.new(0.0569306947, 0, 0.0845070407, 0)
-JUMP.Size = UDim2.new(0, 100, 0, 36)
-JUMP.Font = Enum.Font.Unknown
-JUMP.Text = "JUMP"
-JUMP.TextColor3 = Color3.fromRGB(255, 255, 255)
-JUMP.TextSize = 14.000
-
-TextLabel_16.Parent = JUMP
-TextLabel_16.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_16.BackgroundTransparency = 1.000
-TextLabel_16.BorderColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_16.BorderSizePixel = 0
-TextLabel_16.Position = UDim2.new(0.899999976, 0, -0.111111112, 0)
-TextLabel_16.Size = UDim2.new(0, 70, 0, 46)
-TextLabel_16.Font = Enum.Font.Unknown
-TextLabel_16.Text = "+"
-TextLabel_16.TextColor3 = Color3.fromRGB(255, 0, 0)
-TextLabel_16.TextScaled = true
-TextLabel_16.TextSize = 25.000
-TextLabel_16.TextWrapped = true
-
-UICorner_29.Parent = JUMP
-
-INVISIVEL.Name = "INVISIVEL"
-INVISIVEL.Parent = tela5
-INVISIVEL.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
-INVISIVEL.BorderColor3 = Color3.fromRGB(0, 0, 0)
-INVISIVEL.BorderSizePixel = 0
-INVISIVEL.Position = UDim2.new(0.0569306947, 0, 0.633802831, 0)
-INVISIVEL.Size = UDim2.new(0, 100, 0, 36)
-INVISIVEL.Font = Enum.Font.Unknown
-INVISIVEL.Text = "Invisibility"
-INVISIVEL.TextColor3 = Color3.fromRGB(255, 255, 255)
-INVISIVEL.TextSize = 14.000
-
-TextLabel_17.Parent = INVISIVEL
-TextLabel_17.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_17.BackgroundTransparency = 1.000
-TextLabel_17.BorderColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_17.BorderSizePixel = 0
-TextLabel_17.Position = UDim2.new(0.899999976, 0, -0.138888896, 0)
-TextLabel_17.Size = UDim2.new(0, 70, 0, 46)
-TextLabel_17.Font = Enum.Font.Unknown
-TextLabel_17.Text = "+"
-TextLabel_17.TextColor3 = Color3.fromRGB(255, 0, 0)
-TextLabel_17.TextScaled = true
-TextLabel_17.TextSize = 25.000
-TextLabel_17.TextStrokeColor3 = Color3.fromRGB(255, 0, 0)
-TextLabel_17.TextWrapped = true
-
-UICorner_30.Parent = INVISIVEL
-
 PINCEL.Name = "PINCEL"
 PINCEL.Parent = tela5
 PINCEL.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -911,7 +785,7 @@ PINCEL.Image = "rbxassetid://85851959324603"
 
 -- Scripts:
 
-local function LQXPG_fake_script() -- ScreenGui.GerenciadorAbas 
+local function JLQSC_fake_script() -- ScreenGui.GerenciadorAbas 
 	local script = Instance.new('LocalScript', ScreenGui)
 
 	local gui = script.Parent
@@ -944,8 +818,8 @@ local function LQXPG_fake_script() -- ScreenGui.GerenciadorAbas
 		end
 	end
 end
-coroutine.wrap(LQXPG_fake_script)()
-local function CWUBRDR_fake_script() -- ScreenGui.LocalScript 
+coroutine.wrap(JLQSC_fake_script)()
+local function ILDCO_fake_script() -- ScreenGui.LocalScript 
 	local script = Instance.new('LocalScript', ScreenGui)
 
 	local UserInputService = game:GetService("UserInputService")
@@ -1006,8 +880,8 @@ local function CWUBRDR_fake_script() -- ScreenGui.LocalScript
 		end
 	end)
 end
-coroutine.wrap(CWUBRDR_fake_script)()
-local function ODLZZ_fake_script() -- tela1.CarregarHome 
+coroutine.wrap(ILDCO_fake_script)()
+local function PDVBAFD_fake_script() -- tela1.CarregarHome 
 	local script = Instance.new('LocalScript', tela1)
 
 	local Players = game:GetService("Players")
@@ -1031,8 +905,8 @@ local function ODLZZ_fake_script() -- tela1.CarregarHome
 	
 	task.spawn(carregarFoto)
 end
-coroutine.wrap(ODLZZ_fake_script)()
-local function MTBA_fake_script() -- TextLabel_2.LocalScript 
+coroutine.wrap(PDVBAFD_fake_script)()
+local function LATN_fake_script() -- TextLabel_2.LocalScript 
 	local script = Instance.new('LocalScript', TextLabel_2)
 
 	-- [[ MONITOR DE LATÊNCIA REAL-TIME - 4E20 PANEL ]] --
@@ -1066,8 +940,8 @@ local function MTBA_fake_script() -- TextLabel_2.LocalScript
 		end
 	end
 end
-coroutine.wrap(MTBA_fake_script)()
-local function LITT_fake_script() -- TextLabel_3.LocalScript 
+coroutine.wrap(LATN_fake_script)()
+local function CWAWY_fake_script() -- TextLabel_3.LocalScript 
 	local script = Instance.new('LocalScript', TextLabel_3)
 
 	-- [[ PLAYER COUNTER - 4E20 PANEL ]] --
@@ -1093,8 +967,8 @@ local function LITT_fake_script() -- TextLabel_3.LocalScript
 	-- Atualização inicial
 	atualizarContagem()
 end
-coroutine.wrap(LITT_fake_script)()
-local function CDKR_fake_script() -- tela2.NOMES 
+coroutine.wrap(CWAWY_fake_script)()
+local function DGTL_fake_script() -- tela2.NOMES 
 	local script = Instance.new('LocalScript', tela2)
 
 	local Players = game:GetService("Players")
@@ -1148,8 +1022,8 @@ local function CDKR_fake_script() -- tela2.NOMES
 		end
 	end)
 end
-coroutine.wrap(CDKR_fake_script)()
-local function RESKPGD_fake_script() -- tela2.VIEW 
+coroutine.wrap(DGTL_fake_script)()
+local function BWMAWRM_fake_script() -- tela2.VIEW 
 	local script = Instance.new('LocalScript', tela2)
 
 	local Players = game:GetService("Players")
@@ -1248,8 +1122,8 @@ local function RESKPGD_fake_script() -- tela2.VIEW
 		end
 	end)
 end
-coroutine.wrap(RESKPGD_fake_script)()
-local function MVOQATX_fake_script() -- CLICKTP.LocalScript 
+coroutine.wrap(BWMAWRM_fake_script)()
+local function NMWHHB_fake_script() -- CLICKTP.LocalScript 
 	local script = Instance.new('LocalScript', CLICKTP)
 
 	local Players = game:GetService("Players")
@@ -1305,8 +1179,8 @@ local function MVOQATX_fake_script() -- CLICKTP.LocalScript
 		end
 	end)
 end
-coroutine.wrap(MVOQATX_fake_script)()
-local function BUSMKK_fake_script() -- FLASHBACK.LocalScript 
+coroutine.wrap(NMWHHB_fake_script)()
+local function NWNN_fake_script() -- FLASHBACK.LocalScript 
 	local script = Instance.new('LocalScript', FLASHBACK)
 
 	local RunService = game:GetService("RunService")
@@ -1384,8 +1258,8 @@ local function BUSMKK_fake_script() -- FLASHBACK.LocalScript
 		end
 	end)
 end
-coroutine.wrap(BUSMKK_fake_script)()
-local function RKUGLLX_fake_script() -- NOCLIP.LocalScript 
+coroutine.wrap(NWNN_fake_script)()
+local function KVTMXVS_fake_script() -- NOCLIP.LocalScript 
 	local script = Instance.new('LocalScript', NOCLIP)
 
 	local RunService = game:GetService("RunService")
@@ -1447,8 +1321,8 @@ local function RKUGLLX_fake_script() -- NOCLIP.LocalScript
 		end
 	end)
 end
-coroutine.wrap(RKUGLLX_fake_script)()
-local function VPKK_fake_script() -- ANTAFK.LocalScript 
+coroutine.wrap(KVTMXVS_fake_script)()
+local function NKIGL_fake_script() -- ANTAFK.LocalScript 
 	local script = Instance.new('LocalScript', ANTAFK)
 
 	-- SERVIÇOS
@@ -1486,8 +1360,8 @@ local function VPKK_fake_script() -- ANTAFK.LocalScript
 		end
 	end)
 end
-coroutine.wrap(VPKK_fake_script)()
-local function GAWUO_fake_script() -- tela4.LocalScript 
+coroutine.wrap(NKIGL_fake_script)()
+local function BFLMP_fake_script() -- tela4.LocalScript 
 	local script = Instance.new('LocalScript', tela4)
 
 	local function QKBUY_fake_script()
@@ -1829,540 +1703,8 @@ local function GAWUO_fake_script() -- tela4.LocalScript
 	end
 	coroutine.wrap(QKBUY_fake_script)()
 end
-coroutine.wrap(GAWUO_fake_script)()
-local function HIHEK_fake_script() -- FLING.LocalScript 
-	local script = Instance.new('LocalScript', FLING)
-
-	local RunService = game:GetService("RunService")
-	local UserInputService = game:GetService("UserInputService")
-	local Players = game:GetService("Players")
-	local TweenService = game:GetService("TweenService")
-	local player = Players.LocalPlayer
-	local botao = script.Parent
-	local iconeStatus = botao:WaitForChild("TextLabel")
-	
-	local permissaoPainel = false
-	local flingAtivo = false
-	local bAV = nil
-	local conexaoNoclip = nil
-	local conexaoFling = nil
-	
-	-- NOTIFICAÇÃO BONITA
-	local screenGui = Instance.new("ScreenGui", player.PlayerGui)
-	screenGui.Name = "NotifFling"
-	screenGui.ResetOnSpawn = false
-	
-	local function notificar(titulo, texto, cor)
-		cor = cor or Color3.fromRGB(150, 0, 0)
-		local frame = Instance.new("Frame", screenGui)
-		frame.Size = UDim2.new(0, 260, 0, 60)
-		frame.Position = UDim2.new(0, 20, 1, 10)
-		frame.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
-		frame.BackgroundTransparency = 0.05
-		frame.BorderSizePixel = 0
-		frame.AnchorPoint = Vector2.new(0, 1)
-		frame.ZIndex = 10
-		Instance.new("UICorner", frame).CornerRadius = UDim.new(0, 8)
-	
-		local borda = Instance.new("Frame", frame)
-		borda.Size = UDim2.new(0, 4, 1, 0)
-		borda.BackgroundColor3 = cor
-		borda.BorderSizePixel = 0
-		borda.ZIndex = 11
-		Instance.new("UICorner", borda).CornerRadius = UDim.new(0, 8)
-	
-		local labelT = Instance.new("TextLabel", frame)
-		labelT.Size = UDim2.new(1, -16, 0, 24)
-		labelT.Position = UDim2.new(0, 14, 0, 6)
-		labelT.BackgroundTransparency = 1
-		labelT.Text = titulo
-		labelT.TextColor3 = Color3.fromRGB(255, 255, 255)
-		labelT.Font = Enum.Font.GothamBold
-		labelT.TextSize = 13
-		labelT.TextXAlignment = Enum.TextXAlignment.Left
-		labelT.ZIndex = 11
-	
-		local labelS = Instance.new("TextLabel", frame)
-		labelS.Size = UDim2.new(1, -16, 0, 18)
-		labelS.Position = UDim2.new(0, 14, 0, 30)
-		labelS.BackgroundTransparency = 1
-		labelS.Text = texto
-		labelS.TextColor3 = Color3.fromRGB(170, 170, 170)
-		labelS.Font = Enum.Font.Gotham
-		labelS.TextSize = 11
-		labelS.TextXAlignment = Enum.TextXAlignment.Left
-		labelS.ZIndex = 11
-	
-		TweenService:Create(frame, TweenInfo.new(0.4, Enum.EasingStyle.Back, Enum.EasingDirection.Out), {
-			Position = UDim2.new(0, 20, 1, -20)
-		}):Play()
-	
-		task.delay(3.5, function()
-			TweenService:Create(frame, TweenInfo.new(0.3, Enum.EasingStyle.Quad, Enum.EasingDirection.In), {
-				Position = UDim2.new(0, 20, 1, 10)
-			}):Play()
-			task.wait(0.35)
-			frame:Destroy()
-		end)
-	end
-	
-	-- DESATIVA TUDO COM SEGURANÇA
-	local function desativarTudo()
-		flingAtivo = false
-	
-		if bAV then
-			pcall(function() bAV:Destroy() end)
-			bAV = nil
-		end
-		if conexaoNoclip then
-			conexaoNoclip:Disconnect()
-			conexaoNoclip = nil
-		end
-		if conexaoFling then
-			conexaoFling:Disconnect()
-			conexaoFling = nil
-		end
-	
-		-- Restaura colisão do personagem
-		local char = player.Character
-		if char then
-			for _, p in pairs(char:GetDescendants()) do
-				if p:IsA("BasePart") then
-					p.CanCollide = true
-				end
-			end
-		end
-	end
-	
-	-- ATIVA O FLING
-	local function ativarFling()
-		local char = player.Character
-		if not char then return end
-		local root = char:FindFirstChild("HumanoidRootPart")
-		if not root then return end
-	
-		desativarTudo()
-		flingAtivo = true
-	
-		-- Cria força de rotação
-		bAV = Instance.new("BodyAngularVelocity")
-		bAV.Name = "FlingForce"
-		bAV.MaxTorque = Vector3.new(math.huge, math.huge, math.huge)
-		bAV.P = 30000 -- Aumentado pra ser mais efetivo
-		bAV.AngularVelocity = Vector3.new(10000, 10000, 10000) -- Mais forte
-		bAV.Parent = root
-	
-		-- Noclip pra não travar nas paredes
-		conexaoNoclip = RunService.Stepped:Connect(function()
-			local c = player.Character
-			if not c then return end
-			for _, p in pairs(c:GetDescendants()) do
-				if p:IsA("BasePart") then
-					p.CanCollide = false
-				end
-			end
-		end)
-	
-		-- Loop que mantém o fling ativo e pulsa a velocidade
-		local tick = 0
-		conexaoFling = RunService.Heartbeat:Connect(function(dt)
-			tick = tick + dt
-			local c = player.Character
-			if not c then return end
-			local r = c:FindFirstChild("HumanoidRootPart")
-			if not r then return end
-			local b = r:FindFirstChild("FlingForce")
-			if not b then return end
-	
-			-- Pulsa a direção pra aumentar o efeito de fling
-			local direcao = math.sin(tick * 5) * 10000
-			b.AngularVelocity = Vector3.new(direcao, 10000, direcao)
-		end)
-	
-		iconeStatus.TextColor3 = Color3.fromRGB(255, 50, 50)
-		notificar("💥 Fling ATIVADO", "Chegue perto de alguém!", Color3.fromRGB(255, 50, 50))
-	end
-	
-	-- BOTÃO DO PAINEL
-	botao.MouseButton1Click:Connect(function()
-		permissaoPainel = not permissaoPainel
-		if permissaoPainel then
-			iconeStatus.TextColor3 = Color3.fromRGB(0, 255, 0)
-			notificar("💥 Fling Liberado", "Pressione X para ativar", Color3.fromRGB(0, 200, 0))
-		else
-			iconeStatus.TextColor3 = Color3.fromRGB(255, 0, 0)
-			desativarTudo()
-			notificar("💥 Fling Bloqueado", "Desativado pelo painel", Color3.fromRGB(100, 100, 100))
-		end
-	end)
-	
-	-- TECLA X
-	UserInputService.InputBegan:Connect(function(input, gameProcessed)
-		if gameProcessed then return end
-		if not permissaoPainel then return end
-		if input.KeyCode == Enum.KeyCode.X then
-			if flingAtivo then
-				desativarTudo()
-				iconeStatus.TextColor3 = Color3.fromRGB(0, 255, 0)
-				notificar("💥 Fling DESATIVADO", "Voltou ao normal", Color3.fromRGB(0, 200, 0))
-			else
-				ativarFling()
-			end
-		end
-	end)
-	
-	-- RESETA AO MORRER OU RESPAWNAR
-	player.CharacterAdded:Connect(function()
-		task.wait(0.5)
-		desativarTudo()
-		if permissaoPainel then
-			iconeStatus.TextColor3 = Color3.fromRGB(0, 255, 0)
-		end
-	end)
-end
-coroutine.wrap(HIHEK_fake_script)()
-local function TEZJ_fake_script() -- SPIN.LocalScript 
-	local script = Instance.new('LocalScript', SPIN)
-
-	local RunService = game:GetService("RunService")
-	local UserInputService = game:GetService("UserInputService")
-	local StarterGui = game:GetService("StarterGui")
-	local Players = game:GetService("Players")
-	local player = Players.LocalPlayer
-	
-	local botao = script.Parent
-	local iconeStatus = botao:WaitForChild("TextLabel")
-	
-	local permissaoPainel = false 
-	local spinAtivo = false      
-	local bAV = nil               
-	
-	-- Função de Notificação
-	local function avisar(titulo, texto)
-		StarterGui:SetCore("SendNotification", {
-			Title = titulo;
-			Text = texto;
-			Duration = 4;
-		})
-	end
-	
-	-- Função para destruir o objeto de giro
-	local function removerForca()
-		if bAV then 
-			bAV:Destroy() 
-			bAV = nil 
-		end
-	end
-	
-	-- 1. CLIQUE NO PAINEL (LIBERAÇÃO)
-	botao.MouseButton1Click:Connect(function()
-		permissaoPainel = not permissaoPainel
-	
-		if permissaoPainel then
-			iconeStatus.TextColor3 = Color3.fromRGB(0, 255, 0) -- Verde
-			avisar("Painel: SPIN", "Permissão concedida! Use 'M' para Ligar/Desligar.")
-		else
-			iconeStatus.TextColor3 = Color3.fromRGB(255, 0, 0) -- Vermelho
-			spinAtivo = false
-			removerForca()
-			avisar("Painel: SPIN", "Função bloqueada e desligada.")
-		end
-	end)
-	
-	-- 2. TECLA M (LIGA E DESLIGA O GIRO)
-	UserInputService.InputBegan:Connect(function(input, gameProcessed)
-		if gameProcessed then return end
-	
-		-- Só executa se o botão do painel estiver ativado (verde)
-		if permissaoPainel and input.KeyCode == Enum.KeyCode.M then
-			spinAtivo = not spinAtivo -- Alterna entre ligado e desligado
-	
-			if spinAtivo then
-				local char = player.Character
-				local root = char and char:FindFirstChild("HumanoidRootPart")
-	
-				if root then
-					removerForca() -- Garante que não existam dois giros ao mesmo tempo
-	
-					bAV = Instance.new("BodyAngularVelocity")
-					bAV.Name = "SpinForce"
-					bAV.Parent = root
-					bAV.MaxTorque = Vector3.new(0, math.huge, 0) 
-					bAV.P = 1250 
-					bAV.AngularVelocity = Vector3.new(0, 1, 0) -- Giro lento
-	
-					avisar("Spin", "Giro ATIVADO")
-				end
-			else
-				removerForca()
-				avisar("Spin", "Giro DESATIVADO")
-			end
-		end
-	end)
-	
-	-- Resetar tudo se o personagem morrer
-	player.CharacterAdded:Connect(function()
-		spinAtivo = false
-		removerForca()
-	end)
-end
-coroutine.wrap(TEZJ_fake_script)()
-local function RTSUMMT_fake_script() -- JUMP.LocalScript 
-	local script = Instance.new('LocalScript', JUMP)
-
-	local UserInputService = game:GetService("UserInputService")
-	local StarterGui = game:GetService("StarterGui")
-	local Players = game:GetService("Players")
-	local player = Players.LocalPlayer
-	
-	local botao = script.Parent
-	local iconeStatus = botao:WaitForChild("TextLabel")
-	
-	local permissaoPainel = false -- Chave mestra no painel
-	
-	-- Função de Notificação Customizada
-	local function avisar(titulo, texto)
-		StarterGui:SetCore("SendNotification", {
-			Title = titulo;
-			Text = texto;
-			Duration = 4;
-		})
-	end
-	
-	-- 1. BOTÃO DO PAINEL: LIBERA OU BLOQUEIA A FUNÇÃO
-	botao.MouseButton1Click:Connect(function()
-		permissaoPainel = not permissaoPainel
-	
-		if permissaoPainel then
-			iconeStatus.TextColor3 = Color3.fromRGB(0, 255, 0) -- Verde
-			-- AVISO CUSTOMIZADO
-			avisar("Pulo Infinito", "Liberado! Agora você pode pular no ar à vontade.")
-		else
-			iconeStatus.TextColor3 = Color3.fromRGB(255, 0, 0) -- Vermelho
-			avisar("Pulo Infinito", "Função bloqueada pelo painel.")
-		end
-	end)
-	
-	-- 2. LÓGICA DO PULO INFINITO
-	UserInputService.JumpRequest:Connect(function()
-		-- A lógica só dispara se a permissão no painel estiver ativa (Verde)
-		if permissaoPainel then
-			local char = player.Character
-			local humanoid = char and char:FindFirstChildOfClass("Humanoid")
-	
-			if humanoid then
-				-- Força o estado de "Jumping", permitindo o pulo mesmo sem tocar o chão
-				humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
-			end
-		end
-	end)
-end
-coroutine.wrap(RTSUMMT_fake_script)()
-local function SEOGNE_fake_script() -- INVISIVEL.LocalScript 
-	local script = Instance.new('LocalScript', INVISIVEL)
-
-	local UserInputService = game:GetService("UserInputService")
-	local Players = game:GetService("Players")
-	local RunService = game:GetService("RunService")
-	local player = Players.LocalPlayer
-	local botao = script.Parent
-	local iconeStatus = botao:WaitForChild("TextLabel")
-	
-	local permissaoPainel = false
-	local invisivelAtivo = false
-	local transparenciasOriginais = {}
-	local colisaoOriginal = {}
-	
-	-- NOTIFICAÇÃO BONITA (igual ao painel)
-	local TweenService = game:GetService("TweenService")
-	local screenGui = Instance.new("ScreenGui", player.PlayerGui)
-	screenGui.Name = "NotifInvis"
-	screenGui.ResetOnSpawn = false
-	
-	local function notificar(titulo, texto, cor)
-		cor = cor or Color3.fromRGB(30, 30, 30)
-		local frame = Instance.new("Frame", screenGui)
-		frame.Size = UDim2.new(0, 260, 0, 60)
-		frame.Position = UDim2.new(0, 20, 1, 10)
-		frame.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
-		frame.BackgroundTransparency = 0.05
-		frame.BorderSizePixel = 0
-		frame.AnchorPoint = Vector2.new(0, 1)
-		frame.ZIndex = 10
-		Instance.new("UICorner", frame).CornerRadius = UDim.new(0, 8)
-	
-		local borda = Instance.new("Frame", frame)
-		borda.Size = UDim2.new(0, 4, 1, 0)
-		borda.BackgroundColor3 = cor
-		borda.BorderSizePixel = 0
-		borda.ZIndex = 11
-		Instance.new("UICorner", borda).CornerRadius = UDim.new(0, 8)
-	
-		local labelT = Instance.new("TextLabel", frame)
-		labelT.Size = UDim2.new(1, -16, 0, 24)
-		labelT.Position = UDim2.new(0, 14, 0, 6)
-		labelT.BackgroundTransparency = 1
-		labelT.Text = titulo
-		labelT.TextColor3 = Color3.fromRGB(255, 255, 255)
-		labelT.Font = Enum.Font.GothamBold
-		labelT.TextSize = 13
-		labelT.TextXAlignment = Enum.TextXAlignment.Left
-		labelT.ZIndex = 11
-	
-		local labelS = Instance.new("TextLabel", frame)
-		labelS.Size = UDim2.new(1, -16, 0, 18)
-		labelS.Position = UDim2.new(0, 14, 0, 30)
-		labelS.BackgroundTransparency = 1
-		labelS.Text = texto
-		labelS.TextColor3 = Color3.fromRGB(170, 170, 170)
-		labelS.Font = Enum.Font.Gotham
-		labelS.TextSize = 11
-		labelS.TextXAlignment = Enum.TextXAlignment.Left
-		labelS.ZIndex = 11
-	
-		-- Entrada
-		TweenService:Create(frame, TweenInfo.new(0.4, Enum.EasingStyle.Back, Enum.EasingDirection.Out), {
-			Position = UDim2.new(0, 20, 1, -20)
-		}):Play()
-	
-		-- Saída
-		task.delay(3.5, function()
-			TweenService:Create(frame, TweenInfo.new(0.3, Enum.EasingStyle.Quad, Enum.EasingDirection.In), {
-				Position = UDim2.new(0, 20, 1, 10)
-			}):Play()
-			task.wait(0.35)
-			frame:Destroy()
-		end)
-	end
-	
-	-- SALVA TRANSPARÊNCIA E COLISÃO ORIGINAIS
-	local function salvarOriginais(char)
-		transparenciasOriginais = {}
-		colisaoOriginal = {}
-		for _, v in pairs(char:GetDescendants()) do
-			if v:IsA("BasePart") then
-				transparenciasOriginais[v] = v.Transparency
-				colisaoOriginal[v] = v.CanCollide
-			elseif v:IsA("Decal") then
-				transparenciasOriginais[v] = v.Transparency
-			end
-		end
-	end
-	
-	-- ATIVA INVISIBILIDADE
-	local function ativarInvis()
-		local char = player.Character
-		if not char then return end
-		salvarOriginais(char)
-	
-		for _, v in pairs(char:GetDescendants()) do
-			if v:IsA("BasePart") then
-				-- Mantém HumanoidRootPart funcional mas invisível
-				v.Transparency = 1
-				if v.Name ~= "HumanoidRootPart" then
-					v.CanCollide = false
-				end
-			elseif v:IsA("Decal") then
-				v.Transparency = 1
-			end
-		end
-	
-		-- Mostra só pra você que tá invisível (torna semi-transparente localmente)
-		task.spawn(function()
-			local char2 = player.Character
-			if not char2 then return end
-			for _, v in pairs(char2:GetDescendants()) do
-				if v:IsA("BasePart") and v.Name ~= "HumanoidRootPart" then
-					v.LocalTransparencyModifier = 0.6
-				end
-			end
-		end)
-	end
-	
-	-- DESATIVA INVISIBILIDADE
-	local function desativarInvis()
-		local char = player.Character
-		if not char then return end
-	
-		for _, v in pairs(char:GetDescendants()) do
-			if v:IsA("BasePart") then
-				v.Transparency = transparenciasOriginais[v] or 0
-				v.CanCollide = colisaoOriginal[v] or true
-				v.LocalTransparencyModifier = 0
-			elseif v:IsA("Decal") then
-				v.Transparency = transparenciasOriginais[v] or 0
-			end
-		end
-		transparenciasOriginais = {}
-		colisaoOriginal = {}
-	end
-	
-	-- MANTÉM INVISÍVEL MESMO SE O JOGO TENTAR RESETAR
-	local conexaoInvis = nil
-	local function manterInvis()
-		if conexaoInvis then conexaoInvis:Disconnect() end
-		conexaoInvis = RunService.Heartbeat:Connect(function()
-			if not invisivelAtivo then return end
-			local char = player.Character
-			if not char then return end
-			for _, v in pairs(char:GetDescendants()) do
-				if v:IsA("BasePart") and v.Name ~= "HumanoidRootPart" then
-					if v.Transparency ~= 1 then
-						v.Transparency = 1
-					end
-				end
-			end
-		end)
-	end
-	
-	-- RECONECTA AO RESPAWN
-	player.CharacterAdded:Connect(function()
-		task.wait(1)
-		invisivelAtivo = false
-		transparenciasOriginais = {}
-		colisaoOriginal = {}
-		if conexaoInvis then conexaoInvis:Disconnect() end
-	end)
-	
-	-- BOTÃO DO PAINEL
-	botao.MouseButton1Click:Connect(function()
-		permissaoPainel = not permissaoPainel
-		if permissaoPainel then
-			iconeStatus.TextColor3 = Color3.fromRGB(0, 255, 0)
-			notificar("👻 Modo Fantasma", "Liberado! Pressione L para ativar", Color3.fromRGB(0, 200, 255))
-		else
-			iconeStatus.TextColor3 = Color3.fromRGB(255, 0, 0)
-			if invisivelAtivo then
-				desativarInvis()
-				invisivelAtivo = false
-				if conexaoInvis then conexaoInvis:Disconnect() end
-			end
-			notificar("👻 Modo Fantasma", "Desativado", Color3.fromRGB(255, 50, 50))
-		end
-	end)
-	
-	-- TECLA L
-	UserInputService.InputBegan:Connect(function(input, gameProcessed)
-		if gameProcessed then return end
-		if not permissaoPainel then return end
-		if input.KeyCode == Enum.KeyCode.L then
-			invisivelAtivo = not invisivelAtivo
-			if invisivelAtivo then
-				ativarInvis()
-				manterInvis()
-				iconeStatus.TextColor3 = Color3.fromRGB(0, 255, 255)
-				notificar("👻 Invisível ATIVADO", "Outros jogadores não te veem", Color3.fromRGB(0, 200, 255))
-			else
-				desativarInvis()
-				if conexaoInvis then conexaoInvis:Disconnect() end
-				iconeStatus.TextColor3 = Color3.fromRGB(0, 255, 0)
-				notificar("👁️ Visível", "Você voltou a aparecer", Color3.fromRGB(0, 255, 100))
-			end
-		end
-	end)
-end
-coroutine.wrap(SEOGNE_fake_script)()
-local function WWYK_fake_script() -- PINCEL.LocalScript 
+coroutine.wrap(BFLMP_fake_script)()
+local function UDTMJ_fake_script() -- PINCEL.LocalScript 
 	local script = Instance.new('LocalScript', PINCEL)
 
 	-- [[ SISTEMA DE TEMAS 4E20 PANEL - 20 CORES ]] --
@@ -2423,4 +1765,4 @@ local function WWYK_fake_script() -- PINCEL.LocalScript
 		aplicarTema(novaCor)
 	end)
 end
-coroutine.wrap(WWYK_fake_script)()
+coroutine.wrap(UDTMJ_fake_script)()
