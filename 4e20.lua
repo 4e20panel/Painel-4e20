@@ -95,9 +95,6 @@ local INVISIVEL = Instance.new("TextButton")
 local TextLabel_17 = Instance.new("TextLabel")
 local UICorner_30 = Instance.new("UICorner")
 local PINCEL = Instance.new("ImageButton")
-local JERKOFF = Instance.new("TextButton")
-local TextLabel_18 = Instance.new("TextLabel")
-local UICorner_31 = Instance.new("UICorner")
 
 --Properties:
 
@@ -912,37 +909,9 @@ PINCEL.Position = UDim2.new(0.784653485, 0, 0.739436626, 0)
 PINCEL.Size = UDim2.new(0, 63, 0, 57)
 PINCEL.Image = "rbxassetid://85851959324603"
 
-JERKOFF.Name = "JERKOFF"
-JERKOFF.Parent = tela5
-JERKOFF.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
-JERKOFF.BorderColor3 = Color3.fromRGB(0, 0, 0)
-JERKOFF.BorderSizePixel = 0
-JERKOFF.Position = UDim2.new(0.0569306947, 0, 0.813380301, 0)
-JERKOFF.Size = UDim2.new(0, 100, 0, 36)
-JERKOFF.Font = Enum.Font.Unknown
-JERKOFF.Text = "JECKOFF"
-JERKOFF.TextColor3 = Color3.fromRGB(255, 255, 255)
-JERKOFF.TextSize = 14.000
-
-TextLabel_18.Parent = JERKOFF
-TextLabel_18.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_18.BackgroundTransparency = 1.000
-TextLabel_18.BorderColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_18.BorderSizePixel = 0
-TextLabel_18.Position = UDim2.new(0.899999976, 0, -0.138888896, 0)
-TextLabel_18.Size = UDim2.new(0, 70, 0, 46)
-TextLabel_18.Font = Enum.Font.Unknown
-TextLabel_18.Text = "+"
-TextLabel_18.TextColor3 = Color3.fromRGB(255, 0, 0)
-TextLabel_18.TextScaled = true
-TextLabel_18.TextSize = 25.000
-TextLabel_18.TextWrapped = true
-
-UICorner_31.Parent = JERKOFF
-
 -- Scripts:
 
-local function EFAXFIM_fake_script() -- ScreenGui.GerenciadorAbas 
+local function YIMGZ_fake_script() -- ScreenGui.GerenciadorAbas 
 	local script = Instance.new('LocalScript', ScreenGui)
 
 	local gui = script.Parent
@@ -975,8 +944,8 @@ local function EFAXFIM_fake_script() -- ScreenGui.GerenciadorAbas
 		end
 	end
 end
-coroutine.wrap(EFAXFIM_fake_script)()
-local function NTCXJY_fake_script() -- ScreenGui.LocalScript 
+coroutine.wrap(YIMGZ_fake_script)()
+local function UZXNHNO_fake_script() -- ScreenGui.LocalScript 
 	local script = Instance.new('LocalScript', ScreenGui)
 
 	local UserInputService = game:GetService("UserInputService")
@@ -1037,8 +1006,8 @@ local function NTCXJY_fake_script() -- ScreenGui.LocalScript
 		end
 	end)
 end
-coroutine.wrap(NTCXJY_fake_script)()
-local function UHYNXW_fake_script() -- tela1.CarregarHome 
+coroutine.wrap(UZXNHNO_fake_script)()
+local function MVWXAD_fake_script() -- tela1.CarregarHome 
 	local script = Instance.new('LocalScript', tela1)
 
 	local Players = game:GetService("Players")
@@ -1062,8 +1031,8 @@ local function UHYNXW_fake_script() -- tela1.CarregarHome
 	
 	task.spawn(carregarFoto)
 end
-coroutine.wrap(UHYNXW_fake_script)()
-local function TJOI_fake_script() -- TextLabel_2.LocalScript 
+coroutine.wrap(MVWXAD_fake_script)()
+local function WUXYNCJ_fake_script() -- TextLabel_2.LocalScript 
 	local script = Instance.new('LocalScript', TextLabel_2)
 
 	-- [[ MONITOR DE LATÊNCIA REAL-TIME - 4E20 PANEL ]] --
@@ -1097,8 +1066,8 @@ local function TJOI_fake_script() -- TextLabel_2.LocalScript
 		end
 	end
 end
-coroutine.wrap(TJOI_fake_script)()
-local function MWYHSMM_fake_script() -- TextLabel_3.LocalScript 
+coroutine.wrap(WUXYNCJ_fake_script)()
+local function XXHP_fake_script() -- TextLabel_3.LocalScript 
 	local script = Instance.new('LocalScript', TextLabel_3)
 
 	-- [[ PLAYER COUNTER - 4E20 PANEL ]] --
@@ -1124,8 +1093,8 @@ local function MWYHSMM_fake_script() -- TextLabel_3.LocalScript
 	-- Atualização inicial
 	atualizarContagem()
 end
-coroutine.wrap(MWYHSMM_fake_script)()
-local function IMPWB_fake_script() -- tela2.NOMES 
+coroutine.wrap(XXHP_fake_script)()
+local function OPOTTS_fake_script() -- tela2.NOMES 
 	local script = Instance.new('LocalScript', tela2)
 
 	local Players = game:GetService("Players")
@@ -1179,8 +1148,8 @@ local function IMPWB_fake_script() -- tela2.NOMES
 		end
 	end)
 end
-coroutine.wrap(IMPWB_fake_script)()
-local function XBXXQI_fake_script() -- tela2.VIEW 
+coroutine.wrap(OPOTTS_fake_script)()
+local function WDHUPXF_fake_script() -- tela2.VIEW 
 	local script = Instance.new('LocalScript', tela2)
 
 	local Players = game:GetService("Players")
@@ -1279,8 +1248,8 @@ local function XBXXQI_fake_script() -- tela2.VIEW
 		end
 	end)
 end
-coroutine.wrap(XBXXQI_fake_script)()
-local function WTDNQV_fake_script() -- CLICKTP.LocalScript 
+coroutine.wrap(WDHUPXF_fake_script)()
+local function TQJMDN_fake_script() -- CLICKTP.LocalScript 
 	local script = Instance.new('LocalScript', CLICKTP)
 
 	local Players = game:GetService("Players")
@@ -1336,8 +1305,8 @@ local function WTDNQV_fake_script() -- CLICKTP.LocalScript
 		end
 	end)
 end
-coroutine.wrap(WTDNQV_fake_script)()
-local function LMKJAGC_fake_script() -- FLASHBACK.LocalScript 
+coroutine.wrap(TQJMDN_fake_script)()
+local function BNRZ_fake_script() -- FLASHBACK.LocalScript 
 	local script = Instance.new('LocalScript', FLASHBACK)
 
 	local RunService = game:GetService("RunService")
@@ -1415,8 +1384,8 @@ local function LMKJAGC_fake_script() -- FLASHBACK.LocalScript
 		end
 	end)
 end
-coroutine.wrap(LMKJAGC_fake_script)()
-local function GOTW_fake_script() -- NOCLIP.LocalScript 
+coroutine.wrap(BNRZ_fake_script)()
+local function EBEVA_fake_script() -- NOCLIP.LocalScript 
 	local script = Instance.new('LocalScript', NOCLIP)
 
 	local RunService = game:GetService("RunService")
@@ -1478,8 +1447,8 @@ local function GOTW_fake_script() -- NOCLIP.LocalScript
 		end
 	end)
 end
-coroutine.wrap(GOTW_fake_script)()
-local function ZTUZHC_fake_script() -- ANTAFK.LocalScript 
+coroutine.wrap(EBEVA_fake_script)()
+local function JGVZPF_fake_script() -- ANTAFK.LocalScript 
 	local script = Instance.new('LocalScript', ANTAFK)
 
 	-- SERVIÇOS
@@ -1517,8 +1486,8 @@ local function ZTUZHC_fake_script() -- ANTAFK.LocalScript
 		end
 	end)
 end
-coroutine.wrap(ZTUZHC_fake_script)()
-local function GJPVMJ_fake_script() -- tela4.LocalScript 
+coroutine.wrap(JGVZPF_fake_script)()
+local function QKBUY_fake_script() -- tela4.LocalScript 
 	local script = Instance.new('LocalScript', tela4)
 
 	local Players = game:GetService("Players")
@@ -1849,8 +1818,8 @@ local function GJPVMJ_fake_script() -- tela4.LocalScript
 		notificar("4E20 PANEL", "PAINEL ATIVO — CARGO: " .. cargoInit, 5, "welcome", cargoInit)
 	end)
 end
-coroutine.wrap(GJPVMJ_fake_script)()
-local function DWDG_fake_script() -- FLING.LocalScript 
+coroutine.wrap(QKBUY_fake_script)()
+local function WOHFQX_fake_script() -- FLING.LocalScript 
 	local script = Instance.new('LocalScript', FLING)
 
 	local RunService = game:GetService("RunService")
@@ -2040,8 +2009,8 @@ local function DWDG_fake_script() -- FLING.LocalScript
 		end
 	end)
 end
-coroutine.wrap(DWDG_fake_script)()
-local function TBPWW_fake_script() -- SPIN.LocalScript 
+coroutine.wrap(WOHFQX_fake_script)()
+local function ULRPUAW_fake_script() -- SPIN.LocalScript 
 	local script = Instance.new('LocalScript', SPIN)
 
 	local RunService = game:GetService("RunService")
@@ -2126,8 +2095,8 @@ local function TBPWW_fake_script() -- SPIN.LocalScript
 		removerForca()
 	end)
 end
-coroutine.wrap(TBPWW_fake_script)()
-local function YUQJ_fake_script() -- JUMP.LocalScript 
+coroutine.wrap(ULRPUAW_fake_script)()
+local function ROFUOND_fake_script() -- JUMP.LocalScript 
 	local script = Instance.new('LocalScript', JUMP)
 
 	local UserInputService = game:GetService("UserInputService")
@@ -2177,8 +2146,8 @@ local function YUQJ_fake_script() -- JUMP.LocalScript
 		end
 	end)
 end
-coroutine.wrap(YUQJ_fake_script)()
-local function MFEG_fake_script() -- INVISIVEL.LocalScript 
+coroutine.wrap(ROFUOND_fake_script)()
+local function CTHGI_fake_script() -- INVISIVEL.LocalScript 
 	local script = Instance.new('LocalScript', INVISIVEL)
 
 	local UserInputService = game:GetService("UserInputService")
@@ -2381,8 +2350,8 @@ local function MFEG_fake_script() -- INVISIVEL.LocalScript
 		end
 	end)
 end
-coroutine.wrap(MFEG_fake_script)()
-local function KJDNZD_fake_script() -- PINCEL.LocalScript 
+coroutine.wrap(CTHGI_fake_script)()
+local function LPBKQ_fake_script() -- PINCEL.LocalScript 
 	local script = Instance.new('LocalScript', PINCEL)
 
 	-- [[ SISTEMA DE TEMAS 4E20 PANEL - 20 CORES ]] --
@@ -2443,159 +2412,4 @@ local function KJDNZD_fake_script() -- PINCEL.LocalScript
 		aplicarTema(novaCor)
 	end)
 end
-coroutine.wrap(KJDNZD_fake_script)()
-local function NZLNM_fake_script() -- JERKOFF.LocalScript 
-	local script = Instance.new('LocalScript', JERKOFF)
-
-	local RunService = game:GetService("RunService")
-	local UserInputService = game:GetService("UserInputService")
-	local Players = game:GetService("Players")
-	local TweenService = game:GetService("TweenService")
-	local player = Players.LocalPlayer
-	local botao = script.Parent
-	local iconeStatus = botao:WaitForChild("TextLabel")
-	
-	local permissaoPainel = false
-	local ativo = false
-	local animTrack = nil
-	
-	-- NOTIFICAÇÃO BONITA
-	local screenGui = Instance.new("ScreenGui", player.PlayerGui)
-	screenGui.Name = "NotifSpasm"
-	screenGui.ResetOnSpawn = false
-	
-	local function notificar(titulo, texto, cor)
-		cor = cor or Color3.fromRGB(150, 0, 0)
-		local frame = Instance.new("Frame", screenGui)
-		frame.Size = UDim2.new(0, 260, 0, 60)
-		frame.Position = UDim2.new(0, 20, 1, 10)
-		frame.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
-		frame.BackgroundTransparency = 0.05
-		frame.BorderSizePixel = 0
-		frame.AnchorPoint = Vector2.new(0, 1)
-		frame.ZIndex = 10
-		Instance.new("UICorner", frame).CornerRadius = UDim.new(0, 8)
-	
-		local borda = Instance.new("Frame", frame)
-		borda.Size = UDim2.new(0, 4, 1, 0)
-		borda.BackgroundColor3 = cor
-		borda.BorderSizePixel = 0
-		borda.ZIndex = 11
-		Instance.new("UICorner", borda).CornerRadius = UDim.new(0, 8)
-	
-		local labelT = Instance.new("TextLabel", frame)
-		labelT.Size = UDim2.new(1, -16, 0, 24)
-		labelT.Position = UDim2.new(0, 14, 0, 6)
-		labelT.BackgroundTransparency = 1
-		labelT.Text = titulo
-		labelT.TextColor3 = Color3.fromRGB(255, 255, 255)
-		labelT.Font = Enum.Font.GothamBold
-		labelT.TextSize = 13
-		labelT.TextXAlignment = Enum.TextXAlignment.Left
-		labelT.ZIndex = 11
-	
-		local labelS = Instance.new("TextLabel", frame)
-		labelS.Size = UDim2.new(1, -16, 0, 18)
-		labelS.Position = UDim2.new(0, 14, 0, 30)
-		labelS.BackgroundTransparency = 1
-		labelS.Text = texto
-		labelS.TextColor3 = Color3.fromRGB(170, 170, 170)
-		labelS.Font = Enum.Font.Gotham
-		labelS.TextSize = 11
-		labelS.TextXAlignment = Enum.TextXAlignment.Left
-		labelS.ZIndex = 11
-	
-		TweenService:Create(frame, TweenInfo.new(0.4, Enum.EasingStyle.Back, Enum.EasingDirection.Out), {
-			Position = UDim2.new(0, 20, 1, -20)
-		}):Play()
-	
-		task.delay(3.5, function()
-			TweenService:Create(frame, TweenInfo.new(0.3, Enum.EasingStyle.Quad, Enum.EasingDirection.In), {
-				Position = UDim2.new(0, 20, 1, 10)
-			}):Play()
-			task.wait(0.35)
-			frame:Destroy()
-		end)
-	end
-	
-	-- DESATIVA
-	local function desativar()
-		ativo = false
-		if animTrack then
-			animTrack:Stop()
-			animTrack = nil
-		end
-	end
-	
-	-- ATIVA
-	local function ativar()
-		local char = player.Character
-		if not char then return end
-		local humanoid = char:FindFirstChildOfClass("Humanoid")
-		local animator = humanoid and humanoid:FindFirstChildOfClass("Animator")
-		if not humanoid or not animator then return end
-	
-		desativar()
-		ativo = true
-	
-		-- Cria e carrega a animação
-		local anim = Instance.new("Animation")
-		anim.AnimationId = "rbxassetid://132137977778163"
-	
-		animTrack = animator:LoadAnimation(anim)
-		animTrack.Priority = Enum.AnimationPriority.Action4 -- Prioridade máxima
-		animTrack.Looped = true  -- Loop infinito
-		animTrack:Play()
-		animTrack:AdjustSpeed(5) -- Velocidade 5x mais rápida
-	
-		-- Garante que não para nunca
-		animTrack.Stopped:Connect(function()
-			if ativo then
-				animTrack:Play()
-				animTrack:AdjustSpeed(5)
-			end
-		end)
-	end
-	
-	-- BOTÃO DO PAINEL
-	botao.MouseButton1Click:Connect(function()
-		permissaoPainel = not permissaoPainel
-		if permissaoPainel then
-			iconeStatus.TextColor3 = Color3.fromRGB(0, 255, 0)
-			notificar("🤝 Animação Liberada", "Pressione J para ativar", Color3.fromRGB(85, 0, 255))
-		else
-			iconeStatus.TextColor3 = Color3.fromRGB(255, 0, 0)
-			desativar()
-			notificar("🤝 Animação Bloqueada", "Desativado pelo painel", Color3.fromRGB(100, 100, 100))
-		end
-	end)
-	
-	-- TECLA J
-	UserInputService.InputBegan:Connect(function(input, gameProcessed)
-		if gameProcessed then return end
-		if not permissaoPainel then return end
-		if input.KeyCode == Enum.KeyCode.J then
-			if ativo then
-				desativar()
-				iconeStatus.TextColor3 = Color3.fromRGB(0, 255, 0)
-				notificar("🤝 Animação DESATIVADA", "Voltou ao normal", Color3.fromRGB(0, 200, 0))
-			else
-				ativar()
-				iconeStatus.TextColor3 = Color3.fromRGB(255, 100, 255)
-				notificar("🤝 Animação ATIVADA", "Rodando em loop!", Color3.fromRGB(85, 0, 255))
-			end
-		end
-	end)
-	
-	-- RESETA AO MORRER
-	player.CharacterAdded:Connect(function()
-		task.wait(0.5)
-		desativar()
-		if permissaoPainel then
-			iconeStatus.TextColor3 = Color3.fromRGB(0, 255, 0)
-			-- Reativa automaticamente se estava ativo antes de morrer
-			if ativo then ativar() end
-		end
-	end)
-end
-coroutine.wrap(NZLNM_fake_script)()
+coroutine.wrap(LPBKQ_fake_script)()
