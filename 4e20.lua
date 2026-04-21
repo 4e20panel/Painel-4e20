@@ -1,1 +1,2343 @@
-local a=Instance.new("ScreenGui")local b=Instance.new("TextLabel")local c=Instance.new("Frame")local d=Instance.new("Frame")local e=Instance.new("ImageLabel")local f=Instance.new("TextLabel")local g=Instance.new("Frame")local h=Instance.new("TextButton")local i=Instance.new("TextLabel")local j=Instance.new("TextButton")local k=Instance.new("TextLabel")local l=Instance.new("TextButton")local m=Instance.new("TextLabel")local n=Instance.new("TextButton")local o=Instance.new("TextLabel")local p=Instance.new("Frame")local q=Instance.new("TextButton")local r=Instance.new("TextButton")local s=Instance.new("TextButton")local t=Instance.new("TextButton")local u=Instance.new("TextButton")local v=Instance.new("TextBox")local w=Instance.new("TextLabel")local x=Instance.new("TextLabel")local y=Instance.new("ImageLabel")local z=Instance.new("TextButton")local A=Instance.new("TextButton")local B=Instance.new("Frame")local C=Instance.new("Frame")local D=Instance.new("TextButton")local E=Instance.new("TextButton")local F=Instance.new("TextButton")local G=Instance.new("TextButton")local H=Instance.new("TextButton")local I=Instance.new("TextButton")local J=Instance.new("Frame")local K=Instance.new("TextLabel")local L=Instance.new("TextLabel")local M=Instance.new("TextLabel")local N=Instance.new("Frame")local O=Instance.new("TextButton")local P=Instance.new("TextBox")local Q=Instance.new("TextLabel")local R=Instance.new("Frame")local S=Instance.new("ImageButton")local T=Instance.new("TextButton")local U=Instance.new("TextLabel")local V=Instance.new("TextButton")local W=Instance.new("TextLabel")local X=Instance.new("TextButton")local Y=Instance.new("TextLabel")local Z=Instance.new("TextButton")local _=Instance.new("TextLabel")local a0=Instance.new("TextButton")local a1=Instance.new("TextLabel")local a2=Instance.new("Frame")local a3=Instance.new("ImageLabel")local a4=Instance.new("TextButton")local a5=Instance.new("TextLabel")local a6=Instance.new("TextButton")local a7=Instance.new("TextLabel")local a8=Instance.new("TextButton")local a9=Instance.new("TextLabel")local aa=Instance.new("TextBox")local ab=Instance.new("TextLabel")local ac=Instance.new("TextLabel")local ad=Instance.new("TextLabel")a.Parent=game.Players.LocalPlayer:WaitForChild("PlayerGui")a.ZIndexBehavior=Enum.ZIndexBehavior.Sibling;b.Name="AvisoTP"b.Parent=a;b.BackgroundColor3=Color3.fromRGB(255,255,255)b.BackgroundTransparency=1.000;b.BorderColor3=Color3.fromRGB(0,0,0)b.BorderSizePixel=0;b.Position=UDim2.new(0.83263284,0,0.859222949,0)b.Size=UDim2.new(0,200,0,50)b.Visible=false;b.Font=Enum.Font.SourceSans;b.Text="aviso tp"b.TextColor3=Color3.fromRGB(0,0,0)b.TextSize=14.000;c.Name="CorpoPainel"c.Parent=a;c.BackgroundColor3=Color3.fromRGB(255,255,255)c.BackgroundTransparency=1.000;c.BorderColor3=Color3.fromRGB(0,0,0)c.BorderSizePixel=0;c.Position=UDim2.new(0.294336736,0,0.134980991,0)c.Size=UDim2.new(0,505,0,284)c.ZIndex=5;d.Name="tela1"d.Parent=c;d.Active=true;d.BackgroundColor3=Color3.fromRGB(35,35,35)d.BackgroundTransparency=0.100;d.BorderColor3=Color3.fromRGB(0,0,0)d.BorderSizePixel=0;d.Position=UDim2.new(0.197935313,0,-0.00354723865,0)d.Size=UDim2.new(0,404,0,283)e.Parent=d;e.BackgroundColor3=Color3.fromRGB(255,255,255)e.BorderColor3=Color3.fromRGB(0,0,0)e.BorderSizePixel=0;e.Position=UDim2.new(0.0841584131,0,0.0845070407,0)e.Size=UDim2.new(0,100,0,100)e.Image="rbxasset://textures/ui/GuiImagePlaceholder.png"f.Parent=e;f.BackgroundColor3=Color3.fromRGB(255,255,255)f.BackgroundTransparency=1.000;f.BorderColor3=Color3.fromRGB(255,255,255)f.BorderSizePixel=0;f.Position=UDim2.new(1.14999998,0,0.25,0)f.Size=UDim2.new(0,200,0,50)f.Font=Enum.Font.Jura;f.Text="Olá Seja Bem vindo! user ( B ) abrir/fechar painel"f.TextColor3=Color3.fromRGB(255,255,255)f.TextScaled=true;f.TextSize=14.000;f.TextWrapped=true;g.Name="tela3"g.Parent=c;g.Active=true;g.BackgroundColor3=Color3.fromRGB(35,35,35)g.BackgroundTransparency=0.100;g.BorderColor3=Color3.fromRGB(255,255,255)g.BorderSizePixel=0;g.Position=UDim2.new(0.198397487,0,-0.00525751244,0)g.Size=UDim2.new(0,404,0,284)g.Visible=false;h.Name="CLICK - TP"h.Parent=g;h.BackgroundColor3=Color3.fromRGB(29,29,29)h.BorderColor3=Color3.fromRGB(0,0,0)h.BorderSizePixel=0;h.Position=UDim2.new(0.0569306947,0,0.0845070407,0)h.Size=UDim2.new(0,100,0,36)h.Font=Enum.Font.Unknown;h.Text="CLICK - TP"h.TextColor3=Color3.fromRGB(255,255,255)h.TextSize=14.000;i.Parent=h;i.BackgroundColor3=Color3.fromRGB(255,255,255)i.BackgroundTransparency=1.000;i.BorderColor3=Color3.fromRGB(255,255,255)i.BorderSizePixel=0;i.Position=UDim2.new(0.899999976,0,-0.111111112,0)i.Size=UDim2.new(0,70,0,46)i.Font=Enum.Font.Unknown;i.Text="+"i.TextColor3=Color3.fromRGB(255,0,0)i.TextScaled=true;i.TextSize=25.000;i.TextWrapped=true;j.Name="FLASHBACK"j.Parent=g;j.BackgroundColor3=Color3.fromRGB(29,29,29)j.BorderColor3=Color3.fromRGB(0,0,0)j.BorderSizePixel=0;j.Position=UDim2.new(0.0569306947,0,0.46126762,0)j.Size=UDim2.new(0,100,0,36)j.Font=Enum.Font.Unknown;j.Text="FLASHBACK"j.TextColor3=Color3.fromRGB(255,255,255)j.TextSize=14.000;k.Parent=j;k.BackgroundColor3=Color3.fromRGB(255,255,255)k.BackgroundTransparency=1.000;k.BorderColor3=Color3.fromRGB(255,255,255)k.BorderSizePixel=0;k.Position=UDim2.new(0.899999976,0,-0.138888896,0)k.Size=UDim2.new(0,70,0,46)k.Font=Enum.Font.Unknown;k.Text="+"k.TextColor3=Color3.fromRGB(255,0,0)k.TextScaled=true;k.TextSize=25.000;k.TextStrokeColor3=Color3.fromRGB(255,0,0)k.TextWrapped=true;l.Name="NOCLIP"l.Parent=g;l.BackgroundColor3=Color3.fromRGB(29,29,29)l.BorderColor3=Color3.fromRGB(0,0,0)l.BorderSizePixel=0;l.Position=UDim2.new(0.0569306947,0,0.274647892,0)l.Size=UDim2.new(0,100,0,36)l.Font=Enum.Font.Unknown;l.Text="NOCLIP"l.TextColor3=Color3.fromRGB(255,255,255)l.TextSize=14.000;m.Parent=l;m.BackgroundColor3=Color3.fromRGB(255,255,255)m.BackgroundTransparency=1.000;m.BorderColor3=Color3.fromRGB(255,255,255)m.BorderSizePixel=0;m.Position=UDim2.new(0.899999976,0,-0.138888896,0)m.Size=UDim2.new(0,70,0,46)m.Font=Enum.Font.Unknown;m.Text="+"m.TextColor3=Color3.fromRGB(255,0,0)m.TextScaled=true;m.TextSize=25.000;m.TextWrapped=true;n.Name="ANT-AFK"n.Parent=g;n.BackgroundColor3=Color3.fromRGB(29,29,29)n.BorderColor3=Color3.fromRGB(0,0,0)n.BorderSizePixel=0;n.Position=UDim2.new(0.0569306947,0,0.633802831,0)n.Size=UDim2.new(0,100,0,36)n.Font=Enum.Font.Unknown;n.Text="ANT-AFK"n.TextColor3=Color3.fromRGB(255,255,255)n.TextSize=14.000;o.Parent=n;o.BackgroundColor3=Color3.fromRGB(255,255,255)o.BackgroundTransparency=1.000;o.BorderColor3=Color3.fromRGB(255,255,255)o.BorderSizePixel=0;o.Position=UDim2.new(0.899999976,0,-0.138888896,0)o.Size=UDim2.new(0,70,0,46)o.Font=Enum.Font.Unknown;o.Text="+"o.TextColor3=Color3.fromRGB(255,0,0)o.TextScaled=true;o.TextSize=25.000;o.TextStrokeColor3=Color3.fromRGB(255,0,0)o.TextWrapped=true;p.Name="tela4"p.Parent=c;p.Active=true;p.BackgroundColor3=Color3.fromRGB(35,35,35)p.BackgroundTransparency=0.100;p.BorderColor3=Color3.fromRGB(255,255,255)p.BorderSizePixel=0;p.Position=UDim2.new(0.198397487,0,-0.00525751244,0)p.Size=UDim2.new(0,404,0,284)p.Visible=false;q.Name="ADD"q.Parent=p;q.BackgroundColor3=Color3.fromRGB(91,255,3)q.BorderColor3=Color3.fromRGB(0,0,0)q.BorderSizePixel=0;q.Position=UDim2.new(0.566831708,0,0.517605662,0)q.Size=UDim2.new(0,86,0,36)q.Font=Enum.Font.Unknown;q.Text="ADD"q.TextColor3=Color3.fromRGB(30,30,30)q.TextSize=14.000;r.Name="HELPE"r.Parent=p;r.BackgroundColor3=Color3.fromRGB(255,255,0)r.BorderColor3=Color3.fromRGB(0,0,0)r.BorderSizePixel=0;r.Position=UDim2.new(0.0569306947,0,0.517605722,0)r.Size=UDim2.new(0,100,0,36)r.Font=Enum.Font.Unknown;r.Text="HELPE"r.TextColor3=Color3.fromRGB(30,30,30)r.TextSize=14.000;s.Name="MANAGER"s.Parent=p;s.BackgroundColor3=Color3.fromRGB(85,0,255)s.BorderColor3=Color3.fromRGB(0,0,0)s.BorderSizePixel=0;s.Position=UDim2.new(0.0569306947,0,0.362676114,0)s.Size=UDim2.new(0,100,0,36)s.Font=Enum.Font.Unknown;s.Text="MANAGER"s.TextColor3=Color3.fromRGB(255,255,255)s.TextSize=14.000;t.Name="MEOW"t.Parent=p;t.BackgroundColor3=Color3.fromRGB(255,85,255)t.BorderColor3=Color3.fromRGB(0,0,0)t.BorderSizePixel=0;t.Position=UDim2.new(0.0569306947,0,0.197183102,0)t.Size=UDim2.new(0,100,0,36)t.Font=Enum.Font.Unknown;t.Text="MEOW"t.TextColor3=Color3.fromRGB(255,255,255)t.TextSize=14.000;u.Name="OWNER"u.Parent=p;u.BackgroundColor3=Color3.fromRGB(98,0,0)u.BorderColor3=Color3.fromRGB(0,0,0)u.BorderSizePixel=0;u.Position=UDim2.new(0.0569306947,0,0.0457746461,0)u.Size=UDim2.new(0,100,0,36)u.Font=Enum.Font.Unknown;u.Text="OWNER"u.TextColor3=Color3.fromRGB(255,255,255)u.TextSize=14.000;v.Parent=p;v.BackgroundColor3=Color3.fromRGB(29,29,29)v.BorderColor3=Color3.fromRGB(255,255,255)v.BorderSizePixel=0;v.Position=UDim2.new(0.425742567,0,0.362676114,0)v.Size=UDim2.new(0,200,0,33)v.Font=Enum.Font.SourceSans;v.Text=""v.TextColor3=Color3.fromRGB(255,255,255)v.TextSize=14.000;w.Name="ID"w.Parent=v;w.BackgroundColor3=Color3.fromRGB(255,255,255)w.BackgroundTransparency=1.000;w.BorderColor3=Color3.fromRGB(0,0,0)w.BorderSizePixel=0;w.Position=UDim2.new(0.109999999,0,-2.06023884,0)w.Size=UDim2.new(0,200,0,21)w.Font=Enum.Font.Jura;w.Text="ID"w.TextColor3=Color3.fromRGB(255,255,255)w.TextSize=14.000;w.TextStrokeColor3=Color3.fromRGB(255,255,255)x.Name="DISPLAY NAME"x.Parent=v;x.BackgroundColor3=Color3.fromRGB(255,255,255)x.BackgroundTransparency=1.000;x.BorderColor3=Color3.fromRGB(0,0,0)x.BorderSizePixel=0;x.Position=UDim2.new(0.11088226,0,-1.31108928,0)x.Size=UDim2.new(0,200,0,21)x.Font=Enum.Font.Jura;x.Text="DISPLAY NAME"x.TextColor3=Color3.fromRGB(255,255,255)x.TextSize=14.000;x.TextStrokeColor3=Color3.fromRGB(255,255,255)y.Parent=v;y.BackgroundColor3=Color3.fromRGB(255,255,255)y.BackgroundTransparency=1.000;y.BorderColor3=Color3.fromRGB(0,0,0)y.BorderSizePixel=0;y.Position=UDim2.new(-0.000989990192,0,-2.69846368,0)y.Size=UDim2.new(0,71,0,65)y.Image="rbxasset://textures/ui/GuiImagePlaceholder.png"z.Name="USER"z.Parent=p;z.BackgroundColor3=Color3.fromRGB(255,255,255)z.BorderColor3=Color3.fromRGB(255,255,255)z.BorderSizePixel=0;z.Position=UDim2.new(0.0569306947,0,0.823943794,0)z.Size=UDim2.new(0,100,0,36)z.Font=Enum.Font.Unknown;z.Text="USER"z.TextColor3=Color3.fromRGB(0,0,0)z.TextSize=14.000;A.Name="VIP"A.Parent=p;A.BackgroundColor3=Color3.fromRGB(0,255,0)A.BorderColor3=Color3.fromRGB(255,255,255)A.BorderSizePixel=0;A.Position=UDim2.new(0.0569306947,0,0.6725353,0)A.Size=UDim2.new(0,100,0,36)A.Font=Enum.Font.Unknown;A.Text="VIP"A.TextColor3=Color3.fromRGB(0,0,0)A.TextSize=14.000;B.Name="ABAS"B.Parent=c;B.BackgroundColor3=Color3.fromRGB(255,255,255)B.BackgroundTransparency=1.000;B.BorderColor3=Color3.fromRGB(0,0,0)B.BorderSizePixel=0;B.Position=UDim2.new(0.284243047,0,0.13389121,0)B.Size=UDim2.new(0,100,0,100)C.Name="botoes"C.Parent=B;C.BackgroundColor3=Color3.fromRGB(53,53,53)C.BackgroundTransparency=0.100;C.BorderColor3=Color3.fromRGB(0,0,0)C.BorderSizePixel=0;C.Position=UDim2.new(-1.45186985,0,-0.392296761,0)C.Size=UDim2.new(0,101,0,284)D.Name="butela5"D.Parent=C;D.BackgroundColor3=Color3.fromRGB(29,29,29)D.BorderColor3=Color3.fromRGB(0,0,0)D.BorderSizePixel=0;D.Position=UDim2.new(-9.91065899e-05,0,0.485915452,0)D.Size=UDim2.new(0,100,0,36)D.Font=Enum.Font.Unknown;D.Text="VIP"D.TextColor3=Color3.fromRGB(255,255,255)D.TextSize=14.000;E.Name="butela4"E.Parent=C;E.BackgroundColor3=Color3.fromRGB(29,29,29)E.BorderColor3=Color3.fromRGB(0,0,0)E.BorderSizePixel=0;E.Position=UDim2.new(0.00990068819,0,0.643350244,0)E.Size=UDim2.new(0,98,0,34)E.Font=Enum.Font.Unknown;E.Text="ADM"E.TextColor3=Color3.fromRGB(255,255,255)E.TextSize=14.000;F.Name="butela3"F.Parent=C;F.BackgroundColor3=Color3.fromRGB(29,29,29)F.BorderColor3=Color3.fromRGB(0,0,0)F.BorderSizePixel=0;F.Position=UDim2.new(0.00980218593,0,0.322183102,0)F.Size=UDim2.new(0,100,0,35)F.Font=Enum.Font.Unknown;F.Text="MISC"F.TextColor3=Color3.fromRGB(255,255,255)F.TextSize=14.000;G.Name="butela2"G.Parent=C;G.BackgroundColor3=Color3.fromRGB(29,29,29)G.BorderColor3=Color3.fromRGB(0,0,0)G.BorderSizePixel=0;G.Position=UDim2.new(0.00990098994,0,0.158450708,0)G.Size=UDim2.new(0,100,0,35)G.Font=Enum.Font.Unknown;G.Text="TARGET"G.TextColor3=Color3.fromRGB(255,255,255)G.TextSize=14.000;H.Name="butela1"H.Parent=C;H.BackgroundColor3=Color3.fromRGB(29,29,29)H.BorderColor3=Color3.fromRGB(36,36,36)H.BorderSizePixel=0;H.Position=UDim2.new(0.00990098994,0,-0.00176056335,0)H.Size=UDim2.new(0,100,0,35)H.Font=Enum.Font.Unknown;H.Text="HOME"H.TextColor3=Color3.fromRGB(255,255,255)H.TextSize=14.000;I.Name="butela6"I.Parent=C;I.BackgroundColor3=Color3.fromRGB(29,29,29)I.BorderColor3=Color3.fromRGB(0,0,0)I.BorderSizePixel=0;I.Position=UDim2.new(0.00980188325,0,0.795774579,0)I.Size=UDim2.new(0,100,0,36)I.Visible=false;I.Font=Enum.Font.Unknown;I.Text="NOTIFICAR"I.TextColor3=Color3.fromRGB(255,255,255)I.TextSize=14.000;J.Name="TEXTOS"J.Parent=c;J.BackgroundColor3=Color3.fromRGB(35,35,35)J.BackgroundTransparency=1.000;J.BorderColor3=Color3.fromRGB(0,0,0)J.BorderSizePixel=0;J.Position=UDim2.new(0.36493966,0,0.208588958,0)J.Size=UDim2.new(0,404,0,284)K.Parent=J;K.BackgroundColor3=Color3.fromRGB(255,255,255)K.BackgroundTransparency=1.000;K.BorderColor3=Color3.fromRGB(0,0,0)K.BorderSizePixel=0;K.Position=UDim2.new(0.485148519,0,0.672535241,0)K.Size=UDim2.new(0,200,0,33)K.Font=Enum.Font.Unknown;K.Text="v1.1"K.TextColor3=Color3.fromRGB(255,255,255)K.TextSize=17.000;K.TextWrapped=true;L.Parent=J;L.BackgroundColor3=Color3.fromRGB(255,255,255)L.BackgroundTransparency=1.000;L.BorderColor3=Color3.fromRGB(0,0,0)L.BorderSizePixel=0;L.Position=UDim2.new(0.405940592,0,-0.372297049,0)L.Size=UDim2.new(0,232,0,124)L.Font=Enum.Font.Unknown;L.Text="4e20"L.TextColor3=Color3.fromRGB(255,255,255)L.TextSize=17.000;L.TextWrapped=true;M.Parent=J;M.BackgroundColor3=Color3.fromRGB(255,255,255)M.BackgroundTransparency=1.000;M.BorderColor3=Color3.fromRGB(0,0,0)M.BorderSizePixel=0;M.Position=UDim2.new(0.321782172,0,-0.225352108,0)M.Size=UDim2.new(0,149,0,41)M.Font=Enum.Font.Unknown;M.Text="Panel"M.TextColor3=Color3.fromRGB(255,255,255)M.TextSize=20.000;M.TextStrokeTransparency=0.100;M.TextTransparency=0.100;M.TextWrapped=true;N.Name="tela6"N.Parent=c;N.Active=true;N.BackgroundColor3=Color3.fromRGB(35,35,35)N.BackgroundTransparency=0.100;N.BorderColor3=Color3.fromRGB(255,255,255)N.BorderSizePixel=0;N.Position=UDim2.new(0.198397487,0,-0.00525751244,0)N.Size=UDim2.new(0,404,0,284)N.Visible=false;O.Name="ENVIAR"O.Parent=N;O.BackgroundColor3=Color3.fromRGB(29,29,29)O.BorderColor3=Color3.fromRGB(0,0,0)O.BorderSizePixel=0;O.Position=UDim2.new(0.376237631,0,0.644366324,0)O.Size=UDim2.new(0,100,0,36)O.Font=Enum.Font.Unknown;O.Text="ENVIAR"O.TextColor3=Color3.fromRGB(255,255,255)O.TextSize=14.000;P.Parent=N;P.BackgroundColor3=Color3.fromRGB(29,29,29)P.BorderColor3=Color3.fromRGB(255,255,255)P.BorderSizePixel=0;P.Position=UDim2.new(0.252475262,0,0.320422739,0)P.Size=UDim2.new(0,200,0,83)P.Font=Enum.Font.SourceSans;P.Text=""P.TextColor3=Color3.fromRGB(255,255,255)P.TextSize=14.000;P.TextXAlignment=Enum.TextXAlignment.Left;P.TextYAlignment=Enum.TextYAlignment.Top;Q.Name="DISPLAY NAME"Q.Parent=P;Q.BackgroundColor3=Color3.fromRGB(255,255,255)Q.BackgroundTransparency=1.000;Q.BorderColor3=Color3.fromRGB(0,0,0)Q.BorderSizePixel=0;Q.Position=UDim2.new(-0.00411773659,0,-0.384108573,0)Q.Size=UDim2.new(0,200,0,21)Q.Font=Enum.Font.Jura;Q.Text="MENSAGEM GLOBAL"Q.TextColor3=Color3.fromRGB(255,255,255)Q.TextSize=14.000;Q.TextStrokeColor3=Color3.fromRGB(255,255,255)R.Name="tela5"R.Parent=c;R.Active=true;R.BackgroundColor3=Color3.fromRGB(35,35,35)R.BackgroundTransparency=0.100;R.BorderColor3=Color3.fromRGB(255,255,255)R.BorderSizePixel=0;R.Position=UDim2.new(0.198397487,0,-0.00525751244,0)R.Size=UDim2.new(0,404,0,284)R.Visible=false;S.Name="PINCEL"S.Parent=R;S.BackgroundColor3=Color3.fromRGB(255,255,255)S.BackgroundTransparency=0.100;S.BorderColor3=Color3.fromRGB(0,0,0)S.BorderSizePixel=0;S.Position=UDim2.new(0.784653485,0,0.739436626,0)S.Size=UDim2.new(0,63,0,57)S.Image="rbxassetid://85851959324603"T.Name="FLING"T.Parent=R;T.BackgroundColor3=Color3.fromRGB(29,29,29)T.BorderColor3=Color3.fromRGB(0,0,0)T.BorderSizePixel=0;T.Position=UDim2.new(0.0569306947,0,0.274647892,0)T.Size=UDim2.new(0,100,0,36)T.Font=Enum.Font.Unknown;T.Text="FLING"T.TextColor3=Color3.fromRGB(255,255,255)T.TextSize=14.000;U.Parent=T;U.BackgroundColor3=Color3.fromRGB(255,255,255)U.BackgroundTransparency=1.000;U.BorderColor3=Color3.fromRGB(255,255,255)U.BorderSizePixel=0;U.Position=UDim2.new(0.899999976,0,-0.138888896,0)U.Size=UDim2.new(0,70,0,46)U.Font=Enum.Font.Unknown;U.Text="+"U.TextColor3=Color3.fromRGB(255,0,0)U.TextScaled=true;U.TextSize=25.000;U.TextWrapped=true;V.Name="INVISIVEL"V.Parent=R;V.BackgroundColor3=Color3.fromRGB(29,29,29)V.BorderColor3=Color3.fromRGB(0,0,0)V.BorderSizePixel=0;V.Position=UDim2.new(0.0569306947,0,0.633802831,0)V.Size=UDim2.new(0,100,0,36)V.Font=Enum.Font.Unknown;V.Text="Invisibility"V.TextColor3=Color3.fromRGB(255,255,255)V.TextSize=14.000;W.Parent=V;W.BackgroundColor3=Color3.fromRGB(255,255,255)W.BackgroundTransparency=1.000;W.BorderColor3=Color3.fromRGB(255,255,255)W.BorderSizePixel=0;W.Position=UDim2.new(0.899999976,0,-0.138888896,0)W.Size=UDim2.new(0,70,0,46)W.Font=Enum.Font.Unknown;W.Text="+"W.TextColor3=Color3.fromRGB(255,0,0)W.TextScaled=true;W.TextSize=25.000;W.TextStrokeColor3=Color3.fromRGB(255,0,0)W.TextWrapped=true;X.Name="SPPED"X.Parent=R;X.BackgroundColor3=Color3.fromRGB(29,29,29)X.BorderColor3=Color3.fromRGB(0,0,0)X.BorderSizePixel=0;X.Position=UDim2.new(0.0569306947,0,0.0845070407,0)X.Size=UDim2.new(0,100,0,36)X.Font=Enum.Font.Unknown;X.Text="SPEED"X.TextColor3=Color3.fromRGB(255,255,255)X.TextSize=14.000;Y.Parent=X;Y.BackgroundColor3=Color3.fromRGB(255,255,255)Y.BackgroundTransparency=1.000;Y.BorderColor3=Color3.fromRGB(255,255,255)Y.BorderSizePixel=0;Y.Position=UDim2.new(0.899999976,0,-0.111111112,0)Y.Size=UDim2.new(0,70,0,46)Y.Font=Enum.Font.Unknown;Y.Text="+"Y.TextColor3=Color3.fromRGB(255,0,0)Y.TextScaled=true;Y.TextSize=25.000;Y.TextWrapped=true;Z.Name="SPIN"Z.Parent=R;Z.BackgroundColor3=Color3.fromRGB(29,29,29)Z.BorderColor3=Color3.fromRGB(0,0,0)Z.BorderSizePixel=0;Z.Position=UDim2.new(0.0569306947,0,0.46126762,0)Z.Size=UDim2.new(0,100,0,36)Z.Font=Enum.Font.Unknown;Z.Text="SPIN"Z.TextColor3=Color3.fromRGB(255,255,255)Z.TextSize=14.000;_.Parent=Z;_.BackgroundColor3=Color3.fromRGB(255,255,255)_.BackgroundTransparency=1.000;_.BorderColor3=Color3.fromRGB(255,255,255)_.BorderSizePixel=0;_.Position=UDim2.new(0.899999976,0,-0.138888896,0)_.Size=UDim2.new(0,70,0,46)_.Font=Enum.Font.Unknown;_.Text="+"_.TextColor3=Color3.fromRGB(255,0,0)_.TextScaled=true;_.TextSize=25.000;_.TextStrokeColor3=Color3.fromRGB(255,0,0)_.TextWrapped=true;a0.Name="AUTO-PARRY"a0.Parent=R;a0.BackgroundColor3=Color3.fromRGB(29,29,29)a0.BorderColor3=Color3.fromRGB(0,0,0)a0.BorderSizePixel=0;a0.Position=UDim2.new(0.0569306947,0,0.813380301,0)a0.Size=UDim2.new(0,100,0,36)a0.Font=Enum.Font.Unknown;a0.Text="AUTO-PARRY"a0.TextColor3=Color3.fromRGB(255,255,255)a0.TextSize=14.000;a1.Parent=a0;a1.BackgroundColor3=Color3.fromRGB(255,255,255)a1.BackgroundTransparency=1.000;a1.BorderColor3=Color3.fromRGB(255,255,255)a1.BorderSizePixel=0;a1.Position=UDim2.new(0.899999976,0,-0.138888896,0)a1.Size=UDim2.new(0,70,0,46)a1.Font=Enum.Font.Unknown;a1.Text="+"a1.TextColor3=Color3.fromRGB(255,0,0)a1.TextScaled=true;a1.TextSize=25.000;a1.TextWrapped=true;a2.Name="tela2"a2.Parent=c;a2.Active=true;a2.BackgroundColor3=Color3.fromRGB(35,35,35)a2.BackgroundTransparency=0.100;a2.BorderColor3=Color3.fromRGB(255,255,255)a2.BorderSizePixel=0;a2.Position=UDim2.new(0.194437101,0,-0.00525751244,0)a2.Size=UDim2.new(0,404,0,284)a2.Visible=false;a3.Name="AVATA"a3.Parent=a2;a3.BackgroundColor3=Color3.fromRGB(255,255,255)a3.BackgroundTransparency=1.000;a3.BorderColor3=Color3.fromRGB(0,0,0)a3.BorderSizePixel=0;a3.Position=UDim2.new(0.599009871,0,0.119718313,0)a3.Size=UDim2.new(0,71,0,65)a3.Image="rbxasset://textures/ui/GuiImagePlaceholder.png"a4.Name="VIEW"a4.Parent=a2;a4.BackgroundColor3=Color3.fromRGB(29,29,29)a4.BorderColor3=Color3.fromRGB(0,0,0)a4.BorderSizePixel=0;a4.Position=UDim2.new(0.0569306947,0,0.0845070407,0)a4.Size=UDim2.new(0,100,0,36)a4.Font=Enum.Font.Unknown;a4.Text="VIEW"a4.TextColor3=Color3.fromRGB(255,255,255)a4.TextSize=14.000;a5.Parent=a4;a5.BackgroundColor3=Color3.fromRGB(255,255,255)a5.BackgroundTransparency=1.000;a5.BorderColor3=Color3.fromRGB(255,255,255)a5.BorderSizePixel=0;a5.Position=UDim2.new(0.899999976,0,-0.111111112,0)a5.Size=UDim2.new(0,70,0,46)a5.Font=Enum.Font.Unknown;a5.Text="+"a5.TextColor3=Color3.fromRGB(255,0,0)a5.TextScaled=true;a5.TextSize=25.000;a5.TextWrapped=true;a6.Name="FOLLOW"a6.Parent=a2;a6.BackgroundColor3=Color3.fromRGB(29,29,29)a6.BorderColor3=Color3.fromRGB(0,0,0)a6.BorderSizePixel=0;a6.Position=UDim2.new(0.0569306947,0,0.274647892,0)a6.Size=UDim2.new(0,100,0,36)a6.Font=Enum.Font.Unknown;a6.Text="FOLLOW"a6.TextColor3=Color3.fromRGB(255,255,255)a6.TextSize=14.000;a7.Parent=a6;a7.BackgroundColor3=Color3.fromRGB(255,255,255)a7.BackgroundTransparency=1.000;a7.BorderColor3=Color3.fromRGB(255,255,255)a7.BorderSizePixel=0;a7.Position=UDim2.new(0.899999976,0,-0.138888896,0)a7.Size=UDim2.new(0,70,0,46)a7.Font=Enum.Font.Unknown;a7.Text="+"a7.TextColor3=Color3.fromRGB(255,0,0)a7.TextScaled=true;a7.TextSize=25.000;a7.TextWrapped=true;a8.Name="FOCUS"a8.Parent=a2;a8.BackgroundColor3=Color3.fromRGB(29,29,29)a8.BorderColor3=Color3.fromRGB(0,0,0)a8.BorderSizePixel=0;a8.Position=UDim2.new(0.0569306947,0,0.46126762,0)a8.Size=UDim2.new(0,100,0,36)a8.Font=Enum.Font.Unknown;a8.Text="FOCUS"a8.TextColor3=Color3.fromRGB(255,255,255)a8.TextSize=14.000;a9.Parent=a8;a9.BackgroundColor3=Color3.fromRGB(255,255,255)a9.BackgroundTransparency=1.000;a9.BorderColor3=Color3.fromRGB(255,255,255)a9.BorderSizePixel=0;a9.Position=UDim2.new(0.899999976,0,-0.138888896,0)a9.Size=UDim2.new(0,70,0,46)a9.Font=Enum.Font.Unknown;a9.Text="+"a9.TextColor3=Color3.fromRGB(255,0,0)a9.TextScaled=true;a9.TextSize=25.000;a9.TextStrokeColor3=Color3.fromRGB(255,0,0)a9.TextWrapped=true;aa.Name="@username"aa.Parent=a2;aa.BackgroundColor3=Color3.fromRGB(29,29,29)aa.BorderColor3=Color3.fromRGB(255,255,255)aa.BorderSizePixel=0;aa.Position=UDim2.new(0.438118815,0,0.556338012,0)aa.Size=UDim2.new(0,200,0,23)aa.Font=Enum.Font.SourceSans;aa.Text=""aa.TextColor3=Color3.fromRGB(255,255,255)aa.TextSize=14.000;aa.TextWrapped=true;ab.Name="coloque o @ do usuario!"ab.Parent=aa;ab.BackgroundColor3=Color3.fromRGB(255,255,255)ab.BackgroundTransparency=1.000;ab.BorderColor3=Color3.fromRGB(0,0,0)ab.BorderSizePixel=0;ab.Position=UDim2.new(0,0,0.999999344,0)ab.Size=UDim2.new(0,200,0,21)ab.Font=Enum.Font.Jura;ab.Text="coloque o @ do usuario!"ab.TextColor3=Color3.fromRGB(255,255,255)ab.TextSize=14.000;ab.TextStrokeColor3=Color3.fromRGB(255,255,255)ac.Name="ID"ac.Parent=aa;ac.BackgroundColor3=Color3.fromRGB(255,255,255)ac.BackgroundTransparency=1.000;ac.BorderColor3=Color3.fromRGB(0,0,0)ac.BorderSizePixel=0;ac.Position=UDim2.new(0,0,-2.43478394,0)ac.Size=UDim2.new(0,200,0,21)ac.Font=Enum.Font.Jura;ac.Text="ID"ac.TextColor3=Color3.fromRGB(255,255,255)ac.TextSize=14.000;ac.TextStrokeColor3=Color3.fromRGB(255,255,255)ad.Name="DISPLAY NAME"ad.Parent=aa;ad.BackgroundColor3=Color3.fromRGB(255,255,255)ad.BackgroundTransparency=1.000;ad.BorderColor3=Color3.fromRGB(0,0,0)ad.BorderSizePixel=0;ad.Position=UDim2.new(0,0,-1.52174044,0)ad.Size=UDim2.new(0,200,0,21)ad.Font=Enum.Font.Jura;ad.Text="DISPLAY NAME"ad.TextColor3=Color3.fromRGB(255,255,255)ad.TextSize=14.000;ad.TextStrokeColor3=Color3.fromRGB(255,255,255)local function ae()local af=Instance.new('LocalScript',a)local ag=af.Parent;local ah=ag:WaitForChild("CorpoPainel")local ai=ah:WaitForChild("ABAS"):WaitForChild("botoes")local aj={["butela1"]=ah:WaitForChild("tela1"),["butela2"]=ah:WaitForChild("tela2"),["butela3"]=ah:WaitForChild("tela3"),["butela4"]=ah:WaitForChild("tela4"),["butela5"]=ah:WaitForChild("tela5"),["butela6"]=ah:WaitForChild("tela6")}local function ak(al)for am,an in pairs(aj)do an.Visible=false end;if aj[al]then aj[al].Visible=true end end;for al,am in pairs(aj)do local ao=ai:FindFirstChild(al)if ao then ao.MouseButton1Click:Connect(function()ak(al)end)end end end;coroutine.wrap(ae)()local function ap()local af=Instance.new('LocalScript',a)local aq=game:GetService("UserInputService")local ar=game:GetService("TweenService")local ag=af.Parent;local as=ag:WaitForChild("CorpoPainel")aq.InputBegan:Connect(function(at,au)if au then return end;if at.KeyCode==Enum.KeyCode.B then as.Visible=not as.Visible end end)local av,aw,ax,ay;local function az(at)local aA=at.Position-ax;local aB=UDim2.new(ay.X.Scale,ay.X.Offset+aA.X,ay.Y.Scale,ay.Y.Offset+aA.Y)local aC=TweenInfo.new(0.2,Enum.EasingStyle.Exponential,Enum.EasingDirection.Out)ar:Create(as,aC,{Position=aB}):Play()end;as.InputBegan:Connect(function(at)if at.UserInputType==Enum.UserInputType.MouseButton1 or at.UserInputType==Enum.UserInputType.Touch then av=true;ax=at.Position;ay=as.Position;at.Changed:Connect(function()if at.UserInputState==Enum.UserInputState.End then av=false end end)end end)as.InputChanged:Connect(function(at)if at.UserInputType==Enum.UserInputType.MouseMovement or at.UserInputType==Enum.UserInputType.Touch then aw=at end end)aq.InputChanged:Connect(function(at)if at==aw and av then az(at)end end)end;coroutine.wrap(ap)()local function aD()local af=Instance.new('LocalScript',d)local aE=game:GetService("Players")local aF=aE.LocalPlayer;local d=af.Parent;local aG=d:WaitForChild("ImageLabel")local function aH()local aI=aF.UserId;local aJ=Enum.ThumbnailType.HeadShot;local aK=Enum.ThumbnailSize.Size420x420;local aL,aM=aE:GetUserThumbnailAsync(aI,aJ,aK)if aM then aG.Image=aL;aG.BackgroundTransparency=1 end end;task.spawn(aH)end;coroutine.wrap(aD)()local function aN()local af=Instance.new('LocalScript',h)local aE=game:GetService("Players")local aq=game:GetService("UserInputService")local ar=game:GetService("TweenService")local aF=aE.LocalPlayer;local aO=aF:GetMouse()local ao=af.Parent;local aP=ao:WaitForChild("TextLabel")local aQ=ao.Parent.Parent.Parent;local aR=aQ:FindFirstChild("AvisoTP")local aS=false;local function aT(aU)if aR then aR.Text=aU;aR.Visible=true;task.wait(4)aR.Visible=false end end;ao.MouseButton1Click:Connect(function()aS=not aS;if aS then aP.TextColor3=Color3.fromRGB(0,255,0)task.spawn(function()aT("SEGURE ( CTRL + CLICK ) PARA TELEPORTAR")end)else aP.TextColor3=Color3.fromRGB(255,0,0)end end)aO.Button1Down:Connect(function()if aS and aq:IsKeyDown(Enum.KeyCode.LeftControl)then local aV=aO.Hit.p;local aW=aF.Character;if aW and aW:FindFirstChild("HumanoidRootPart")then aW.HumanoidRootPart.CFrame=CFrame.new(aV+Vector3.new(0,3,0))end end end)end;coroutine.wrap(aN)()local function aX()local af=Instance.new('LocalScript',j)local aY=game:GetService("RunService")local aq=game:GetService("UserInputService")local aE=game:GetService("Players")local aF=aE.LocalPlayer;local ao=af.Parent;local aP=ao:WaitForChild("TextLabel")local aZ=1000;local a_=0.03;local b0=0.12;local b1=false;local b2={}local b3=0;ao.MouseButton1Click:Connect(function()b1=not b1;if b1 then aP.TextColor3=Color3.fromRGB(0,255,0)else aP.TextColor3=Color3.fromRGB(255,0,0)table.clear(b2)end end)aY.Heartbeat:Connect(function(b4)if not b1 then return end;local aW=aF.Character;local b5=aW and aW:FindFirstChild("HumanoidRootPart")local b6=aW and aW:FindFirstChildOfClass("Humanoid")if not b5 or not b6 then return end;if aq:IsKeyDown(Enum.KeyCode.V)then b3=b3+b4;if b3>=a_ and#b2>0 then b3=0;local b7=table.remove(b2,1)if b7 then local b8=1-b0^(b4*60)b5.CFrame=b5.CFrame:Lerp(b7.cf,b8)b5.Velocity=-b7.vel*0.3;b6:ChangeState(b7.state)if b7.tool and not aW:FindFirstChildOfClass("Tool")then b6:EquipTool(b7.tool)end end end else b3=b3+b4;if b3>=a_ then b3=0;table.insert(b2,1,{cf=b5.CFrame,vel=b5.Velocity,state=b6:GetState(),tool=aW:FindFirstChildOfClass("Tool")})if#b2>aZ/a_ then table.remove(b2,#b2)end end end end)end;coroutine.wrap(aX)()local function b9()local af=Instance.new('LocalScript',l)local ba=af.Parent;local bb=ba:FindFirstChild("TextLabel")local bc=game:GetService("Players").LocalPlayer;local aY=game:GetService("RunService")local bd=false;local be=nil;ba.MouseButton1Click:Connect(function()if not bd then bd=true;if bb then bb.TextColor3=Color3.fromRGB(0,255,0)end;be=aY.Stepped:Connect(function()if bc.Character then for am,bf in ipairs(bc.Character:GetDescendants())do if bf:IsA("BasePart")and bf.CanCollide==true then bf.CanCollide=false end end end end)else bd=false;if bb then bb.TextColor3=Color3.fromRGB(255,0,0)end;if be then be:Disconnect()be=nil end;if bc.Character then for am,bf in ipairs(bc.Character:GetDescendants())do if bf:IsA("BasePart")then bf.CanCollide=true end end end end end)end;coroutine.wrap(b9)()local function bg()local af=Instance.new('LocalScript',n)local aE=game:GetService("Players")local bh=game:GetService("VirtualUser")local bi=aE.LocalPlayer;local ao=af.Parent;local aP=ao:WaitForChild("TextLabel")local b1=false;ao.MouseButton1Click:Connect(function()b1=not b1;if b1 then aP.TextColor3=Color3.fromRGB(0,255,0)else aP.TextColor3=Color3.fromRGB(255,0,0)end end)bi.Idled:Connect(function()if b1 then bh:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)task.wait(0.5)bh:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)end end)end;coroutine.wrap(bg)()local function bj()local af=Instance.new('LocalScript',p)local aE=game:GetService("Players")local ar=game:GetService("TweenService")local bk=game:GetService("HttpService")local bi=aE.LocalPlayer;local function bl()local bm=bi:WaitForChild("PlayerGui")for am,bn in pairs(bm:GetChildren())do if bn.Name=="NotificacoesPainel"and bn:IsA("ScreenGui")then bn:Destroy()end end end;bl()local bo=af.Parent;local bp=bo:WaitForChild("TextBox")local bq=bo:WaitForChild("ADD")local br=bp:WaitForChild("ImageLabel")local bs=bp:WaitForChild("DISPLAY NAME")local bt=bp:WaitForChild("ID")local ai=bo.Parent:WaitForChild("ABAS"):WaitForChild("botoes")local bu={["ADM"]=ai:WaitForChild("butela4"),["VIP"]=ai:WaitForChild("butela5")}local bv={["ADM"]=bo.Parent:WaitForChild("tela4"),["VIP"]=bo.Parent:WaitForChild("tela5")}local bw=9657477548;local bx=""local by="https://foure20-backend.onrender.com"local bz="4E20_GLOBAL"local bA={["OWNER"]=Color3.fromRGB(150,0,0),["MEOW"]=Color3.fromRGB(255,100,255),["MANAGER"]=Color3.fromRGB(85,0,255),["HELPE"]=Color3.fromRGB(255,255,0),["VIP"]=Color3.fromRGB(0,255,0),["USER"]=Color3.fromRGB(255,255,255)}local bB={["OWNER"]=true,["MANAGER"]=true}local bC={["OWNER"]=true,["MANAGER"]=true,["MEOW"]=true,["VIP"]=true}local bD={}if bu["ADM"]then bu["ADM"].Visible=false end;if bu["VIP"]then bu["VIP"].Visible=false end;if bv["ADM"]then bv["ADM"].Visible=false end;if bv["VIP"]then bv["VIP"].Visible=false end;local aQ=Instance.new("ScreenGui",bi.PlayerGui)aQ.Name="NotificacoesPainel"aQ.ResetOnSpawn=false;local function bE(bF,aU,bG,bH,bI)bG=bG or 4;for am,bJ in pairs(aQ:GetChildren())do if bJ:IsA("Frame")then ar:Create(bJ,TweenInfo.new(0.3),{Position=UDim2.new(1,-300,1,bJ.Position.Y.Offset-85)}):Play()end end;local bK=bA[bI]or Color3.fromRGB(150,0,0)local an=Instance.new("Frame",aQ)an.Size=UDim2.new(0,280,0,75)an.Position=UDim2.new(1,10,1,-95)an.BackgroundColor3=Color3.fromRGB(30,30,30)an.BorderSizePixel=0;an.AnchorPoint=Vector2.new(0,1)Instance.new("UICorner",an).CornerRadius=UDim.new(0,8)local bL=Instance.new("Frame",an)bL.Size=UDim2.new(0,5,1,0)bL.BackgroundColor3=bK;bL.BorderSizePixel=0;Instance.new("UICorner",bL).CornerRadius=UDim.new(0,8)local bM=Instance.new("TextLabel",an)bM.Size=UDim2.new(1,-60,0,30)bM.Position=UDim2.new(0,20,0,10)bM.BackgroundTransparency=1;bM.Text=bF:upper()bM.TextColor3=Color3.fromRGB(255,255,255)bM.Font=Enum.Font.GothamBold;bM.TextSize=14;bM.TextXAlignment=Enum.TextXAlignment.Left;local bN=Instance.new("TextLabel",an)bN.Size=UDim2.new(1,-60,0,25)bN.Position=UDim2.new(0,20,0,35)bN.BackgroundTransparency=1;bN.Text=aU;bN.TextColor3=Color3.fromRGB(200,200,200)bN.Font=Enum.Font.Gotham;bN.TextSize=12;bN.TextXAlignment=Enum.TextXAlignment.Left;ar:Create(an,TweenInfo.new(0.4,Enum.EasingStyle.Back),{Position=UDim2.new(1,-300,1,-95)}):Play()task.delay(bG,function()if an and an.Parent then ar:Create(an,TweenInfo.new(0.3),{Position=UDim2.new(1,10,1,an.Position.Y.Offset)}):Play()task.wait(0.3)an:Destroy()end end)end;local function bO(bP)local bQ=syn and syn.request or http and http.request or request or HttpRequest or fluxus and fluxus.request;local bR,bS=pcall(function()return bQ(bP)end)return bR and bS or nil end;local function bT(bU)return{math.floor(bU.R*255),math.floor(bU.G*255),math.floor(bU.B*255)}end;local function bV(bW)return Color3.fromRGB(bW[1],bW[2],bW[3])end;local function bX(bY,bI,bU)pcall(function()bO({Url=by.."/settag",Method="POST",Headers={["Content-Type"]="application/json"},Body=bk:JSONEncode({player=bY,cargo=bI,cor=bT(bU),gameId=bz})})end)end;local function bZ()local bS=bO({Url=by.."/gettags?gameId="..bz,Method="GET"})return bS and bS.Body and bk:JSONDecode(bS.Body)or nil end;local function b_(bI)local c0=bi.UserId==bw or bB[bI]==true;local c1=bi.UserId==bw or bC[bI]==true;if bu["ADM"]then bu["ADM"].Visible=c0 end;if bu["VIP"]then bu["VIP"].Visible=c1 end;if bv["ADM"]and not c0 then bv["ADM"].Visible=false end;if bv["VIP"]and not c1 then bv["VIP"].Visible=false end end;local function c2(c3,aU,bU)if not(c3.Character and c3.Character:FindFirstChild("Head"))then return end;for am,c4 in pairs(c3.Character.Head:GetChildren())do if c4.Name=="TagPainel"then c4:Destroy()end end;local c5=Instance.new("BillboardGui",c3.Character.Head)c5.Name="TagPainel"c5.StudsOffset=Vector3.new(0,2.1,0)c5.AlwaysOnTop=true;c5.MaxDistance=100;c5.Size=aU=="USER"and UDim2.new(1.6,0,0.5,0)or UDim2.new(2.8,0,0.75,0)local c6=Instance.new("TextLabel",c5)c6.Size=UDim2.new(1,0,1,0)c6.BackgroundTransparency=1;c6.TextColor3=bU;c6.Font=Enum.Font.GothamBold;c6.RichText=true;c6.TextScaled=true;c6.Text="<b>"..aU.."</b>"if aU=="OWNER"or aU=="MANAGER"or aU=="MEOW"then c6.TextStrokeTransparency=1;local c7=Instance.new("UIGradient",c6)c7.Color=ColorSequence.new({ColorSequenceKeypoint.new(0,bU),ColorSequenceKeypoint.new(0.30,bU),ColorSequenceKeypoint.new(0.44,Color3.fromRGB(255,255,255)),ColorSequenceKeypoint.new(0.50,Color3.fromRGB(255,255,255)),ColorSequenceKeypoint.new(0.56,Color3.fromRGB(255,255,255)),ColorSequenceKeypoint.new(0.70,bU),ColorSequenceKeypoint.new(1,bU)})task.spawn(function()while c6 and c6.Parent do c7.Offset=Vector2.new(-1.5,0)ar:Create(c7,TweenInfo.new(3.0,Enum.EasingStyle.Sine,Enum.EasingDirection.InOut),{Offset=Vector2.new(1.5,0)}):Play()task.wait(3.8)end end)else c6.TextStrokeTransparency=0.3;c6.TextStrokeColor3=Color3.new(0,0,0)end end;bp:GetPropertyChangedSignal("Text"):Connect(function()local c8=bp.Text:lower()if c8==""then return end;for am,c9 in pairs(aE:GetPlayers())do if c9.Name:lower():find(c8)or c9.DisplayName:lower():find(c8)then bs.Text=c9.DisplayName;bt.Text="ID: "..c9.UserId;pcall(function()br.Image=aE:GetUserThumbnailAsync(c9.UserId,Enum.ThumbnailType.HeadShot,Enum.ThumbnailSize.Size150x150)end)break end end end)local ca=nil;for cb,am in pairs(bA)do if bo:FindFirstChild(cb)then bo[cb].MouseButton1Click:Connect(function()if ca then ca.BorderSizePixel=0 end;bx=cb;ca=bo[cb]ca.BorderSizePixel=3;ca.BorderColor3=Color3.new(1,1,1)end)end end;bq.MouseButton1Click:Connect(function()if bx==""then return end;for am,c9 in pairs(aE:GetPlayers())do if c9.DisplayName==bs.Text then local bU=bA[bx]bX(c9.Name,bx,bU)c2(c9,bx,bU)bD[c9.Name]=true;bE("SISTEMA",c9.DisplayName.." ATUALIZADO PARA "..bx,4,"update",bx)if c9==bi then b_(bx)end;break end end end)task.spawn(function()while task.wait(2)do pcall(function()local bP=bZ()if not bP then return end;for cc,aC in pairs(bP)do if bD[cc]then local c9=aE:FindFirstChild(cc)if c9 and c9.Character and c9.Character:FindFirstChild("Head")then local cd=c9.Character.Head:FindFirstChild("TagPainel")local ce=cd and cd:FindFirstChildOfClass("TextLabel")if not ce or ce.Text~="<b>"..aC.cargo.."</b>"then c2(c9,aC.cargo,bV(aC.cor))end end end end;local cf=bP[bi.Name]local cg=cf and cf.cargo or"USER"b_(cg)end)end end)task.spawn(function()local ch=bi.UserId==bw and"OWNER"or"USER"c2(bi,ch,bA[ch])b_(ch)local ci=0;repeat ci=ci+1;local bP=bZ()if bP and bP[bi.Name]then if bi.UserId~=bw then ch=bP[bi.Name].cargo end;break end;task.wait(0.5)until ci>=5;bX(bi.Name,ch,bA[ch])bD[bi.Name]=true;c2(bi,ch,bA[ch])b_(ch)bE("4E20 PANEL","PAINEL ATIVO — CARGO: "..ch,5,"welcome",ch)end)end;coroutine.wrap(bj)()local function cj()local af=Instance.new('LocalScript',O)local ba=af.Parent;local bb=ba:FindFirstChild("TextLabel")local bc=game:GetService("Players").LocalPlayer;local ck=bc:WaitForChild("PlayerGui")local cl=nil;ba.MouseButton1Click:Connect(function()if cl then cl:Destroy()cl=nil;if bb then bb.TextColor3=Color3.fromRGB(255,0,0)end;return end;if bb then bb.TextColor3=Color3.fromRGB(0,255,0)end;local cm=Instance.new("Frame")local cn=Instance.new("UICorner")local co=Instance.new("TextLabel")local v=Instance.new("TextBox")local cp=Instance.new("TextButton")cm.Name="SpeedMenu"cm.Parent=af:FindFirstAncestorOfClass("ScreenGui")cm.BackgroundColor3=Color3.fromRGB(30,30,30)cm.Position=UDim2.new(0.5,50,0.5,-50)cm.Size=UDim2.new(0,150,0,100)cm.Active=true;cm.Draggable=true;cn.CornerRadius=UDim.new(0,10)cn.Parent=cm;co.Size=UDim2.new(1,0,0,30)co.BackgroundTransparency=1;co.Text="VELOCIDADE"co.TextColor3=Color3.new(1,1,1)co.Font=Enum.Font.SourceSansBold;co.Parent=cm;v.Size=UDim2.new(0,100,0,30)v.Position=UDim2.new(0.5,-50,0.5,-5)v.BackgroundColor3=Color3.fromRGB(50,50,50)v.Text="16"v.TextColor3=Color3.new(1,1,1)v.Parent=cm;Instance.new("UICorner",v).CornerRadius=UDim.new(0,5)cp.Size=UDim2.new(0,25,0,25)cp.Position=UDim2.new(1,-30,0,5)cp.BackgroundColor3=Color3.fromRGB(150,0,0)cp.Text="X"cp.TextColor3=Color3.new(1,1,1)cp.Parent=cm;Instance.new("UICorner",cp).CornerRadius=UDim.new(1,0)cl=cm;v.FocusLost:Connect(function(cq)local cr=tonumber(v.Text)if cr then if bc.Character and bc.Character:FindFirstChild("Humanoid")then bc.Character.Humanoid.WalkSpeed=cr end end end)cp.MouseButton1Click:Connect(function()cm:Destroy()cl=nil;if bb then bb.TextColor3=Color3.fromRGB(255,0,0)end end)end)end;coroutine.wrap(cj)()local function cs()local af=Instance.new('LocalScript',S)local ct=af.Parent;local aQ=ct.Parent.Parent;local cu=aQ:WaitForChild("ABAS")local cv=cu:WaitForChild("botoes")local cw={Color3.fromRGB(100,100,0),Color3.fromRGB(0,100,0),Color3.fromRGB(80,0,150),Color3.fromRGB(150,0,100),Color3.fromRGB(0,80,150),Color3.fromRGB(50,120,130),Color3.fromRGB(130,30,30),Color3.fromRGB(130,80,0),Color3.fromRGB(60,100,80),Color3.fromRGB(100,70,140),Color3.fromRGB(140,140,140),Color3.fromRGB(0,120,100),Color3.fromRGB(100,50,0),Color3.fromRGB(150,100,150),Color3.fromRGB(70,90,110),Color3.fromRGB(120,130,50),Color3.fromRGB(90,40,40),Color3.fromRGB(40,40,90),Color3.fromRGB(110,110,80),Color3.fromRGB(45,45,45)}local cx=1;local ar=game:GetService("TweenService")local function cy(bU)local aC=TweenInfo.new(0.6,Enum.EasingStyle.Quint,Enum.EasingDirection.Out)ar:Create(cv,aC,{BackgroundColor3=bU}):Play()for cz=1,5 do local cA="tela"..cz;local bo=aQ:FindFirstChild(cA)if bo and bo:IsA("Frame")then ar:Create(bo,aC,{BackgroundColor3=bU}):Play()end end end;ct.MouseButton1Click:Connect(function()cx=cx+1;if cx>#cw then cx=1 end;local cB=cw[cx]cy(cB)end)end;coroutine.wrap(cs)()local function cC()local af=Instance.new('LocalScript',T)local aY=game:GetService("RunService")local aq=game:GetService("UserInputService")local aE=game:GetService("Players")local ar=game:GetService("TweenService")local aF=aE.LocalPlayer;local ao=af.Parent;local aP=ao:WaitForChild("TextLabel")local b1=false;local cD=false;local cE=nil;local cF=nil;local cG=nil;local aQ=Instance.new("ScreenGui",aF.PlayerGui)aQ.Name="NotifFling"aQ.ResetOnSpawn=false;local function bE(bF,aU,bU)bU=bU or Color3.fromRGB(150,0,0)local an=Instance.new("Frame",aQ)an.Size=UDim2.new(0,260,0,60)an.Position=UDim2.new(0,20,1,10)an.BackgroundColor3=Color3.fromRGB(18,18,18)an.BackgroundTransparency=0.05;an.BorderSizePixel=0;an.AnchorPoint=Vector2.new(0,1)an.ZIndex=10;Instance.new("UICorner",an).CornerRadius=UDim.new(0,8)local bL=Instance.new("Frame",an)bL.Size=UDim2.new(0,4,1,0)bL.BackgroundColor3=bU;bL.BorderSizePixel=0;bL.ZIndex=11;Instance.new("UICorner",bL).CornerRadius=UDim.new(0,8)local cH=Instance.new("TextLabel",an)cH.Size=UDim2.new(1,-16,0,24)cH.Position=UDim2.new(0,14,0,6)cH.BackgroundTransparency=1;cH.Text=bF;cH.TextColor3=Color3.fromRGB(255,255,255)cH.Font=Enum.Font.GothamBold;cH.TextSize=13;cH.TextXAlignment=Enum.TextXAlignment.Left;cH.ZIndex=11;local cI=Instance.new("TextLabel",an)cI.Size=UDim2.new(1,-16,0,18)cI.Position=UDim2.new(0,14,0,30)cI.BackgroundTransparency=1;cI.Text=aU;cI.TextColor3=Color3.fromRGB(170,170,170)cI.Font=Enum.Font.Gotham;cI.TextSize=11;cI.TextXAlignment=Enum.TextXAlignment.Left;cI.ZIndex=11;ar:Create(an,TweenInfo.new(0.4,Enum.EasingStyle.Back,Enum.EasingDirection.Out),{Position=UDim2.new(0,20,1,-20)}):Play()task.delay(3.5,function()ar:Create(an,TweenInfo.new(0.3,Enum.EasingStyle.Quad,Enum.EasingDirection.In),{Position=UDim2.new(0,20,1,10)}):Play()task.wait(0.35)an:Destroy()end)end;local function cJ()cD=false;if cE then pcall(function()cE:Destroy()end)cE=nil end;if cF then cF:Disconnect()cF=nil end;if cG then cG:Disconnect()cG=nil end;local aW=aF.Character;if aW then for am,c9 in pairs(aW:GetDescendants())do if c9:IsA("BasePart")then c9.CanCollide=true end end end end;local function cK()local aW=aF.Character;if not aW then return end;local b5=aW:FindFirstChild("HumanoidRootPart")if not b5 then return end;cJ()cD=true;cE=Instance.new("BodyAngularVelocity")cE.Name="FlingForce"cE.MaxTorque=Vector3.new(math.huge,math.huge,math.huge)cE.P=30000;cE.AngularVelocity=Vector3.new(10000,10000,10000)cE.Parent=b5;cF=aY.Stepped:Connect(function()local cL=aF.Character;if not cL then return end;for am,c9 in pairs(cL:GetDescendants())do if c9:IsA("BasePart")then c9.CanCollide=false end end end)local cM=0;cG=aY.Heartbeat:Connect(function(b4)cM=cM+b4;local cL=aF.Character;if not cL then return end;local bQ=cL:FindFirstChild("HumanoidRootPart")if not bQ then return end;local cN=bQ:FindFirstChild("FlingForce")if not cN then return end;local cO=math.sin(cM*5)*10000;cN.AngularVelocity=Vector3.new(cO,10000,cO)end)aP.TextColor3=Color3.fromRGB(255,50,50)bE("💥 Fling ATIVADO","Chegue perto de alguém!",Color3.fromRGB(255,50,50))end;ao.MouseButton1Click:Connect(function()b1=not b1;if b1 then aP.TextColor3=Color3.fromRGB(0,255,0)bE("💥 Fling Liberado","Pressione X para ativar",Color3.fromRGB(0,200,0))else aP.TextColor3=Color3.fromRGB(255,0,0)cJ()bE("💥 Fling Bloqueado","Desativado pelo painel",Color3.fromRGB(100,100,100))end end)aq.InputBegan:Connect(function(at,au)if au then return end;if not b1 then return end;if at.KeyCode==Enum.KeyCode.X then if cD then cJ()aP.TextColor3=Color3.fromRGB(0,255,0)bE("💥 Fling DESATIVADO","Voltou ao normal",Color3.fromRGB(0,200,0))else cK()end end end)aF.CharacterAdded:Connect(function()task.wait(0.5)cJ()if b1 then aP.TextColor3=Color3.fromRGB(0,255,0)end end)end;coroutine.wrap(cC)()local function cP()local af=Instance.new('LocalScript',V)local ba=af.Parent;local bb=ba:FindFirstChild("TextLabel")local bc=game:GetService("Players").LocalPlayer;local cQ=false;local function cR(aW,cS)for am,c9 in ipairs(aW:GetDescendants())do if c9:IsA("BasePart")and c9.Name~="HumanoidRootPart"then c9.Transparency=cS end end end;ba.MouseButton1Click:Connect(function()local aW=bc.Character;if not aW then return end;if not cQ then cQ=true;if bb then bb.TextColor3=Color3.fromRGB(0,255,0)end;cR(aW,0.5)local cT=aW.HumanoidRootPart.CFrame;task.wait()aW:MoveTo(Vector3.new(-25.95,84,3537.55))task.wait(0.15)local cU=Instance.new("Seat",workspace)cU.Name="invischair"cU.Transparency=1;cU.Position=Vector3.new(-25.95,84,3537.55)local cV=Instance.new("Weld",cU)cV.Part0=cU;cV.Part1=aW:FindFirstChild("Torso")or aW:FindFirstChild("UpperTorso")cU.CFrame=cT else cQ=false;if bb then bb.TextColor3=Color3.fromRGB(255,0,0)end;cR(aW,0)if workspace:FindFirstChild("invischair")then workspace.invischair:Destroy()end end end)end;coroutine.wrap(cP)()local function cW()local af=Instance.new('LocalScript',X)local ba=af.Parent;local bb=ba:FindFirstChild("TextLabel")local bc=game:GetService("Players").LocalPlayer;local ck=bc:WaitForChild("PlayerGui")local cl=nil;ba.MouseButton1Click:Connect(function()if cl then cl:Destroy()cl=nil;if bb then bb.TextColor3=Color3.fromRGB(255,0,0)end;return end;if bb then bb.TextColor3=Color3.fromRGB(0,255,0)end;local cm=Instance.new("Frame")local cn=Instance.new("UICorner")local co=Instance.new("TextLabel")local v=Instance.new("TextBox")local cp=Instance.new("TextButton")cm.Name="SpeedMenu"cm.Parent=af:FindFirstAncestorOfClass("ScreenGui")cm.BackgroundColor3=Color3.fromRGB(30,30,30)cm.Position=UDim2.new(0.5,50,0.5,-50)cm.Size=UDim2.new(0,150,0,100)cm.Active=true;cm.Draggable=true;cn.CornerRadius=UDim.new(0,10)cn.Parent=cm;co.Size=UDim2.new(1,0,0,30)co.BackgroundTransparency=1;co.Text="VELOCIDADE"co.TextColor3=Color3.new(1,1,1)co.Font=Enum.Font.SourceSansBold;co.Parent=cm;v.Size=UDim2.new(0,100,0,30)v.Position=UDim2.new(0.5,-50,0.5,-5)v.BackgroundColor3=Color3.fromRGB(50,50,50)v.Text="16"v.TextColor3=Color3.new(1,1,1)v.Parent=cm;Instance.new("UICorner",v).CornerRadius=UDim.new(0,5)cp.Size=UDim2.new(0,25,0,25)cp.Position=UDim2.new(1,-30,0,5)cp.BackgroundColor3=Color3.fromRGB(150,0,0)cp.Text="X"cp.TextColor3=Color3.new(1,1,1)cp.Parent=cm;Instance.new("UICorner",cp).CornerRadius=UDim.new(1,0)cl=cm;v.FocusLost:Connect(function(cq)local cr=tonumber(v.Text)if cr then if bc.Character and bc.Character:FindFirstChild("Humanoid")then bc.Character.Humanoid.WalkSpeed=cr end end end)cp.MouseButton1Click:Connect(function()cm:Destroy()cl=nil;if bb then bb.TextColor3=Color3.fromRGB(255,0,0)end end)end)end;coroutine.wrap(cW)()local function cX()local af=Instance.new('LocalScript',Z)local aY=game:GetService("RunService")local aq=game:GetService("UserInputService")local cY=game:GetService("StarterGui")local aE=game:GetService("Players")local aF=aE.LocalPlayer;local ao=af.Parent;local aP=ao:WaitForChild("TextLabel")local b1=false;local cZ=false;local cE=nil;local function c_(bF,aU)cY:SetCore("SendNotification",{Title=bF,Text=aU,Duration=4})end;local function d0()if cE then cE:Destroy()cE=nil end end;ao.MouseButton1Click:Connect(function()b1=not b1;if b1 then aP.TextColor3=Color3.fromRGB(0,255,0)c_("Painel: SPIN","Permissão concedida! Use 'M' para Ligar/Desligar.")else aP.TextColor3=Color3.fromRGB(255,0,0)cZ=false;d0()c_("Painel: SPIN","Função bloqueada e desligada.")end end)aq.InputBegan:Connect(function(at,au)if au then return end;if b1 and at.KeyCode==Enum.KeyCode.M then cZ=not cZ;if cZ then local aW=aF.Character;local b5=aW and aW:FindFirstChild("HumanoidRootPart")if b5 then d0()cE=Instance.new("BodyAngularVelocity")cE.Name="SpinForce"cE.Parent=b5;cE.MaxTorque=Vector3.new(0,math.huge,0)cE.P=1250;cE.AngularVelocity=Vector3.new(0,1,0)c_("Spin","Giro ATIVADO")end else d0()c_("Spin","Giro DESATIVADO")end end end)aF.CharacterAdded:Connect(function()cZ=false;d0()end)end;coroutine.wrap(cX)()local function d1()local af=Instance.new('LocalScript',a2)local aE=game:GetService("Players")local bo=af.Parent;local d2=bo:WaitForChild("@username")local d3=d2:WaitForChild("ID")local d4=d2:WaitForChild("DISPLAY NAME")local d5=bo:WaitForChild("AVATA")local function d6()d3.Text="ID: 000000"d4.Text="NÃO ENCONTRADO"d5.Image=""end;d2.FocusLost:Connect(function(cq)if cq then local b7=d2.Text:lower():gsub("%s+","")local d7=nil;if b7~=""then for am,aF in pairs(aE:GetPlayers())do local d8=aF.Name:lower()local d9=aF.DisplayName:lower()if string.find(d8,b7)or string.find(d9,b7)then d7=aF;break end end end;if d7 then local aL,aM=aE:GetUserThumbnailAsync(d7.UserId,Enum.ThumbnailType.AvatarThumbnail,Enum.ThumbnailSize.Size420x420)d5.Image=aL;d3.Text="ID: "..d7.UserId;d4.Text=d7.DisplayName else d6()end end end)end;coroutine.wrap(d1)()local function da()local af=Instance.new('LocalScript',a2)local aE=game:GetService("Players")local db=workspace.CurrentCamera;local bo=af.Parent;local d2=bo:WaitForChild("@username")local dc=bo:WaitForChild("VIEW")local dd=dc:WaitForChild("TextLabel")local de=bo:WaitForChild("FOLLOW")local df=de:WaitForChild("TextLabel")local dg=bo:WaitForChild("FOCUS")local dh=dg:WaitForChild("TextLabel")local di=nil;local dj=false;local dk=false;local dl=Color3.fromRGB(0,255,0)local dm=Color3.fromRGB(255,0,0)d2.FocusLost:Connect(function(cq)if cq then local dn=d2.Text:lower():gsub("%s+","")di=nil;for am,c9 in pairs(aE:GetPlayers())do if string.find(c9.Name:lower(),dn)or string.find(c9.DisplayName:lower(),dn)then di=c9;break end end end end)dc.MouseButton1Click:Connect(function()if di and di.Character then local b6=di.Character:FindFirstChild("Humanoid")if b6 then dj=not dj;db.CameraSubject=dj and b6 or aE.LocalPlayer.Character.Humanoid;dd.TextColor3=dj and dl or dm end else dd.TextColor3=dm end end)de.MouseButton1Click:Connect(function()if di and di.Character then dk=not dk;df.TextColor3=dk and dl or dm;if dk then task.spawn(function()while dk and di and di.Character do local dp=aE.LocalPlayer.Character:FindFirstChild("HumanoidRootPart")local dq=di.Character:FindFirstChild("HumanoidRootPart")if dp and dq then dp.CFrame=dq.CFrame*CFrame.new(0,0,5)end;task.wait(0.05)end end)end else df.TextColor3=dm end end)dg.MouseButton1Click:Connect(function()if di and di.Character then local dp=aE.LocalPlayer.Character:FindFirstChild("HumanoidRootPart")local dq=di.Character:FindFirstChild("HumanoidRootPart")if dp and dq then dp.CFrame=dq.CFrame;dh.TextColor3=dl;task.wait(0.5)dh.TextColor3=dm end else dh.TextColor3=dm end end)end;coroutine.wrap(da)()
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local AvisoTP = Instance.new("TextLabel")
+local CorpoPainel = Instance.new("Frame")
+local tela1 = Instance.new("Frame")
+local ImageLabel = Instance.new("ImageLabel")
+local TextLabel = Instance.new("TextLabel")
+local tela3 = Instance.new("Frame")
+local CLICKTP = Instance.new("TextButton")
+local TextLabel_2 = Instance.new("TextLabel")
+local FLASHBACK = Instance.new("TextButton")
+local TextLabel_3 = Instance.new("TextLabel")
+local NOCLIP = Instance.new("TextButton")
+local TextLabel_4 = Instance.new("TextLabel")
+local ANTAFK = Instance.new("TextButton")
+local TextLabel_5 = Instance.new("TextLabel")
+local tela4 = Instance.new("Frame")
+local ADD = Instance.new("TextButton")
+local HELPE = Instance.new("TextButton")
+local MANAGER = Instance.new("TextButton")
+local MEOW = Instance.new("TextButton")
+local OWNER = Instance.new("TextButton")
+local TextBox = Instance.new("TextBox")
+local ID = Instance.new("TextLabel")
+local DISPLAYNAME = Instance.new("TextLabel")
+local ImageLabel_2 = Instance.new("ImageLabel")
+local USER = Instance.new("TextButton")
+local VIP = Instance.new("TextButton")
+local ABAS = Instance.new("Frame")
+local botoes = Instance.new("Frame")
+local butela5 = Instance.new("TextButton")
+local butela4 = Instance.new("TextButton")
+local butela3 = Instance.new("TextButton")
+local butela2 = Instance.new("TextButton")
+local butela1 = Instance.new("TextButton")
+local butela6 = Instance.new("TextButton")
+local TEXTOS = Instance.new("Frame")
+local TextLabel_6 = Instance.new("TextLabel")
+local TextLabel_7 = Instance.new("TextLabel")
+local TextLabel_8 = Instance.new("TextLabel")
+local tela6 = Instance.new("Frame")
+local ENVIAR = Instance.new("TextButton")
+local TextBox_2 = Instance.new("TextBox")
+local DISPLAYNAME_2 = Instance.new("TextLabel")
+local tela5 = Instance.new("Frame")
+local PINCEL = Instance.new("ImageButton")
+local FLING = Instance.new("TextButton")
+local TextLabel_9 = Instance.new("TextLabel")
+local INVISIVEL = Instance.new("TextButton")
+local TextLabel_10 = Instance.new("TextLabel")
+local SPPED = Instance.new("TextButton")
+local TextLabel_11 = Instance.new("TextLabel")
+local SPIN = Instance.new("TextButton")
+local TextLabel_12 = Instance.new("TextLabel")
+local AUTOPARRY = Instance.new("TextButton")
+local TextLabel_13 = Instance.new("TextLabel")
+local tela2 = Instance.new("Frame")
+local AVATA = Instance.new("ImageLabel")
+local VIEW = Instance.new("TextButton")
+local TextLabel_14 = Instance.new("TextLabel")
+local FOLLOW = Instance.new("TextButton")
+local TextLabel_15 = Instance.new("TextLabel")
+local FOCUS = Instance.new("TextButton")
+local TextLabel_16 = Instance.new("TextLabel")
+local username = Instance.new("TextBox")
+local coloqueodousuario = Instance.new("TextLabel")
+local ID_2 = Instance.new("TextLabel")
+local DISPLAYNAME_3 = Instance.new("TextLabel")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+AvisoTP.Name = "AvisoTP"
+AvisoTP.Parent = ScreenGui
+AvisoTP.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+AvisoTP.BackgroundTransparency = 1.000
+AvisoTP.BorderColor3 = Color3.fromRGB(0, 0, 0)
+AvisoTP.BorderSizePixel = 0
+AvisoTP.Position = UDim2.new(0.83263284, 0, 0.859222949, 0)
+AvisoTP.Size = UDim2.new(0, 200, 0, 50)
+AvisoTP.Visible = false
+AvisoTP.Font = Enum.Font.SourceSans
+AvisoTP.Text = "aviso tp"
+AvisoTP.TextColor3 = Color3.fromRGB(0, 0, 0)
+AvisoTP.TextSize = 14.000
+
+CorpoPainel.Name = "CorpoPainel"
+CorpoPainel.Parent = ScreenGui
+CorpoPainel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CorpoPainel.BackgroundTransparency = 1.000
+CorpoPainel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+CorpoPainel.BorderSizePixel = 0
+CorpoPainel.Position = UDim2.new(0.294336736, 0, 0.134980991, 0)
+CorpoPainel.Size = UDim2.new(0, 505, 0, 284)
+CorpoPainel.ZIndex = 5
+
+tela1.Name = "tela1"
+tela1.Parent = CorpoPainel
+tela1.Active = true
+tela1.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+tela1.BackgroundTransparency = 0.100
+tela1.BorderColor3 = Color3.fromRGB(0, 0, 0)
+tela1.BorderSizePixel = 0
+tela1.Position = UDim2.new(0.197935313, 0, -0.00354723865, 0)
+tela1.Size = UDim2.new(0, 404, 0, 283)
+
+ImageLabel.Parent = tela1
+ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ImageLabel.BorderSizePixel = 0
+ImageLabel.Position = UDim2.new(0.0841584131, 0, 0.0845070407, 0)
+ImageLabel.Size = UDim2.new(0, 100, 0, 100)
+ImageLabel.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
+
+TextLabel.Parent = ImageLabel
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.BorderColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(1.14999998, 0, 0.25, 0)
+TextLabel.Size = UDim2.new(0, 200, 0, 50)
+TextLabel.Font = Enum.Font.Jura
+TextLabel.Text = "Olá Seja Bem vindo! user ( B ) abrir/fechar painel"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+
+tela3.Name = "tela3"
+tela3.Parent = CorpoPainel
+tela3.Active = true
+tela3.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+tela3.BackgroundTransparency = 0.100
+tela3.BorderColor3 = Color3.fromRGB(255, 255, 255)
+tela3.BorderSizePixel = 0
+tela3.Position = UDim2.new(0.198397487, 0, -0.00525751244, 0)
+tela3.Size = UDim2.new(0, 404, 0, 284)
+tela3.Visible = false
+
+CLICKTP.Name = "CLICK - TP"
+CLICKTP.Parent = tela3
+CLICKTP.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
+CLICKTP.BorderColor3 = Color3.fromRGB(0, 0, 0)
+CLICKTP.BorderSizePixel = 0
+CLICKTP.Position = UDim2.new(0.0569306947, 0, 0.0845070407, 0)
+CLICKTP.Size = UDim2.new(0, 100, 0, 36)
+CLICKTP.Font = Enum.Font.Unknown
+CLICKTP.Text = "CLICK - TP"
+CLICKTP.TextColor3 = Color3.fromRGB(255, 255, 255)
+CLICKTP.TextSize = 14.000
+
+TextLabel_2.Parent = CLICKTP
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.BorderColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BorderSizePixel = 0
+TextLabel_2.Position = UDim2.new(0.899999976, 0, -0.111111112, 0)
+TextLabel_2.Size = UDim2.new(0, 70, 0, 46)
+TextLabel_2.Font = Enum.Font.Unknown
+TextLabel_2.Text = "+"
+TextLabel_2.TextColor3 = Color3.fromRGB(255, 0, 0)
+TextLabel_2.TextScaled = true
+TextLabel_2.TextSize = 25.000
+TextLabel_2.TextWrapped = true
+
+FLASHBACK.Name = "FLASHBACK"
+FLASHBACK.Parent = tela3
+FLASHBACK.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
+FLASHBACK.BorderColor3 = Color3.fromRGB(0, 0, 0)
+FLASHBACK.BorderSizePixel = 0
+FLASHBACK.Position = UDim2.new(0.0569306947, 0, 0.46126762, 0)
+FLASHBACK.Size = UDim2.new(0, 100, 0, 36)
+FLASHBACK.Font = Enum.Font.Unknown
+FLASHBACK.Text = "FLASHBACK"
+FLASHBACK.TextColor3 = Color3.fromRGB(255, 255, 255)
+FLASHBACK.TextSize = 14.000
+
+TextLabel_3.Parent = FLASHBACK
+TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.BackgroundTransparency = 1.000
+TextLabel_3.BorderColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.BorderSizePixel = 0
+TextLabel_3.Position = UDim2.new(0.899999976, 0, -0.138888896, 0)
+TextLabel_3.Size = UDim2.new(0, 70, 0, 46)
+TextLabel_3.Font = Enum.Font.Unknown
+TextLabel_3.Text = "+"
+TextLabel_3.TextColor3 = Color3.fromRGB(255, 0, 0)
+TextLabel_3.TextScaled = true
+TextLabel_3.TextSize = 25.000
+TextLabel_3.TextStrokeColor3 = Color3.fromRGB(255, 0, 0)
+TextLabel_3.TextWrapped = true
+
+NOCLIP.Name = "NOCLIP"
+NOCLIP.Parent = tela3
+NOCLIP.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
+NOCLIP.BorderColor3 = Color3.fromRGB(0, 0, 0)
+NOCLIP.BorderSizePixel = 0
+NOCLIP.Position = UDim2.new(0.0569306947, 0, 0.274647892, 0)
+NOCLIP.Size = UDim2.new(0, 100, 0, 36)
+NOCLIP.Font = Enum.Font.Unknown
+NOCLIP.Text = "NOCLIP"
+NOCLIP.TextColor3 = Color3.fromRGB(255, 255, 255)
+NOCLIP.TextSize = 14.000
+
+TextLabel_4.Parent = NOCLIP
+TextLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_4.BackgroundTransparency = 1.000
+TextLabel_4.BorderColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_4.BorderSizePixel = 0
+TextLabel_4.Position = UDim2.new(0.899999976, 0, -0.138888896, 0)
+TextLabel_4.Size = UDim2.new(0, 70, 0, 46)
+TextLabel_4.Font = Enum.Font.Unknown
+TextLabel_4.Text = "+"
+TextLabel_4.TextColor3 = Color3.fromRGB(255, 0, 0)
+TextLabel_4.TextScaled = true
+TextLabel_4.TextSize = 25.000
+TextLabel_4.TextWrapped = true
+
+ANTAFK.Name = "ANT-AFK"
+ANTAFK.Parent = tela3
+ANTAFK.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
+ANTAFK.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ANTAFK.BorderSizePixel = 0
+ANTAFK.Position = UDim2.new(0.0569306947, 0, 0.633802831, 0)
+ANTAFK.Size = UDim2.new(0, 100, 0, 36)
+ANTAFK.Font = Enum.Font.Unknown
+ANTAFK.Text = "ANT-AFK"
+ANTAFK.TextColor3 = Color3.fromRGB(255, 255, 255)
+ANTAFK.TextSize = 14.000
+
+TextLabel_5.Parent = ANTAFK
+TextLabel_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_5.BackgroundTransparency = 1.000
+TextLabel_5.BorderColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_5.BorderSizePixel = 0
+TextLabel_5.Position = UDim2.new(0.899999976, 0, -0.138888896, 0)
+TextLabel_5.Size = UDim2.new(0, 70, 0, 46)
+TextLabel_5.Font = Enum.Font.Unknown
+TextLabel_5.Text = "+"
+TextLabel_5.TextColor3 = Color3.fromRGB(255, 0, 0)
+TextLabel_5.TextScaled = true
+TextLabel_5.TextSize = 25.000
+TextLabel_5.TextStrokeColor3 = Color3.fromRGB(255, 0, 0)
+TextLabel_5.TextWrapped = true
+
+tela4.Name = "tela4"
+tela4.Parent = CorpoPainel
+tela4.Active = true
+tela4.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+tela4.BackgroundTransparency = 0.100
+tela4.BorderColor3 = Color3.fromRGB(255, 255, 255)
+tela4.BorderSizePixel = 0
+tela4.Position = UDim2.new(0.198397487, 0, -0.00525751244, 0)
+tela4.Size = UDim2.new(0, 404, 0, 284)
+tela4.Visible = false
+
+ADD.Name = "ADD"
+ADD.Parent = tela4
+ADD.BackgroundColor3 = Color3.fromRGB(91, 255, 3)
+ADD.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ADD.BorderSizePixel = 0
+ADD.Position = UDim2.new(0.566831708, 0, 0.517605662, 0)
+ADD.Size = UDim2.new(0, 86, 0, 36)
+ADD.Font = Enum.Font.Unknown
+ADD.Text = "ADD"
+ADD.TextColor3 = Color3.fromRGB(30, 30, 30)
+ADD.TextSize = 14.000
+
+HELPE.Name = "HELPE"
+HELPE.Parent = tela4
+HELPE.BackgroundColor3 = Color3.fromRGB(255, 255, 0)
+HELPE.BorderColor3 = Color3.fromRGB(0, 0, 0)
+HELPE.BorderSizePixel = 0
+HELPE.Position = UDim2.new(0.0569306947, 0, 0.517605722, 0)
+HELPE.Size = UDim2.new(0, 100, 0, 36)
+HELPE.Font = Enum.Font.Unknown
+HELPE.Text = "HELPE"
+HELPE.TextColor3 = Color3.fromRGB(30, 30, 30)
+HELPE.TextSize = 14.000
+
+MANAGER.Name = "MANAGER"
+MANAGER.Parent = tela4
+MANAGER.BackgroundColor3 = Color3.fromRGB(85, 0, 255)
+MANAGER.BorderColor3 = Color3.fromRGB(0, 0, 0)
+MANAGER.BorderSizePixel = 0
+MANAGER.Position = UDim2.new(0.0569306947, 0, 0.362676114, 0)
+MANAGER.Size = UDim2.new(0, 100, 0, 36)
+MANAGER.Font = Enum.Font.Unknown
+MANAGER.Text = "MANAGER"
+MANAGER.TextColor3 = Color3.fromRGB(255, 255, 255)
+MANAGER.TextSize = 14.000
+
+MEOW.Name = "MEOW"
+MEOW.Parent = tela4
+MEOW.BackgroundColor3 = Color3.fromRGB(255, 85, 255)
+MEOW.BorderColor3 = Color3.fromRGB(0, 0, 0)
+MEOW.BorderSizePixel = 0
+MEOW.Position = UDim2.new(0.0569306947, 0, 0.197183102, 0)
+MEOW.Size = UDim2.new(0, 100, 0, 36)
+MEOW.Font = Enum.Font.Unknown
+MEOW.Text = "MEOW"
+MEOW.TextColor3 = Color3.fromRGB(255, 255, 255)
+MEOW.TextSize = 14.000
+
+OWNER.Name = "OWNER"
+OWNER.Parent = tela4
+OWNER.BackgroundColor3 = Color3.fromRGB(98, 0, 0)
+OWNER.BorderColor3 = Color3.fromRGB(0, 0, 0)
+OWNER.BorderSizePixel = 0
+OWNER.Position = UDim2.new(0.0569306947, 0, 0.0457746461, 0)
+OWNER.Size = UDim2.new(0, 100, 0, 36)
+OWNER.Font = Enum.Font.Unknown
+OWNER.Text = "OWNER"
+OWNER.TextColor3 = Color3.fromRGB(255, 255, 255)
+OWNER.TextSize = 14.000
+
+TextBox.Parent = tela4
+TextBox.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
+TextBox.BorderColor3 = Color3.fromRGB(255, 255, 255)
+TextBox.BorderSizePixel = 0
+TextBox.Position = UDim2.new(0.425742567, 0, 0.362676114, 0)
+TextBox.Size = UDim2.new(0, 200, 0, 33)
+TextBox.Font = Enum.Font.SourceSans
+TextBox.Text = ""
+TextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextBox.TextSize = 14.000
+
+ID.Name = "ID"
+ID.Parent = TextBox
+ID.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ID.BackgroundTransparency = 1.000
+ID.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ID.BorderSizePixel = 0
+ID.Position = UDim2.new(0.109999999, 0, -2.06023884, 0)
+ID.Size = UDim2.new(0, 200, 0, 21)
+ID.Font = Enum.Font.Jura
+ID.Text = "ID"
+ID.TextColor3 = Color3.fromRGB(255, 255, 255)
+ID.TextSize = 14.000
+ID.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+
+DISPLAYNAME.Name = "DISPLAY NAME"
+DISPLAYNAME.Parent = TextBox
+DISPLAYNAME.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+DISPLAYNAME.BackgroundTransparency = 1.000
+DISPLAYNAME.BorderColor3 = Color3.fromRGB(0, 0, 0)
+DISPLAYNAME.BorderSizePixel = 0
+DISPLAYNAME.Position = UDim2.new(0.11088226, 0, -1.31108928, 0)
+DISPLAYNAME.Size = UDim2.new(0, 200, 0, 21)
+DISPLAYNAME.Font = Enum.Font.Jura
+DISPLAYNAME.Text = "DISPLAY NAME"
+DISPLAYNAME.TextColor3 = Color3.fromRGB(255, 255, 255)
+DISPLAYNAME.TextSize = 14.000
+DISPLAYNAME.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+
+ImageLabel_2.Parent = TextBox
+ImageLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel_2.BackgroundTransparency = 1.000
+ImageLabel_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ImageLabel_2.BorderSizePixel = 0
+ImageLabel_2.Position = UDim2.new(-0.000989990192, 0, -2.69846368, 0)
+ImageLabel_2.Size = UDim2.new(0, 71, 0, 65)
+ImageLabel_2.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
+
+USER.Name = "USER"
+USER.Parent = tela4
+USER.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+USER.BorderColor3 = Color3.fromRGB(255, 255, 255)
+USER.BorderSizePixel = 0
+USER.Position = UDim2.new(0.0569306947, 0, 0.823943794, 0)
+USER.Size = UDim2.new(0, 100, 0, 36)
+USER.Font = Enum.Font.Unknown
+USER.Text = "USER"
+USER.TextColor3 = Color3.fromRGB(0, 0, 0)
+USER.TextSize = 14.000
+
+VIP.Name = "VIP"
+VIP.Parent = tela4
+VIP.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+VIP.BorderColor3 = Color3.fromRGB(255, 255, 255)
+VIP.BorderSizePixel = 0
+VIP.Position = UDim2.new(0.0569306947, 0, 0.6725353, 0)
+VIP.Size = UDim2.new(0, 100, 0, 36)
+VIP.Font = Enum.Font.Unknown
+VIP.Text = "VIP"
+VIP.TextColor3 = Color3.fromRGB(0, 0, 0)
+VIP.TextSize = 14.000
+
+ABAS.Name = "ABAS"
+ABAS.Parent = CorpoPainel
+ABAS.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ABAS.BackgroundTransparency = 1.000
+ABAS.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ABAS.BorderSizePixel = 0
+ABAS.Position = UDim2.new(0.284243047, 0, 0.13389121, 0)
+ABAS.Size = UDim2.new(0, 100, 0, 100)
+
+botoes.Name = "botoes"
+botoes.Parent = ABAS
+botoes.BackgroundColor3 = Color3.fromRGB(53, 53, 53)
+botoes.BackgroundTransparency = 0.100
+botoes.BorderColor3 = Color3.fromRGB(0, 0, 0)
+botoes.BorderSizePixel = 0
+botoes.Position = UDim2.new(-1.45186985, 0, -0.392296761, 0)
+botoes.Size = UDim2.new(0, 101, 0, 284)
+
+butela5.Name = "butela5"
+butela5.Parent = botoes
+butela5.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
+butela5.BorderColor3 = Color3.fromRGB(0, 0, 0)
+butela5.BorderSizePixel = 0
+butela5.Position = UDim2.new(-9.91065899e-05, 0, 0.485915452, 0)
+butela5.Size = UDim2.new(0, 100, 0, 36)
+butela5.Font = Enum.Font.Unknown
+butela5.Text = "VIP"
+butela5.TextColor3 = Color3.fromRGB(255, 255, 255)
+butela5.TextSize = 14.000
+
+butela4.Name = "butela4"
+butela4.Parent = botoes
+butela4.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
+butela4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+butela4.BorderSizePixel = 0
+butela4.Position = UDim2.new(0.00990068819, 0, 0.643350244, 0)
+butela4.Size = UDim2.new(0, 98, 0, 34)
+butela4.Font = Enum.Font.Unknown
+butela4.Text = "ADM"
+butela4.TextColor3 = Color3.fromRGB(255, 255, 255)
+butela4.TextSize = 14.000
+
+butela3.Name = "butela3"
+butela3.Parent = botoes
+butela3.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
+butela3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+butela3.BorderSizePixel = 0
+butela3.Position = UDim2.new(0.00980218593, 0, 0.322183102, 0)
+butela3.Size = UDim2.new(0, 100, 0, 35)
+butela3.Font = Enum.Font.Unknown
+butela3.Text = "MISC"
+butela3.TextColor3 = Color3.fromRGB(255, 255, 255)
+butela3.TextSize = 14.000
+
+butela2.Name = "butela2"
+butela2.Parent = botoes
+butela2.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
+butela2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+butela2.BorderSizePixel = 0
+butela2.Position = UDim2.new(0.00990098994, 0, 0.158450708, 0)
+butela2.Size = UDim2.new(0, 100, 0, 35)
+butela2.Font = Enum.Font.Unknown
+butela2.Text = "TARGET"
+butela2.TextColor3 = Color3.fromRGB(255, 255, 255)
+butela2.TextSize = 14.000
+
+butela1.Name = "butela1"
+butela1.Parent = botoes
+butela1.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
+butela1.BorderColor3 = Color3.fromRGB(36, 36, 36)
+butela1.BorderSizePixel = 0
+butela1.Position = UDim2.new(0.00990098994, 0, -0.00176056335, 0)
+butela1.Size = UDim2.new(0, 100, 0, 35)
+butela1.Font = Enum.Font.Unknown
+butela1.Text = "HOME"
+butela1.TextColor3 = Color3.fromRGB(255, 255, 255)
+butela1.TextSize = 14.000
+
+butela6.Name = "butela6"
+butela6.Parent = botoes
+butela6.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
+butela6.BorderColor3 = Color3.fromRGB(0, 0, 0)
+butela6.BorderSizePixel = 0
+butela6.Position = UDim2.new(0.00980188325, 0, 0.795774579, 0)
+butela6.Size = UDim2.new(0, 100, 0, 36)
+butela6.Visible = false
+butela6.Font = Enum.Font.Unknown
+butela6.Text = "NOTIFICAR"
+butela6.TextColor3 = Color3.fromRGB(255, 255, 255)
+butela6.TextSize = 14.000
+
+TEXTOS.Name = "TEXTOS"
+TEXTOS.Parent = CorpoPainel
+TEXTOS.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+TEXTOS.BackgroundTransparency = 1.000
+TEXTOS.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TEXTOS.BorderSizePixel = 0
+TEXTOS.Position = UDim2.new(0.36493966, 0, 0.208588958, 0)
+TEXTOS.Size = UDim2.new(0, 404, 0, 284)
+
+TextLabel_6.Parent = TEXTOS
+TextLabel_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_6.BackgroundTransparency = 1.000
+TextLabel_6.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_6.BorderSizePixel = 0
+TextLabel_6.Position = UDim2.new(0.485148519, 0, 0.672535241, 0)
+TextLabel_6.Size = UDim2.new(0, 200, 0, 33)
+TextLabel_6.Font = Enum.Font.Unknown
+TextLabel_6.Text = "v1.1"
+TextLabel_6.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_6.TextSize = 17.000
+TextLabel_6.TextWrapped = true
+
+TextLabel_7.Parent = TEXTOS
+TextLabel_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_7.BackgroundTransparency = 1.000
+TextLabel_7.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_7.BorderSizePixel = 0
+TextLabel_7.Position = UDim2.new(0.405940592, 0, -0.372297049, 0)
+TextLabel_7.Size = UDim2.new(0, 232, 0, 124)
+TextLabel_7.Font = Enum.Font.Unknown
+TextLabel_7.Text = "4e20"
+TextLabel_7.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_7.TextSize = 17.000
+TextLabel_7.TextWrapped = true
+
+TextLabel_8.Parent = TEXTOS
+TextLabel_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_8.BackgroundTransparency = 1.000
+TextLabel_8.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_8.BorderSizePixel = 0
+TextLabel_8.Position = UDim2.new(0.321782172, 0, -0.225352108, 0)
+TextLabel_8.Size = UDim2.new(0, 149, 0, 41)
+TextLabel_8.Font = Enum.Font.Unknown
+TextLabel_8.Text = "Panel"
+TextLabel_8.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_8.TextSize = 20.000
+TextLabel_8.TextStrokeTransparency = 0.100
+TextLabel_8.TextTransparency = 0.100
+TextLabel_8.TextWrapped = true
+
+tela6.Name = "tela6"
+tela6.Parent = CorpoPainel
+tela6.Active = true
+tela6.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+tela6.BackgroundTransparency = 0.100
+tela6.BorderColor3 = Color3.fromRGB(255, 255, 255)
+tela6.BorderSizePixel = 0
+tela6.Position = UDim2.new(0.198397487, 0, -0.00525751244, 0)
+tela6.Size = UDim2.new(0, 404, 0, 284)
+tela6.Visible = false
+
+ENVIAR.Name = "ENVIAR"
+ENVIAR.Parent = tela6
+ENVIAR.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
+ENVIAR.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ENVIAR.BorderSizePixel = 0
+ENVIAR.Position = UDim2.new(0.376237631, 0, 0.644366324, 0)
+ENVIAR.Size = UDim2.new(0, 100, 0, 36)
+ENVIAR.Font = Enum.Font.Unknown
+ENVIAR.Text = "ENVIAR"
+ENVIAR.TextColor3 = Color3.fromRGB(255, 255, 255)
+ENVIAR.TextSize = 14.000
+
+TextBox_2.Parent = tela6
+TextBox_2.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
+TextBox_2.BorderColor3 = Color3.fromRGB(255, 255, 255)
+TextBox_2.BorderSizePixel = 0
+TextBox_2.Position = UDim2.new(0.252475262, 0, 0.320422739, 0)
+TextBox_2.Size = UDim2.new(0, 200, 0, 83)
+TextBox_2.Font = Enum.Font.SourceSans
+TextBox_2.Text = ""
+TextBox_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextBox_2.TextSize = 14.000
+TextBox_2.TextXAlignment = Enum.TextXAlignment.Left
+TextBox_2.TextYAlignment = Enum.TextYAlignment.Top
+
+DISPLAYNAME_2.Name = "DISPLAY NAME"
+DISPLAYNAME_2.Parent = TextBox_2
+DISPLAYNAME_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+DISPLAYNAME_2.BackgroundTransparency = 1.000
+DISPLAYNAME_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+DISPLAYNAME_2.BorderSizePixel = 0
+DISPLAYNAME_2.Position = UDim2.new(-0.00411773659, 0, -0.384108573, 0)
+DISPLAYNAME_2.Size = UDim2.new(0, 200, 0, 21)
+DISPLAYNAME_2.Font = Enum.Font.Jura
+DISPLAYNAME_2.Text = "MENSAGEM GLOBAL"
+DISPLAYNAME_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+DISPLAYNAME_2.TextSize = 14.000
+DISPLAYNAME_2.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+
+tela5.Name = "tela5"
+tela5.Parent = CorpoPainel
+tela5.Active = true
+tela5.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+tela5.BackgroundTransparency = 0.100
+tela5.BorderColor3 = Color3.fromRGB(255, 255, 255)
+tela5.BorderSizePixel = 0
+tela5.Position = UDim2.new(0.198397487, 0, -0.00525751244, 0)
+tela5.Size = UDim2.new(0, 404, 0, 284)
+tela5.Visible = false
+
+PINCEL.Name = "PINCEL"
+PINCEL.Parent = tela5
+PINCEL.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+PINCEL.BackgroundTransparency = 0.100
+PINCEL.BorderColor3 = Color3.fromRGB(0, 0, 0)
+PINCEL.BorderSizePixel = 0
+PINCEL.Position = UDim2.new(0.784653485, 0, 0.739436626, 0)
+PINCEL.Size = UDim2.new(0, 63, 0, 57)
+PINCEL.Image = "rbxassetid://85851959324603"
+
+FLING.Name = "FLING"
+FLING.Parent = tela5
+FLING.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
+FLING.BorderColor3 = Color3.fromRGB(0, 0, 0)
+FLING.BorderSizePixel = 0
+FLING.Position = UDim2.new(0.0569306947, 0, 0.274647892, 0)
+FLING.Size = UDim2.new(0, 100, 0, 36)
+FLING.Font = Enum.Font.Unknown
+FLING.Text = "FLING"
+FLING.TextColor3 = Color3.fromRGB(255, 255, 255)
+FLING.TextSize = 14.000
+
+TextLabel_9.Parent = FLING
+TextLabel_9.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_9.BackgroundTransparency = 1.000
+TextLabel_9.BorderColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_9.BorderSizePixel = 0
+TextLabel_9.Position = UDim2.new(0.899999976, 0, -0.138888896, 0)
+TextLabel_9.Size = UDim2.new(0, 70, 0, 46)
+TextLabel_9.Font = Enum.Font.Unknown
+TextLabel_9.Text = "+"
+TextLabel_9.TextColor3 = Color3.fromRGB(255, 0, 0)
+TextLabel_9.TextScaled = true
+TextLabel_9.TextSize = 25.000
+TextLabel_9.TextWrapped = true
+
+INVISIVEL.Name = "INVISIVEL"
+INVISIVEL.Parent = tela5
+INVISIVEL.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
+INVISIVEL.BorderColor3 = Color3.fromRGB(0, 0, 0)
+INVISIVEL.BorderSizePixel = 0
+INVISIVEL.Position = UDim2.new(0.0569306947, 0, 0.633802831, 0)
+INVISIVEL.Size = UDim2.new(0, 100, 0, 36)
+INVISIVEL.Font = Enum.Font.Unknown
+INVISIVEL.Text = "Invisibility"
+INVISIVEL.TextColor3 = Color3.fromRGB(255, 255, 255)
+INVISIVEL.TextSize = 14.000
+
+TextLabel_10.Parent = INVISIVEL
+TextLabel_10.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_10.BackgroundTransparency = 1.000
+TextLabel_10.BorderColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_10.BorderSizePixel = 0
+TextLabel_10.Position = UDim2.new(0.899999976, 0, -0.138888896, 0)
+TextLabel_10.Size = UDim2.new(0, 70, 0, 46)
+TextLabel_10.Font = Enum.Font.Unknown
+TextLabel_10.Text = "+"
+TextLabel_10.TextColor3 = Color3.fromRGB(255, 0, 0)
+TextLabel_10.TextScaled = true
+TextLabel_10.TextSize = 25.000
+TextLabel_10.TextStrokeColor3 = Color3.fromRGB(255, 0, 0)
+TextLabel_10.TextWrapped = true
+
+SPPED.Name = "SPPED"
+SPPED.Parent = tela5
+SPPED.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
+SPPED.BorderColor3 = Color3.fromRGB(0, 0, 0)
+SPPED.BorderSizePixel = 0
+SPPED.Position = UDim2.new(0.0569306947, 0, 0.0845070407, 0)
+SPPED.Size = UDim2.new(0, 100, 0, 36)
+SPPED.Font = Enum.Font.Unknown
+SPPED.Text = "SPEED"
+SPPED.TextColor3 = Color3.fromRGB(255, 255, 255)
+SPPED.TextSize = 14.000
+
+TextLabel_11.Parent = SPPED
+TextLabel_11.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_11.BackgroundTransparency = 1.000
+TextLabel_11.BorderColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_11.BorderSizePixel = 0
+TextLabel_11.Position = UDim2.new(0.899999976, 0, -0.111111112, 0)
+TextLabel_11.Size = UDim2.new(0, 70, 0, 46)
+TextLabel_11.Font = Enum.Font.Unknown
+TextLabel_11.Text = "+"
+TextLabel_11.TextColor3 = Color3.fromRGB(255, 0, 0)
+TextLabel_11.TextScaled = true
+TextLabel_11.TextSize = 25.000
+TextLabel_11.TextWrapped = true
+
+SPIN.Name = "SPIN"
+SPIN.Parent = tela5
+SPIN.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
+SPIN.BorderColor3 = Color3.fromRGB(0, 0, 0)
+SPIN.BorderSizePixel = 0
+SPIN.Position = UDim2.new(0.0569306947, 0, 0.46126762, 0)
+SPIN.Size = UDim2.new(0, 100, 0, 36)
+SPIN.Font = Enum.Font.Unknown
+SPIN.Text = "SPIN"
+SPIN.TextColor3 = Color3.fromRGB(255, 255, 255)
+SPIN.TextSize = 14.000
+
+TextLabel_12.Parent = SPIN
+TextLabel_12.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_12.BackgroundTransparency = 1.000
+TextLabel_12.BorderColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_12.BorderSizePixel = 0
+TextLabel_12.Position = UDim2.new(0.899999976, 0, -0.138888896, 0)
+TextLabel_12.Size = UDim2.new(0, 70, 0, 46)
+TextLabel_12.Font = Enum.Font.Unknown
+TextLabel_12.Text = "+"
+TextLabel_12.TextColor3 = Color3.fromRGB(255, 0, 0)
+TextLabel_12.TextScaled = true
+TextLabel_12.TextSize = 25.000
+TextLabel_12.TextStrokeColor3 = Color3.fromRGB(255, 0, 0)
+TextLabel_12.TextWrapped = true
+
+AUTOPARRY.Name = "AUTO-PARRY"
+AUTOPARRY.Parent = tela5
+AUTOPARRY.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
+AUTOPARRY.BorderColor3 = Color3.fromRGB(0, 0, 0)
+AUTOPARRY.BorderSizePixel = 0
+AUTOPARRY.Position = UDim2.new(0.0569306947, 0, 0.813380301, 0)
+AUTOPARRY.Size = UDim2.new(0, 100, 0, 36)
+AUTOPARRY.Font = Enum.Font.Unknown
+AUTOPARRY.Text = "AUTO-PARRY"
+AUTOPARRY.TextColor3 = Color3.fromRGB(255, 255, 255)
+AUTOPARRY.TextSize = 14.000
+
+TextLabel_13.Parent = AUTOPARRY
+TextLabel_13.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_13.BackgroundTransparency = 1.000
+TextLabel_13.BorderColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_13.BorderSizePixel = 0
+TextLabel_13.Position = UDim2.new(0.899999976, 0, -0.138888896, 0)
+TextLabel_13.Size = UDim2.new(0, 70, 0, 46)
+TextLabel_13.Font = Enum.Font.Unknown
+TextLabel_13.Text = "+"
+TextLabel_13.TextColor3 = Color3.fromRGB(255, 0, 0)
+TextLabel_13.TextScaled = true
+TextLabel_13.TextSize = 25.000
+TextLabel_13.TextWrapped = true
+
+tela2.Name = "tela2"
+tela2.Parent = CorpoPainel
+tela2.Active = true
+tela2.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+tela2.BackgroundTransparency = 0.100
+tela2.BorderColor3 = Color3.fromRGB(255, 255, 255)
+tela2.BorderSizePixel = 0
+tela2.Position = UDim2.new(0.194437101, 0, -0.00525751244, 0)
+tela2.Size = UDim2.new(0, 404, 0, 284)
+tela2.Visible = false
+
+AVATA.Name = "AVATA"
+AVATA.Parent = tela2
+AVATA.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+AVATA.BackgroundTransparency = 1.000
+AVATA.BorderColor3 = Color3.fromRGB(0, 0, 0)
+AVATA.BorderSizePixel = 0
+AVATA.Position = UDim2.new(0.599009871, 0, 0.119718313, 0)
+AVATA.Size = UDim2.new(0, 71, 0, 65)
+AVATA.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
+
+VIEW.Name = "VIEW"
+VIEW.Parent = tela2
+VIEW.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
+VIEW.BorderColor3 = Color3.fromRGB(0, 0, 0)
+VIEW.BorderSizePixel = 0
+VIEW.Position = UDim2.new(0.0569306947, 0, 0.0845070407, 0)
+VIEW.Size = UDim2.new(0, 100, 0, 36)
+VIEW.Font = Enum.Font.Unknown
+VIEW.Text = "VIEW"
+VIEW.TextColor3 = Color3.fromRGB(255, 255, 255)
+VIEW.TextSize = 14.000
+
+TextLabel_14.Parent = VIEW
+TextLabel_14.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_14.BackgroundTransparency = 1.000
+TextLabel_14.BorderColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_14.BorderSizePixel = 0
+TextLabel_14.Position = UDim2.new(0.899999976, 0, -0.111111112, 0)
+TextLabel_14.Size = UDim2.new(0, 70, 0, 46)
+TextLabel_14.Font = Enum.Font.Unknown
+TextLabel_14.Text = "+"
+TextLabel_14.TextColor3 = Color3.fromRGB(255, 0, 0)
+TextLabel_14.TextScaled = true
+TextLabel_14.TextSize = 25.000
+TextLabel_14.TextWrapped = true
+
+FOLLOW.Name = "FOLLOW"
+FOLLOW.Parent = tela2
+FOLLOW.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
+FOLLOW.BorderColor3 = Color3.fromRGB(0, 0, 0)
+FOLLOW.BorderSizePixel = 0
+FOLLOW.Position = UDim2.new(0.0569306947, 0, 0.274647892, 0)
+FOLLOW.Size = UDim2.new(0, 100, 0, 36)
+FOLLOW.Font = Enum.Font.Unknown
+FOLLOW.Text = "FOLLOW"
+FOLLOW.TextColor3 = Color3.fromRGB(255, 255, 255)
+FOLLOW.TextSize = 14.000
+
+TextLabel_15.Parent = FOLLOW
+TextLabel_15.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_15.BackgroundTransparency = 1.000
+TextLabel_15.BorderColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_15.BorderSizePixel = 0
+TextLabel_15.Position = UDim2.new(0.899999976, 0, -0.138888896, 0)
+TextLabel_15.Size = UDim2.new(0, 70, 0, 46)
+TextLabel_15.Font = Enum.Font.Unknown
+TextLabel_15.Text = "+"
+TextLabel_15.TextColor3 = Color3.fromRGB(255, 0, 0)
+TextLabel_15.TextScaled = true
+TextLabel_15.TextSize = 25.000
+TextLabel_15.TextWrapped = true
+
+FOCUS.Name = "FOCUS"
+FOCUS.Parent = tela2
+FOCUS.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
+FOCUS.BorderColor3 = Color3.fromRGB(0, 0, 0)
+FOCUS.BorderSizePixel = 0
+FOCUS.Position = UDim2.new(0.0569306947, 0, 0.46126762, 0)
+FOCUS.Size = UDim2.new(0, 100, 0, 36)
+FOCUS.Font = Enum.Font.Unknown
+FOCUS.Text = "FOCUS"
+FOCUS.TextColor3 = Color3.fromRGB(255, 255, 255)
+FOCUS.TextSize = 14.000
+
+TextLabel_16.Parent = FOCUS
+TextLabel_16.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_16.BackgroundTransparency = 1.000
+TextLabel_16.BorderColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_16.BorderSizePixel = 0
+TextLabel_16.Position = UDim2.new(0.899999976, 0, -0.138888896, 0)
+TextLabel_16.Size = UDim2.new(0, 70, 0, 46)
+TextLabel_16.Font = Enum.Font.Unknown
+TextLabel_16.Text = "+"
+TextLabel_16.TextColor3 = Color3.fromRGB(255, 0, 0)
+TextLabel_16.TextScaled = true
+TextLabel_16.TextSize = 25.000
+TextLabel_16.TextStrokeColor3 = Color3.fromRGB(255, 0, 0)
+TextLabel_16.TextWrapped = true
+
+username.Name = "@username"
+username.Parent = tela2
+username.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
+username.BorderColor3 = Color3.fromRGB(255, 255, 255)
+username.BorderSizePixel = 0
+username.Position = UDim2.new(0.438118815, 0, 0.556338012, 0)
+username.Size = UDim2.new(0, 200, 0, 23)
+username.Font = Enum.Font.SourceSans
+username.Text = ""
+username.TextColor3 = Color3.fromRGB(255, 255, 255)
+username.TextSize = 14.000
+username.TextWrapped = true
+
+coloqueodousuario.Name = "coloque o @ do usuario!"
+coloqueodousuario.Parent = username
+coloqueodousuario.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+coloqueodousuario.BackgroundTransparency = 1.000
+coloqueodousuario.BorderColor3 = Color3.fromRGB(0, 0, 0)
+coloqueodousuario.BorderSizePixel = 0
+coloqueodousuario.Position = UDim2.new(0, 0, 0.999999344, 0)
+coloqueodousuario.Size = UDim2.new(0, 200, 0, 21)
+coloqueodousuario.Font = Enum.Font.Jura
+coloqueodousuario.Text = "coloque o @ do usuario!"
+coloqueodousuario.TextColor3 = Color3.fromRGB(255, 255, 255)
+coloqueodousuario.TextSize = 14.000
+coloqueodousuario.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+
+ID_2.Name = "ID"
+ID_2.Parent = username
+ID_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ID_2.BackgroundTransparency = 1.000
+ID_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ID_2.BorderSizePixel = 0
+ID_2.Position = UDim2.new(0, 0, -2.43478394, 0)
+ID_2.Size = UDim2.new(0, 200, 0, 21)
+ID_2.Font = Enum.Font.Jura
+ID_2.Text = "ID"
+ID_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+ID_2.TextSize = 14.000
+ID_2.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+
+DISPLAYNAME_3.Name = "DISPLAY NAME"
+DISPLAYNAME_3.Parent = username
+DISPLAYNAME_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+DISPLAYNAME_3.BackgroundTransparency = 1.000
+DISPLAYNAME_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+DISPLAYNAME_3.BorderSizePixel = 0
+DISPLAYNAME_3.Position = UDim2.new(0, 0, -1.52174044, 0)
+DISPLAYNAME_3.Size = UDim2.new(0, 200, 0, 21)
+DISPLAYNAME_3.Font = Enum.Font.Jura
+DISPLAYNAME_3.Text = "DISPLAY NAME"
+DISPLAYNAME_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+DISPLAYNAME_3.TextSize = 14.000
+DISPLAYNAME_3.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+
+-- Scripts:
+
+local function WQORVL_fake_script() -- ScreenGui.GerenciadorAbas 
+	local script = Instance.new('LocalScript', ScreenGui)
+
+	local gui = script.Parent
+	local corpo = gui:WaitForChild("CorpoPainel") -- Entra no frame principal
+	local pastaBotoes = corpo:WaitForChild("ABAS"):WaitForChild("botoes") 
+	
+	local telas = {
+		
+		["butela1"] = corpo:WaitForChild("tela1"),
+		["butela2"] = corpo:WaitForChild("tela2"),
+		["butela3"] = corpo:WaitForChild("tela3"),
+		["butela4"] = corpo:WaitForChild("tela4"),
+		["butela5"] = corpo:WaitForChild("tela5"),
+		["butela6"] = corpo:WaitForChild("tela6"),
+	}
+	
+	local function abrirAba(nomeBotao)
+		for _, frame in pairs(telas) do
+			frame.Visible = false
+		end
+		if telas[nomeBotao] then
+			telas[nomeBotao].Visible = true
+		end
+	end
+	
+	for nomeBotao, _ in pairs(telas) do
+		local botao = pastaBotoes:FindFirstChild(nomeBotao)
+		if botao then
+			botao.MouseButton1Click:Connect(function()
+				abrirAba(nomeBotao)
+			end)
+		end
+	end
+end
+coroutine.wrap(WQORVL_fake_script)()
+local function UBZN_fake_script() -- ScreenGui.LocalScript 
+	local script = Instance.new('LocalScript', ScreenGui)
+
+	local UserInputService = game:GetService("UserInputService")
+	local TweenService = game:GetService("TweenService")
+	
+	local gui = script.Parent
+	-- Agora o script foca no Frame que segura todas as peças
+	local painel = gui:WaitForChild("CorpoPainel") 
+	
+	-- 1. ABRIR/FECHAR COM A LETRA B
+	UserInputService.InputBegan:Connect(function(input, gameProcessed)
+		if gameProcessed then return end
+		if input.KeyCode == Enum.KeyCode.B then
+			painel.Visible = not painel.Visible
+		end
+	end)
+	
+	-- 2. SISTEMA DE ARRASTAR LENTO E SUAVE (DRAG)
+	local dragging, dragInput, dragStart, startPos
+	
+	local function update(input)
+		local delta = input.Position - dragStart
+		local newPos = UDim2.new(
+			startPos.X.Scale, 
+			startPos.X.Offset + delta.X, 
+			startPos.Y.Scale, 
+			startPos.Y.Offset + delta.Y
+		)
+	
+		-- Efeito de deslize suave (0.2 para ser mais lento)
+		local info = TweenInfo.new(0.2, Enum.EasingStyle.Exponential, Enum.EasingDirection.Out)
+		TweenService:Create(painel, info, {Position = newPos}):Play()
+	end
+	
+	painel.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+			dragging = true
+			dragStart = input.Position
+			startPos = painel.Position
+	
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragging = false
+				end
+			end)
+		end
+	end)
+	
+	painel.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			dragInput = input
+		end
+	end)
+	
+	UserInputService.InputChanged:Connect(function(input)
+		if input == dragInput and dragging then
+			update(input)
+		end
+	end)
+end
+coroutine.wrap(UBZN_fake_script)()
+local function IDRR_fake_script() -- tela1.CarregarHome 
+	local script = Instance.new('LocalScript', tela1)
+
+	local Players = game:GetService("Players")
+	local player = Players.LocalPlayer
+	
+	local tela1 = script.Parent -- O script já está dentro da tela1
+	local fotoUsuario = tela1:WaitForChild("ImageLabel")
+	
+	local function carregarFoto()
+		local userId = player.UserId
+		local thumbType = Enum.ThumbnailType.HeadShot
+		local thumbSize = Enum.ThumbnailSize.Size420x420
+	
+		local content, isReady = Players:GetUserThumbnailAsync(userId, thumbType, thumbSize)
+	
+		if isReady then
+			fotoUsuario.Image = content
+			fotoUsuario.BackgroundTransparency = 1
+		end
+	end
+	
+	task.spawn(carregarFoto)
+end
+coroutine.wrap(IDRR_fake_script)()
+local function DCYIXP_fake_script() -- CLICKTP.LocalScript 
+	local script = Instance.new('LocalScript', CLICKTP)
+
+	local Players = game:GetService("Players")
+	local UserInputService = game:GetService("UserInputService")
+	local TweenService = game:GetService("TweenService")
+	
+	local player = Players.LocalPlayer
+	local mouse = player:GetMouse()
+	
+	local botao = script.Parent -- O próprio botão CLICK - TP
+	local iconeStatus = botao:WaitForChild("TextLabel") -- O símbolo de +
+	
+	-- Procura a ScreenGui para mostrar o aviso no canto da tela
+	local screenGui = botao.Parent.Parent.Parent 
+	local aviso = screenGui:FindFirstChild("AvisoTP")
+	
+	local ativado = false
+	
+	-- Função para a mensagem customizada de 4 segundos
+	local function mostrarNotificacao(texto)
+		if aviso then
+			aviso.Text = texto
+			aviso.Visible = true
+			task.wait(4)
+			aviso.Visible = false
+		end
+	end
+	
+	-- 1. CLIQUE NO BOTÃO: ATIVA/DESATIVA E MUDA A COR
+	botao.MouseButton1Click:Connect(function()
+		ativado = not ativado
+	
+		if ativado then
+			iconeStatus.TextColor3 = Color3.fromRGB(0, 255, 0) -- Fica Verde
+			task.spawn(function()
+				mostrarNotificacao("SEGURE ( CTRL + CLICK ) PARA TELEPORTAR")
+			end)
+		else
+			iconeStatus.TextColor3 = Color3.fromRGB(255, 0, 0) -- Fica Vermelho
+		end
+	end)
+	
+	-- 2. SISTEMA DE TELEPORTE (Mecanismo do Click TP)
+	mouse.Button1Down:Connect(function()
+		if ativado and UserInputService:IsKeyDown(Enum.KeyCode.LeftControl) then
+			local posicaoAlvo = mouse.Hit.p
+			local char = player.Character
+	
+			if char and char:FindFirstChild("HumanoidRootPart") then
+				-- Teleporta 3 studs acima do chão para não bugar
+				char.HumanoidRootPart.CFrame = CFrame.new(posicaoAlvo + Vector3.new(0, 3, 0))
+			end
+		end
+	end)
+end
+coroutine.wrap(DCYIXP_fake_script)()
+local function TOFIF_fake_script() -- FLASHBACK.LocalScript 
+	local script = Instance.new('LocalScript', FLASHBACK)
+
+	local RunService = game:GetService("RunService")
+	local UserInputService = game:GetService("UserInputService")
+	local Players = game:GetService("Players")
+	
+	local player = Players.LocalPlayer
+	local botao = script.Parent
+	local iconeStatus = botao:WaitForChild("TextLabel")
+	
+	-- CONFIGURAÇÕES SINCRONIZADAS
+	local flashbackLength = 1000 
+	local interval = 0.03 -- Tempo entre cada "foto" do seu personagem
+	local suavidade = 0.12 -- Mantém o movimento liso
+	
+	-- VARIÁVEIS
+	local permissaoPainel = false
+	local frames = {}
+	local tempoAcumulado = 0
+	
+	-- 1. LIGA/DESLIGA
+	botao.MouseButton1Click:Connect(function()
+		permissaoPainel = not permissaoPainel
+		if permissaoPainel then
+			iconeStatus.TextColor3 = Color3.fromRGB(0, 255, 0)
+		else
+			iconeStatus.TextColor3 = Color3.fromRGB(255, 0, 0)
+			table.clear(frames)
+		end
+	end)
+	
+	-- 2. GRAVAÇÃO E REPRODUÇÃO SINCRONIZADA
+	RunService.Heartbeat:Connect(function(dt)
+		if not permissaoPainel then return end
+	
+		local char = player.Character
+		local root = char and char:FindFirstChild("HumanoidRootPart")
+		local hum = char and char:FindFirstChildOfClass("Humanoid")
+	
+		if not root or not hum then return end
+	
+		-- MODO REBOBINAR (Segurando V)
+		if UserInputService:IsKeyDown(Enum.KeyCode.V) then
+			tempoAcumulado = tempoAcumulado + dt
+	
+			-- Só remove um frame quando o tempo passado for igual ao intervalo de gravação
+			-- Isso garante que a velocidade de volta seja IGUAL à velocidade de ida
+			if tempoAcumulado >= interval and #frames > 0 then
+				tempoAcumulado = 0
+				local alvo = table.remove(frames, 1)
+	
+				if alvo then
+					local fator = 1 - (suavidade ^ (dt * 60))
+					root.CFrame = root.CFrame:Lerp(alvo.cf, fator)
+					root.Velocity = -alvo.vel * 0.3
+					hum:ChangeState(alvo.state)
+	
+					if alvo.tool and not char:FindFirstChildOfClass("Tool") then
+						hum:EquipTool(alvo.tool)
+					end
+				end
+			end
+	
+			-- MODO GRAVAÇÃO (Andando normal)
+		else
+			tempoAcumulado = tempoAcumulado + dt
+			if tempoAcumulado >= interval then
+				tempoAcumulado = 0
+	
+				table.insert(frames, 1, {
+					cf = root.CFrame,
+					vel = root.Velocity,
+					state = hum:GetState(),
+					tool = char:FindFirstChildOfClass("Tool")
+				})
+	
+				if #frames > (flashbackLength / interval) then
+					table.remove(frames, #frames)
+				end
+			end
+		end
+	end)
+end
+coroutine.wrap(TOFIF_fake_script)()
+local function HBHXZFM_fake_script() -- NOCLIP.LocalScript 
+	local script = Instance.new('LocalScript', NOCLIP)
+
+	local Button = script.Parent
+	local Indicator = Button:FindFirstChild("TextLabel") -- O seu "+"
+	local plr = game:GetService("Players").LocalPlayer
+	local RunService = game:GetService("RunService")
+	
+	local noclipOn = false
+	local noclipConn = nil
+	
+	Button.MouseButton1Click:Connect(function()
+		if not noclipOn then
+			-- ========================
+			-- LIGAR NOCLIP
+			-- ========================
+			noclipOn = true
+	
+			-- Muda o "+" para VERDE
+			if Indicator then
+				Indicator.TextColor3 = Color3.fromRGB(0, 255, 0)
+			end
+	
+			-- Cria a conexão para desativar colisão repetidamente
+			noclipConn = RunService.Stepped:Connect(function()
+				if plr.Character then
+					for _, part in ipairs(plr.Character:GetDescendants()) do
+						if part:IsA("BasePart") and part.CanCollide == true then
+							part.CanCollide = false
+						end
+					end
+				end
+			end)
+		else
+			-- ========================
+			-- DESLIGAR NOCLIP
+			-- ========================
+			noclipOn = false
+	
+			-- Muda o "+" para VERMELHO
+			if Indicator then
+				Indicator.TextColor3 = Color3.fromRGB(255, 0, 0)
+			end
+	
+			-- Desconecta o loop do Noclip
+			if noclipConn then
+				noclipConn:Disconnect()
+				noclipConn = nil
+			end
+	
+			-- Força a colisão a voltar ao normal no personagem
+			if plr.Character then
+				for _, part in ipairs(plr.Character:GetDescendants()) do
+					if part:IsA("BasePart") then
+						part.CanCollide = true
+					end
+				end
+			end
+		end
+	end)
+end
+coroutine.wrap(HBHXZFM_fake_script)()
+local function COTMPBF_fake_script() -- ANTAFK.LocalScript 
+	local script = Instance.new('LocalScript', ANTAFK)
+
+	-- SERVIÇOS
+	local Players = game:GetService("Players")
+	local VirtualUser = game:GetService("VirtualUser")
+	local localPlayer = Players.LocalPlayer
+	
+	-- REFERÊNCIAS DO SEU LAYOUT
+	local botao = script.Parent 
+	local iconeStatus = botao:WaitForChild("TextLabel") -- O símbolo de +
+	
+	local permissaoPainel = false -- Liberação pelo painel
+	
+	-- 1. CLIQUE NO PAINEL: ATIVA/DESATIVA A PERMISSÃO
+	botao.MouseButton1Click:Connect(function()
+		permissaoPainel = not permissaoPainel
+	
+		if permissaoPainel then
+			iconeStatus.TextColor3 = Color3.fromRGB(0, 255, 0) -- Verde (Ativado)
+			
+		else
+			iconeStatus.TextColor3 = Color3.fromRGB(255, 0, 0) -- Vermelho (Desativado)
+			
+		end
+	end)
+	
+	-- 2. SISTEMA VIGIA: SÓ AGE SE A PERMISSÃO ESTIVER ATIVA
+	localPlayer.Idled:Connect(function()
+		if permissaoPainel then
+			-- Simula interação técnica para resetar o tempo de inatividade do Roblox
+			VirtualUser:Button2Down(Vector2.new(0,0), workspace.CurrentCamera.CFrame)
+			task.wait(0.5)
+			VirtualUser:Button2Up(Vector2.new(0,0), workspace.CurrentCamera.CFrame)
+			
+		end
+	end)
+end
+coroutine.wrap(COTMPBF_fake_script)()
+local function XUTL_fake_script() -- tela4.LocalScript 
+	local script = Instance.new('LocalScript', tela4)
+
+	local Players = game:GetService("Players")
+	local TweenService = game:GetService("TweenService")
+	local HttpService = game:GetService("HttpService")
+	local localPlayer = Players.LocalPlayer
+	
+	-- [[ 1. LIMPEZA ]]
+	local function limparDuplicatas()
+		local pGui = localPlayer:WaitForChild("PlayerGui")
+		for _, obj in pairs(pGui:GetChildren()) do
+			if obj.Name == "NotificacoesPainel" and obj:IsA("ScreenGui") then
+				obj:Destroy()
+			end
+		end
+	end
+	limparDuplicatas()
+	
+	-- [[ 2. CONFIGURAÇÕES ]]
+	local tela = script.Parent
+	local inputNome = tela:WaitForChild("TextBox")
+	local botaoAdd = tela:WaitForChild("ADD")
+	local imagemAvatar = inputNome:WaitForChild("ImageLabel")
+	local textoDisplay = inputNome:WaitForChild("DISPLAY NAME")
+	local textoID = inputNome:WaitForChild("ID")
+	local pastaBotoes = tela.Parent:WaitForChild("ABAS"):WaitForChild("botoes")
+	
+	local abasRestritas = {
+		["ADM"] = pastaBotoes:WaitForChild("butela4"),
+		["VIP"] = pastaBotoes:WaitForChild("butela5"),
+	}
+	local telasRestritas = {
+		["ADM"] = tela.Parent:WaitForChild("tela4"),
+		["VIP"] = tela.Parent:WaitForChild("tela5"),
+	}
+	
+	local MEU_ID_DONO = 9657477548
+	local tagSelecionada = ""
+	local SERVIDOR = "https://foure20-backend.onrender.com"
+	local GAME_ID = "4E20_GLOBAL"
+	
+	local configuracaoTags = {
+		["OWNER"]   = Color3.fromRGB(150, 0, 0),
+		["MEOW"]    = Color3.fromRGB(255, 100, 255),
+		["MANAGER"] = Color3.fromRGB(85, 0, 255),
+		["HELPE"]   = Color3.fromRGB(255, 255, 0),
+		["VIP"]     = Color3.fromRGB(0, 255, 0),
+		["USER"]    = Color3.fromRGB(255, 255, 255)
+	}
+	
+	local tagsADM = {["OWNER"] = true, ["MANAGER"] = true}
+	local tagsVIP = {["OWNER"] = true, ["MANAGER"] = true, ["MEOW"] = true, ["VIP"] = true}
+	
+	-- Esconde tudo IMEDIATAMENTE
+	if abasRestritas["ADM"] then abasRestritas["ADM"].Visible = false end
+	if abasRestritas["VIP"] then abasRestritas["VIP"].Visible = false end
+	if telasRestritas["ADM"] then telasRestritas["ADM"].Visible = false end
+	if telasRestritas["VIP"] then telasRestritas["VIP"].Visible = false end
+	
+	-- [[ 3. NOTIFICAÇÕES ]]
+	local screenGui = Instance.new("ScreenGui", localPlayer.PlayerGui)
+	screenGui.Name = "NotificacoesPainel"
+	screenGui.ResetOnSpawn = false
+	
+	local function notificar(titulo, texto, duracao, tipo, cargo)
+		duracao = duracao or 4
+		for _, f in pairs(screenGui:GetChildren()) do
+			if f:IsA("Frame") then
+				TweenService:Create(f, TweenInfo.new(0.3), {
+					Position = UDim2.new(1, -300, 1, f.Position.Y.Offset - 85)
+				}):Play()
+			end
+		end
+	
+		local corCargo = configuracaoTags[cargo] or Color3.fromRGB(150, 0, 0)
+		local frame = Instance.new("Frame", screenGui)
+		frame.Size = UDim2.new(0, 280, 0, 75)
+		frame.Position = UDim2.new(1, 10, 1, -95)
+		frame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+		frame.BorderSizePixel = 0
+		frame.AnchorPoint = Vector2.new(0, 1)
+		Instance.new("UICorner", frame).CornerRadius = UDim.new(0, 8)
+	
+		local borda = Instance.new("Frame", frame)
+		borda.Size = UDim2.new(0, 5, 1, 0)
+		borda.BackgroundColor3 = corCargo
+		borda.BorderSizePixel = 0
+		Instance.new("UICorner", borda).CornerRadius = UDim.new(0, 8)
+	
+		local labelTitulo = Instance.new("TextLabel", frame)
+		labelTitulo.Size = UDim2.new(1, -60, 0, 30)
+		labelTitulo.Position = UDim2.new(0, 20, 0, 10)
+		labelTitulo.BackgroundTransparency = 1
+		labelTitulo.Text = titulo:upper()
+		labelTitulo.TextColor3 = Color3.fromRGB(255, 255, 255)
+		labelTitulo.Font = Enum.Font.GothamBold
+		labelTitulo.TextSize = 14
+		labelTitulo.TextXAlignment = Enum.TextXAlignment.Left
+	
+		local labelTexto = Instance.new("TextLabel", frame)
+		labelTexto.Size = UDim2.new(1, -60, 0, 25)
+		labelTexto.Position = UDim2.new(0, 20, 0, 35)
+		labelTexto.BackgroundTransparency = 1
+		labelTexto.Text = texto
+		labelTexto.TextColor3 = Color3.fromRGB(200, 200, 200)
+		labelTexto.Font = Enum.Font.Gotham
+		labelTexto.TextSize = 12
+		labelTexto.TextXAlignment = Enum.TextXAlignment.Left
+	
+		TweenService:Create(frame, TweenInfo.new(0.4, Enum.EasingStyle.Back), {
+			Position = UDim2.new(1, -300, 1, -95)
+		}):Play()
+	
+		task.delay(duracao, function()
+			if frame and frame.Parent then
+				TweenService:Create(frame, TweenInfo.new(0.3), {
+					Position = UDim2.new(1, 10, 1, frame.Position.Y.Offset)
+				}):Play()
+				task.wait(0.3)
+				frame:Destroy()
+			end
+		end)
+	end
+	
+	-- [[ 4. FUNÇÕES DE REDE ]]
+	local function httpRequest(dados)
+		local r = (syn and syn.request) or (http and http.request) or request or HttpRequest or (fluxus and fluxus.request)
+		local ok, res = pcall(function() return r(dados) end)
+		return ok and res or nil
+	end
+	
+	local function corParaTabela(cor)
+		return {math.floor(cor.R*255), math.floor(cor.G*255), math.floor(cor.B*255)}
+	end
+	
+	local function tabelaParaCor(t)
+		return Color3.fromRGB(t[1], t[2], t[3])
+	end
+	
+	local function enviarTag(playerName, cargo, cor)
+		pcall(function()
+			httpRequest({
+				Url = SERVIDOR .. "/settag",
+				Method = "POST",
+				Headers = {["Content-Type"] = "application/json"},
+				Body = HttpService:JSONEncode({
+					player = playerName,
+					cargo = cargo,
+					cor = corParaTabela(cor),
+					gameId = GAME_ID
+				})
+			})
+		end)
+	end
+	
+	local function buscarTodosCargos()
+		local res = httpRequest({Url = SERVIDOR .. "/gettags?gameId=" .. GAME_ID, Method = "GET"})
+		return res and res.Body and HttpService:JSONDecode(res.Body) or nil
+	end
+	
+	-- [[ 5. CONTROLE DE ABAS ]]
+	local function atualizarAbas(cargo)
+		local temADM = (localPlayer.UserId == MEU_ID_DONO) or (tagsADM[cargo] == true)
+		local temVIP = (localPlayer.UserId == MEU_ID_DONO) or (tagsVIP[cargo] == true)
+	
+		if abasRestritas["ADM"] then abasRestritas["ADM"].Visible = temADM end
+		if abasRestritas["VIP"] then abasRestritas["VIP"].Visible = temVIP end
+		if telasRestritas["ADM"] and not temADM then telasRestritas["ADM"].Visible = false end
+		if telasRestritas["VIP"] and not temVIP then telasRestritas["VIP"].Visible = false end
+	end
+	
+	-- [[ 6. TAGS VISUAIS ]]
+	local function aplicarTagVisual(pAlvo, texto, cor)
+		if not (pAlvo.Character and pAlvo.Character:FindFirstChild("Head")) then return end
+	
+		for _, o in pairs(pAlvo.Character.Head:GetChildren()) do
+			if o.Name == "TagPainel" then o:Destroy() end
+		end
+	
+		local bill = Instance.new("BillboardGui", pAlvo.Character.Head)
+		bill.Name = "TagPainel"
+		bill.StudsOffset = Vector3.new(0, 2.1, 0)
+		bill.AlwaysOnTop = true
+		bill.MaxDistance = 100
+		bill.Size = texto == "USER" and UDim2.new(1.6, 0, 0.5, 0) or UDim2.new(2.8, 0, 0.75, 0)
+	
+		local label = Instance.new("TextLabel", bill)
+		label.Size = UDim2.new(1, 0, 1, 0)
+		label.BackgroundTransparency = 1
+		label.TextColor3 = cor
+		label.Font = Enum.Font.GothamBold
+		label.RichText = true
+		label.TextScaled = true
+		label.Text = "<b>" .. texto .. "</b>"
+	
+		if texto == "OWNER" or texto == "MANAGER" or texto == "MEOW" then
+			label.TextStrokeTransparency = 1
+			local grad = Instance.new("UIGradient", label)
+			grad.Color = ColorSequence.new({
+				ColorSequenceKeypoint.new(0,    cor),
+				ColorSequenceKeypoint.new(0.30, cor),
+				ColorSequenceKeypoint.new(0.44, Color3.fromRGB(255, 255, 255)),
+				ColorSequenceKeypoint.new(0.50, Color3.fromRGB(255, 255, 255)),
+				ColorSequenceKeypoint.new(0.56, Color3.fromRGB(255, 255, 255)),
+				ColorSequenceKeypoint.new(0.70, cor),
+				ColorSequenceKeypoint.new(1,    cor)
+			})
+			task.spawn(function()
+				while label and label.Parent do
+					grad.Offset = Vector2.new(-1.5, 0)
+					TweenService:Create(grad, TweenInfo.new(3.0, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), {
+						Offset = Vector2.new(1.5, 0)
+					}):Play()
+					task.wait(3.8)
+				end
+			end)
+		else
+			label.TextStrokeTransparency = 0.3
+			label.TextStrokeColor3 = Color3.new(0, 0, 0)
+		end
+	end
+	
+	-- [[ 7. REAAPLICA TAG AO RESPAWN ]]
+	local function conectarRespawn(p)
+		p.CharacterAdded:Connect(function()
+			task.wait(1.5)
+			local dados = buscarTodosCargos()
+			if dados and dados[p.Name] then
+				local info = dados[p.Name]
+				aplicarTagVisual(p, info.cargo, tabelaParaCor(info.cor))
+				if p == localPlayer then atualizarAbas(info.cargo) end
+			end
+		end)
+	end
+	
+	-- Conecta respawn de todos já na sala
+	for _, p in pairs(Players:GetPlayers()) do
+		conectarRespawn(p)
+	end
+	Players.PlayerAdded:Connect(function(p)
+		conectarRespawn(p)
+	end)
+	
+	-- [[ 8. BUSCA DE JOGADOR ]]
+	inputNome:GetPropertyChangedSignal("Text"):Connect(function()
+		local d = inputNome.Text:lower()
+		if d == "" then return end
+		for _, p in pairs(Players:GetPlayers()) do
+			if p.Name:lower():find(d) or p.DisplayName:lower():find(d) then
+				textoDisplay.Text = p.DisplayName
+				textoID.Text = "ID: " .. p.UserId
+				pcall(function()
+					imagemAvatar.Image = Players:GetUserThumbnailAsync(
+						p.UserId, Enum.ThumbnailType.HeadShot, Enum.ThumbnailSize.Size150x150)
+				end)
+				break
+			end
+		end
+	end)
+	
+	-- [[ 9. BOTÕES DE SELEÇÃO DE TAG ]]
+	local bSel = nil
+	for n, _ in pairs(configuracaoTags) do
+		if tela:FindFirstChild(n) then
+			tela[n].MouseButton1Click:Connect(function()
+				if bSel then bSel.BorderSizePixel = 0 end
+				tagSelecionada = n
+				bSel = tela[n]
+				bSel.BorderSizePixel = 3
+				bSel.BorderColor3 = Color3.new(1, 1, 1)
+			end)
+		end
+	end
+	
+	-- [[ 10. BOTÃO ADD ]]
+	botaoAdd.MouseButton1Click:Connect(function()
+		if tagSelecionada == "" then return end
+		for _, p in pairs(Players:GetPlayers()) do
+			if p.DisplayName == textoDisplay.Text then
+				local cor = configuracaoTags[tagSelecionada]
+				enviarTag(p.Name, tagSelecionada, cor)
+				aplicarTagVisual(p, tagSelecionada, cor)
+				notificar("SISTEMA", p.DisplayName .. " ATUALIZADO PARA " .. tagSelecionada, 4, "update", tagSelecionada)
+				if p == localPlayer then atualizarAbas(tagSelecionada) end
+				break
+			end
+		end
+	end)
+	
+	-- [[ 11. LOOP PRINCIPAL ]]
+	-- Agora sem filtro — lê direto do servidor e aplica em todos
+	task.spawn(function()
+		while task.wait(2) do
+			pcall(function()
+				local dados = buscarTodosCargos()
+				if not dados then return end
+	
+				for pName, info in pairs(dados) do
+					local p = Players:FindFirstChild(pName)
+					if p and p.Character and p.Character:FindFirstChild("Head") then
+						local tag = p.Character.Head:FindFirstChild("TagPainel")
+						local lbl = tag and tag:FindFirstChildOfClass("TextLabel")
+						if not lbl or lbl.Text ~= "<b>" .. info.cargo .. "</b>" then
+							aplicarTagVisual(p, info.cargo, tabelaParaCor(info.cor))
+						end
+					end
+				end
+	
+				local minhaInfo = dados[localPlayer.Name]
+				local meuCargo = minhaInfo and minhaInfo.cargo or "USER"
+				atualizarAbas(meuCargo)
+			end)
+		end
+	end)
+	
+	-- [[ 12. INICIALIZAÇÃO ]]
+	task.spawn(function()
+		local cargoInit = localPlayer.UserId == MEU_ID_DONO and "OWNER" or "USER"
+		aplicarTagVisual(localPlayer, cargoInit, configuracaoTags[cargoInit])
+		atualizarAbas(cargoInit)
+	
+		local tentativas = 0
+		repeat
+			tentativas = tentativas + 1
+			local dados = buscarTodosCargos()
+			if dados and dados[localPlayer.Name] then
+				if localPlayer.UserId ~= MEU_ID_DONO then
+					cargoInit = dados[localPlayer.Name].cargo
+				end
+				break
+			end
+			task.wait(0.5)
+		until tentativas >= 5
+	
+		enviarTag(localPlayer.Name, cargoInit, configuracaoTags[cargoInit])
+		aplicarTagVisual(localPlayer, cargoInit, configuracaoTags[cargoInit])
+		atualizarAbas(cargoInit)
+		notificar("4E20 PANEL", "PAINEL ATIVO — CARGO: " .. cargoInit, 5, "welcome", cargoInit)
+		conectarRespawn(localPlayer)
+	end)
+end
+coroutine.wrap(XUTL_fake_script)()
+local function FZTP_fake_script() -- ENVIAR.LocalScript 
+	local script = Instance.new('LocalScript', ENVIAR)
+
+	local Button = script.Parent
+	local Indicator = Button:FindFirstChild("TextLabel") -- O "+" do botão
+	local plr = game:GetService("Players").LocalPlayer
+	local PlayerGui = plr:WaitForChild("PlayerGui")
+	
+	local menuAberto = nil -- Variável para saber se o menu já está na tela
+	
+	Button.MouseButton1Click:Connect(function()
+		-- Se o menu já existir, vamos fechar ele
+		if menuAberto then
+			menuAberto:Destroy()
+			menuAberto = nil
+			if Indicator then Indicator.TextColor3 = Color3.fromRGB(255, 0, 0) end -- Fica Vermelho
+			return
+		end
+	
+		-- Se não existir, vamos criar o Menu de Velocidade Customizado
+		if Indicator then Indicator.TextColor3 = Color3.fromRGB(0, 255, 0) end -- Fica Verde
+	
+		-- 1. Criando o Quadro (Frame) do Menu
+		local CustomMenu = Instance.new("Frame")
+		local UICorner = Instance.new("UICorner")
+		local Title = Instance.new("TextLabel")
+		local TextBox = Instance.new("TextBox")
+		local CloseBtn = Instance.new("TextButton")
+	
+		CustomMenu.Name = "SpeedMenu"
+		CustomMenu.Parent = script:FindFirstAncestorOfClass("ScreenGui")
+		CustomMenu.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+		CustomMenu.Position = UDim2.new(0.5, 50, 0.5, -50) -- Aparece perto do centro
+		CustomMenu.Size = UDim2.new(0, 150, 0, 100)
+		CustomMenu.Active = true
+		CustomMenu.Draggable = true -- Faz o menu ser arrastável
+	
+		UICorner.CornerRadius = UDim.new(0, 10)
+		UICorner.Parent = CustomMenu
+	
+		-- Título
+		Title.Size = UDim2.new(1, 0, 0, 30)
+		Title.BackgroundTransparency = 1
+		Title.Text = "VELOCIDADE"
+		Title.TextColor3 = Color3.new(1, 1, 1)
+		Title.Font = Enum.Font.SourceSansBold
+		Title.Parent = CustomMenu
+	
+		-- TextBox (Onde digita o número)
+		TextBox.Size = UDim2.new(0, 100, 0, 30)
+		TextBox.Position = UDim2.new(0.5, -50, 0.5, -5)
+		TextBox.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+		TextBox.Text = "16" -- Padrão
+		TextBox.TextColor3 = Color3.new(1, 1, 1)
+		TextBox.Parent = CustomMenu
+		Instance.new("UICorner", TextBox).CornerRadius = UDim.new(0, 5)
+	
+		-- Botão X para fechar
+		CloseBtn.Size = UDim2.new(0, 25, 0, 25)
+		CloseBtn.Position = UDim2.new(1, -30, 0, 5)
+		CloseBtn.BackgroundColor3 = Color3.fromRGB(150, 0, 0)
+		CloseBtn.Text = "X"
+		CloseBtn.TextColor3 = Color3.new(1, 1, 1)
+		CloseBtn.Parent = CustomMenu
+		Instance.new("UICorner", CloseBtn).CornerRadius = UDim.new(1, 0)
+	
+		menuAberto = CustomMenu
+	
+		-- Lógica do TextBox (Mudar velocidade ao digitar)
+		TextBox.FocusLost:Connect(function(enterPressed)
+			local num = tonumber(TextBox.Text)
+			if num then
+				if plr.Character and plr.Character:FindFirstChild("Humanoid") then
+					plr.Character.Humanoid.WalkSpeed = num
+				end
+			end
+		end)
+	
+		-- Lógica do botão X (Fechar)
+		CloseBtn.MouseButton1Click:Connect(function()
+			CustomMenu:Destroy()
+			menuAberto = nil
+			if Indicator then Indicator.TextColor3 = Color3.fromRGB(255, 0, 0) end
+		end)
+	end)
+end
+coroutine.wrap(FZTP_fake_script)()
+local function PYVNF_fake_script() -- PINCEL.LocalScript 
+	local script = Instance.new('LocalScript', PINCEL)
+
+	-- [[ SISTEMA DE TEMAS 4E20 PANEL - 20 CORES ]] --
+	local botaoPincel = script.Parent
+	local screenGui = botaoPincel.Parent.Parent -- tela5 -> ScreenGui
+	local abasPasta = screenGui:WaitForChild("ABAS")
+	local frameBotoes = abasPasta:WaitForChild("botoes")
+	
+	-- 20 CORES (Equilíbrio entre tons vivos e elegantes)
+	local temas = {
+		Color3.fromRGB(100, 100, 0),   -- 1. Amarelo Ouro
+		Color3.fromRGB(0, 100, 0),     -- 2. Verde Floresta
+		Color3.fromRGB(80, 0, 150),    -- 3. Roxo Profundo
+		Color3.fromRGB(150, 0, 100),   -- 4. Magenta
+		Color3.fromRGB(0, 80, 150),    -- 5. Azul Oceano
+		Color3.fromRGB(50, 120, 130),  -- 6. Ciano Escuro
+		Color3.fromRGB(130, 30, 30),   -- 7. Vermelho Sangue
+		Color3.fromRGB(130, 80, 0),    -- 8. Laranja Queimado
+		Color3.fromRGB(60, 100, 80),   -- 9. Verde Esmeralda
+		Color3.fromRGB(100, 70, 140),  -- 10. Lavanda
+		Color3.fromRGB(140, 140, 140), -- 11. Cinza Metálico
+		Color3.fromRGB(0, 120, 100),   -- 12. Verde Água
+		Color3.fromRGB(100, 50, 0),    -- 13. Marrom Chocolate
+		Color3.fromRGB(150, 100, 150), -- 14. Orquídea
+		Color3.fromRGB(70, 90, 110),   -- 15. Azul Acinzentado
+		Color3.fromRGB(120, 130, 50),  -- 16. Lima Fosco
+		Color3.fromRGB(90, 40, 40),    -- 17. Vinho
+		Color3.fromRGB(40, 40, 90),    -- 18. Azul Noite
+		Color3.fromRGB(110, 110, 80),  -- 19. Bege Oliva
+		Color3.fromRGB(45, 45, 45)     -- 20. Grafite Dark
+	}
+	
+	local indiceTema = 1
+	local TweenService = game:GetService("TweenService")
+	
+	local function aplicarTema(cor)
+		-- Transição profissional de 0.6 segundos
+		local info = TweenInfo.new(0.6, Enum.EasingStyle.Quint, Enum.EasingDirection.Out)
+	
+		-- Aplica na barra lateral (botoes)
+		TweenService:Create(frameBotoes, info, {BackgroundColor3 = cor}):Play()
+	
+		-- Aplica em todas as telas soltas na ScreenGui
+		for i = 1, 5 do
+			local nomeTela = "tela" .. i
+			local tela = screenGui:FindFirstChild(nomeTela)
+			if tela and tela:IsA("Frame") then
+				TweenService:Create(tela, info, {BackgroundColor3 = cor}):Play()
+			end
+		end
+	end
+	
+	botaoPincel.MouseButton1Click:Connect(function()
+		indiceTema = indiceTema + 1
+		if indiceTema > #temas then indiceTema = 1 end
+	
+		local novaCor = temas[indiceTema]
+		aplicarTema(novaCor)
+	end)
+end
+coroutine.wrap(PYVNF_fake_script)()
+local function HBSRME_fake_script() -- FLING.LocalScript 
+	local script = Instance.new('LocalScript', FLING)
+
+	local RunService = game:GetService("RunService")
+	local UserInputService = game:GetService("UserInputService")
+	local Players = game:GetService("Players")
+	local TweenService = game:GetService("TweenService")
+	local player = Players.LocalPlayer
+	local botao = script.Parent
+	local iconeStatus = botao:WaitForChild("TextLabel")
+	
+	local permissaoPainel = false
+	local flingAtivo = false
+	local bAV = nil
+	local conexaoNoclip = nil
+	local conexaoFling = nil
+	
+	-- NOTIFICAÇÃO BONITA
+	local screenGui = Instance.new("ScreenGui", player.PlayerGui)
+	screenGui.Name = "NotifFling"
+	screenGui.ResetOnSpawn = false
+	
+	local function notificar(titulo, texto, cor)
+		cor = cor or Color3.fromRGB(150, 0, 0)
+		local frame = Instance.new("Frame", screenGui)
+		frame.Size = UDim2.new(0, 260, 0, 60)
+		frame.Position = UDim2.new(0, 20, 1, 10)
+		frame.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
+		frame.BackgroundTransparency = 0.05
+		frame.BorderSizePixel = 0
+		frame.AnchorPoint = Vector2.new(0, 1)
+		frame.ZIndex = 10
+		Instance.new("UICorner", frame).CornerRadius = UDim.new(0, 8)
+	
+		local borda = Instance.new("Frame", frame)
+		borda.Size = UDim2.new(0, 4, 1, 0)
+		borda.BackgroundColor3 = cor
+		borda.BorderSizePixel = 0
+		borda.ZIndex = 11
+		Instance.new("UICorner", borda).CornerRadius = UDim.new(0, 8)
+	
+		local labelT = Instance.new("TextLabel", frame)
+		labelT.Size = UDim2.new(1, -16, 0, 24)
+		labelT.Position = UDim2.new(0, 14, 0, 6)
+		labelT.BackgroundTransparency = 1
+		labelT.Text = titulo
+		labelT.TextColor3 = Color3.fromRGB(255, 255, 255)
+		labelT.Font = Enum.Font.GothamBold
+		labelT.TextSize = 13
+		labelT.TextXAlignment = Enum.TextXAlignment.Left
+		labelT.ZIndex = 11
+	
+		local labelS = Instance.new("TextLabel", frame)
+		labelS.Size = UDim2.new(1, -16, 0, 18)
+		labelS.Position = UDim2.new(0, 14, 0, 30)
+		labelS.BackgroundTransparency = 1
+		labelS.Text = texto
+		labelS.TextColor3 = Color3.fromRGB(170, 170, 170)
+		labelS.Font = Enum.Font.Gotham
+		labelS.TextSize = 11
+		labelS.TextXAlignment = Enum.TextXAlignment.Left
+		labelS.ZIndex = 11
+	
+		TweenService:Create(frame, TweenInfo.new(0.4, Enum.EasingStyle.Back, Enum.EasingDirection.Out), {
+			Position = UDim2.new(0, 20, 1, -20)
+		}):Play()
+	
+		task.delay(3.5, function()
+			TweenService:Create(frame, TweenInfo.new(0.3, Enum.EasingStyle.Quad, Enum.EasingDirection.In), {
+				Position = UDim2.new(0, 20, 1, 10)
+			}):Play()
+			task.wait(0.35)
+			frame:Destroy()
+		end)
+	end
+	
+	-- DESATIVA TUDO COM SEGURANÇA
+	local function desativarTudo()
+		flingAtivo = false
+	
+		if bAV then
+			pcall(function() bAV:Destroy() end)
+			bAV = nil
+		end
+		if conexaoNoclip then
+			conexaoNoclip:Disconnect()
+			conexaoNoclip = nil
+		end
+		if conexaoFling then
+			conexaoFling:Disconnect()
+			conexaoFling = nil
+		end
+	
+		-- Restaura colisão do personagem
+		local char = player.Character
+		if char then
+			for _, p in pairs(char:GetDescendants()) do
+				if p:IsA("BasePart") then
+					p.CanCollide = true
+				end
+			end
+		end
+	end
+	
+	-- ATIVA O FLING
+	local function ativarFling()
+		local char = player.Character
+		if not char then return end
+		local root = char:FindFirstChild("HumanoidRootPart")
+		if not root then return end
+	
+		desativarTudo()
+		flingAtivo = true
+	
+		-- Cria força de rotação
+		bAV = Instance.new("BodyAngularVelocity")
+		bAV.Name = "FlingForce"
+		bAV.MaxTorque = Vector3.new(math.huge, math.huge, math.huge)
+		bAV.P = 30000 -- Aumentado pra ser mais efetivo
+		bAV.AngularVelocity = Vector3.new(10000, 10000, 10000) -- Mais forte
+		bAV.Parent = root
+	
+		-- Noclip pra não travar nas paredes
+		conexaoNoclip = RunService.Stepped:Connect(function()
+			local c = player.Character
+			if not c then return end
+			for _, p in pairs(c:GetDescendants()) do
+				if p:IsA("BasePart") then
+					p.CanCollide = false
+				end
+			end
+		end)
+	
+		-- Loop que mantém o fling ativo e pulsa a velocidade
+		local tick = 0
+		conexaoFling = RunService.Heartbeat:Connect(function(dt)
+			tick = tick + dt
+			local c = player.Character
+			if not c then return end
+			local r = c:FindFirstChild("HumanoidRootPart")
+			if not r then return end
+			local b = r:FindFirstChild("FlingForce")
+			if not b then return end
+	
+			-- Pulsa a direção pra aumentar o efeito de fling
+			local direcao = math.sin(tick * 5) * 10000
+			b.AngularVelocity = Vector3.new(direcao, 10000, direcao)
+		end)
+	
+		iconeStatus.TextColor3 = Color3.fromRGB(255, 50, 50)
+		notificar("💥 Fling ATIVADO", "Chegue perto de alguém!", Color3.fromRGB(255, 50, 50))
+	end
+	
+	-- BOTÃO DO PAINEL
+	botao.MouseButton1Click:Connect(function()
+		permissaoPainel = not permissaoPainel
+		if permissaoPainel then
+			iconeStatus.TextColor3 = Color3.fromRGB(0, 255, 0)
+			notificar("💥 Fling Liberado", "Pressione X para ativar", Color3.fromRGB(0, 200, 0))
+		else
+			iconeStatus.TextColor3 = Color3.fromRGB(255, 0, 0)
+			desativarTudo()
+			notificar("💥 Fling Bloqueado", "Desativado pelo painel", Color3.fromRGB(100, 100, 100))
+		end
+	end)
+	
+	-- TECLA X
+	UserInputService.InputBegan:Connect(function(input, gameProcessed)
+		if gameProcessed then return end
+		if not permissaoPainel then return end
+		if input.KeyCode == Enum.KeyCode.X then
+			if flingAtivo then
+				desativarTudo()
+				iconeStatus.TextColor3 = Color3.fromRGB(0, 255, 0)
+				notificar("💥 Fling DESATIVADO", "Voltou ao normal", Color3.fromRGB(0, 200, 0))
+			else
+				ativarFling()
+			end
+		end
+	end)
+	
+	-- RESETA AO MORRER OU RESPAWNAR
+	player.CharacterAdded:Connect(function()
+		task.wait(0.5)
+		desativarTudo()
+		if permissaoPainel then
+			iconeStatus.TextColor3 = Color3.fromRGB(0, 255, 0)
+		end
+	end)
+end
+coroutine.wrap(HBSRME_fake_script)()
+local function ZJJRCR_fake_script() -- INVISIVEL.LocalScript 
+	local script = Instance.new('LocalScript', INVISIVEL)
+
+	local Button = script.Parent
+	local Indicator = Button:FindFirstChild("TextLabel") -- Procura o "+" dentro do botão
+	local plr = game:GetService("Players").LocalPlayer
+	local invisOn = false
+	
+	-- Função para mudar transparência (ajuda a saber se está funcionando)
+	local function setTransparency(char, val)
+		for _, p in ipairs(char:GetDescendants()) do
+			if p:IsA("BasePart") and p.Name ~= "HumanoidRootPart" then
+				p.Transparency = val
+			end
+		end
+	end
+	
+	Button.MouseButton1Click:Connect(function()
+		local char = plr.Character
+		if not char then return end
+	
+		if not invisOn then
+			-- ========================
+			-- LIGAR INVISIBILIDADE
+			-- ========================
+			invisOn = true
+	
+			-- Muda a cor do "+" para VERDE
+			if Indicator then
+				Indicator.TextColor3 = Color3.fromRGB(0, 255, 0)
+			end
+	
+			setTransparency(char, 0.5) -- Fica fantasma para você
+			local savedpos = char.HumanoidRootPart.CFrame
+	
+			task.wait()
+			char:MoveTo(Vector3.new(-25.95, 84, 3537.55)) -- Teleporta para bugar a rede
+	
+			task.wait(0.15)
+			local Seat = Instance.new("Seat", workspace)
+			Seat.Name = "invischair"
+			Seat.Transparency = 1
+			Seat.Position = Vector3.new(-25.95, 84, 3537.55)
+	
+			local Weld = Instance.new("Weld", Seat)
+			Weld.Part0 = Seat
+			Weld.Part1 = char:FindFirstChild("Torso") or char:FindFirstChild("UpperTorso")
+	
+			Seat.CFrame = savedpos
+		else
+			-- ========================
+			-- DESLIGAR INVISIBILIDADE
+			-- ========================
+			invisOn = false
+	
+			-- Muda a cor do "+" para VERMELHO
+			if Indicator then
+				Indicator.TextColor3 = Color3.fromRGB(255, 0, 0)
+			end
+	
+			setTransparency(char, 0) -- Volta ao normal
+			if workspace:FindFirstChild("invischair") then
+				workspace.invischair:Destroy()
+			end
+	
+			-- DICA: Em alguns jogos, para a visibilidade voltar totalmente para os outros,
+			-- você precisa dar Reset ou encostar em algum lugar que atualize seu personagem.
+		end
+	end)
+end
+coroutine.wrap(ZJJRCR_fake_script)()
+local function JSHU_fake_script() -- SPPED.LocalScript 
+	local script = Instance.new('LocalScript', SPPED)
+
+	local Button = script.Parent
+	local Indicator = Button:FindFirstChild("TextLabel") -- O "+" do botão
+	local plr = game:GetService("Players").LocalPlayer
+	local PlayerGui = plr:WaitForChild("PlayerGui")
+	
+	local menuAberto = nil -- Variável para saber se o menu já está na tela
+	
+	Button.MouseButton1Click:Connect(function()
+		-- Se o menu já existir, vamos fechar ele
+		if menuAberto then
+			menuAberto:Destroy()
+			menuAberto = nil
+			if Indicator then Indicator.TextColor3 = Color3.fromRGB(255, 0, 0) end -- Fica Vermelho
+			return
+		end
+	
+		-- Se não existir, vamos criar o Menu de Velocidade Customizado
+		if Indicator then Indicator.TextColor3 = Color3.fromRGB(0, 255, 0) end -- Fica Verde
+	
+		-- 1. Criando o Quadro (Frame) do Menu
+		local CustomMenu = Instance.new("Frame")
+		local UICorner = Instance.new("UICorner")
+		local Title = Instance.new("TextLabel")
+		local TextBox = Instance.new("TextBox")
+		local CloseBtn = Instance.new("TextButton")
+	
+		CustomMenu.Name = "SpeedMenu"
+		CustomMenu.Parent = script:FindFirstAncestorOfClass("ScreenGui")
+		CustomMenu.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+		CustomMenu.Position = UDim2.new(0.5, 50, 0.5, -50) -- Aparece perto do centro
+		CustomMenu.Size = UDim2.new(0, 150, 0, 100)
+		CustomMenu.Active = true
+		CustomMenu.Draggable = true -- Faz o menu ser arrastável
+	
+		UICorner.CornerRadius = UDim.new(0, 10)
+		UICorner.Parent = CustomMenu
+	
+		-- Título
+		Title.Size = UDim2.new(1, 0, 0, 30)
+		Title.BackgroundTransparency = 1
+		Title.Text = "VELOCIDADE"
+		Title.TextColor3 = Color3.new(1, 1, 1)
+		Title.Font = Enum.Font.SourceSansBold
+		Title.Parent = CustomMenu
+	
+		-- TextBox (Onde digita o número)
+		TextBox.Size = UDim2.new(0, 100, 0, 30)
+		TextBox.Position = UDim2.new(0.5, -50, 0.5, -5)
+		TextBox.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+		TextBox.Text = "16" -- Padrão
+		TextBox.TextColor3 = Color3.new(1, 1, 1)
+		TextBox.Parent = CustomMenu
+		Instance.new("UICorner", TextBox).CornerRadius = UDim.new(0, 5)
+	
+		-- Botão X para fechar
+		CloseBtn.Size = UDim2.new(0, 25, 0, 25)
+		CloseBtn.Position = UDim2.new(1, -30, 0, 5)
+		CloseBtn.BackgroundColor3 = Color3.fromRGB(150, 0, 0)
+		CloseBtn.Text = "X"
+		CloseBtn.TextColor3 = Color3.new(1, 1, 1)
+		CloseBtn.Parent = CustomMenu
+		Instance.new("UICorner", CloseBtn).CornerRadius = UDim.new(1, 0)
+	
+		menuAberto = CustomMenu
+	
+		-- Lógica do TextBox (Mudar velocidade ao digitar)
+		TextBox.FocusLost:Connect(function(enterPressed)
+			local num = tonumber(TextBox.Text)
+			if num then
+				if plr.Character and plr.Character:FindFirstChild("Humanoid") then
+					plr.Character.Humanoid.WalkSpeed = num
+				end
+			end
+		end)
+	
+		-- Lógica do botão X (Fechar)
+		CloseBtn.MouseButton1Click:Connect(function()
+			CustomMenu:Destroy()
+			menuAberto = nil
+			if Indicator then Indicator.TextColor3 = Color3.fromRGB(255, 0, 0) end
+		end)
+	end)
+end
+coroutine.wrap(JSHU_fake_script)()
+local function ACMUE_fake_script() -- SPIN.LocalScript 
+	local script = Instance.new('LocalScript', SPIN)
+
+	local RunService = game:GetService("RunService")
+	local UserInputService = game:GetService("UserInputService")
+	local StarterGui = game:GetService("StarterGui")
+	local Players = game:GetService("Players")
+	local player = Players.LocalPlayer
+	
+	local botao = script.Parent
+	local iconeStatus = botao:WaitForChild("TextLabel")
+	
+	local permissaoPainel = false 
+	local spinAtivo = false      
+	local bAV = nil               
+	
+	-- Função de Notificação
+	local function avisar(titulo, texto)
+		StarterGui:SetCore("SendNotification", {
+			Title = titulo;
+			Text = texto;
+			Duration = 4;
+		})
+	end
+	
+	-- Função para destruir o objeto de giro
+	local function removerForca()
+		if bAV then 
+			bAV:Destroy() 
+			bAV = nil 
+		end
+	end
+	
+	-- 1. CLIQUE NO PAINEL (LIBERAÇÃO)
+	botao.MouseButton1Click:Connect(function()
+		permissaoPainel = not permissaoPainel
+	
+		if permissaoPainel then
+			iconeStatus.TextColor3 = Color3.fromRGB(0, 255, 0) -- Verde
+			avisar("Painel: SPIN", "Permissão concedida! Use 'M' para Ligar/Desligar.")
+		else
+			iconeStatus.TextColor3 = Color3.fromRGB(255, 0, 0) -- Vermelho
+			spinAtivo = false
+			removerForca()
+			avisar("Painel: SPIN", "Função bloqueada e desligada.")
+		end
+	end)
+	
+	-- 2. TECLA M (LIGA E DESLIGA O GIRO)
+	UserInputService.InputBegan:Connect(function(input, gameProcessed)
+		if gameProcessed then return end
+	
+		-- Só executa se o botão do painel estiver ativado (verde)
+		if permissaoPainel and input.KeyCode == Enum.KeyCode.M then
+			spinAtivo = not spinAtivo -- Alterna entre ligado e desligado
+	
+			if spinAtivo then
+				local char = player.Character
+				local root = char and char:FindFirstChild("HumanoidRootPart")
+	
+				if root then
+					removerForca() -- Garante que não existam dois giros ao mesmo tempo
+	
+					bAV = Instance.new("BodyAngularVelocity")
+					bAV.Name = "SpinForce"
+					bAV.Parent = root
+					bAV.MaxTorque = Vector3.new(0, math.huge, 0) 
+					bAV.P = 1250 
+					bAV.AngularVelocity = Vector3.new(0, 1, 0) -- Giro lento
+	
+					avisar("Spin", "Giro ATIVADO")
+				end
+			else
+				removerForca()
+				avisar("Spin", "Giro DESATIVADO")
+			end
+		end
+	end)
+	
+	-- Resetar tudo se o personagem morrer
+	player.CharacterAdded:Connect(function()
+		spinAtivo = false
+		removerForca()
+	end)
+end
+coroutine.wrap(ACMUE_fake_script)()
+local function NFZOBMU_fake_script() -- tela2.NOMES 
+	local script = Instance.new('LocalScript', tela2)
+
+	local Players = game:GetService("Players")
+	
+	local tela = script.Parent
+	local textBox = tela:WaitForChild("@username") 
+	local labelID = textBox:WaitForChild("ID")
+	local labelDisplay = textBox:WaitForChild("DISPLAY NAME")
+	local imageLabel = tela:WaitForChild("AVATA")
+	
+	local function resetarInterface()
+		labelID.Text = "ID: 000000"
+		labelDisplay.Text = "NÃO ENCONTRADO"
+		imageLabel.Image = ""
+	end
+	
+	textBox.FocusLost:Connect(function(enterPressed)
+		if enterPressed then
+			local alvo = textBox.Text:lower():gsub("%s+", "") -- Texto digitado em minúsculo e sem espaços
+			local jogadorEncontrado = nil
+	
+			if alvo ~= "" then
+				-- Procura nos jogadores do servidor
+				for _, player in pairs(Players:GetPlayers()) do
+					local nomeReal = player.Name:lower()
+					local nomeExibicao = player.DisplayName:lower()
+	
+					-- Verifica se o que você digitou faz PARTE do nome ou do display name
+					if string.find(nomeReal, alvo) or string.find(nomeExibicao, alvo) then
+						jogadorEncontrado = player
+						break -- Achou o primeiro que combina? Já para a busca.
+					end
+				end
+			end
+	
+			if jogadorEncontrado then
+				-- 1. Carrega a foto
+				local content, isReady = Players:GetUserThumbnailAsync(
+					jogadorEncontrado.UserId, 
+					Enum.ThumbnailType.AvatarThumbnail, 
+					Enum.ThumbnailSize.Size420x420
+				)
+				imageLabel.Image = content
+	
+				-- 2. Atualiza as Labels
+				labelID.Text = "ID: " .. jogadorEncontrado.UserId
+				labelDisplay.Text = jogadorEncontrado.DisplayName
+			else
+				resetarInterface()
+			end
+		end
+	end)
+end
+coroutine.wrap(NFZOBMU_fake_script)()
+local function KKKYX_fake_script() -- tela2.VIEW 
+	local script = Instance.new('LocalScript', tela2)
+
+	local Players = game:GetService("Players")
+	local camera = workspace.CurrentCamera
+	
+	local tela = script.Parent
+	local textBox = tela:WaitForChild("@username")
+	
+	-- Botões e Sinais (Todos usando o objeto "A" como referência)
+	local btnView = tela:WaitForChild("VIEW")
+	local sinalView = btnView:WaitForChild("TextLabel")
+	
+	local btnFollow = tela:WaitForChild("FOLLOW")
+	local sinalFollow = btnFollow:WaitForChild("TextLabel")
+	
+	local btnFocus = tela:WaitForChild("FOCUS")
+	local sinalFocus = btnFocus:WaitForChild("TextLabel")
+	
+	-- Variáveis de Controle
+	local jogadorAlvo = nil
+	local modoView = false
+	local modoFollow = false
+	
+	local COR_LIGADO = Color3.fromRGB(0, 255, 0)    -- Verde
+	local COR_DESLIGADO = Color3.fromRGB(255, 0, 0) -- Vermelho
+	
+	-- 1. Busca do Player (Aperte ENTER para validar)
+	textBox.FocusLost:Connect(function(enterPressed)
+		if enterPressed then
+			local nome = textBox.Text:lower():gsub("%s+", "")
+			jogadorAlvo = nil
+			for _, p in pairs(Players:GetPlayers()) do
+				if string.find(p.Name:lower(), nome) or string.find(p.DisplayName:lower(), nome) then
+					jogadorAlvo = p
+					
+					break
+				end
+			end
+		end
+	end)
+	
+	-- 2. VIEW: Assiste o jogador
+	btnView.MouseButton1Click:Connect(function()
+		if jogadorAlvo and jogadorAlvo.Character then
+			local hum = jogadorAlvo.Character:FindFirstChild("Humanoid")
+			if hum then
+				modoView = not modoView
+				camera.CameraSubject = modoView and hum or Players.LocalPlayer.Character.Humanoid
+				sinalView.TextColor3 = modoView and COR_LIGADO or COR_DESLIGADO
+			end
+		else
+			sinalView.TextColor3 = COR_DESLIGADO
+		end
+	end)
+	
+	-- 3. FOLLOW: Segue o jogador continuamente
+	btnFollow.MouseButton1Click:Connect(function()
+		if jogadorAlvo and jogadorAlvo.Character then
+			modoFollow = not modoFollow
+			sinalFollow.TextColor3 = modoFollow and COR_LIGADO or COR_DESLIGADO
+	
+			if modoFollow then
+				task.spawn(function()
+					while modoFollow and jogadorAlvo and jogadorAlvo.Character do
+						local meuRoot = Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart")
+						local alvoRoot = jogadorAlvo.Character:FindFirstChild("HumanoidRootPart")
+						if meuRoot and alvoRoot then
+							meuRoot.CFrame = alvoRoot.CFrame * CFrame.new(0, 0, 5)
+						end
+						task.wait(0.05)
+					end
+				end)
+			end
+		else
+			sinalFollow.TextColor3 = COR_DESLIGADO
+		end
+	end)
+	
+	-- 4. FOCUS: Teleporta para o jogador (Instantâneo)
+	btnFocus.MouseButton1Click:Connect(function()
+		if jogadorAlvo and jogadorAlvo.Character then
+			local meuRoot = Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart")
+			local alvoRoot = jogadorAlvo.Character:FindFirstChild("HumanoidRootPart")
+	
+			if meuRoot and alvoRoot then
+				-- Teleporta você exatamente para onde o player está
+				meuRoot.CFrame = alvoRoot.CFrame
+	
+				-- Pisca o sinal em verde para indicar sucesso
+				sinalFocus.TextColor3 = COR_LIGADO
+				task.wait(0.5)
+				sinalFocus.TextColor3 = COR_DESLIGADO
+			end
+		else
+			sinalFocus.TextColor3 = COR_DESLIGADO
+		end
+	end)
+end
+coroutine.wrap(KKKYX_fake_script)()
