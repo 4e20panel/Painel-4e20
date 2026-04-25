@@ -1775,66 +1775,11 @@ UICorner_33.Parent = clicker
 
 -- Scripts:
 
-local function IKGWQPI_fake_script() -- MainPanel.LocalScript 
-	local script = Instance.new('LocalScript', MainPanel)
-
-	local UserInputService = game:GetService("UserInputService")
-	
-	local mainPanel = script.Parent
-	local topBar = mainPanel:WaitForChild("TopBar")
-	
-	local dragging = false
-	local dragStart, startPos
-	
-	-- 1. Abrir/Fechar com a Tecla B
-	UserInputService.InputBegan:Connect(function(input, gameProcessed)
-		if not gameProcessed and input.KeyCode == Enum.KeyCode.B then
-			mainPanel.Visible = not mainPanel.Visible
-		end
-	end)
-	
-	-- 2. Lógica de Arrastar e Trava de Tela
-	topBar.InputBegan:Connect(function(input)
-		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
-			dragging = true
-			dragStart = input.Position
-			startPos = mainPanel.AbsolutePosition -- Usamos AbsolutePosition para evitar o "pulo"
-	
-			input.Changed:Connect(function()
-				if input.UserInputState == Enum.UserInputState.End then
-					dragging = false
-				end
-			end)
-		end
-	end)
-	
-	UserInputService.InputChanged:Connect(function(input)
-		if dragging and (input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch) then
-			local delta = input.Position - dragStart
-			local screen = mainPanel.Parent.AbsoluteSize
-			local panelSize = mainPanel.AbsoluteSize
-	
-			-- Calcula a nova posição absoluta
-			local newX = startPos.X + delta.X
-			local newY = startPos.Y + delta.Y
-	
-			-- Trava (Clamp) para não sair da tela
-			newX = math.clamp(newX, 0, screen.X - panelSize.X)
-			newY = math.clamp(newY, 0, screen.Y - panelSize.Y)
-	
-			-- Aplica a posição resetando o Scale para 0 e usando apenas Offset
-			-- Isso mata o bug de "se jogar pro canto"
-			mainPanel.AnchorPoint = Vector2.new(0,0) -- Forçamos o anchor para 0,0 para a trava ser perfeita
-			mainPanel.Position = UDim2.new(0, newX, 0, newY)
-		end
-	end)
-end
-coroutine.wrap(IKGWQPI_fake_script)()
-local function LWGVJSP_fake_script() -- MainPanel.LocalScript 
+local function DBJTUP_fake_script() -- MainPanel.LocalScript 
 	local script = Instance.new('LocalScript', MainPanel)
 
 	-- ============================================================
-	--  4E20 PANEL - LocalScript Unificado v2.3
+	--  4E20 PANEL - LocalScript Unificado v2.4 (FINAL)
 	--  Coloque este script dentro de: MainPanel
 	-- ============================================================
 	
@@ -1851,6 +1796,7 @@ local function LWGVJSP_fake_script() -- MainPanel.LocalScript
 	-- ============================================================
 	local mainPanel = script.Parent
 	local screenGui = mainPanel.Parent
+	local topBar    = mainPanel:WaitForChild("TopBar")
 	
 	-- Botões laterais
 	local botoes       = mainPanel:WaitForChild("BOTOES"):WaitForChild("ScrollingFrame")
@@ -1885,16 +1831,16 @@ local function LWGVJSP_fake_script() -- MainPanel.LocalScript
 	local textoID      = ownerScroll:WaitForChild("userid")
 	
 	-- BanTela9
-	local banTextBox      = banTela:WaitForChild("TextBox")
-	local banBtn          = banTela:WaitForChild("BAN")
-	local desbanBtn       = banTela:WaitForChild("DESBANIDO")
-	local banImgLabel     = banTela:WaitForChild("ImageLabel")
-	local banNomeLabel    = banTela:WaitForChild("BANIDO")
-	local banStatusLabel  = banTela:WaitForChild("disponivel")
-	local banUserIdLabel  = banTela:WaitForChild("USERID")
+	local banTextBox     = banTela:WaitForChild("TextBox")
+	local banBtn         = banTela:WaitForChild("BAN")
+	local desbanBtn      = banTela:WaitForChild("DESBANIDO")
+	local banImgLabel    = banTela:WaitForChild("ImageLabel")
+	local banNomeLabel   = banTela:WaitForChild("BANIDO")
+	local banStatusLabel = banTela:WaitForChild("disponivel")
+	local banUserIdLabel = banTela:WaitForChild("USERID")
 	
 	-- StaffTela8
-	local staffScroll  = staffTela:WaitForChild("ScrollingFrame")
+	local staffScroll = staffTela:WaitForChild("ScrollingFrame")
 	
 	-- ============================================================
 	-- [[ 2. CONFIGURAÇÕES GERAIS ]]
@@ -1905,15 +1851,15 @@ local function LWGVJSP_fake_script() -- MainPanel.LocalScript
 	local IMAGEM_PADRAO = "rbxassetid://4620867021"
 	
 	local configuracaoTags = {
-		["OWNER"]   = Color3.fromRGB(150, 0,   0),
-		["MEOW"]    = Color3.fromRGB(255, 100, 255),
-		["MANAGER"] = Color3.fromRGB(85,  0,   255),
-		["STAFF"]   = Color3.fromRGB(255, 165, 0),
-		["SUPORTE"] = Color3.fromRGB(0,   200, 255),
-		["VIP 4E20"]= Color3.fromRGB(0,   255, 100),
-		["DEVELOP"] = Color3.fromRGB(100, 255, 255),
-		["BABY"]    = Color3.fromRGB(255, 182, 193),
-		["USER"]    = Color3.fromRGB(255, 255, 255),
+		["OWNER"]    = Color3.fromRGB(150, 0,   0),
+		["MEOW"]     = Color3.fromRGB(255, 100, 255),
+		["MANAGER"]  = Color3.fromRGB(85,  0,   255),
+		["STAFF"]    = Color3.fromRGB(255, 165, 0),
+		["SUPORTE"]  = Color3.fromRGB(0,   200, 255),
+		["VIP 4E20"] = Color3.fromRGB(0,   255, 100),
+		["DEVELOP"]  = Color3.fromRGB(100, 255, 255),
+		["BABY"]     = Color3.fromRGB(255, 182, 193),
+		["USER"]     = Color3.fromRGB(255, 255, 255),
 	}
 	
 	local tagsOwnerAcesso = {["OWNER"]=true, ["MANAGER"]=true}
@@ -1928,6 +1874,7 @@ local function LWGVJSP_fake_script() -- MainPanel.LocalScript
 	local playersComPainel    = {}  -- { [userId] = { cargo=, horaExec= } }
 	local botoesStaff         = {}
 	local spectandoPlayer     = nil
+	local painelBloqueado     = false  -- true quando player está banido
 	
 	-- ============================================================
 	-- [[ 3. LIMPEZA DE NOTIFICAÇÕES DUPLICADAS ]]
@@ -2005,7 +1952,63 @@ local function LWGVJSP_fake_script() -- MainPanel.LocalScript
 	end
 	
 	-- ============================================================
-	-- [[ 5. HTTP / REDE ]]
+	-- [[ 5. ARRASTAR O PAINEL (TopBar) ]]
+	-- ============================================================
+	local dragging   = false
+	local dragStart  = nil
+	local startPos   = nil
+	
+	topBar.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1
+			or input.UserInputType == Enum.UserInputType.Touch then
+			dragging  = true
+			dragStart = input.Position
+			startPos  = mainPanel.AbsolutePosition
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragging = false
+				end
+			end)
+		end
+	end)
+	
+	UserInputService.InputChanged:Connect(function(input)
+		if not dragging then return end
+		if input.UserInputType == Enum.UserInputType.MouseMovement
+			or input.UserInputType == Enum.UserInputType.Touch then
+			local delta     = input.Position - dragStart
+			local screen    = mainPanel.Parent.AbsoluteSize
+			local panelSize = mainPanel.AbsoluteSize
+			local newX = math.clamp(startPos.X + delta.X, 0, screen.X - panelSize.X)
+			local newY = math.clamp(startPos.Y + delta.Y, 0, screen.Y - panelSize.Y)
+			mainPanel.AnchorPoint = Vector2.new(0, 0)
+			mainPanel.Position    = UDim2.new(0, newX, 0, newY)
+		end
+	end)
+	
+	-- ============================================================
+	-- [[ 6. ABRIR/FECHAR COM [B] ]]
+	-- ============================================================
+	mainPanel.Visible = false
+	
+	UserInputService.InputBegan:Connect(function(input, gameProcessed)
+		if gameProcessed then return end
+		if input.KeyCode == Enum.KeyCode.B then
+			if painelBloqueado then
+				-- Banido: força abrir e manter tela de banido
+				mainPanel.Visible   = true
+				banidoFrame.Visible = true
+				return
+			end
+			mainPanel.Visible = not mainPanel.Visible
+			if mainPanel.Visible and telaAtual == nil then
+				abrirTela(homeTela)
+			end
+		end
+	end)
+	
+	-- ============================================================
+	-- [[ 7. HTTP / REDE ]]
 	-- ============================================================
 	local function httpRequest(dados)
 		local r = (syn and syn.request)
@@ -2034,7 +2037,7 @@ local function LWGVJSP_fake_script() -- MainPanel.LocalScript
 				Headers = {["Content-Type"]="application/json"},
 				Body    = HttpService:JSONEncode({
 					player = playerName, cargo = cargo,
-					cor = corParaTabela(cor), gameId = GAME_ID
+					cor    = corParaTabela(cor), gameId = GAME_ID
 				})
 			})
 		end)
@@ -2048,14 +2051,14 @@ local function LWGVJSP_fake_script() -- MainPanel.LocalScript
 	end
 	
 	-- ============================================================
-	-- [[ 6. SISTEMA DE BAN ]]
+	-- [[ 8. SISTEMA DE BAN ]]
 	-- ============================================================
 	local function banirPlayer(userId)
 		pcall(function()
 			httpRequest({
-				Url = SERVIDOR.."/ban", Method = "POST",
+				Url     = SERVIDOR.."/ban", Method = "POST",
 				Headers = {["Content-Type"]="application/json"},
-				Body = HttpService:JSONEncode({userId=tostring(userId), gameId=GAME_ID})
+				Body    = HttpService:JSONEncode({userId=tostring(userId), gameId=GAME_ID})
 			})
 		end)
 	end
@@ -2063,16 +2066,16 @@ local function LWGVJSP_fake_script() -- MainPanel.LocalScript
 	local function desbanirPlayer(userId)
 		pcall(function()
 			httpRequest({
-				Url = SERVIDOR.."/unban", Method = "POST",
+				Url     = SERVIDOR.."/unban", Method = "POST",
 				Headers = {["Content-Type"]="application/json"},
-				Body = HttpService:JSONEncode({userId=tostring(userId), gameId=GAME_ID})
+				Body    = HttpService:JSONEncode({userId=tostring(userId), gameId=GAME_ID})
 			})
 		end)
 	end
 	
 	local function checarBan(userId)
 		local res = httpRequest({
-			Url = SERVIDOR.."/isbanned?userId="..tostring(userId).."&gameId="..GAME_ID,
+			Url    = SERVIDOR.."/isbanned?userId="..tostring(userId).."&gameId="..GAME_ID,
 			Method = "GET"
 		})
 		if not (res and res.Body) then return false end
@@ -2081,10 +2084,9 @@ local function LWGVJSP_fake_script() -- MainPanel.LocalScript
 	end
 	
 	-- ============================================================
-	-- [[ 7. TAGS VISUAIS ]]
-	-- REGRA: só mostra tag se o player tem painel ativo (está em playersComPainel)
+	-- [[ 9. TAGS VISUAIS ]]
+	-- Só aparece para quem tem painel ativo
 	-- ============================================================
-	-- Detecta se o player é mobile ou PC
 	local function detectarPlataforma(p)
 		if p == localPlayer then
 			local toque = UserInputService.TouchEnabled and not UserInputService.KeyboardEnabled
@@ -2101,8 +2103,10 @@ local function LWGVJSP_fake_script() -- MainPanel.LocalScript
 			if o.Name == "TagPainel" then o:Destroy() end
 		end
 	
+		if texto == "USER" then return end
+	
 		local plataforma = detectarPlataforma(p)
-		local textoFinal = plataforma ~= "" and (plataforma .. " " .. texto) or texto
+		local textoFinal = plataforma ~= "" and (plataforma.." "..texto) or texto
 	
 		local bill = Instance.new("BillboardGui", p.Character.Head)
 		bill.Name        = "TagPainel"
@@ -2154,7 +2158,7 @@ local function LWGVJSP_fake_script() -- MainPanel.LocalScript
 	end
 	
 	-- ============================================================
-	-- [[ 8. CONTROLE DE TELAS E ABAS ]]
+	-- [[ 10. CONTROLE DE TELAS E ABAS ]]
 	-- ============================================================
 	local todasAsTelas = {homeTela, miscTela, charTela, aboutTela, ownerTela, staffTela, banTela, targetTela}
 	if vipTela then table.insert(todasAsTelas, vipTela) end
@@ -2173,8 +2177,7 @@ local function LWGVJSP_fake_script() -- MainPanel.LocalScript
 	
 	local function atualizarAbas(cargo)
 		meuCargo = cargo
-		local ehDono = (localPlayer.UserId == MEU_ID_DONO)
-		-- USER não tem acesso a nenhuma aba restrita
+		local ehDono    = (localPlayer.UserId == MEU_ID_DONO)
 		local temAcesso = (cargo ~= "USER")
 		btnOwner.Visible = ehDono or (temAcesso and tagsOwnerAcesso[cargo] == true)
 		btnStaff.Visible = ehDono or (temAcesso and tagsStaffAcesso[cargo] == true)
@@ -2188,7 +2191,7 @@ local function LWGVJSP_fake_script() -- MainPanel.LocalScript
 	end
 	
 	-- ============================================================
-	-- [[ 9. BOTÕES LATERAIS ]]
+	-- [[ 11. BOTÕES LATERAIS ]]
 	-- ============================================================
 	local function conectarBotao(btn, tela)
 		if not (btn and tela) then return end
@@ -2206,22 +2209,7 @@ local function LWGVJSP_fake_script() -- MainPanel.LocalScript
 	if btnVip and vipTela then conectarBotao(btnVip, vipTela) end
 	
 	-- ============================================================
-	-- [[ 10. ABRIR/FECHAR COM [B] ]]
-	-- ============================================================
-	mainPanel.Visible = false
-	
-	UserInputService.InputBegan:Connect(function(input, gameProcessed)
-		if gameProcessed then return end
-		if input.KeyCode == Enum.KeyCode.B then
-			mainPanel.Visible = not mainPanel.Visible
-			if mainPanel.Visible and telaAtual == nil then
-				abrirTela(homeTela)
-			end
-		end
-	end)
-	
-	-- ============================================================
-	-- [[ 11. BUSCA DE PLAYER (OwnerTela7) ]]
+	-- [[ 12. BUSCA DE PLAYER (OwnerTela7) ]]
 	-- ============================================================
 	imagemAvatar.Image = IMAGEM_PADRAO
 	textoDisplay.Text  = "DISPLAY NAME"
@@ -2252,7 +2240,7 @@ local function LWGVJSP_fake_script() -- MainPanel.LocalScript
 	end)
 	
 	-- ============================================================
-	-- [[ 12. BOTÕES DE SELEÇÃO DE TAG ]]
+	-- [[ 13. BOTÕES DE SELEÇÃO DE TAG ]]
 	-- ============================================================
 	for tagNome, _ in pairs(configuracaoTags) do
 		local btn = ownerScroll:FindFirstChild(tagNome)
@@ -2268,7 +2256,7 @@ local function LWGVJSP_fake_script() -- MainPanel.LocalScript
 	end
 	
 	-- ============================================================
-	-- [[ 13. BOTÃO ADD TAG ]]
+	-- [[ 14. BOTÃO ADD TAG ]]
 	-- ============================================================
 	botaoAdd.MouseButton1Click:Connect(function()
 		if tagSelecionada == "" then
@@ -2292,21 +2280,18 @@ local function LWGVJSP_fake_script() -- MainPanel.LocalScript
 	end)
 	
 	-- ============================================================
-	-- [[ 14. SISTEMA DE BAN (BanTela9) ]]
+	-- [[ 15. SISTEMA DE BAN (BanTela9) ]]
 	-- ============================================================
 	local banAlvoId      = nil
 	local banAlvoDisplay = nil
-	local ultimoStatusBan = ""
 	
 	local function atualizarStatusBan(userId)
 		task.spawn(function()
 			local banido = checarBan(userId)
 			if banido then
-				ultimoStatusBan = "BANIDO"
 				banStatusLabel.Text       = "⛔ BANIDO"
 				banStatusLabel.TextColor3 = Color3.fromRGB(255, 50, 50)
 			else
-				ultimoStatusBan = "DISPONIVEL"
 				banStatusLabel.Text       = "✅ DISPONÍVEL"
 				banStatusLabel.TextColor3 = Color3.fromRGB(50, 255, 100)
 			end
@@ -2316,7 +2301,6 @@ local function LWGVJSP_fake_script() -- MainPanel.LocalScript
 	banTextBox:GetPropertyChangedSignal("Text"):Connect(function()
 		local d = banTextBox.Text:lower()
 		banAlvoId = nil
-		ultimoStatusBan = ""
 	
 		if d == "" then
 			banImgLabel.Image         = IMAGEM_PADRAO
@@ -2331,17 +2315,14 @@ local function LWGVJSP_fake_script() -- MainPanel.LocalScript
 			if p.Name:lower():find(d, 1, true) or p.DisplayName:lower():find(d, 1, true) then
 				banAlvoId      = p.UserId
 				banAlvoDisplay = p.DisplayName
-	
 				banNomeLabel.Text         = p.DisplayName
 				banUserIdLabel.Text       = "ID: "..p.UserId
-				banStatusLabel.Text       = "Verificando..."
+				banStatusLabel.Text       = "🔄 Verificando..."
 				banStatusLabel.TextColor3 = Color3.fromRGB(255, 220, 50)
-	
 				local ok, img = pcall(function()
 					return Players:GetUserThumbnailAsync(p.UserId, Enum.ThumbnailType.HeadShot, Enum.ThumbnailSize.Size150x150)
 				end)
 				banImgLabel.Image = ok and img or IMAGEM_PADRAO
-	
 				atualizarStatusBan(p.UserId)
 				return
 			end
@@ -2355,36 +2336,28 @@ local function LWGVJSP_fake_script() -- MainPanel.LocalScript
 	end)
 	
 	banBtn.MouseButton1Click:Connect(function()
-		if not banAlvoId then
-			notificar("ERRO", "Nenhum player selecionado!", 3, "USER") return
-		end
-		if banAlvoId == localPlayer.UserId then
-			notificar("ERRO", "Você não pode se banir!", 3, "USER") return
-		end
+		if not banAlvoId then notificar("ERRO", "Nenhum player selecionado!", 3, "USER") return end
+		if banAlvoId == localPlayer.UserId then notificar("ERRO", "Você não pode se banir!", 3, "USER") return end
 		banirPlayer(banAlvoId)
 		banStatusLabel.Text       = "⛔ BANIDO"
 		banStatusLabel.TextColor3 = Color3.fromRGB(255, 50, 50)
-		ultimoStatusBan = "BANIDO"
 		notificar("BAN", banAlvoDisplay.." foi BANIDO!", 5, "OWNER")
 		banAlvoId = nil
 		banTextBox.Text = ""
 	end)
 	
 	desbanBtn.MouseButton1Click:Connect(function()
-		if not banAlvoId then
-			notificar("ERRO", "Nenhum player selecionado!", 3, "USER") return
-		end
+		if not banAlvoId then notificar("ERRO", "Nenhum player selecionado!", 3, "USER") return end
 		desbanirPlayer(banAlvoId)
 		banStatusLabel.Text       = "✅ DISPONÍVEL"
 		banStatusLabel.TextColor3 = Color3.fromRGB(50, 255, 100)
-		ultimoStatusBan = "DISPONIVEL"
 		notificar("DESBAN", banAlvoDisplay.." foi DESBANIDO!", 5, "VIP 4E20")
 		banAlvoId = nil
 		banTextBox.Text = ""
 	end)
 	
 	-- ============================================================
-	-- [[ 15. STAFF - LISTA SÓ COM PAINEL ATIVO + SPECTAR ]]
+	-- [[ 16. STAFF - LISTA COM PAINEL ATIVO + SPECTAR ]]
 	-- ============================================================
 	local function formatarHora(timestamp)
 		local h = math.floor(timestamp / 3600) % 24
@@ -2420,9 +2393,9 @@ local function LWGVJSP_fake_script() -- MainPanel.LocalScript
 			if not p then continue end
 	
 			i = i + 1
-			local cargo    = info.cargo or "USER"
-			local horaExec = info.horaExec or 0
-			local corTag   = configuracaoTags[cargo] or Color3.fromRGB(255,255,255)
+			local cargo  = info.cargo or "USER"
+			local hora   = info.horaExec or 0
+			local corTag = configuracaoTags[cargo] or Color3.fromRGB(255,255,255)
 	
 			local frame = Instance.new("Frame")
 			frame.Name             = p.Name
@@ -2432,14 +2405,16 @@ local function LWGVJSP_fake_script() -- MainPanel.LocalScript
 			frame.Parent           = staffScroll
 			Instance.new("UICorner", frame).CornerRadius = UDim.new(0, 8)
 	
+			-- Borda colorida
 			local borda = Instance.new("Frame", frame)
 			borda.Size             = UDim2.new(0, 4, 1, 0)
 			borda.BackgroundColor3 = corTag
 			borda.BorderSizePixel  = 0
 			Instance.new("UICorner", borda).CornerRadius = UDim.new(0, 4)
 	
+			-- Nome
 			local lblNome = Instance.new("TextLabel", frame)
-			lblNome.Size               = UDim2.new(1, -80, 0, 24)
+			lblNome.Size               = UDim2.new(1, -95, 0, 24)
 			lblNome.Position           = UDim2.new(0, 12, 0, 4)
 			lblNome.BackgroundTransparency = 1
 			lblNome.Text               = p.DisplayName.." (@"..p.Name..")"
@@ -2449,8 +2424,9 @@ local function LWGVJSP_fake_script() -- MainPanel.LocalScript
 			lblNome.TextXAlignment     = Enum.TextXAlignment.Left
 			lblNome.TextTruncate       = Enum.TextTruncate.AtEnd
 	
+			-- Tag
 			local lblTag = Instance.new("TextLabel", frame)
-			lblTag.Size               = UDim2.new(0, 80, 0, 16)
+			lblTag.Size               = UDim2.new(0, 90, 0, 16)
 			lblTag.Position           = UDim2.new(0, 12, 0, 28)
 			lblTag.BackgroundTransparency = 1
 			lblTag.Text               = "["..cargo.."]"
@@ -2459,26 +2435,29 @@ local function LWGVJSP_fake_script() -- MainPanel.LocalScript
 			lblTag.TextSize           = 11
 			lblTag.TextXAlignment     = Enum.TextXAlignment.Left
 	
+			-- Hora
 			local lblHora = Instance.new("TextLabel", frame)
-			lblHora.Size               = UDim2.new(0, 80, 0, 16)
+			lblHora.Size               = UDim2.new(0, 85, 0, 16)
 			lblHora.Position           = UDim2.new(1, -90, 0, 28)
 			lblHora.BackgroundTransparency = 1
-			lblHora.Text               = "🕐 "..formatarHora(horaExec)
+			lblHora.Text               = "🕐 "..formatarHora(hora)
 			lblHora.TextColor3         = Color3.fromRGB(160, 160, 160)
 			lblHora.Font               = Enum.Font.Gotham
 			lblHora.TextSize           = 10
 			lblHora.TextXAlignment     = Enum.TextXAlignment.Right
 	
+			-- Botão invisível por cima
 			local btn = Instance.new("TextButton", frame)
 			btn.Size               = UDim2.new(1, 0, 1, 0)
 			btn.BackgroundTransparency = 1
 			btn.Text               = ""
 			btn.ZIndex             = 5
 	
+			local frameRef = frame
 			btn.MouseButton1Click:Connect(function()
 				if spectandoPlayer == p then
 					sairDoSpect()
-					frame.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+					frameRef.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
 				else
 					sairDoSpect()
 					if p.Character then
@@ -2488,11 +2467,11 @@ local function LWGVJSP_fake_script() -- MainPanel.LocalScript
 							cam.CameraType    = Enum.CameraType.Custom
 							cam.CameraSubject = hum
 							spectandoPlayer   = p
-							frame.BackgroundColor3 = Color3.fromRGB(60, 40, 40)
+							frameRef.BackgroundColor3 = Color3.fromRGB(60, 40, 40)
 							notificar("STAFF", "Spectando "..p.DisplayName.." — clique dnv pra sair", 3, meuCargo)
 						end
 					else
-						notificar("ERRO", p.DisplayName.." não tem personagem!", 3, "USER")
+						notificar("ERRO", p.DisplayName.." sem personagem!", 3, "USER")
 					end
 				end
 			end)
@@ -2519,28 +2498,22 @@ local function LWGVJSP_fake_script() -- MainPanel.LocalScript
 	end)
 	
 	-- ============================================================
-	-- [[ 16. VERIFICAR BAN AO INICIAR ]]
+	-- [[ 17. VERIFICAR BAN AO INICIAR ]]
 	-- ============================================================
 	local function verificarBanLocal()
 		local banido = checarBan(localPlayer.UserId)
 		if banido then
+			painelBloqueado     = true
 			mainPanel.Visible   = true
 			esconderTodasTelas()
 			banidoFrame.Visible = true
-			UserInputService.InputBegan:Connect(function(input, gp)
-				if gp then return end
-				if input.KeyCode == Enum.KeyCode.B then
-					mainPanel.Visible   = true
-					banidoFrame.Visible = true
-				end
-			end)
 			return true
 		end
 		return false
 	end
 	
 	-- ============================================================
-	-- [[ 17. RESPAWN ]]
+	-- [[ 18. RESPAWN ]]
 	-- ============================================================
 	local function conectarRespawn(p)
 		p.CharacterAdded:Connect(function()
@@ -2562,7 +2535,7 @@ local function LWGVJSP_fake_script() -- MainPanel.LocalScript
 	Players.PlayerAdded:Connect(function(p) conectarRespawn(p) end)
 	
 	-- ============================================================
-	-- [[ 18. REGISTRAR PAINEL ATIVO ]]
+	-- [[ 19. REGISTRAR PAINEL ATIVO ]]
 	-- ============================================================
 	local function registrarPainelAtivo()
 		pcall(function()
@@ -2588,7 +2561,7 @@ local function LWGVJSP_fake_script() -- MainPanel.LocalScript
 	end
 	
 	-- ============================================================
-	-- [[ 19. LOOP PRINCIPAL ]]
+	-- [[ 20. LOOP PRINCIPAL ]]
 	-- ============================================================
 	task.spawn(function()
 		while task.wait(3) do
@@ -2602,7 +2575,9 @@ local function LWGVJSP_fake_script() -- MainPanel.LocalScript
 				local novosPainel = {}
 				novosPainel[localPlayer.UserId] = {
 					cargo    = meuCargo,
-					horaExec = playersComPainel[localPlayer.UserId] and playersComPainel[localPlayer.UserId].horaExec or os.time()
+					horaExec = playersComPainel[localPlayer.UserId]
+						and playersComPainel[localPlayer.UserId].horaExec
+						or os.time()
 				}
 	
 				for _, uid in pairs(ativos) do
@@ -2611,21 +2586,19 @@ local function LWGVJSP_fake_script() -- MainPanel.LocalScript
 						if pl.UserId == uid then p = pl break end
 					end
 					if p then
-						local cargo = "USER"
-						if dados and dados[p.Name] then
-							cargo = dados[p.Name].cargo
-						end
-						-- Preserva hora original se já existia
-						local horaExec = playersComPainel[uid] and playersComPainel[uid].horaExec or os.time()
+						local cargo    = "USER"
+						if dados and dados[p.Name] then cargo = dados[p.Name].cargo end
+						local horaExec = playersComPainel[uid]
+							and playersComPainel[uid].horaExec
+							or os.time()
 						novosPainel[uid] = { cargo = cargo, horaExec = horaExec }
 					end
 				end
 				playersComPainel = novosPainel
 	
-				-- Aplica/remove tags visuais com base em quem tem painel ativo
+				-- Aplica/remove tags visuais
 				for _, p in pairs(Players:GetPlayers()) do
 					if playersComPainel[p.UserId] then
-						-- Tem painel ativo → descobre cargo (backend ou USER padrão)
 						local cargo = "USER"
 						local cor   = configuracaoTags["USER"]
 						if dados and dados[p.Name] then
@@ -2635,12 +2608,11 @@ local function LWGVJSP_fake_script() -- MainPanel.LocalScript
 						if p.Character and p.Character:FindFirstChild("Head") then
 							local tag = p.Character.Head:FindFirstChild("TagPainel")
 							local lbl = tag and tag:FindFirstChildOfClass("TextLabel")
-							if not lbl or lbl.Text ~= "<b>"..cargo.."</b>" then
+							if not lbl or not lbl.Text:find(cargo) then
 								aplicarTagVisual(p, cargo, cor)
 							end
 						end
 					else
-						-- Sem painel ativo → remove qualquer tag exibida
 						removerTagVisual(p)
 					end
 				end
@@ -2652,14 +2624,14 @@ local function LWGVJSP_fake_script() -- MainPanel.LocalScript
 					if novoCargo ~= meuCargo then atualizarAbas(novoCargo) end
 				end
 	
-				-- Atualiza lista staff se estiver visível
+				-- Atualiza staff se visível
 				if staffTela.Visible then atualizarListaStaff() end
 			end)
 		end
 	end)
 	
 	-- ============================================================
-	-- [[ 20. INICIALIZAÇÃO ]]
+	-- [[ 21. INICIALIZAÇÃO ]]
 	-- ============================================================
 	task.spawn(function()
 		if verificarBanLocal() then return end
@@ -2680,7 +2652,6 @@ local function LWGVJSP_fake_script() -- MainPanel.LocalScript
 			task.wait(0.5)
 		until tentativas >= 6
 	
-		-- Registra painel ativo com hora atual
 		registrarPainelAtivo()
 		playersComPainel[localPlayer.UserId] = {
 			cargo    = cargoInit,
@@ -2690,8 +2661,6 @@ local function LWGVJSP_fake_script() -- MainPanel.LocalScript
 		local corInit = configuracaoTags[cargoInit] or Color3.fromRGB(255,255,255)
 		enviarTag(localPlayer.Name, cargoInit, corInit)
 		atualizarAbas(cargoInit)
-	
-		-- Aguarda 1 tick pra garantir que playersComPainel já está preenchido
 		task.wait(0.1)
 		aplicarTagVisual(localPlayer, cargoInit, corInit)
 	
@@ -2700,8 +2669,8 @@ local function LWGVJSP_fake_script() -- MainPanel.LocalScript
 		abrirTela(homeTela)
 	end)
 end
-coroutine.wrap(LWGVJSP_fake_script)()
-local function PPNW_fake_script() -- clicker.LocalScript 
+coroutine.wrap(DBJTUP_fake_script)()
+local function ZXSY_fake_script() -- clicker.LocalScript 
 	local script = Instance.new('LocalScript', clicker)
 
 	local painel = script.Parent.Parent:WaitForChild("MainPanel")
@@ -2711,4 +2680,4 @@ local function PPNW_fake_script() -- clicker.LocalScript
 		painel.Visible = not painel.Visible
 	end)
 end
-coroutine.wrap(PPNW_fake_script)()
+coroutine.wrap(ZXSY_fake_script)()
