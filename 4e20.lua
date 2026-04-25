@@ -1775,7 +1775,7 @@ UICorner_33.Parent = clicker
 
 -- Scripts:
 
-local function MNMRMN_fake_script() -- MainPanel.LocalScript 
+local function LHNIQTG_fake_script() -- MainPanel.LocalScript 
 	local script = Instance.new('LocalScript', MainPanel)
 
 	-- ============================================================
@@ -2029,6 +2029,15 @@ local function MNMRMN_fake_script() -- MainPanel.LocalScript
 	-- [[ 7. TAGS VISUAIS ]]
 	-- REGRA: só mostra tag se o player tem painel ativo (está em playersComPainel)
 	-- ============================================================
+	-- Detecta se o player é mobile ou PC
+	local function detectarPlataforma(p)
+		if p == localPlayer then
+			local toque = UserInputService.TouchEnabled and not UserInputService.KeyboardEnabled
+			return toque and "📱" or "🖥️"
+		end
+		return ""
+	end
+	
 	local function aplicarTagVisual(p, texto, cor)
 		if not playersComPainel[p.UserId] then return end
 		if not (p.Character and p.Character:FindFirstChild("Head")) then return end
@@ -2036,6 +2045,9 @@ local function MNMRMN_fake_script() -- MainPanel.LocalScript
 		for _, o in pairs(p.Character.Head:GetChildren()) do
 			if o.Name == "TagPainel" then o:Destroy() end
 		end
+	
+		local plataforma = detectarPlataforma(p)
+		local textoFinal = plataforma ~= "" and (plataforma .. " " .. texto) or texto
 	
 		local bill = Instance.new("BillboardGui", p.Character.Head)
 		bill.Name        = "TagPainel"
@@ -2051,7 +2063,7 @@ local function MNMRMN_fake_script() -- MainPanel.LocalScript
 		label.Font                   = Enum.Font.GothamBold
 		label.RichText               = true
 		label.TextScaled             = true
-		label.Text                   = "<b>"..texto.."</b>"
+		label.Text                   = "<b>"..textoFinal.."</b>"
 		label.TextStrokeTransparency = 0.5
 		label.TextStrokeColor3       = Color3.new(0, 0, 0)
 	
@@ -2548,8 +2560,9 @@ local function MNMRMN_fake_script() -- MainPanel.LocalScript
 						if dados and dados[p.Name] then
 							cargo = dados[p.Name].cargo
 						end
-						local horaExec = playersComPainel[p.UserId] and playersComPainel[p.UserId].horaExec or os.time()
-						novosPainel[p.UserId] = { cargo = cargo, horaExec = horaExec }
+						-- Preserva hora original se já existia
+						local horaExec = playersComPainel[uid] and playersComPainel[uid].horaExec or os.time()
+						novosPainel[uid] = { cargo = cargo, horaExec = horaExec }
 					end
 				end
 				playersComPainel = novosPainel
@@ -2557,24 +2570,22 @@ local function MNMRMN_fake_script() -- MainPanel.LocalScript
 				-- Aplica/remove tags visuais com base em quem tem painel ativo
 				for _, p in pairs(Players:GetPlayers()) do
 					if playersComPainel[p.UserId] then
-						local cargo = playersComPainel[p.UserId].cargo or "USER"
-						local cor   = configuracaoTags[cargo] or Color3.fromRGB(255,255,255)
+						-- Tem painel ativo → descobre cargo (backend ou USER padrão)
+						local cargo = "USER"
+						local cor   = configuracaoTags["USER"]
 						if dados and dados[p.Name] then
 							cargo = dados[p.Name].cargo
 							cor   = tabelaParaCor(dados[p.Name].cor)
 						end
-						-- Atualiza cargo no cache local
-						playersComPainel[p.UserId].cargo = cargo
 						if p.Character and p.Character:FindFirstChild("Head") then
-							local head = p.Character.Head
-							local tagAtual = head:FindFirstChild("TagPainel")
-							local lblAtual = tagAtual and tagAtual:FindFirstChildOfClass("TextLabel")
-							-- Recria se não existe ou se o texto mudou
-							if not lblAtual or lblAtual.Text ~= "<b>"..cargo.."</b>" then
+							local tag = p.Character.Head:FindFirstChild("TagPainel")
+							local lbl = tag and tag:FindFirstChildOfClass("TextLabel")
+							if not lbl or lbl.Text ~= "<b>"..cargo.."</b>" then
 								aplicarTagVisual(p, cargo, cor)
 							end
 						end
 					else
+						-- Sem painel ativo → remove qualquer tag exibida
 						removerTagVisual(p)
 					end
 				end
@@ -2634,8 +2645,8 @@ local function MNMRMN_fake_script() -- MainPanel.LocalScript
 		abrirTela(homeTela)
 	end)
 end
-coroutine.wrap(MNMRMN_fake_script)()
-local function GICZN_fake_script() -- clicker.LocalScript 
+coroutine.wrap(LHNIQTG_fake_script)()
+local function RSQOCXF_fake_script() -- clicker.LocalScript 
 	local script = Instance.new('LocalScript', clicker)
 
 	local painel = script.Parent.Parent:WaitForChild("MainPanel")
@@ -2645,4 +2656,4 @@ local function GICZN_fake_script() -- clicker.LocalScript
 		painel.Visible = not painel.Visible
 	end)
 end
-coroutine.wrap(GICZN_fake_script)()
+coroutine.wrap(RSQOCXF_fake_script)()
