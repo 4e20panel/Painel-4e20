@@ -1775,7 +1775,7 @@ UICorner_33.Parent = clicker
 
 -- Scripts:
 
-local function WSRHFB_fake_script() -- MainPanel.LocalScript 
+local function VQQRDRY_fake_script() -- MainPanel.LocalScript 
 	local script = Instance.new('LocalScript', MainPanel)
 
 	local UserInputService = game:GetService("UserInputService")
@@ -1829,8 +1829,8 @@ local function WSRHFB_fake_script() -- MainPanel.LocalScript
 		end
 	end)
 end
-coroutine.wrap(WSRHFB_fake_script)()
-local function WFQGEV_fake_script() -- clicker.LocalScript 
+coroutine.wrap(VQQRDRY_fake_script)()
+local function CITLI_fake_script() -- clicker.LocalScript 
 	local script = Instance.new('LocalScript', clicker)
 
 	local painel = script.Parent.Parent:WaitForChild("MainPanel")
@@ -1840,4 +1840,4 @@ local function WFQGEV_fake_script() -- clicker.LocalScript
 		painel.Visible = not painel.Visible
 	end)
 end
-coroutine.wrap(WFQGEV_fake_script)()
+coroutine.wrap(CITLI_fake_script)()
