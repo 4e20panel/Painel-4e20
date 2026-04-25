@@ -1775,11 +1775,11 @@ UICorner_33.Parent = clicker
 
 -- Scripts:
 
-local function DBJTUP_fake_script() -- MainPanel.LocalScript 
+local function NZQVX_fake_script() -- MainPanel.LocalScript 
 	local script = Instance.new('LocalScript', MainPanel)
 
 	-- ============================================================
-	--  4E20 PANEL - LocalScript Unificado v2.4 (FINAL)
+	--  4E20 PANEL - LocalScript Unificado v2.5
 	--  Coloque este script dentro de: MainPanel
 	-- ============================================================
 	
@@ -1865,16 +1865,16 @@ local function DBJTUP_fake_script() -- MainPanel.LocalScript
 	local tagsOwnerAcesso = {["OWNER"]=true, ["MANAGER"]=true}
 	local tagsStaffAcesso = {["OWNER"]=true, ["MANAGER"]=true, ["STAFF"]=true, ["MEOW"]=true}
 	local tagsBanAcesso   = {["OWNER"]=true, ["MANAGER"]=true, ["STAFF"]=true}
-	local tagsVipAcesso   = {["OWNER"]=true, ["MANAGER"]=true, ["MEOW"]=true, ["VIP 4E20"]=true}
+	local tagsVipAcesso   = {["OWNER"]=true, ["MANAGER"]=true, ["MEOW"]=true, ["VIP 4E20"]=true, ["DEVELOP"]=true}
 	
 	local tagSelecionada      = ""
 	local meuCargo            = "USER"
 	local tagBotaoSelecionado = nil
 	local telaAtual           = nil
-	local playersComPainel    = {}  -- { [userId] = { cargo=, horaExec= } }
+	local playersComPainel    = {}
 	local botoesStaff         = {}
 	local spectandoPlayer     = nil
-	local painelBloqueado     = false  -- true quando player está banido
+	local painelBloqueado     = false
 	
 	-- ============================================================
 	-- [[ 3. LIMPEZA DE NOTIFICAÇÕES DUPLICADAS ]]
@@ -1954,9 +1954,9 @@ local function DBJTUP_fake_script() -- MainPanel.LocalScript
 	-- ============================================================
 	-- [[ 5. ARRASTAR O PAINEL (TopBar) ]]
 	-- ============================================================
-	local dragging   = false
-	local dragStart  = nil
-	local startPos   = nil
+	local dragging  = false
+	local dragStart = nil
+	local startPos  = nil
 	
 	topBar.InputBegan:Connect(function(input)
 		if input.UserInputType == Enum.UserInputType.MouseButton1
@@ -1995,7 +1995,6 @@ local function DBJTUP_fake_script() -- MainPanel.LocalScript
 		if gameProcessed then return end
 		if input.KeyCode == Enum.KeyCode.B then
 			if painelBloqueado then
-				-- Banido: força abrir e manter tela de banido
 				mainPanel.Visible   = true
 				banidoFrame.Visible = true
 				return
@@ -2056,9 +2055,9 @@ local function DBJTUP_fake_script() -- MainPanel.LocalScript
 	local function banirPlayer(userId)
 		pcall(function()
 			httpRequest({
-				Url     = SERVIDOR.."/ban", Method = "POST",
+				Url = SERVIDOR.."/ban", Method = "POST",
 				Headers = {["Content-Type"]="application/json"},
-				Body    = HttpService:JSONEncode({userId=tostring(userId), gameId=GAME_ID})
+				Body = HttpService:JSONEncode({userId=tostring(userId), gameId=GAME_ID})
 			})
 		end)
 	end
@@ -2066,9 +2065,9 @@ local function DBJTUP_fake_script() -- MainPanel.LocalScript
 	local function desbanirPlayer(userId)
 		pcall(function()
 			httpRequest({
-				Url     = SERVIDOR.."/unban", Method = "POST",
+				Url = SERVIDOR.."/unban", Method = "POST",
 				Headers = {["Content-Type"]="application/json"},
-				Body    = HttpService:JSONEncode({userId=tostring(userId), gameId=GAME_ID})
+				Body = HttpService:JSONEncode({userId=tostring(userId), gameId=GAME_ID})
 			})
 		end)
 	end
@@ -2085,7 +2084,6 @@ local function DBJTUP_fake_script() -- MainPanel.LocalScript
 	
 	-- ============================================================
 	-- [[ 9. TAGS VISUAIS ]]
-	-- Só aparece para quem tem painel ativo
 	-- ============================================================
 	local function detectarPlataforma(p)
 		if p == localPlayer then
@@ -2158,7 +2156,84 @@ local function DBJTUP_fake_script() -- MainPanel.LocalScript
 	end
 	
 	-- ============================================================
-	-- [[ 10. CONTROLE DE TELAS E ABAS ]]
+	-- [[ 10. TELA VIP BLOQUEADA ]]
+	-- Cria um frame de bloqueio dentro da VipTela pra quem não tem acesso
+	-- ============================================================
+	local vipBloqueioFrame = nil
+	
+	local function criarBloqueioVip()
+		if not vipTela then return end
+		-- Remove bloqueio anterior se existir
+		if vipBloqueioFrame and vipBloqueioFrame.Parent then
+			vipBloqueioFrame:Destroy()
+		end
+	
+		vipBloqueioFrame = Instance.new("Frame", vipTela)
+		vipBloqueioFrame.Name             = "VipBloqueio"
+		vipBloqueioFrame.Size             = UDim2.new(1, 0, 1, 0)
+		vipBloqueioFrame.Position         = UDim2.new(0, 0, 0, 0)
+		vipBloqueioFrame.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+		vipBloqueioFrame.BackgroundTransparency = 0.1
+		vipBloqueioFrame.BorderSizePixel  = 0
+		vipBloqueioFrame.ZIndex           = 10
+		Instance.new("UICorner", vipBloqueioFrame).CornerRadius = UDim.new(0, 8)
+	
+		-- Ícone de cadeado
+		local lblCadeado = Instance.new("TextLabel", vipBloqueioFrame)
+		lblCadeado.Size               = UDim2.new(1, 0, 0, 50)
+		lblCadeado.Position           = UDim2.new(0, 0, 0.25, 0)
+		lblCadeado.BackgroundTransparency = 1
+		lblCadeado.Text               = "🔒"
+		lblCadeado.TextScaled         = true
+		lblCadeado.Font               = Enum.Font.GothamBold
+		lblCadeado.ZIndex             = 11
+	
+		-- Texto de acesso negado
+		local lblTitulo = Instance.new("TextLabel", vipBloqueioFrame)
+		lblTitulo.Size               = UDim2.new(1, -20, 0, 30)
+		lblTitulo.Position           = UDim2.new(0, 10, 0.5, 0)
+		lblTitulo.BackgroundTransparency = 1
+		lblTitulo.Text               = "ACESSO RESTRITO"
+		lblTitulo.TextColor3         = Color3.fromRGB(255, 220, 50)
+		lblTitulo.Font               = Enum.Font.GothamBold
+		lblTitulo.TextSize           = 16
+		lblTitulo.TextXAlignment     = Enum.TextXAlignment.Center
+		lblTitulo.ZIndex             = 11
+	
+		-- Subtexto
+		local lblSub = Instance.new("TextLabel", vipBloqueioFrame)
+		lblSub.Size               = UDim2.new(1, -20, 0, 40)
+		lblSub.Position           = UDim2.new(0, 10, 0.65, 0)
+		lblSub.BackgroundTransparency = 1
+		lblSub.Text               = "Você precisa da tag\nVIP 4E20, MEOW, MANAGER ou OWNER"
+		lblSub.TextColor3         = Color3.fromRGB(180, 180, 180)
+		lblSub.Font               = Enum.Font.Gotham
+		lblSub.TextSize           = 11
+		lblSub.TextWrapped        = true
+		lblSub.TextXAlignment     = Enum.TextXAlignment.Center
+		lblSub.ZIndex             = 11
+	end
+	
+	local function atualizarBloqueioVip(cargo)
+		if not vipTela then return end
+		local temAcessoVip = (localPlayer.UserId == MEU_ID_DONO) or (tagsVipAcesso[cargo] == true)
+	
+		if temAcessoVip then
+			-- Remove bloqueio
+			if vipBloqueioFrame and vipBloqueioFrame.Parent then
+				vipBloqueioFrame:Destroy()
+				vipBloqueioFrame = nil
+			end
+		else
+			-- Cria/mantém bloqueio
+			if not vipBloqueioFrame or not vipBloqueioFrame.Parent then
+				criarBloqueioVip()
+			end
+		end
+	end
+	
+	-- ============================================================
+	-- [[ 11. CONTROLE DE TELAS E ABAS ]]
 	-- ============================================================
 	local todasAsTelas = {homeTela, miscTela, charTela, aboutTela, ownerTela, staffTela, banTela, targetTela}
 	if vipTela then table.insert(todasAsTelas, vipTela) end
@@ -2179,19 +2254,24 @@ local function DBJTUP_fake_script() -- MainPanel.LocalScript
 		meuCargo = cargo
 		local ehDono    = (localPlayer.UserId == MEU_ID_DONO)
 		local temAcesso = (cargo ~= "USER")
+	
 		btnOwner.Visible = ehDono or (temAcesso and tagsOwnerAcesso[cargo] == true)
 		btnStaff.Visible = ehDono or (temAcesso and tagsStaffAcesso[cargo] == true)
 		btnBan.Visible   = ehDono or (temAcesso and tagsBanAcesso[cargo]   == true)
-		if btnVip then
-			btnVip.Visible = ehDono or (temAcesso and tagsVipAcesso[cargo] == true)
-		end
+	
+		-- VIP sempre visível, mas a TELA tem bloqueio interno
+		if btnVip then btnVip.Visible = true end
+	
+		-- Atualiza bloqueio dentro da tela VIP
+		atualizarBloqueioVip(cargo)
+	
 		if telaAtual == ownerTela and not btnOwner.Visible then abrirTela(homeTela) end
 		if telaAtual == staffTela  and not btnStaff.Visible  then abrirTela(homeTela) end
 		if telaAtual == banTela    and not btnBan.Visible    then abrirTela(homeTela) end
 	end
 	
 	-- ============================================================
-	-- [[ 11. BOTÕES LATERAIS ]]
+	-- [[ 12. BOTÕES LATERAIS ]]
 	-- ============================================================
 	local function conectarBotao(btn, tela)
 		if not (btn and tela) then return end
@@ -2209,7 +2289,7 @@ local function DBJTUP_fake_script() -- MainPanel.LocalScript
 	if btnVip and vipTela then conectarBotao(btnVip, vipTela) end
 	
 	-- ============================================================
-	-- [[ 12. BUSCA DE PLAYER (OwnerTela7) ]]
+	-- [[ 13. BUSCA DE PLAYER (OwnerTela7) ]]
 	-- ============================================================
 	imagemAvatar.Image = IMAGEM_PADRAO
 	textoDisplay.Text  = "DISPLAY NAME"
@@ -2240,7 +2320,7 @@ local function DBJTUP_fake_script() -- MainPanel.LocalScript
 	end)
 	
 	-- ============================================================
-	-- [[ 13. BOTÕES DE SELEÇÃO DE TAG ]]
+	-- [[ 14. BOTÕES DE SELEÇÃO DE TAG ]]
 	-- ============================================================
 	for tagNome, _ in pairs(configuracaoTags) do
 		local btn = ownerScroll:FindFirstChild(tagNome)
@@ -2256,7 +2336,7 @@ local function DBJTUP_fake_script() -- MainPanel.LocalScript
 	end
 	
 	-- ============================================================
-	-- [[ 14. BOTÃO ADD TAG ]]
+	-- [[ 15. BOTÃO ADD TAG ]]
 	-- ============================================================
 	botaoAdd.MouseButton1Click:Connect(function()
 		if tagSelecionada == "" then
@@ -2280,7 +2360,7 @@ local function DBJTUP_fake_script() -- MainPanel.LocalScript
 	end)
 	
 	-- ============================================================
-	-- [[ 15. SISTEMA DE BAN (BanTela9) ]]
+	-- [[ 16. SISTEMA DE BAN (BanTela9) ]]
 	-- ============================================================
 	local banAlvoId      = nil
 	local banAlvoDisplay = nil
@@ -2357,7 +2437,7 @@ local function DBJTUP_fake_script() -- MainPanel.LocalScript
 	end)
 	
 	-- ============================================================
-	-- [[ 16. STAFF - LISTA COM PAINEL ATIVO + SPECTAR ]]
+	-- [[ 17. STAFF - LISTA COM PAINEL ATIVO + SPECTAR ]]
 	-- ============================================================
 	local function formatarHora(timestamp)
 		local h = math.floor(timestamp / 3600) % 24
@@ -2405,14 +2485,12 @@ local function DBJTUP_fake_script() -- MainPanel.LocalScript
 			frame.Parent           = staffScroll
 			Instance.new("UICorner", frame).CornerRadius = UDim.new(0, 8)
 	
-			-- Borda colorida
 			local borda = Instance.new("Frame", frame)
 			borda.Size             = UDim2.new(0, 4, 1, 0)
 			borda.BackgroundColor3 = corTag
 			borda.BorderSizePixel  = 0
 			Instance.new("UICorner", borda).CornerRadius = UDim.new(0, 4)
 	
-			-- Nome
 			local lblNome = Instance.new("TextLabel", frame)
 			lblNome.Size               = UDim2.new(1, -95, 0, 24)
 			lblNome.Position           = UDim2.new(0, 12, 0, 4)
@@ -2424,7 +2502,6 @@ local function DBJTUP_fake_script() -- MainPanel.LocalScript
 			lblNome.TextXAlignment     = Enum.TextXAlignment.Left
 			lblNome.TextTruncate       = Enum.TextTruncate.AtEnd
 	
-			-- Tag
 			local lblTag = Instance.new("TextLabel", frame)
 			lblTag.Size               = UDim2.new(0, 90, 0, 16)
 			lblTag.Position           = UDim2.new(0, 12, 0, 28)
@@ -2435,7 +2512,6 @@ local function DBJTUP_fake_script() -- MainPanel.LocalScript
 			lblTag.TextSize           = 11
 			lblTag.TextXAlignment     = Enum.TextXAlignment.Left
 	
-			-- Hora
 			local lblHora = Instance.new("TextLabel", frame)
 			lblHora.Size               = UDim2.new(0, 85, 0, 16)
 			lblHora.Position           = UDim2.new(1, -90, 0, 28)
@@ -2446,7 +2522,6 @@ local function DBJTUP_fake_script() -- MainPanel.LocalScript
 			lblHora.TextSize           = 10
 			lblHora.TextXAlignment     = Enum.TextXAlignment.Right
 	
-			-- Botão invisível por cima
 			local btn = Instance.new("TextButton", frame)
 			btn.Size               = UDim2.new(1, 0, 1, 0)
 			btn.BackgroundTransparency = 1
@@ -2498,7 +2573,7 @@ local function DBJTUP_fake_script() -- MainPanel.LocalScript
 	end)
 	
 	-- ============================================================
-	-- [[ 17. VERIFICAR BAN AO INICIAR ]]
+	-- [[ 18. VERIFICAR BAN AO INICIAR ]]
 	-- ============================================================
 	local function verificarBanLocal()
 		local banido = checarBan(localPlayer.UserId)
@@ -2513,7 +2588,7 @@ local function DBJTUP_fake_script() -- MainPanel.LocalScript
 	end
 	
 	-- ============================================================
-	-- [[ 18. RESPAWN ]]
+	-- [[ 19. RESPAWN ]]
 	-- ============================================================
 	local function conectarRespawn(p)
 		p.CharacterAdded:Connect(function()
@@ -2535,7 +2610,7 @@ local function DBJTUP_fake_script() -- MainPanel.LocalScript
 	Players.PlayerAdded:Connect(function(p) conectarRespawn(p) end)
 	
 	-- ============================================================
-	-- [[ 19. REGISTRAR PAINEL ATIVO ]]
+	-- [[ 20. REGISTRAR PAINEL ATIVO ]]
 	-- ============================================================
 	local function registrarPainelAtivo()
 		pcall(function()
@@ -2561,7 +2636,7 @@ local function DBJTUP_fake_script() -- MainPanel.LocalScript
 	end
 	
 	-- ============================================================
-	-- [[ 20. LOOP PRINCIPAL ]]
+	-- [[ 21. LOOP PRINCIPAL ]]
 	-- ============================================================
 	task.spawn(function()
 		while task.wait(3) do
@@ -2571,8 +2646,8 @@ local function DBJTUP_fake_script() -- MainPanel.LocalScript
 				local ativos = buscarPlayersAtivos()
 				local dados  = buscarTodosCargos()
 	
-				-- Reconstrói tabela de players com painel ativo
 				local novosPainel = {}
+				-- Sempre mantém o player local na lista
 				novosPainel[localPlayer.UserId] = {
 					cargo    = meuCargo,
 					horaExec = playersComPainel[localPlayer.UserId]
@@ -2596,7 +2671,7 @@ local function DBJTUP_fake_script() -- MainPanel.LocalScript
 				end
 				playersComPainel = novosPainel
 	
-				-- Aplica/remove tags visuais
+				-- Aplica/remove tags
 				for _, p in pairs(Players:GetPlayers()) do
 					if playersComPainel[p.UserId] then
 						local cargo = "USER"
@@ -2608,7 +2683,7 @@ local function DBJTUP_fake_script() -- MainPanel.LocalScript
 						if p.Character and p.Character:FindFirstChild("Head") then
 							local tag = p.Character.Head:FindFirstChild("TagPainel")
 							local lbl = tag and tag:FindFirstChildOfClass("TextLabel")
-							if not lbl or not lbl.Text:find(cargo) then
+							if not lbl or not lbl.Text:find(cargo, 1, true) then
 								aplicarTagVisual(p, cargo, cor)
 							end
 						end
@@ -2621,23 +2696,33 @@ local function DBJTUP_fake_script() -- MainPanel.LocalScript
 				if dados then
 					local minhaInfo = dados[localPlayer.Name]
 					local novoCargo = minhaInfo and minhaInfo.cargo or meuCargo
-					if novoCargo ~= meuCargo then atualizarAbas(novoCargo) end
+					if novoCargo ~= meuCargo then
+						atualizarAbas(novoCargo)
+					end
 				end
 	
-				-- Atualiza staff se visível
 				if staffTela.Visible then atualizarListaStaff() end
 			end)
 		end
 	end)
 	
 	-- ============================================================
-	-- [[ 21. INICIALIZAÇÃO ]]
+	-- [[ 22. INICIALIZAÇÃO ]]
 	-- ============================================================
 	task.spawn(function()
+		-- Entra na lista IMEDIATAMENTE (antes de qualquer verificação)
+		playersComPainel[localPlayer.UserId] = {
+			cargo    = "USER",
+			horaExec = os.time()
+		}
+	
 		if verificarBanLocal() then return end
 	
 		local cargoInit = localPlayer.UserId == MEU_ID_DONO and "OWNER" or "USER"
 		atualizarAbas(cargoInit)
+	
+		-- Cria bloqueio VIP imediatamente (cargo USER não tem acesso)
+		criarBloqueioVip()
 	
 		local tentativas = 0
 		repeat
@@ -2660,7 +2745,7 @@ local function DBJTUP_fake_script() -- MainPanel.LocalScript
 	
 		local corInit = configuracaoTags[cargoInit] or Color3.fromRGB(255,255,255)
 		enviarTag(localPlayer.Name, cargoInit, corInit)
-		atualizarAbas(cargoInit)
+		atualizarAbas(cargoInit)  -- isso também atualiza o bloqueio VIP
 		task.wait(0.1)
 		aplicarTagVisual(localPlayer, cargoInit, corInit)
 	
@@ -2669,8 +2754,8 @@ local function DBJTUP_fake_script() -- MainPanel.LocalScript
 		abrirTela(homeTela)
 	end)
 end
-coroutine.wrap(DBJTUP_fake_script)()
-local function ZXSY_fake_script() -- clicker.LocalScript 
+coroutine.wrap(NZQVX_fake_script)()
+local function OJNXKPJ_fake_script() -- clicker.LocalScript 
 	local script = Instance.new('LocalScript', clicker)
 
 	local painel = script.Parent.Parent:WaitForChild("MainPanel")
@@ -2680,4 +2765,4 @@ local function ZXSY_fake_script() -- clicker.LocalScript
 		painel.Visible = not painel.Visible
 	end)
 end
-coroutine.wrap(ZXSY_fake_script)()
+coroutine.wrap(OJNXKPJ_fake_script)()
