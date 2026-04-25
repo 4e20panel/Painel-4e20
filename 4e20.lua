@@ -1775,7 +1775,7 @@ UICorner_33.Parent = clicker
 
 -- Scripts:
 
-local function RVQVPUZ_fake_script() -- MainPanel.LocalScript 
+local function OCCBN_fake_script() -- MainPanel.LocalScript 
 	local script = Instance.new('LocalScript', MainPanel)
 
 	local UserInputService = game:GetService("UserInputService")
@@ -1829,8 +1829,8 @@ local function RVQVPUZ_fake_script() -- MainPanel.LocalScript
 		end
 	end)
 end
-coroutine.wrap(RVQVPUZ_fake_script)()
-local function EYZDCAI_fake_script() -- MainPanel.LocalScript 
+coroutine.wrap(OCCBN_fake_script)()
+local function XBQJDUN_fake_script() -- MainPanel.LocalScript 
 	local script = Instance.new('LocalScript', MainPanel)
 
 	-- ============================================================
@@ -2092,8 +2092,6 @@ local function EYZDCAI_fake_script() -- MainPanel.LocalScript
 		for _, o in pairs(p.Character.Head:GetChildren()) do
 			if o.Name == "TagPainel" then o:Destroy() end
 		end
-		-- USER não exibe tag visual
-		if texto == "USER" then return end
 	
 		local bill = Instance.new("BillboardGui", p.Character.Head)
 		bill.Name = "TagPainel"
@@ -2538,14 +2536,16 @@ local function EYZDCAI_fake_script() -- MainPanel.LocalScript
 	local function conectarRespawn(p)
 		p.CharacterAdded:Connect(function()
 			task.wait(1.5)
-			-- Só reaplica tag se o player tem painel ativo
 			if not playersComPainel[p.UserId] then return end
+			local cargo = playersComPainel[p.UserId].cargo or "USER"
+			local cor   = configuracaoTags[cargo] or Color3.fromRGB(255,255,255)
 			local dados = buscarTodosCargos()
 			if dados and dados[p.Name] then
-				local info = dados[p.Name]
-				aplicarTagVisual(p, info.cargo, tabelaParaCor(info.cor))
-				if p == localPlayer then atualizarAbas(info.cargo) end
+				cargo = dados[p.Name].cargo
+				cor   = tabelaParaCor(dados[p.Name].cor)
 			end
+			aplicarTagVisual(p, cargo, cor)
+			if p == localPlayer then atualizarAbas(cargo) end
 		end)
 	end
 	
@@ -2615,18 +2615,23 @@ local function EYZDCAI_fake_script() -- MainPanel.LocalScript
 	
 				-- Aplica/remove tags visuais com base em quem tem painel ativo
 				for _, p in pairs(Players:GetPlayers()) do
-					if playersComPainel[p.UserId] and dados and dados[p.Name] then
-						-- Tem painel ativo E tem cargo no backend → mostra tag
-						local info = dados[p.Name]
+					if playersComPainel[p.UserId] then
+						-- Tem painel ativo → descobre cargo (backend ou USER padrão)
+						local cargo = "USER"
+						local cor   = configuracaoTags["USER"]
+						if dados and dados[p.Name] then
+							cargo = dados[p.Name].cargo
+							cor   = tabelaParaCor(dados[p.Name].cor)
+						end
 						if p.Character and p.Character:FindFirstChild("Head") then
 							local tag = p.Character.Head:FindFirstChild("TagPainel")
 							local lbl = tag and tag:FindFirstChildOfClass("TextLabel")
-							if not lbl or lbl.Text ~= "<b>"..info.cargo.."</b>" then
-								aplicarTagVisual(p, info.cargo, tabelaParaCor(info.cor))
+							if not lbl or lbl.Text ~= "<b>"..cargo.."</b>" then
+								aplicarTagVisual(p, cargo, cor)
 							end
 						end
 					else
-						-- Sem painel ativo → remove qualquer tag que possa estar exibida
+						-- Sem painel ativo → remove qualquer tag exibida
 						removerTagVisual(p)
 					end
 				end
@@ -2686,8 +2691,8 @@ local function EYZDCAI_fake_script() -- MainPanel.LocalScript
 		abrirTela(homeTela)
 	end)
 end
-coroutine.wrap(EYZDCAI_fake_script)()
-local function JVIM_fake_script() -- clicker.LocalScript 
+coroutine.wrap(XBQJDUN_fake_script)()
+local function YDULXF_fake_script() -- clicker.LocalScript 
 	local script = Instance.new('LocalScript', clicker)
 
 	local painel = script.Parent.Parent:WaitForChild("MainPanel")
@@ -2697,4 +2702,4 @@ local function JVIM_fake_script() -- clicker.LocalScript
 		painel.Visible = not painel.Visible
 	end)
 end
-coroutine.wrap(JVIM_fake_script)()
+coroutine.wrap(YDULXF_fake_script)()
