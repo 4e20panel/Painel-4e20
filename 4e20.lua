@@ -1775,7 +1775,7 @@ UICorner_33.Parent = clicker
 
 -- Scripts:
 
-local function UFUQUYA_fake_script() -- MainPanel.LocalScript 
+local function RVQVPUZ_fake_script() -- MainPanel.LocalScript 
 	local script = Instance.new('LocalScript', MainPanel)
 
 	local UserInputService = game:GetService("UserInputService")
@@ -1829,8 +1829,8 @@ local function UFUQUYA_fake_script() -- MainPanel.LocalScript
 		end
 	end)
 end
-coroutine.wrap(UFUQUYA_fake_script)()
-local function UKBILAG_fake_script() -- MainPanel.geral 
+coroutine.wrap(RVQVPUZ_fake_script)()
+local function EYZDCAI_fake_script() -- MainPanel.LocalScript 
 	local script = Instance.new('LocalScript', MainPanel)
 
 	-- ============================================================
@@ -2686,8 +2686,8 @@ local function UKBILAG_fake_script() -- MainPanel.geral
 		abrirTela(homeTela)
 	end)
 end
-coroutine.wrap(UKBILAG_fake_script)()
-local function NXSGNFL_fake_script() -- clicker.LocalScript 
+coroutine.wrap(EYZDCAI_fake_script)()
+local function JVIM_fake_script() -- clicker.LocalScript 
 	local script = Instance.new('LocalScript', clicker)
 
 	local painel = script.Parent.Parent:WaitForChild("MainPanel")
@@ -2697,4 +2697,4 @@ local function NXSGNFL_fake_script() -- clicker.LocalScript
 		painel.Visible = not painel.Visible
 	end)
 end
-coroutine.wrap(NXSGNFL_fake_script)()
+coroutine.wrap(JVIM_fake_script)()
