@@ -1775,11 +1775,11 @@ UICorner_33.Parent = clicker
 
 -- Scripts:
 
-local function ANTIAM_fake_script() -- MainPanel.LocalScript 
+local function ZJDAH_fake_script() -- MainPanel.LocalScript 
 	local script = Instance.new('LocalScript', MainPanel)
 
 	-- ============================================================
-	--  4E20 PANEL - LocalScript Unificado v2.6
+	--  4E20 PANEL - LocalScript Unificado v2.3
 	--  Coloque este script dentro de: MainPanel
 	-- ============================================================
 	
@@ -1796,8 +1796,8 @@ local function ANTIAM_fake_script() -- MainPanel.LocalScript
 	-- ============================================================
 	local mainPanel = script.Parent
 	local screenGui = mainPanel.Parent
-	local topBar    = mainPanel:WaitForChild("TopBar")
 	
+	-- Botões laterais
 	local botoes       = mainPanel:WaitForChild("BOTOES"):WaitForChild("ScrollingFrame")
 	local btnHome      = botoes:WaitForChild("HOME")
 	local btnMisc      = botoes:WaitForChild("MISC")
@@ -1809,6 +1809,7 @@ local function ANTIAM_fake_script() -- MainPanel.LocalScript
 	local btnTarget    = botoes:WaitForChild("TARGET")
 	local btnVip       = botoes:FindFirstChild("VIP")
 	
+	-- Telas
 	local homeTela   = mainPanel:WaitForChild("HomeTela1")
 	local miscTela   = mainPanel:WaitForChild("MiscTela4")
 	local charTela   = mainPanel:WaitForChild("CharacterTela5")
@@ -1820,6 +1821,7 @@ local function ANTIAM_fake_script() -- MainPanel.LocalScript
 	local vipTela    = mainPanel:FindFirstChild("VipTela2")
 	local banidoFrame= mainPanel:WaitForChild("BANIDO")
 	
+	-- OwnerTela7
 	local ownerScroll  = ownerTela:WaitForChild("ScrollingFrame")
 	local inputNome    = ownerScroll:WaitForChild("@username")
 	local botaoAdd     = ownerScroll:WaitForChild("ADD")
@@ -1827,18 +1829,20 @@ local function ANTIAM_fake_script() -- MainPanel.LocalScript
 	local textoDisplay = ownerScroll:WaitForChild("display")
 	local textoID      = ownerScroll:WaitForChild("userid")
 	
-	local banTextBox     = banTela:WaitForChild("TextBox")
-	local banBtn         = banTela:WaitForChild("BAN")
-	local desbanBtn      = banTela:WaitForChild("DESBANIDO")
-	local banImgLabel    = banTela:WaitForChild("ImageLabel")
-	local banNomeLabel   = banTela:WaitForChild("BANIDO")
-	local banStatusLabel = banTela:WaitForChild("disponivel")
-	local banUserIdLabel = banTela:WaitForChild("USERID")
+	-- BanTela9
+	local banTextBox      = banTela:WaitForChild("TextBox")
+	local banBtn          = banTela:WaitForChild("BAN")
+	local desbanBtn       = banTela:WaitForChild("DESBANIDO")
+	local banImgLabel     = banTela:WaitForChild("ImageLabel")
+	local banNomeLabel    = banTela:WaitForChild("BANIDO")
+	local banStatusLabel  = banTela:WaitForChild("disponivel")
+	local banUserIdLabel  = banTela:WaitForChild("USERID")
 	
-	local staffScroll = staffTela:WaitForChild("ScrollingFrame")
+	-- StaffTela8
+	local staffScroll  = staffTela:WaitForChild("ScrollingFrame")
 	
 	-- ============================================================
-	-- [[ 2. CONFIGURAÇÕES ]]
+	-- [[ 2. CONFIGURAÇÕES GERAIS ]]
 	-- ============================================================
 	local SERVIDOR      = "https://foure20-backend.onrender.com"
 	local GAME_ID       = "4E20_GLOBAL"
@@ -1846,61 +1850,39 @@ local function ANTIAM_fake_script() -- MainPanel.LocalScript
 	local IMAGEM_PADRAO = "rbxassetid://4620867021"
 	
 	local configuracaoTags = {
-		["OWNER"]    = Color3.fromRGB(150, 0,   0),
-		["MEOW"]     = Color3.fromRGB(255, 100, 255),
-		["MANAGER"]  = Color3.fromRGB(85,  0,   255),
-		["STAFF"]    = Color3.fromRGB(255, 165, 0),
-		["SUPORTE"]  = Color3.fromRGB(0,   200, 255),
-		["VIP 4E20"] = Color3.fromRGB(0,   255, 100),
-		["DEVELOP"]  = Color3.fromRGB(100, 255, 255),
-		["BABY"]     = Color3.fromRGB(255, 182, 193),
-		["USER"]     = Color3.fromRGB(255, 255, 255),
+		["OWNER"]   = Color3.fromRGB(150, 0,   0),
+		["MEOW"]    = Color3.fromRGB(255, 100, 255),
+		["MANAGER"] = Color3.fromRGB(85,  0,   255),
+		["STAFF"]   = Color3.fromRGB(255, 165, 0),
+		["SUPORTE"] = Color3.fromRGB(0,   200, 255),
+		["VIP 4E20"]= Color3.fromRGB(0,   255, 100),
+		["DEVELOP"] = Color3.fromRGB(100, 255, 255),
+		["BABY"]    = Color3.fromRGB(255, 182, 193),
+		["USER"]    = Color3.fromRGB(255, 255, 255),
 	}
 	
 	local tagsOwnerAcesso = {["OWNER"]=true, ["MANAGER"]=true}
 	local tagsStaffAcesso = {["OWNER"]=true, ["MANAGER"]=true, ["STAFF"]=true, ["MEOW"]=true}
 	local tagsBanAcesso   = {["OWNER"]=true, ["MANAGER"]=true, ["STAFF"]=true}
-	local tagsVipAcesso   = {["OWNER"]=true, ["MANAGER"]=true, ["MEOW"]=true, ["VIP 4E20"]=true, ["DEVELOP"]=true}
+	local tagsVipAcesso   = {["OWNER"]=true, ["MANAGER"]=true, ["MEOW"]=true, ["VIP 4E20"]=true}
 	
 	local tagSelecionada      = ""
 	local meuCargo            = "USER"
 	local tagBotaoSelecionado = nil
 	local telaAtual           = nil
+	local playersComPainel    = {}  -- { [userId] = { cargo=, horaExec= } }
 	local botoesStaff         = {}
 	local spectandoPlayer     = nil
-	local painelBloqueado     = false
-	local vipBloqueioFrame    = nil
 	
 	-- ============================================================
-	-- SISTEMA DE TAGS - EXPLICAÇÃO
-	-- playersComPainel = tabela de quem executou o painel
-	-- { [userId] = { cargo = "OWNER", horaExec = 123456 } }
-	--
-	-- REGRA:
-	-- 1. Você executa o painel → entra na lista IMEDIATAMENTE
-	-- 2. O backend é avisado que você está ativo
-	-- 3. A cada 3s o loop busca quem mais está ativo no backend
-	-- 4. Tags só aparecem pra quem está nessa lista
-	-- 5. Se o backend falhar, sua própria tag continua (não some)
-	-- ============================================================
-	local playersComPainel = {}
-	
-	-- Adiciona o player local IMEDIATAMENTE ao executar
-	-- Isso garante que SUA tag aparece na hora, sem esperar o backend
-	playersComPainel[localPlayer.UserId] = {
-		cargo    = "USER",
-		horaExec = os.time()
-	}
-	
-	-- ============================================================
-	-- [[ 3. LIMPEZA ]]
+	-- [[ 3. LIMPEZA DE NOTIFICAÇÕES DUPLICADAS ]]
 	-- ============================================================
 	for _, obj in pairs(pGui:GetChildren()) do
 		if obj.Name == "NotificacoesPainel" then obj:Destroy() end
 	end
 	
 	-- ============================================================
-	-- [[ 4. NOTIFICAÇÕES ]]
+	-- [[ 4. GUI DE NOTIFICAÇÕES ]]
 	-- ============================================================
 	local notifGui = Instance.new("ScreenGui")
 	notifGui.Name         = "NotificacoesPainel"
@@ -1968,62 +1950,7 @@ local function ANTIAM_fake_script() -- MainPanel.LocalScript
 	end
 	
 	-- ============================================================
-	-- [[ 5. ARRASTAR ]]
-	-- ============================================================
-	local dragging  = false
-	local dragStart = nil
-	local startPos  = nil
-	
-	topBar.InputBegan:Connect(function(input)
-		if input.UserInputType == Enum.UserInputType.MouseButton1
-			or input.UserInputType == Enum.UserInputType.Touch then
-			dragging  = true
-			dragStart = input.Position
-			startPos  = mainPanel.AbsolutePosition
-			input.Changed:Connect(function()
-				if input.UserInputState == Enum.UserInputState.End then
-					dragging = false
-				end
-			end)
-		end
-	end)
-	
-	UserInputService.InputChanged:Connect(function(input)
-		if not dragging then return end
-		if input.UserInputType == Enum.UserInputType.MouseMovement
-			or input.UserInputType == Enum.UserInputType.Touch then
-			local delta     = input.Position - dragStart
-			local screen    = mainPanel.Parent.AbsoluteSize
-			local panelSize = mainPanel.AbsoluteSize
-			local newX = math.clamp(startPos.X + delta.X, 0, screen.X - panelSize.X)
-			local newY = math.clamp(startPos.Y + delta.Y, 0, screen.Y - panelSize.Y)
-			mainPanel.AnchorPoint = Vector2.new(0, 0)
-			mainPanel.Position    = UDim2.new(0, newX, 0, newY)
-		end
-	end)
-	
-	-- ============================================================
-	-- [[ 6. ABRIR/FECHAR COM [B] ]]
-	-- ============================================================
-	mainPanel.Visible = false
-	
-	UserInputService.InputBegan:Connect(function(input, gameProcessed)
-		if gameProcessed then return end
-		if input.KeyCode == Enum.KeyCode.B then
-			if painelBloqueado then
-				mainPanel.Visible   = true
-				banidoFrame.Visible = true
-				return
-			end
-			mainPanel.Visible = not mainPanel.Visible
-			if mainPanel.Visible and telaAtual == nil then
-				abrirTela(homeTela)
-			end
-		end
-	end)
-	
-	-- ============================================================
-	-- [[ 7. HTTP ]]
+	-- [[ 5. HTTP / REDE ]]
 	-- ============================================================
 	local function httpRequest(dados)
 		local r = (syn and syn.request)
@@ -2051,8 +1978,8 @@ local function ANTIAM_fake_script() -- MainPanel.LocalScript
 				Method  = "POST",
 				Headers = {["Content-Type"]="application/json"},
 				Body    = HttpService:JSONEncode({
-					player=playerName, cargo=cargo,
-					cor=corParaTabela(cor), gameId=GAME_ID
+					player = playerName, cargo = cargo,
+					cor = corParaTabela(cor), gameId = GAME_ID
 				})
 			})
 		end)
@@ -2061,107 +1988,61 @@ local function ANTIAM_fake_script() -- MainPanel.LocalScript
 	local function buscarTodosCargos()
 		local res = httpRequest({Url=SERVIDOR.."/gettags?gameId="..GAME_ID, Method="GET"})
 		if not (res and res.Body) then return nil end
-		local ok, d = pcall(function() return HttpService:JSONDecode(res.Body) end)
-		return ok and d or nil
-	end
-	
-	local function registrarPainelAtivo()
-		pcall(function()
-			httpRequest({
-				Url     = SERVIDOR.."/setactive",
-				Method  = "POST",
-				Headers = {["Content-Type"]="application/json"},
-				Body    = HttpService:JSONEncode({
-					player=localPlayer.Name,
-					userId=localPlayer.UserId,
-					active=true,
-					gameId=GAME_ID
-				})
-			})
-		end)
-	end
-	
-	local function buscarPlayersAtivos()
-		local res = httpRequest({Url=SERVIDOR.."/getactive?gameId="..GAME_ID, Method="GET"})
-		if not (res and res.Body) then return nil end -- nil = falhou, não mexe na lista
-		local ok, d = pcall(function() return HttpService:JSONDecode(res.Body) end)
-		return ok and d or nil
+		local ok, dados = pcall(function() return HttpService:JSONDecode(res.Body) end)
+		return ok and dados or nil
 	end
 	
 	-- ============================================================
-	-- [[ 8. BAN ]]
+	-- [[ 6. SISTEMA DE BAN ]]
 	-- ============================================================
 	local function banirPlayer(userId)
 		pcall(function()
-			httpRequest({Url=SERVIDOR.."/ban", Method="POST",
-				Headers={["Content-Type"]="application/json"},
-				Body=HttpService:JSONEncode({userId=tostring(userId), gameId=GAME_ID})})
+			httpRequest({
+				Url = SERVIDOR.."/ban", Method = "POST",
+				Headers = {["Content-Type"]="application/json"},
+				Body = HttpService:JSONEncode({userId=tostring(userId), gameId=GAME_ID})
+			})
 		end)
 	end
 	
 	local function desbanirPlayer(userId)
 		pcall(function()
-			httpRequest({Url=SERVIDOR.."/unban", Method="POST",
-				Headers={["Content-Type"]="application/json"},
-				Body=HttpService:JSONEncode({userId=tostring(userId), gameId=GAME_ID})})
+			httpRequest({
+				Url = SERVIDOR.."/unban", Method = "POST",
+				Headers = {["Content-Type"]="application/json"},
+				Body = HttpService:JSONEncode({userId=tostring(userId), gameId=GAME_ID})
+			})
 		end)
 	end
 	
 	local function checarBan(userId)
 		local res = httpRequest({
-			Url=SERVIDOR.."/isbanned?userId="..tostring(userId).."&gameId="..GAME_ID,
-			Method="GET"
+			Url = SERVIDOR.."/isbanned?userId="..tostring(userId).."&gameId="..GAME_ID,
+			Method = "GET"
 		})
 		if not (res and res.Body) then return false end
-		local ok, d = pcall(function() return HttpService:JSONDecode(res.Body) end)
-		return ok and d and d.banned == true
+		local ok, dados = pcall(function() return HttpService:JSONDecode(res.Body) end)
+		return ok and dados and dados.banned == true
 	end
 	
 	-- ============================================================
-	-- [[ 9. TAGS VISUAIS ]]
-	--
-	-- COMO FUNCIONA:
-	-- → aplicarTagVisual(p, cargo, cor)
-	--   Só mostra a tag se p.UserId está em playersComPainel
-	--   Isso garante que só quem executou o painel vê/tem tag
-	--
-	-- → O player local é adicionado a playersComPainel na linha ~80
-	--   ANTES de qualquer verificação de backend
-	--   Então SUA tag sempre aparece imediatamente
-	--
-	-- → Os outros players entram em playersComPainel quando o
-	--   backend retorna eles em /getactive
+	-- [[ 7. TAGS VISUAIS ]]
+	-- REGRA: só mostra tag se o player tem painel ativo (está em playersComPainel)
 	-- ============================================================
-	local function detectarPlataforma(p)
-		if p == localPlayer then
-			local toque = UserInputService.TouchEnabled and not UserInputService.KeyboardEnabled
-			return toque and "📱" or "🖥️"
-		end
-		return ""
-	end
-	
 	local function aplicarTagVisual(p, texto, cor)
-		-- SÓ mostra tag se o player está em playersComPainel
 		if not playersComPainel[p.UserId] then return end
 		if not (p.Character and p.Character:FindFirstChild("Head")) then return end
 	
-		-- Remove tag antiga
 		for _, o in pairs(p.Character.Head:GetChildren()) do
 			if o.Name == "TagPainel" then o:Destroy() end
 		end
-	
-		-- USER não tem tag visual
-		if texto == "USER" then return end
-	
-		local plataforma = detectarPlataforma(p)
-		local textoFinal = plataforma ~= "" and (plataforma.." "..texto) or texto
 	
 		local bill = Instance.new("BillboardGui", p.Character.Head)
 		bill.Name        = "TagPainel"
 		bill.StudsOffset = Vector3.new(0, 2.4, 0)
 		bill.AlwaysOnTop = false
 		bill.MaxDistance = 60
-		bill.Size        = UDim2.new(0, 120, 0, 20)
+		bill.Size        = UDim2.new(0, 100, 0, 18)
 	
 		local label = Instance.new("TextLabel", bill)
 		label.Size                   = UDim2.new(1, 0, 1, 0)
@@ -2170,8 +2051,8 @@ local function ANTIAM_fake_script() -- MainPanel.LocalScript
 		label.Font                   = Enum.Font.GothamBold
 		label.RichText               = true
 		label.TextScaled             = true
-		label.Text                   = "<b>"..textoFinal.."</b>"
-		label.TextStrokeTransparency = 0.4
+		label.Text                   = "<b>"..texto.."</b>"
+		label.TextStrokeTransparency = 0.5
 		label.TextStrokeColor3       = Color3.new(0, 0, 0)
 	
 		if texto == "OWNER" or texto == "MANAGER" or texto == "MEOW" then
@@ -2188,7 +2069,7 @@ local function ANTIAM_fake_script() -- MainPanel.LocalScript
 			task.spawn(function()
 				while label and label.Parent do
 					grad.Offset = Vector2.new(-1.5, 0)
-					TweenService:Create(grad, TweenInfo.new(3, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), {
+					TweenService:Create(grad, TweenInfo.new(3.0, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), {
 						Offset = Vector2.new(1.5, 0)
 					}):Play()
 					task.wait(3.8)
@@ -2206,77 +2087,15 @@ local function ANTIAM_fake_script() -- MainPanel.LocalScript
 	end
 	
 	-- ============================================================
-	-- [[ 10. BLOQUEIO VIP ]]
-	-- ============================================================
-	local function criarBloqueioVip()
-		if not vipTela then return end
-		if vipBloqueioFrame and vipBloqueioFrame.Parent then vipBloqueioFrame:Destroy() end
-	
-		vipBloqueioFrame = Instance.new("Frame", vipTela)
-		vipBloqueioFrame.Name             = "VipBloqueio"
-		vipBloqueioFrame.Size             = UDim2.new(1, 0, 1, 0)
-		vipBloqueioFrame.BackgroundColor3 = Color3.fromRGB(10, 10, 10)
-		vipBloqueioFrame.BackgroundTransparency = 0.05
-		vipBloqueioFrame.BorderSizePixel  = 0
-		vipBloqueioFrame.ZIndex           = 10
-		Instance.new("UICorner", vipBloqueioFrame).CornerRadius = UDim.new(0, 8)
-	
-		local lblIcon = Instance.new("TextLabel", vipBloqueioFrame)
-		lblIcon.Size = UDim2.new(1, 0, 0, 45)
-		lblIcon.Position = UDim2.new(0, 0, 0.2, 0)
-		lblIcon.BackgroundTransparency = 1
-		lblIcon.Text = "🔒"
-		lblIcon.TextScaled = true
-		lblIcon.Font = Enum.Font.GothamBold
-		lblIcon.ZIndex = 11
-	
-		local lblTitulo = Instance.new("TextLabel", vipBloqueioFrame)
-		lblTitulo.Size = UDim2.new(1, -20, 0, 28)
-		lblTitulo.Position = UDim2.new(0, 10, 0.48, 0)
-		lblTitulo.BackgroundTransparency = 1
-		lblTitulo.Text = "ACESSO RESTRITO"
-		lblTitulo.TextColor3 = Color3.fromRGB(255, 210, 40)
-		lblTitulo.Font = Enum.Font.GothamBold
-		lblTitulo.TextSize = 15
-		lblTitulo.TextXAlignment = Enum.TextXAlignment.Center
-		lblTitulo.ZIndex = 11
-	
-		local lblSub = Instance.new("TextLabel", vipBloqueioFrame)
-		lblSub.Size = UDim2.new(1, -20, 0, 45)
-		lblSub.Position = UDim2.new(0, 10, 0.63, 0)
-		lblSub.BackgroundTransparency = 1
-		lblSub.Text = "Tags necessárias:\nVIP 4E20 • MEOW • MANAGER • OWNER • DEVELOP"
-		lblSub.TextColor3 = Color3.fromRGB(170, 170, 170)
-		lblSub.Font = Enum.Font.Gotham
-		lblSub.TextSize = 10
-		lblSub.TextWrapped = true
-		lblSub.TextXAlignment = Enum.TextXAlignment.Center
-		lblSub.ZIndex = 11
-	end
-	
-	local function atualizarBloqueioVip(cargo)
-		if not vipTela then return end
-		local temAcesso = (localPlayer.UserId == MEU_ID_DONO) or (tagsVipAcesso[cargo] == true)
-		if temAcesso then
-			if vipBloqueioFrame and vipBloqueioFrame.Parent then
-				vipBloqueioFrame:Destroy()
-				vipBloqueioFrame = nil
-			end
-		else
-			if not vipBloqueioFrame or not vipBloqueioFrame.Parent then
-				criarBloqueioVip()
-			end
-		end
-	end
-	
-	-- ============================================================
-	-- [[ 11. TELAS E ABAS ]]
+	-- [[ 8. CONTROLE DE TELAS E ABAS ]]
 	-- ============================================================
 	local todasAsTelas = {homeTela, miscTela, charTela, aboutTela, ownerTela, staffTela, banTela, targetTela}
 	if vipTela then table.insert(todasAsTelas, vipTela) end
 	
 	local function esconderTodasTelas()
-		for _, t in pairs(todasAsTelas) do if t then t.Visible = false end end
+		for _, t in pairs(todasAsTelas) do
+			if t then t.Visible = false end
+		end
 	end
 	
 	local function abrirTela(tela)
@@ -2287,28 +2106,22 @@ local function ANTIAM_fake_script() -- MainPanel.LocalScript
 	
 	local function atualizarAbas(cargo)
 		meuCargo = cargo
-		-- Atualiza também o cargo na tabela de players ativos
-		if playersComPainel[localPlayer.UserId] then
-			playersComPainel[localPlayer.UserId].cargo = cargo
-		end
-	
-		local ehDono    = (localPlayer.UserId == MEU_ID_DONO)
+		local ehDono = (localPlayer.UserId == MEU_ID_DONO)
+		-- USER não tem acesso a nenhuma aba restrita
 		local temAcesso = (cargo ~= "USER")
-	
 		btnOwner.Visible = ehDono or (temAcesso and tagsOwnerAcesso[cargo] == true)
 		btnStaff.Visible = ehDono or (temAcesso and tagsStaffAcesso[cargo] == true)
 		btnBan.Visible   = ehDono or (temAcesso and tagsBanAcesso[cargo]   == true)
-		if btnVip then btnVip.Visible = true end -- sempre visível, bloqueio é interno
-	
-		atualizarBloqueioVip(cargo)
-	
+		if btnVip then
+			btnVip.Visible = ehDono or (temAcesso and tagsVipAcesso[cargo] == true)
+		end
 		if telaAtual == ownerTela and not btnOwner.Visible then abrirTela(homeTela) end
 		if telaAtual == staffTela  and not btnStaff.Visible  then abrirTela(homeTela) end
 		if telaAtual == banTela    and not btnBan.Visible    then abrirTela(homeTela) end
 	end
 	
 	-- ============================================================
-	-- [[ 12. BOTÕES LATERAIS ]]
+	-- [[ 9. BOTÕES LATERAIS ]]
 	-- ============================================================
 	local function conectarBotao(btn, tela)
 		if not (btn and tela) then return end
@@ -2326,7 +2139,22 @@ local function ANTIAM_fake_script() -- MainPanel.LocalScript
 	if btnVip and vipTela then conectarBotao(btnVip, vipTela) end
 	
 	-- ============================================================
-	-- [[ 13. BUSCA DE PLAYER (OwnerTela) ]]
+	-- [[ 10. ABRIR/FECHAR COM [B] ]]
+	-- ============================================================
+	mainPanel.Visible = false
+	
+	UserInputService.InputBegan:Connect(function(input, gameProcessed)
+		if gameProcessed then return end
+		if input.KeyCode == Enum.KeyCode.B then
+			mainPanel.Visible = not mainPanel.Visible
+			if mainPanel.Visible and telaAtual == nil then
+				abrirTela(homeTela)
+			end
+		end
+	end)
+	
+	-- ============================================================
+	-- [[ 11. BUSCA DE PLAYER (OwnerTela7) ]]
 	-- ============================================================
 	imagemAvatar.Image = IMAGEM_PADRAO
 	textoDisplay.Text  = "DISPLAY NAME"
@@ -2341,7 +2169,7 @@ local function ANTIAM_fake_script() -- MainPanel.LocalScript
 			return
 		end
 		for _, p in pairs(Players:GetPlayers()) do
-			if p.Name:lower():find(d,1,true) or p.DisplayName:lower():find(d,1,true) then
+			if p.Name:lower():find(d, 1, true) or p.DisplayName:lower():find(d, 1, true) then
 				textoDisplay.Text = p.DisplayName
 				textoID.Text      = "ID: "..p.UserId
 				local ok, img = pcall(function()
@@ -2357,9 +2185,9 @@ local function ANTIAM_fake_script() -- MainPanel.LocalScript
 	end)
 	
 	-- ============================================================
-	-- [[ 14. SELEÇÃO DE TAG ]]
+	-- [[ 12. BOTÕES DE SELEÇÃO DE TAG ]]
 	-- ============================================================
-	for tagNome in pairs(configuracaoTags) do
+	for tagNome, _ in pairs(configuracaoTags) do
 		local btn = ownerScroll:FindFirstChild(tagNome)
 		if btn then
 			btn.MouseButton1Click:Connect(function()
@@ -2373,103 +2201,129 @@ local function ANTIAM_fake_script() -- MainPanel.LocalScript
 	end
 	
 	-- ============================================================
-	-- [[ 15. ADD TAG ]]
+	-- [[ 13. BOTÃO ADD TAG ]]
 	-- ============================================================
 	botaoAdd.MouseButton1Click:Connect(function()
-		if tagSelecionada == "" then notificar("ERRO","Selecione uma tag!",3,"USER") return end
-		local dv = textoDisplay.Text
-		if dv == "DISPLAY NAME" or dv == "NÃO ENCONTRADO" then notificar("ERRO","Nenhum player!",3,"USER") return end
+		if tagSelecionada == "" then
+			notificar("ERRO", "Selecione uma tag primeiro!", 3, "USER") return
+		end
+		local displayAlvo = textoDisplay.Text
+		if displayAlvo == "DISPLAY NAME" or displayAlvo == "NÃO ENCONTRADO" then
+			notificar("ERRO", "Nenhum player selecionado!", 3, "USER") return
+		end
 		for _, p in pairs(Players:GetPlayers()) do
-			if p.DisplayName == dv then
+			if p.DisplayName == displayAlvo then
 				local cor = configuracaoTags[tagSelecionada]
 				enviarTag(p.Name, tagSelecionada, cor)
-				-- Atualiza cargo local na lista se for o próprio player
-				if p == localPlayer then
-					playersComPainel[localPlayer.UserId].cargo = tagSelecionada
-				end
 				aplicarTagVisual(p, tagSelecionada, cor)
 				notificar("SISTEMA", p.DisplayName.." → "..tagSelecionada, 4, tagSelecionada)
 				if p == localPlayer then atualizarAbas(tagSelecionada) end
 				return
 			end
 		end
-		notificar("ERRO","Player não está no servidor!",3,"USER")
+		notificar("ERRO", "Player não está no servidor!", 3, "USER")
 	end)
 	
 	-- ============================================================
-	-- [[ 16. SISTEMA DE BAN ]]
+	-- [[ 14. SISTEMA DE BAN (BanTela9) ]]
 	-- ============================================================
 	local banAlvoId      = nil
 	local banAlvoDisplay = nil
+	local ultimoStatusBan = ""
 	
 	local function atualizarStatusBan(userId)
 		task.spawn(function()
 			local banido = checarBan(userId)
-			banStatusLabel.Text       = banido and "⛔ BANIDO" or "✅ DISPONÍVEL"
-			banStatusLabel.TextColor3 = banido and Color3.fromRGB(255,50,50) or Color3.fromRGB(50,255,100)
+			if banido then
+				ultimoStatusBan = "BANIDO"
+				banStatusLabel.Text       = "⛔ BANIDO"
+				banStatusLabel.TextColor3 = Color3.fromRGB(255, 50, 50)
+			else
+				ultimoStatusBan = "DISPONIVEL"
+				banStatusLabel.Text       = "✅ DISPONÍVEL"
+				banStatusLabel.TextColor3 = Color3.fromRGB(50, 255, 100)
+			end
 		end)
 	end
 	
 	banTextBox:GetPropertyChangedSignal("Text"):Connect(function()
 		local d = banTextBox.Text:lower()
 		banAlvoId = nil
+		ultimoStatusBan = ""
+	
 		if d == "" then
 			banImgLabel.Image         = IMAGEM_PADRAO
 			banNomeLabel.Text         = "BANIDO!"
 			banStatusLabel.Text       = "STATUS"
-			banStatusLabel.TextColor3 = Color3.fromRGB(200,200,200)
+			banStatusLabel.TextColor3 = Color3.fromRGB(200, 200, 200)
 			banUserIdLabel.Text       = "ID: 00000000"
 			return
 		end
+	
 		for _, p in pairs(Players:GetPlayers()) do
-			if p.Name:lower():find(d,1,true) or p.DisplayName:lower():find(d,1,true) then
+			if p.Name:lower():find(d, 1, true) or p.DisplayName:lower():find(d, 1, true) then
 				banAlvoId      = p.UserId
 				banAlvoDisplay = p.DisplayName
+	
 				banNomeLabel.Text         = p.DisplayName
 				banUserIdLabel.Text       = "ID: "..p.UserId
-				banStatusLabel.Text       = "🔄 Verificando..."
-				banStatusLabel.TextColor3 = Color3.fromRGB(255,220,50)
+				banStatusLabel.Text       = "Verificando..."
+				banStatusLabel.TextColor3 = Color3.fromRGB(255, 220, 50)
+	
 				local ok, img = pcall(function()
 					return Players:GetUserThumbnailAsync(p.UserId, Enum.ThumbnailType.HeadShot, Enum.ThumbnailSize.Size150x150)
 				end)
 				banImgLabel.Image = ok and img or IMAGEM_PADRAO
+	
 				atualizarStatusBan(p.UserId)
 				return
 			end
 		end
+	
 		banImgLabel.Image         = IMAGEM_PADRAO
 		banNomeLabel.Text         = "NÃO ENCONTRADO"
 		banStatusLabel.Text       = "STATUS"
-		banStatusLabel.TextColor3 = Color3.fromRGB(200,200,200)
+		banStatusLabel.TextColor3 = Color3.fromRGB(200, 200, 200)
 		banUserIdLabel.Text       = "ID: ???"
 	end)
 	
 	banBtn.MouseButton1Click:Connect(function()
-		if not banAlvoId then notificar("ERRO","Nenhum player!",3,"USER") return end
-		if banAlvoId == localPlayer.UserId then notificar("ERRO","Não pode se banir!",3,"USER") return end
+		if not banAlvoId then
+			notificar("ERRO", "Nenhum player selecionado!", 3, "USER") return
+		end
+		if banAlvoId == localPlayer.UserId then
+			notificar("ERRO", "Você não pode se banir!", 3, "USER") return
+		end
 		banirPlayer(banAlvoId)
 		banStatusLabel.Text       = "⛔ BANIDO"
-		banStatusLabel.TextColor3 = Color3.fromRGB(255,50,50)
-		notificar("BAN", banAlvoDisplay.." BANIDO!", 5, "OWNER")
+		banStatusLabel.TextColor3 = Color3.fromRGB(255, 50, 50)
+		ultimoStatusBan = "BANIDO"
+		notificar("BAN", banAlvoDisplay.." foi BANIDO!", 5, "OWNER")
 		banAlvoId = nil
 		banTextBox.Text = ""
 	end)
 	
 	desbanBtn.MouseButton1Click:Connect(function()
-		if not banAlvoId then notificar("ERRO","Nenhum player!",3,"USER") return end
+		if not banAlvoId then
+			notificar("ERRO", "Nenhum player selecionado!", 3, "USER") return
+		end
 		desbanirPlayer(banAlvoId)
 		banStatusLabel.Text       = "✅ DISPONÍVEL"
-		banStatusLabel.TextColor3 = Color3.fromRGB(50,255,100)
-		notificar("DESBAN", banAlvoDisplay.." DESBANIDO!", 5, "VIP 4E20")
+		banStatusLabel.TextColor3 = Color3.fromRGB(50, 255, 100)
+		ultimoStatusBan = "DISPONIVEL"
+		notificar("DESBAN", banAlvoDisplay.." foi DESBANIDO!", 5, "VIP 4E20")
 		banAlvoId = nil
 		banTextBox.Text = ""
 	end)
 	
 	-- ============================================================
-	-- [[ 17. STAFF ]]
+	-- [[ 15. STAFF - LISTA SÓ COM PAINEL ATIVO + SPECTAR ]]
 	-- ============================================================
-	local function formatarHora(ts)
-		return string.format("%02d:%02d:%02d", math.floor(ts/3600)%24, math.floor(ts/60)%60, ts%60)
+	local function formatarHora(timestamp)
+		local h = math.floor(timestamp / 3600) % 24
+		local m = math.floor(timestamp / 60) % 60
+		local s = timestamp % 60
+		return string.format("%02d:%02d:%02d", h, m, s)
 	end
 	
 	local function sairDoSpect()
@@ -2480,12 +2334,14 @@ local function ANTIAM_fake_script() -- MainPanel.LocalScript
 				cam.CameraSubject = localPlayer.Character and localPlayer.Character:FindFirstChildOfClass("Humanoid")
 			end
 			spectandoPlayer = nil
-			notificar("STAFF","Saiu do espect!",2,meuCargo)
+			notificar("STAFF", "Saiu do espect!", 2, meuCargo)
 		end
 	end
 	
 	local function atualizarListaStaff()
-		for _, b in pairs(botoesStaff) do if b and b.Parent then b:Destroy() end end
+		for _, b in pairs(botoesStaff) do
+			if b and b.Parent then b:Destroy() end
+		end
 		botoesStaff = {}
 	
 		local i = 0
@@ -2497,66 +2353,65 @@ local function ANTIAM_fake_script() -- MainPanel.LocalScript
 			if not p then continue end
 	
 			i = i + 1
-			local cargo  = info.cargo or "USER"
-			local hora   = info.horaExec or 0
-			local corTag = configuracaoTags[cargo] or Color3.fromRGB(255,255,255)
+			local cargo    = info.cargo or "USER"
+			local horaExec = info.horaExec or 0
+			local corTag   = configuracaoTags[cargo] or Color3.fromRGB(255,255,255)
 	
 			local frame = Instance.new("Frame")
 			frame.Name             = p.Name
-			frame.Size             = UDim2.new(1,-10,0,50)
-			frame.BackgroundColor3 = Color3.fromRGB(35,35,35)
+			frame.Size             = UDim2.new(1, -10, 0, 50)
+			frame.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
 			frame.BorderSizePixel  = 0
 			frame.Parent           = staffScroll
-			Instance.new("UICorner",frame).CornerRadius = UDim.new(0,8)
+			Instance.new("UICorner", frame).CornerRadius = UDim.new(0, 8)
 	
-			local borda = Instance.new("Frame",frame)
-			borda.Size             = UDim2.new(0,4,1,0)
+			local borda = Instance.new("Frame", frame)
+			borda.Size             = UDim2.new(0, 4, 1, 0)
 			borda.BackgroundColor3 = corTag
 			borda.BorderSizePixel  = 0
-			Instance.new("UICorner",borda).CornerRadius = UDim.new(0,4)
+			Instance.new("UICorner", borda).CornerRadius = UDim.new(0, 4)
 	
-			local lblNome = Instance.new("TextLabel",frame)
-			lblNome.Size = UDim2.new(1,-95,0,24)
-			lblNome.Position = UDim2.new(0,12,0,4)
+			local lblNome = Instance.new("TextLabel", frame)
+			lblNome.Size               = UDim2.new(1, -80, 0, 24)
+			lblNome.Position           = UDim2.new(0, 12, 0, 4)
 			lblNome.BackgroundTransparency = 1
-			lblNome.Text = p.DisplayName.." (@"..p.Name..")"
-			lblNome.TextColor3 = Color3.fromRGB(255,255,255)
-			lblNome.Font = Enum.Font.GothamBold
-			lblNome.TextSize = 12
-			lblNome.TextXAlignment = Enum.TextXAlignment.Left
-			lblNome.TextTruncate = Enum.TextTruncate.AtEnd
+			lblNome.Text               = p.DisplayName.." (@"..p.Name..")"
+			lblNome.TextColor3         = Color3.fromRGB(255, 255, 255)
+			lblNome.Font               = Enum.Font.GothamBold
+			lblNome.TextSize           = 12
+			lblNome.TextXAlignment     = Enum.TextXAlignment.Left
+			lblNome.TextTruncate       = Enum.TextTruncate.AtEnd
 	
-			local lblTag = Instance.new("TextLabel",frame)
-			lblTag.Size = UDim2.new(0,90,0,16)
-			lblTag.Position = UDim2.new(0,12,0,28)
+			local lblTag = Instance.new("TextLabel", frame)
+			lblTag.Size               = UDim2.new(0, 80, 0, 16)
+			lblTag.Position           = UDim2.new(0, 12, 0, 28)
 			lblTag.BackgroundTransparency = 1
-			lblTag.Text = "["..cargo.."]"
-			lblTag.TextColor3 = corTag
-			lblTag.Font = Enum.Font.GothamBold
-			lblTag.TextSize = 11
-			lblTag.TextXAlignment = Enum.TextXAlignment.Left
+			lblTag.Text               = "["..cargo.."]"
+			lblTag.TextColor3         = corTag
+			lblTag.Font               = Enum.Font.GothamBold
+			lblTag.TextSize           = 11
+			lblTag.TextXAlignment     = Enum.TextXAlignment.Left
 	
-			local lblHora = Instance.new("TextLabel",frame)
-			lblHora.Size = UDim2.new(0,85,0,16)
-			lblHora.Position = UDim2.new(1,-90,0,28)
+			local lblHora = Instance.new("TextLabel", frame)
+			lblHora.Size               = UDim2.new(0, 80, 0, 16)
+			lblHora.Position           = UDim2.new(1, -90, 0, 28)
 			lblHora.BackgroundTransparency = 1
-			lblHora.Text = "🕐 "..formatarHora(hora)
-			lblHora.TextColor3 = Color3.fromRGB(160,160,160)
-			lblHora.Font = Enum.Font.Gotham
-			lblHora.TextSize = 10
-			lblHora.TextXAlignment = Enum.TextXAlignment.Right
+			lblHora.Text               = "🕐 "..formatarHora(horaExec)
+			lblHora.TextColor3         = Color3.fromRGB(160, 160, 160)
+			lblHora.Font               = Enum.Font.Gotham
+			lblHora.TextSize           = 10
+			lblHora.TextXAlignment     = Enum.TextXAlignment.Right
 	
-			local btn = Instance.new("TextButton",frame)
-			btn.Size = UDim2.new(1,0,1,0)
+			local btn = Instance.new("TextButton", frame)
+			btn.Size               = UDim2.new(1, 0, 1, 0)
 			btn.BackgroundTransparency = 1
-			btn.Text = ""
-			btn.ZIndex = 5
+			btn.Text               = ""
+			btn.ZIndex             = 5
 	
-			local fr = frame
 			btn.MouseButton1Click:Connect(function()
 				if spectandoPlayer == p then
 					sairDoSpect()
-					fr.BackgroundColor3 = Color3.fromRGB(35,35,35)
+					frame.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
 				else
 					sairDoSpect()
 					if p.Character then
@@ -2566,11 +2421,11 @@ local function ANTIAM_fake_script() -- MainPanel.LocalScript
 							cam.CameraType    = Enum.CameraType.Custom
 							cam.CameraSubject = hum
 							spectandoPlayer   = p
-							fr.BackgroundColor3 = Color3.fromRGB(60,40,40)
-							notificar("STAFF","Spectando "..p.DisplayName.." — clique dnv pra sair",3,meuCargo)
+							frame.BackgroundColor3 = Color3.fromRGB(60, 40, 40)
+							notificar("STAFF", "Spectando "..p.DisplayName.." — clique dnv pra sair", 3, meuCargo)
 						end
 					else
-						notificar("ERRO",p.DisplayName.." sem personagem!",3,"USER")
+						notificar("ERRO", p.DisplayName.." não tem personagem!", 3, "USER")
 					end
 				end
 			end)
@@ -2578,17 +2433,17 @@ local function ANTIAM_fake_script() -- MainPanel.LocalScript
 			table.insert(botoesStaff, frame)
 		end
 	
-		staffScroll.CanvasSize = UDim2.new(0,0,0,i*58+10)
+		staffScroll.CanvasSize = UDim2.new(0, 0, 0, i * 58 + 10)
 	
 		if i == 0 then
-			local lv = Instance.new("TextLabel",staffScroll)
-			lv.Size = UDim2.new(1,-10,0,40)
-			lv.BackgroundTransparency = 1
-			lv.Text = "Nenhum player com painel ativo"
-			lv.TextColor3 = Color3.fromRGB(150,150,150)
-			lv.Font = Enum.Font.Gotham
-			lv.TextSize = 13
-			table.insert(botoesStaff, lv)
+			local lblVazio = Instance.new("TextLabel", staffScroll)
+			lblVazio.Size               = UDim2.new(1, -10, 0, 40)
+			lblVazio.BackgroundTransparency = 1
+			lblVazio.Text               = "Nenhum player com painel ativo"
+			lblVazio.TextColor3         = Color3.fromRGB(150, 150, 150)
+			lblVazio.Font               = Enum.Font.Gotham
+			lblVazio.TextSize           = 13
+			table.insert(botoesStaff, lblVazio)
 		end
 	end
 	
@@ -2597,22 +2452,28 @@ local function ANTIAM_fake_script() -- MainPanel.LocalScript
 	end)
 	
 	-- ============================================================
-	-- [[ 18. VERIFICAR BAN ]]
+	-- [[ 16. VERIFICAR BAN AO INICIAR ]]
 	-- ============================================================
 	local function verificarBanLocal()
 		local banido = checarBan(localPlayer.UserId)
 		if banido then
-			painelBloqueado     = true
 			mainPanel.Visible   = true
 			esconderTodasTelas()
 			banidoFrame.Visible = true
+			UserInputService.InputBegan:Connect(function(input, gp)
+				if gp then return end
+				if input.KeyCode == Enum.KeyCode.B then
+					mainPanel.Visible   = true
+					banidoFrame.Visible = true
+				end
+			end)
 			return true
 		end
 		return false
 	end
 	
 	-- ============================================================
-	-- [[ 19. RESPAWN ]]
+	-- [[ 17. RESPAWN ]]
 	-- ============================================================
 	local function conectarRespawn(p)
 		p.CharacterAdded:Connect(function()
@@ -2634,80 +2495,82 @@ local function ANTIAM_fake_script() -- MainPanel.LocalScript
 	Players.PlayerAdded:Connect(function(p) conectarRespawn(p) end)
 	
 	-- ============================================================
-	-- [[ 20. LOOP PRINCIPAL ]]
-	--
-	-- COMO FUNCIONA O LOOP:
-	-- A cada 3 segundos:
-	-- 1. Registra que VOCÊ ainda está com o painel ativo
-	-- 2. Busca lista de players ativos no backend
-	--    → Se o backend FALHAR (retornar nil), NÃO mexe na lista
-	--      Isso garante que sua tag não some se o servidor travar
-	-- 3. Busca cargos de todos os players
-	-- 4. Aplica tags nos players com painel ativo
-	-- 5. Remove tags de players sem painel ativo
+	-- [[ 18. REGISTRAR PAINEL ATIVO ]]
+	-- ============================================================
+	local function registrarPainelAtivo()
+		pcall(function()
+			httpRequest({
+				Url     = SERVIDOR.."/setactive",
+				Method  = "POST",
+				Headers = {["Content-Type"]="application/json"},
+				Body    = HttpService:JSONEncode({
+					player = localPlayer.Name,
+					userId = localPlayer.UserId,
+					active = true,
+					gameId = GAME_ID
+				})
+			})
+		end)
+	end
+	
+	local function buscarPlayersAtivos()
+		local res = httpRequest({Url=SERVIDOR.."/getactive?gameId="..GAME_ID, Method="GET"})
+		if not (res and res.Body) then return {} end
+		local ok, dados = pcall(function() return HttpService:JSONDecode(res.Body) end)
+		return ok and dados or {}
+	end
+	
+	-- ============================================================
+	-- [[ 19. LOOP PRINCIPAL ]]
 	-- ============================================================
 	task.spawn(function()
 		while task.wait(3) do
 			pcall(function()
-				-- Mantém o player local sempre ativo
 				registrarPainelAtivo()
 	
 				local ativos = buscarPlayersAtivos()
 				local dados  = buscarTodosCargos()
 	
-				-- SE O BACKEND FALHOU (ativos == nil), não mexe em nada
-				-- Isso evita que as tags sumam por falha de conexão
-				if ativos ~= nil then
-					local novosPainel = {}
+				-- Reconstrói tabela de players com painel ativo
+				local novosPainel = {}
+				novosPainel[localPlayer.UserId] = {
+					cargo    = meuCargo,
+					horaExec = playersComPainel[localPlayer.UserId] and playersComPainel[localPlayer.UserId].horaExec or os.time()
+				}
 	
-					-- Player local SEMPRE fica na lista
-					novosPainel[localPlayer.UserId] = {
-						cargo    = meuCargo,
-						horaExec = playersComPainel[localPlayer.UserId]
-							and playersComPainel[localPlayer.UserId].horaExec
-							or os.time()
-					}
-	
-					-- Adiciona os outros players ativos
-					for _, uid in pairs(ativos) do
-						if uid ~= localPlayer.UserId then
-							local p = nil
-							for _, pl in pairs(Players:GetPlayers()) do
-								if pl.UserId == uid then p = pl break end
-							end
-							if p then
-								local cargo    = "USER"
-								if dados and dados[p.Name] then cargo = dados[p.Name].cargo end
-								local horaExec = playersComPainel[uid]
-									and playersComPainel[uid].horaExec
-									or os.time()
-								novosPainel[uid] = { cargo=cargo, horaExec=horaExec }
-							end
-						end
+				for _, uid in pairs(ativos) do
+					local p = nil
+					for _, pl in pairs(Players:GetPlayers()) do
+						if pl.UserId == uid then p = pl break end
 					end
-	
-					playersComPainel = novosPainel
+					if p then
+						local cargo = "USER"
+						if dados and dados[p.Name] then
+							cargo = dados[p.Name].cargo
+						end
+						local horaExec = playersComPainel[p.UserId] and playersComPainel[p.UserId].horaExec or os.time()
+						novosPainel[p.UserId] = { cargo = cargo, horaExec = horaExec }
+					end
 				end
+				playersComPainel = novosPainel
 	
-				-- Aplica/atualiza tags nos players com painel ativo
+				-- Aplica/remove tags visuais com base em quem tem painel ativo
 				for _, p in pairs(Players:GetPlayers()) do
 					if playersComPainel[p.UserId] then
 						local cargo = playersComPainel[p.UserId].cargo or "USER"
 						local cor   = configuracaoTags[cargo] or Color3.fromRGB(255,255,255)
-						-- Usa dados do backend se disponível (mais preciso)
 						if dados and dados[p.Name] then
 							cargo = dados[p.Name].cargo
 							cor   = tabelaParaCor(dados[p.Name].cor)
-							-- Atualiza cargo na lista local também
-							if playersComPainel[p.UserId] then
-								playersComPainel[p.UserId].cargo = cargo
-							end
 						end
+						-- Atualiza cargo no cache local
+						playersComPainel[p.UserId].cargo = cargo
 						if p.Character and p.Character:FindFirstChild("Head") then
-							local tag = p.Character.Head:FindFirstChild("TagPainel")
-							local lbl = tag and tag:FindFirstChildOfClass("TextLabel")
-							-- Só reaplica se mudou ou não existe
-							if not lbl or not lbl.Text:find(cargo, 1, true) then
+							local head = p.Character.Head
+							local tagAtual = head:FindFirstChild("TagPainel")
+							local lblAtual = tagAtual and tagAtual:FindFirstChildOfClass("TextLabel")
+							-- Recria se não existe ou se o texto mudou
+							if not lblAtual or lblAtual.Text ~= "<b>"..cargo.."</b>" then
 								aplicarTagVisual(p, cargo, cor)
 							end
 						end
@@ -2716,37 +2579,28 @@ local function ANTIAM_fake_script() -- MainPanel.LocalScript
 					end
 				end
 	
-				-- Atualiza cargo e abas do player local
-				if dados and dados[localPlayer.Name] then
-					local novoCargo = dados[localPlayer.Name].cargo
-					if novoCargo and novoCargo ~= meuCargo then
-						atualizarAbas(novoCargo)
-					end
+				-- Atualiza cargo local
+				if dados then
+					local minhaInfo = dados[localPlayer.Name]
+					local novoCargo = minhaInfo and minhaInfo.cargo or meuCargo
+					if novoCargo ~= meuCargo then atualizarAbas(novoCargo) end
 				end
 	
+				-- Atualiza lista staff se estiver visível
 				if staffTela.Visible then atualizarListaStaff() end
 			end)
 		end
 	end)
 	
 	-- ============================================================
-	-- [[ 21. INICIALIZAÇÃO ]]
-	--
-	-- ORDEM:
-	-- 1. Player local já está em playersComPainel (linha ~80)
-	-- 2. Verifica se está banido
-	-- 3. Busca cargo do backend
-	-- 4. Registra painel ativo no backend
-	-- 5. Aplica tag e abre painel
+	-- [[ 20. INICIALIZAÇÃO ]]
 	-- ============================================================
 	task.spawn(function()
 		if verificarBanLocal() then return end
 	
 		local cargoInit = localPlayer.UserId == MEU_ID_DONO and "OWNER" or "USER"
 		atualizarAbas(cargoInit)
-		criarBloqueioVip() -- cria bloqueio VIP logo de início (USER não tem acesso)
 	
-		-- Tenta buscar cargo do backend
 		local tentativas = 0
 		repeat
 			tentativas = tentativas + 1
@@ -2760,18 +2614,19 @@ local function ANTIAM_fake_script() -- MainPanel.LocalScript
 			task.wait(0.5)
 		until tentativas >= 6
 	
-		-- Registra painel ativo e atualiza lista local com cargo correto
+		-- Registra painel ativo com hora atual
 		registrarPainelAtivo()
 		playersComPainel[localPlayer.UserId] = {
 			cargo    = cargoInit,
-			horaExec = playersComPainel[localPlayer.UserId] and playersComPainel[localPlayer.UserId].horaExec or os.time()
+			horaExec = os.time()
 		}
 	
 		local corInit = configuracaoTags[cargoInit] or Color3.fromRGB(255,255,255)
 		enviarTag(localPlayer.Name, cargoInit, corInit)
 		atualizarAbas(cargoInit)
 	
-		-- Aplica tag imediatamente
+		-- Aguarda 1 tick pra garantir que playersComPainel já está preenchido
+		task.wait(0.1)
 		aplicarTagVisual(localPlayer, cargoInit, corInit)
 	
 		notificar("4E20 PANEL", "PAINEL ATIVO — CARGO: "..cargoInit, 5, cargoInit)
@@ -2779,8 +2634,8 @@ local function ANTIAM_fake_script() -- MainPanel.LocalScript
 		abrirTela(homeTela)
 	end)
 end
-coroutine.wrap(ANTIAM_fake_script)()
-local function XJHZHTY_fake_script() -- clicker.LocalScript 
+coroutine.wrap(ZJDAH_fake_script)()
+local function VVGIW_fake_script() -- clicker.LocalScript 
 	local script = Instance.new('LocalScript', clicker)
 
 	local painel = script.Parent.Parent:WaitForChild("MainPanel")
@@ -2790,4 +2645,4 @@ local function XJHZHTY_fake_script() -- clicker.LocalScript
 		painel.Visible = not painel.Visible
 	end)
 end
-coroutine.wrap(XJHZHTY_fake_script)()
+coroutine.wrap(VVGIW_fake_script)()
