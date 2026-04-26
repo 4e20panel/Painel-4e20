@@ -389,7 +389,7 @@ name.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 name.BackgroundTransparency = 1.000
 name.BorderColor3 = Color3.fromRGB(0, 0, 0)
 name.BorderSizePixel = 0
-name.Position = UDim2.new(0, 191, 0, 15)
+name.Position = UDim2.new(0, 198, 0, 15)
 name.Size = UDim2.new(0, 100, 0, 50)
 name.Font = Enum.Font.SourceSans
 name.Text = "name"
@@ -1778,7 +1778,7 @@ UICorner_33.Parent = clicker
 
 -- Scripts:
 
-local function HEGVO_fake_script() -- MainPanel.LocalScript 
+local function PVPNIUF_fake_script() -- MainPanel.LocalScript 
 	local script = Instance.new('LocalScript', MainPanel)
 
 	-- ============================================================
@@ -3065,16 +3065,35 @@ local function HEGVO_fake_script() -- MainPanel.LocalScript
 		task.wait(0.1)
 		aplicarTagVisual(localPlayer, cargoInit, corInit)
 	
-		carregarAvatarHome()
-		atualizarNomeHome()
+		-- Nome removido daqui — use o script separado NameScript no TextLabel name
 	
 		notificar("4E20 PANEL", "PAINEL ATIVO — CARGO: "..cargoInit, 5, cargoInit)
 		conectarRespawn(localPlayer)
 		abrirTela(homeTela)
 	end)
 end
-coroutine.wrap(HEGVO_fake_script)()
-local function BXWG_fake_script() -- DATA.LocalScript 
+coroutine.wrap(PVPNIUF_fake_script)()
+local function TGZCT_fake_script() -- name.LocalScript 
+	local script = Instance.new('LocalScript', name)
+
+	-- ============================================================
+	--  NameScript — LocalScript
+	--  Coloque este script DENTRO do TextLabel "name" na HomeTela1
+	-- ============================================================
+	
+	local Players   = game:GetService("Players")
+	local label     = script.Parent
+	local player    = Players.LocalPlayer
+	
+	label.Text = player.DisplayName
+	
+	-- Atualiza se o DisplayName mudar durante a sessão
+	player:GetPropertyChangedSignal("DisplayName"):Connect(function()
+		label.Text = player.DisplayName
+	end)
+end
+coroutine.wrap(TGZCT_fake_script)()
+local function DPMVSV_fake_script() -- DATA.LocalScript 
 	local script = Instance.new('LocalScript', DATA)
 
 	-- ============================================================
@@ -3093,8 +3112,8 @@ local function BXWG_fake_script() -- DATA.LocalScript
 		task.wait(1)
 	end
 end
-coroutine.wrap(BXWG_fake_script)()
-local function UXPFDJZ_fake_script() -- clicker.LocalScript 
+coroutine.wrap(DPMVSV_fake_script)()
+local function ONJTS_fake_script() -- clicker.LocalScript 
 	local script = Instance.new('LocalScript', clicker)
 
 	local painel = script.Parent.Parent:WaitForChild("MainPanel")
@@ -3104,4 +3123,4 @@ local function UXPFDJZ_fake_script() -- clicker.LocalScript
 		painel.Visible = not painel.Visible
 	end)
 end
-coroutine.wrap(UXPFDJZ_fake_script)()
+coroutine.wrap(ONJTS_fake_script)()
