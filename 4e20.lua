@@ -230,6 +230,7 @@ ScrollingFrame.BackgroundTransparency = 1.000
 ScrollingFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 ScrollingFrame.BorderSizePixel = 0
 ScrollingFrame.Size = UDim2.new(1, 0, 1, 0)
+ScrollingFrame.CanvasPosition = Vector2.new(0, 83)
 ScrollingFrame.CanvasSize = UDim2.new(0, 0, 0, 355)
 ScrollingFrame.ScrollBarThickness = 5
 
@@ -1778,7 +1779,7 @@ UICorner_33.Parent = clicker
 
 -- Scripts:
 
-local function HSJJFS_fake_script() -- MainPanel.LocalScript 
+local function FGTNDCM_fake_script() -- MainPanel.LocalScript 
 	local script = Instance.new('LocalScript', MainPanel)
 
 	-- ============================================================
@@ -3072,35 +3073,36 @@ local function HSJJFS_fake_script() -- MainPanel.LocalScript
 		abrirTela(homeTela)
 	end)
 end
-coroutine.wrap(HSJJFS_fake_script)()
-local function WCQSX_fake_script() -- name.LocalScript 
+coroutine.wrap(FGTNDCM_fake_script)()
+local function LKTUCI_fake_script() -- name.LocalScript 
 	local script = Instance.new('LocalScript', name)
 
 	-- ============================================================
 	--  NameScript — LocalScript
 	--  Coloque DENTRO do TextLabel "name" na HomeTela1
-	--  Size no Studio: {0,200},{0,22} — Position: {0,198},{0,15}
 	-- ============================================================
 	
 	local Players = game:GetService("Players")
 	local label   = script.Parent
 	local player  = Players.LocalPlayer
 	
-	-- Corrige o tamanho do label para caber nomes longos
-	label.Size           = UDim2.new(0, 200, 0, 22)
+	-- Posição exata: logo após o "Olá!" (X=150+100+5=255, Y=15)
+	label.Position           = UDim2.new(0, 230, 0, 30)
+	label.Size               = UDim2.new(0, 170, 0, 22)
 	label.BackgroundTransparency = 1
-	label.TextXAlignment = Enum.TextXAlignment.Left
-	label.TextTruncate   = Enum.TextTruncate.AtEnd
-	label.TextScaled     = false
-	label.TextWrapped    = false
+	label.TextXAlignment     = Enum.TextXAlignment.Left
+	label.TextTruncate       = Enum.TextTruncate.AtEnd
+	label.TextScaled         = false
+	label.TextWrapped        = false
+	label.TextColor3         = Color3.fromRGB(197, 197, 197)
+	label.Font               = Enum.Font.SourceSansPro
 	
 	local function atualizar()
 		local nome = player.DisplayName
-		-- Ajusta TextSize baseado no comprimento do nome
-		if #nome <= 12 then
-			label.TextSize = 15
-		elseif #nome <= 18 then
-			label.TextSize = 13
+		if #nome <= 10 then
+			label.TextSize = 16
+		elseif #nome <= 16 then
+			label.TextSize = 14
 		else
 			label.TextSize = 11
 		end
@@ -3110,8 +3112,8 @@ local function WCQSX_fake_script() -- name.LocalScript
 	atualizar()
 	player:GetPropertyChangedSignal("DisplayName"):Connect(atualizar)
 end
-coroutine.wrap(WCQSX_fake_script)()
-local function KTHQ_fake_script() -- DATA.LocalScript 
+coroutine.wrap(LKTUCI_fake_script)()
+local function EEBZPCA_fake_script() -- DATA.LocalScript 
 	local script = Instance.new('LocalScript', DATA)
 
 	-- ============================================================
@@ -3130,8 +3132,8 @@ local function KTHQ_fake_script() -- DATA.LocalScript
 		task.wait(1)
 	end
 end
-coroutine.wrap(KTHQ_fake_script)()
-local function MZEVTFG_fake_script() -- clicker.LocalScript 
+coroutine.wrap(EEBZPCA_fake_script)()
+local function LJQG_fake_script() -- clicker.LocalScript 
 	local script = Instance.new('LocalScript', clicker)
 
 	local painel = script.Parent.Parent:WaitForChild("MainPanel")
@@ -3141,4 +3143,4 @@ local function MZEVTFG_fake_script() -- clicker.LocalScript
 		painel.Visible = not painel.Visible
 	end)
 end
-coroutine.wrap(MZEVTFG_fake_script)()
+coroutine.wrap(LJQG_fake_script)()
