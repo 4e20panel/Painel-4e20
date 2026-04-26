@@ -1779,7 +1779,7 @@ UICorner_33.Parent = clicker
 
 -- Scripts:
 
-local function VUHK_fake_script() -- MainPanel.LocalScript 
+local function CJXBQF_fake_script() -- MainPanel.LocalScript 
 	local script = Instance.new('LocalScript', MainPanel)
 
 	-- ============================================================
@@ -2338,7 +2338,8 @@ local function VUHK_fake_script() -- MainPanel.LocalScript
 	
 		btnOwner.Visible = ehDono or (temAcesso and tagsOwnerAcesso[cargo] == true)
 		btnStaff.Visible = ehDono or (temAcesso and tagsStaffAcesso[cargo] == true)
-		btnBan.Visible   = ehDono or (cargo == "OWNER")
+		-- BAN: apenas o dono do painel (MEU_ID_DONO) ou quem tem cargo OWNER
+		btnBan.Visible   = (localPlayer.UserId == MEU_ID_DONO) or (cargo == "OWNER")
 		if btnVip then btnVip.Visible = true end
 	
 		if telaAtual == ownerTela and not btnOwner.Visible then abrirTela(homeTela) end
@@ -2507,9 +2508,11 @@ local function VUHK_fake_script() -- MainPanel.LocalScript
 				if homeData then
 					local d = os.date("*t", os.time())
 					homeData.Text = string.format(
-						"%02d/%02d/%04d  %02d:%02d",
+						"Date  %02d/%02d/%04d  %02d:%02d",
 						d.day, d.month, d.year, d.hour, d.min
 					)
+					homeData.TextXAlignment = Enum.TextXAlignment.Left
+					homeData.TextSize       = 14
 				end
 			end)
 		end
@@ -3041,6 +3044,23 @@ local function VUHK_fake_script() -- MainPanel.LocalScript
 		task.wait(0.1)
 		aplicarTagVisual(localPlayer, cargoInit, corInit)
 	
+		-- Corrige posição do elemento DATA na HomeTela para não sobrepor texto
+		if homeData then
+			homeData.Position       = UDim2.new(0, 10, 0, 463)  -- abaixo do Online
+			homeData.Size           = UDim2.new(0, 300, 0, 20)
+			homeData.TextXAlignment = Enum.TextXAlignment.Left
+			homeData.TextSize       = 14
+			homeData.BackgroundTransparency = 1
+		end
+		if homeOnline then
+			homeOnline.Position       = UDim2.new(0, 10, 0, 435)
+			homeOnline.TextXAlignment = Enum.TextXAlignment.Left
+		end
+		if homePing then
+			homePing.Position       = UDim2.new(0, 10, 0, 407)
+			homePing.TextXAlignment = Enum.TextXAlignment.Left
+		end
+	
 		carregarAvatarHome()
 		atualizarNomeHome()
 	
@@ -3049,8 +3069,8 @@ local function VUHK_fake_script() -- MainPanel.LocalScript
 		abrirTela(homeTela)
 	end)
 end
-coroutine.wrap(VUHK_fake_script)()
-local function FKWYAVP_fake_script() -- clicker.LocalScript 
+coroutine.wrap(CJXBQF_fake_script)()
+local function VNMROFJ_fake_script() -- clicker.LocalScript 
 	local script = Instance.new('LocalScript', clicker)
 
 	local painel = script.Parent.Parent:WaitForChild("MainPanel")
@@ -3060,4 +3080,4 @@ local function FKWYAVP_fake_script() -- clicker.LocalScript
 		painel.Visible = not painel.Visible
 	end)
 end
-coroutine.wrap(FKWYAVP_fake_script)()
+coroutine.wrap(VNMROFJ_fake_script)()
