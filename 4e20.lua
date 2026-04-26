@@ -1779,7 +1779,7 @@ UICorner_33.Parent = clicker
 
 -- Scripts:
 
-local function KNZOUUH_fake_script() -- MainPanel.LocalScript 
+local function XKICBWA_fake_script() -- MainPanel.LocalScript 
 	local script = Instance.new('LocalScript', MainPanel)
 
 	-- ============================================================
@@ -3073,8 +3073,8 @@ local function KNZOUUH_fake_script() -- MainPanel.LocalScript
 		abrirTela(homeTela)
 	end)
 end
-coroutine.wrap(KNZOUUH_fake_script)()
-local function FWTVBB_fake_script() -- name.LocalScript 
+coroutine.wrap(XKICBWA_fake_script)()
+local function CIGEL_fake_script() -- name.LocalScript 
 	local script = Instance.new('LocalScript', name)
 
 	-- ============================================================
@@ -3112,8 +3112,8 @@ local function FWTVBB_fake_script() -- name.LocalScript
 	atualizar()
 	player:GetPropertyChangedSignal("DisplayName"):Connect(atualizar)
 end
-coroutine.wrap(FWTVBB_fake_script)()
-local function FYHV_fake_script() -- DATA.LocalScript 
+coroutine.wrap(CIGEL_fake_script)()
+local function GXKQAB_fake_script() -- DATA.LocalScript 
 	local script = Instance.new('LocalScript', DATA)
 
 	-- ============================================================
@@ -3132,8 +3132,8 @@ local function FYHV_fake_script() -- DATA.LocalScript
 		task.wait(1)
 	end
 end
-coroutine.wrap(FYHV_fake_script)()
-local function TCSP_fake_script() -- clicker.LocalScript 
+coroutine.wrap(GXKQAB_fake_script)()
+local function PBDGB_fake_script() -- clicker.LocalScript 
 	local script = Instance.new('LocalScript', clicker)
 
 	local painel = script.Parent.Parent:WaitForChild("MainPanel")
@@ -3143,4 +3143,4 @@ local function TCSP_fake_script() -- clicker.LocalScript
 		painel.Visible = not painel.Visible
 	end)
 end
-coroutine.wrap(TCSP_fake_script)()
+coroutine.wrap(PBDGB_fake_script)()
