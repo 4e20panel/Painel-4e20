@@ -1779,7 +1779,7 @@ UICorner_33.Parent = clicker
 
 -- Scripts:
 
-local function XKICBWA_fake_script() -- MainPanel.LocalScript 
+local function OLSQIZ_fake_script() -- MainPanel.LocalScript 
 	local script = Instance.new('LocalScript', MainPanel)
 
 	-- ============================================================
@@ -3066,6 +3066,7 @@ local function XKICBWA_fake_script() -- MainPanel.LocalScript
 		task.wait(0.1)
 		aplicarTagVisual(localPlayer, cargoInit, corInit)
 	
+		carregarAvatarHome() -- carrega foto do avatar na HomeTela
 		-- Nome removido daqui — use o script separado NameScript no TextLabel name
 	
 		notificar("4E20 PANEL", "PAINEL ATIVO — CARGO: "..cargoInit, 5, cargoInit)
@@ -3073,8 +3074,8 @@ local function XKICBWA_fake_script() -- MainPanel.LocalScript
 		abrirTela(homeTela)
 	end)
 end
-coroutine.wrap(XKICBWA_fake_script)()
-local function CIGEL_fake_script() -- name.LocalScript 
+coroutine.wrap(OLSQIZ_fake_script)()
+local function KSCGHWZ_fake_script() -- name.LocalScript 
 	local script = Instance.new('LocalScript', name)
 
 	-- ============================================================
@@ -3112,8 +3113,8 @@ local function CIGEL_fake_script() -- name.LocalScript
 	atualizar()
 	player:GetPropertyChangedSignal("DisplayName"):Connect(atualizar)
 end
-coroutine.wrap(CIGEL_fake_script)()
-local function GXKQAB_fake_script() -- DATA.LocalScript 
+coroutine.wrap(KSCGHWZ_fake_script)()
+local function AFHXU_fake_script() -- DATA.LocalScript 
 	local script = Instance.new('LocalScript', DATA)
 
 	-- ============================================================
@@ -3132,8 +3133,8 @@ local function GXKQAB_fake_script() -- DATA.LocalScript
 		task.wait(1)
 	end
 end
-coroutine.wrap(GXKQAB_fake_script)()
-local function PBDGB_fake_script() -- clicker.LocalScript 
+coroutine.wrap(AFHXU_fake_script)()
+local function YHNM_fake_script() -- clicker.LocalScript 
 	local script = Instance.new('LocalScript', clicker)
 
 	local painel = script.Parent.Parent:WaitForChild("MainPanel")
@@ -3143,4 +3144,4 @@ local function PBDGB_fake_script() -- clicker.LocalScript
 		painel.Visible = not painel.Visible
 	end)
 end
-coroutine.wrap(PBDGB_fake_script)()
+coroutine.wrap(YHNM_fake_script)()
