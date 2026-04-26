@@ -1778,7 +1778,7 @@ UICorner_33.Parent = clicker
 
 -- Scripts:
 
-local function PVPNIUF_fake_script() -- MainPanel.LocalScript 
+local function HSJJFS_fake_script() -- MainPanel.LocalScript 
 	local script = Instance.new('LocalScript', MainPanel)
 
 	-- ============================================================
@@ -3072,28 +3072,46 @@ local function PVPNIUF_fake_script() -- MainPanel.LocalScript
 		abrirTela(homeTela)
 	end)
 end
-coroutine.wrap(PVPNIUF_fake_script)()
-local function TGZCT_fake_script() -- name.LocalScript 
+coroutine.wrap(HSJJFS_fake_script)()
+local function WCQSX_fake_script() -- name.LocalScript 
 	local script = Instance.new('LocalScript', name)
 
 	-- ============================================================
 	--  NameScript — LocalScript
-	--  Coloque este script DENTRO do TextLabel "name" na HomeTela1
+	--  Coloque DENTRO do TextLabel "name" na HomeTela1
+	--  Size no Studio: {0,200},{0,22} — Position: {0,198},{0,15}
 	-- ============================================================
 	
-	local Players   = game:GetService("Players")
-	local label     = script.Parent
-	local player    = Players.LocalPlayer
+	local Players = game:GetService("Players")
+	local label   = script.Parent
+	local player  = Players.LocalPlayer
 	
-	label.Text = player.DisplayName
+	-- Corrige o tamanho do label para caber nomes longos
+	label.Size           = UDim2.new(0, 200, 0, 22)
+	label.BackgroundTransparency = 1
+	label.TextXAlignment = Enum.TextXAlignment.Left
+	label.TextTruncate   = Enum.TextTruncate.AtEnd
+	label.TextScaled     = false
+	label.TextWrapped    = false
 	
-	-- Atualiza se o DisplayName mudar durante a sessão
-	player:GetPropertyChangedSignal("DisplayName"):Connect(function()
-		label.Text = player.DisplayName
-	end)
+	local function atualizar()
+		local nome = player.DisplayName
+		-- Ajusta TextSize baseado no comprimento do nome
+		if #nome <= 12 then
+			label.TextSize = 15
+		elseif #nome <= 18 then
+			label.TextSize = 13
+		else
+			label.TextSize = 11
+		end
+		label.Text = nome
+	end
+	
+	atualizar()
+	player:GetPropertyChangedSignal("DisplayName"):Connect(atualizar)
 end
-coroutine.wrap(TGZCT_fake_script)()
-local function DPMVSV_fake_script() -- DATA.LocalScript 
+coroutine.wrap(WCQSX_fake_script)()
+local function KTHQ_fake_script() -- DATA.LocalScript 
 	local script = Instance.new('LocalScript', DATA)
 
 	-- ============================================================
@@ -3112,8 +3130,8 @@ local function DPMVSV_fake_script() -- DATA.LocalScript
 		task.wait(1)
 	end
 end
-coroutine.wrap(DPMVSV_fake_script)()
-local function ONJTS_fake_script() -- clicker.LocalScript 
+coroutine.wrap(KTHQ_fake_script)()
+local function MZEVTFG_fake_script() -- clicker.LocalScript 
 	local script = Instance.new('LocalScript', clicker)
 
 	local painel = script.Parent.Parent:WaitForChild("MainPanel")
@@ -3123,4 +3141,4 @@ local function ONJTS_fake_script() -- clicker.LocalScript
 		painel.Visible = not painel.Visible
 	end)
 end
-coroutine.wrap(ONJTS_fake_script)()
+coroutine.wrap(MZEVTFG_fake_script)()
