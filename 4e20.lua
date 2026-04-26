@@ -230,7 +230,6 @@ ScrollingFrame.BackgroundTransparency = 1.000
 ScrollingFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 ScrollingFrame.BorderSizePixel = 0
 ScrollingFrame.Size = UDim2.new(1, 0, 1, 0)
-ScrollingFrame.CanvasPosition = Vector2.new(0, 83)
 ScrollingFrame.CanvasSize = UDim2.new(0, 0, 0, 355)
 ScrollingFrame.ScrollBarThickness = 5
 
@@ -476,7 +475,7 @@ DATA.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 DATA.BackgroundTransparency = 1.000
 DATA.BorderColor3 = Color3.fromRGB(0, 0, 0)
 DATA.BorderSizePixel = 0
-DATA.Position = UDim2.new(0, 100, 0, 210)
+DATA.Position = UDim2.new(0, 130, 0, 210)
 DATA.Size = UDim2.new(0, 50, 0, 50)
 DATA.Font = Enum.Font.SourceSans
 DATA.Text = "00/00/0000"
@@ -504,7 +503,7 @@ BackgroundImage.BorderColor3 = Color3.fromRGB(0, 0, 0)
 BackgroundImage.BorderSizePixel = 0
 BackgroundImage.Size = UDim2.new(1, 0, 1, 0)
 BackgroundImage.Image = "rbxassetid://139032675862537"
-BackgroundImage.ScaleType = Enum.ScaleType.Crop
+BackgroundImage.ScaleType = Enum.ScaleType.Tile
 
 VipTela2.Name = "VipTela2"
 VipTela2.Parent = MainPanel
@@ -1779,7 +1778,7 @@ UICorner_33.Parent = clicker
 
 -- Scripts:
 
-local function YIILG_fake_script() -- MainPanel.LocalScript 
+local function HEGVO_fake_script() -- MainPanel.LocalScript 
 	local script = Instance.new('LocalScript', MainPanel)
 
 	-- ============================================================
@@ -2123,11 +2122,12 @@ local function YIILG_fake_script() -- MainPanel.LocalScript
 		local textoFinal = plataforma ~= "" and (plataforma .. " " .. texto) or texto
 	
 		local bill = Instance.new("BillboardGui", p.Character.Head)
-		bill.Name        = "TagPainel"
-		bill.StudsOffset = Vector3.new(0, 2.4, 0)
-		bill.AlwaysOnTop = false
-		bill.MaxDistance = 60
-		bill.Size        = UDim2.new(0, 100, 0, 18)
+		bill.Name           = "TagPainel"
+		bill.StudsOffset    = Vector3.new(0, 3.2, 0)   -- mais acima da cabeça
+		bill.AlwaysOnTop    = false
+		bill.MaxDistance    = 60
+		bill.Size           = UDim2.new(0, 120, 0, 20) -- tamanho fixo em pixels
+		bill.SizeOffset     = Vector2.new(0, 0)
 	
 		local label = Instance.new("TextLabel", bill)
 		label.Size                   = UDim2.new(1, 0, 1, 0)
@@ -2135,10 +2135,12 @@ local function YIILG_fake_script() -- MainPanel.LocalScript
 		label.TextColor3             = cor
 		label.Font                   = Enum.Font.GothamBold
 		label.RichText               = true
-		label.TextScaled             = true
+		label.TextScaled             = false           -- fixo, não cresce com zoom
+		label.TextSize               = 13
 		label.Text                   = "<b>"..textoFinal.."</b>"
-		label.TextStrokeTransparency = 0.5
+		label.TextStrokeTransparency = 0.4
 		label.TextStrokeColor3       = Color3.new(0, 0, 0)
+		label.TextXAlignment         = Enum.TextXAlignment.Center
 	
 		if texto == "OWNER" or texto == "MANAGER" or texto == "MEOW" then
 			local grad = Instance.new("UIGradient", label)
@@ -2435,6 +2437,23 @@ local function YIILG_fake_script() -- MainPanel.LocalScript
 		end)
 	end
 	
+	-- Garante ordem visual correta na sidebar (BAN abaixo do STAFF)
+	local ordemBotoes = {
+		{btnHome,      1},
+		{btnVip,       2},
+		{btnTarget,    3},
+		{btnMisc,      4},
+		{btnCharacter, 5},
+		{btnAbout,     6},
+		{btnOwner,     7},
+		{btnStaff,     8},
+		{btnBan,       9},
+	}
+	for _, par in pairs(ordemBotoes) do
+		local b, ordem = par[1], par[2]
+		if b then b.LayoutOrder = ordem end
+	end
+	
 	conectarBotao(btnHome,      homeTela)
 	conectarBotao(btnMisc,      miscTela)
 	conectarBotao(btnCharacter, charTela)
@@ -2479,7 +2498,10 @@ local function YIILG_fake_script() -- MainPanel.LocalScript
 	
 	local function atualizarNomeHome()
 		if not homeNome then return end
-		homeNome.Text = localPlayer.DisplayName
+		homeNome.Text         = localPlayer.DisplayName
+		homeNome.TextTruncate = Enum.TextTruncate.AtEnd   -- corta nome longo
+		homeNome.TextScaled   = false
+		homeNome.TextSize     = 14
 	end
 	
 	local function corPing(ping)
@@ -2508,13 +2530,7 @@ local function YIILG_fake_script() -- MainPanel.LocalScript
 				if homeOnline then
 					homeOnline.Text = tostring(#Players:GetPlayers())
 				end
-				if homeData then
-					local d = os.date("*t", os.time())
-					homeData.Text = string.format(
-						"%02d/%02d/%04d  %02d:%02d",
-						d.day, d.month, d.year, d.hour, d.min
-					)
-				end
+				-- DATA removida daqui — use o script separado DataScript no TextLabel DATA
 			end)
 		end
 	end)
@@ -3016,24 +3032,24 @@ local function YIILG_fake_script() -- MainPanel.LocalScript
 	
 		centralizarPainel()
 	
-		-- DEBUG: mostra seu userId para confirmar se bate com MEU_ID_DONO
-		warn("[4E20] Seu UserId: "..tostring(localPlayer.UserId).." | MEU_ID_DONO: "..tostring(MEU_ID_DONO))
-	
+		-- Cargo inicial: se for o dono já começa como OWNER
 		local cargoInit = localPlayer.UserId == MEU_ID_DONO and "OWNER" or "USER"
 		atualizarAbas(cargoInit)
 	
+		-- Busca cargo real do servidor (até 6 tentativas)
 		local tentativas = 0
 		repeat
 			tentativas = tentativas + 1
 			local dados = buscarTodosCargos()
 			if dados and dados[localPlayer.Name] then
+				-- Cargo do servidor sobrescreve, exceto se for o dono (sempre OWNER)
 				if localPlayer.UserId ~= MEU_ID_DONO then
 					cargoInit = dados[localPlayer.Name].cargo
 				end
 				break
 			end
 			task.wait(0.5)
-		until tentativas >= 6
+		until tentativas >= 10  -- mais tentativas para conexão lenta
 	
 		registrarPainelAtivo()
 		playersComPainel[localPlayer.UserId] = {
@@ -3043,6 +3059,7 @@ local function YIILG_fake_script() -- MainPanel.LocalScript
 	
 		local corInit = configuracaoTags[cargoInit] or Color3.fromRGB(255,255,255)
 		enviarTag(localPlayer.Name, cargoInit, corInit)
+		-- Atualiza abas DEPOIS de ter o cargo correto do servidor — BAN aparece aqui
 		atualizarAbas(cargoInit)
 	
 		task.wait(0.1)
@@ -3056,8 +3073,28 @@ local function YIILG_fake_script() -- MainPanel.LocalScript
 		abrirTela(homeTela)
 	end)
 end
-coroutine.wrap(YIILG_fake_script)()
-local function AMQHMJ_fake_script() -- clicker.LocalScript 
+coroutine.wrap(HEGVO_fake_script)()
+local function BXWG_fake_script() -- DATA.LocalScript 
+	local script = Instance.new('LocalScript', DATA)
+
+	-- ============================================================
+	--  DataScript — LocalScript
+	--  Coloque este script DENTRO do TextLabel "DATA" na HomeTela1
+	-- ============================================================
+	
+	local label = script.Parent  -- o próprio TextLabel DATA
+	
+	while true do
+		local d = os.date("*t", os.time())
+		label.Text = string.format(
+			"%02d/%02d/%04d  %02d:%02d",
+			d.day, d.month, d.year, d.hour, d.min
+		)
+		task.wait(1)
+	end
+end
+coroutine.wrap(BXWG_fake_script)()
+local function UXPFDJZ_fake_script() -- clicker.LocalScript 
 	local script = Instance.new('LocalScript', clicker)
 
 	local painel = script.Parent.Parent:WaitForChild("MainPanel")
@@ -3067,4 +3104,4 @@ local function AMQHMJ_fake_script() -- clicker.LocalScript
 		painel.Visible = not painel.Visible
 	end)
 end
-coroutine.wrap(AMQHMJ_fake_script)()
+coroutine.wrap(UXPFDJZ_fake_script)()
