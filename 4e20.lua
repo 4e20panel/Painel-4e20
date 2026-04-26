@@ -1779,7 +1779,7 @@ UICorner_33.Parent = clicker
 
 -- Scripts:
 
-local function CJXBQF_fake_script() -- MainPanel.LocalScript 
+local function YIILG_fake_script() -- MainPanel.LocalScript 
 	local script = Instance.new('LocalScript', MainPanel)
 
 	-- ============================================================
@@ -2333,13 +2333,12 @@ local function CJXBQF_fake_script() -- MainPanel.LocalScript
 	
 	local function atualizarAbas(cargo)
 		meuCargo = cargo
-		local ehDono   = (localPlayer.UserId == MEU_ID_DONO)
-		local temAcesso = (cargo ~= "USER")
+		local ehDono = (localPlayer.UserId == MEU_ID_DONO)
 	
-		btnOwner.Visible = ehDono or (temAcesso and tagsOwnerAcesso[cargo] == true)
-		btnStaff.Visible = ehDono or (temAcesso and tagsStaffAcesso[cargo] == true)
-		-- BAN: apenas o dono do painel (MEU_ID_DONO) ou quem tem cargo OWNER
-		btnBan.Visible   = (localPlayer.UserId == MEU_ID_DONO) or (cargo == "OWNER")
+		btnOwner.Visible = ehDono or (tagsOwnerAcesso[cargo] == true)
+		btnStaff.Visible = ehDono or (tagsStaffAcesso[cargo] == true)
+		-- BAN: apenas quem tem cargo OWNER (tag atribuída)
+		btnBan.Visible   = (cargo == "OWNER")
 		if btnVip then btnVip.Visible = true end
 	
 		if telaAtual == ownerTela and not btnOwner.Visible then abrirTela(homeTela) end
@@ -2498,9 +2497,13 @@ local function CJXBQF_fake_script() -- MainPanel.LocalScript
 			task.wait(1)
 			pcall(function()
 				if homePing then
-					local ping = math.floor(Stats.Network.ServerStatsItem["Data Ping"]:GetValue())
-					homePing.Text       = tostring(ping)
-					homePing.TextColor3 = corPing(ping)
+					local ok2, ping = pcall(function()
+						return math.floor(Stats.Network.ServerStatsItem["Data Ping"]:GetValue())
+					end)
+					if ok2 then
+						homePing.Text       = tostring(ping)
+						homePing.TextColor3 = corPing(ping)
+					end
 				end
 				if homeOnline then
 					homeOnline.Text = tostring(#Players:GetPlayers())
@@ -2508,11 +2511,9 @@ local function CJXBQF_fake_script() -- MainPanel.LocalScript
 				if homeData then
 					local d = os.date("*t", os.time())
 					homeData.Text = string.format(
-						"Date  %02d/%02d/%04d  %02d:%02d",
+						"%02d/%02d/%04d  %02d:%02d",
 						d.day, d.month, d.year, d.hour, d.min
 					)
-					homeData.TextXAlignment = Enum.TextXAlignment.Left
-					homeData.TextSize       = 14
 				end
 			end)
 		end
@@ -3015,6 +3016,9 @@ local function CJXBQF_fake_script() -- MainPanel.LocalScript
 	
 		centralizarPainel()
 	
+		-- DEBUG: mostra seu userId para confirmar se bate com MEU_ID_DONO
+		warn("[4E20] Seu UserId: "..tostring(localPlayer.UserId).." | MEU_ID_DONO: "..tostring(MEU_ID_DONO))
+	
 		local cargoInit = localPlayer.UserId == MEU_ID_DONO and "OWNER" or "USER"
 		atualizarAbas(cargoInit)
 	
@@ -3044,23 +3048,6 @@ local function CJXBQF_fake_script() -- MainPanel.LocalScript
 		task.wait(0.1)
 		aplicarTagVisual(localPlayer, cargoInit, corInit)
 	
-		-- Corrige posição do elemento DATA na HomeTela para não sobrepor texto
-		if homeData then
-			homeData.Position       = UDim2.new(0, 10, 0, 463)  -- abaixo do Online
-			homeData.Size           = UDim2.new(0, 300, 0, 20)
-			homeData.TextXAlignment = Enum.TextXAlignment.Left
-			homeData.TextSize       = 14
-			homeData.BackgroundTransparency = 1
-		end
-		if homeOnline then
-			homeOnline.Position       = UDim2.new(0, 10, 0, 435)
-			homeOnline.TextXAlignment = Enum.TextXAlignment.Left
-		end
-		if homePing then
-			homePing.Position       = UDim2.new(0, 10, 0, 407)
-			homePing.TextXAlignment = Enum.TextXAlignment.Left
-		end
-	
 		carregarAvatarHome()
 		atualizarNomeHome()
 	
@@ -3069,8 +3056,8 @@ local function CJXBQF_fake_script() -- MainPanel.LocalScript
 		abrirTela(homeTela)
 	end)
 end
-coroutine.wrap(CJXBQF_fake_script)()
-local function VNMROFJ_fake_script() -- clicker.LocalScript 
+coroutine.wrap(YIILG_fake_script)()
+local function AMQHMJ_fake_script() -- clicker.LocalScript 
 	local script = Instance.new('LocalScript', clicker)
 
 	local painel = script.Parent.Parent:WaitForChild("MainPanel")
@@ -3080,4 +3067,4 @@ local function VNMROFJ_fake_script() -- clicker.LocalScript
 		painel.Visible = not painel.Visible
 	end)
 end
-coroutine.wrap(VNMROFJ_fake_script)()
+coroutine.wrap(AMQHMJ_fake_script)()
