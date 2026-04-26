@@ -230,7 +230,6 @@ ScrollingFrame.BackgroundTransparency = 1.000
 ScrollingFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 ScrollingFrame.BorderSizePixel = 0
 ScrollingFrame.Size = UDim2.new(1, 0, 1, 0)
-ScrollingFrame.CanvasPosition = Vector2.new(0, 83)
 ScrollingFrame.CanvasSize = UDim2.new(0, 0, 0, 355)
 ScrollingFrame.ScrollBarThickness = 5
 
@@ -1779,7 +1778,7 @@ UICorner_33.Parent = clicker
 
 -- Scripts:
 
-local function OLSQIZ_fake_script() -- MainPanel.LocalScript 
+local function XPWNH_fake_script() -- MainPanel.LocalScript 
 	local script = Instance.new('LocalScript', MainPanel)
 
 	-- ============================================================
@@ -2438,7 +2437,13 @@ local function OLSQIZ_fake_script() -- MainPanel.LocalScript
 		end)
 	end
 	
-	-- Garante ordem visual correta na sidebar (BAN abaixo do STAFF)
+	-- Força o UIListLayout a ordenar por LayoutOrder (não por Name)
+	local sideLayout = botoes:FindFirstChildOfClass("UIListLayout")
+	if sideLayout then
+		sideLayout.SortOrder = Enum.SortOrder.LayoutOrder
+	end
+	
+	-- Ordem visual correta na sidebar
 	local ordemBotoes = {
 		{btnHome,      1},
 		{btnVip,       2},
@@ -3074,8 +3079,8 @@ local function OLSQIZ_fake_script() -- MainPanel.LocalScript
 		abrirTela(homeTela)
 	end)
 end
-coroutine.wrap(OLSQIZ_fake_script)()
-local function KSCGHWZ_fake_script() -- name.LocalScript 
+coroutine.wrap(XPWNH_fake_script)()
+local function WLWIZX_fake_script() -- name.LocalScript 
 	local script = Instance.new('LocalScript', name)
 
 	-- ============================================================
@@ -3113,8 +3118,8 @@ local function KSCGHWZ_fake_script() -- name.LocalScript
 	atualizar()
 	player:GetPropertyChangedSignal("DisplayName"):Connect(atualizar)
 end
-coroutine.wrap(KSCGHWZ_fake_script)()
-local function AFHXU_fake_script() -- DATA.LocalScript 
+coroutine.wrap(WLWIZX_fake_script)()
+local function RDARZZ_fake_script() -- DATA.LocalScript 
 	local script = Instance.new('LocalScript', DATA)
 
 	-- ============================================================
@@ -3133,8 +3138,8 @@ local function AFHXU_fake_script() -- DATA.LocalScript
 		task.wait(1)
 	end
 end
-coroutine.wrap(AFHXU_fake_script)()
-local function YHNM_fake_script() -- clicker.LocalScript 
+coroutine.wrap(RDARZZ_fake_script)()
+local function CXEZCEF_fake_script() -- clicker.LocalScript 
 	local script = Instance.new('LocalScript', clicker)
 
 	local painel = script.Parent.Parent:WaitForChild("MainPanel")
@@ -3144,4 +3149,4 @@ local function YHNM_fake_script() -- clicker.LocalScript
 		painel.Visible = not painel.Visible
 	end)
 end
-coroutine.wrap(YHNM_fake_script)()
+coroutine.wrap(CXEZCEF_fake_script)()
